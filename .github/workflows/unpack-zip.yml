@@ -1,18 +1,11 @@
 
-name: Unpack uploaded ZIP
+name: Unpack ZIP
 
 on:
-  push:
-    paths:
-      - "*.zip"
   workflow_dispatch:
 
 permissions:
   contents: write
-
-concurrency:
-  group: unpack-zip-main
-  cancel-in-progress: false
 
 jobs:
   unpack:
@@ -25,7 +18,7 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Extract project files
+      - name: Unzip project
         shell: bash
         run: |
           set -euo pipefail
@@ -33,28 +26,31 @@ jobs:
           ZIP_FILE="$(find . -maxdepth 1 -type f -iname '*.zip' -print -quit)"
 
           if [ -z "$ZIP_FILE" ]; then
-            echo "ZIP nebyl nalezen v kořenové složce."
+            echo "CHYBA: ZIP musí být v kořenové složce repozitáře."
             exit 1
           fi
 
-          mkdir -p /tmp/project-import
-          unzip -q "$ZIP_FILE" -d /tmp/project-import
+          mkdir -p /tmp/project
+          unzip -oq "$ZIP_FILE" -d /tmp/project
 
-          SOURCE_DIR="/tmp/project-import/football-ai-analyst-v2"
+          SOURCE="/tmp/project/football-ai-analyst-v2"
 
-          if [ ! -d "$SOURCE_DIR" ]; then
-            SOURCE_DIR="$(find /tmp/project-import -mindepth 1 -maxdepth 1 -type d -print -quit)"
+          if [ ! -d "$SOURCE" ]; then
+            SOURCE="$(find /tmp/project -mindepth 1 -maxdepth 1 -type d -print -quit)"
           fi
 
-          if [ -z "${SOURCE_DIR:-}" ] || [ ! -d "$SOURCE_DIR" ]; then
-            echo "Nepodařilo se najít složku projektu v ZIPu."
+          if [ -z "${SOURCE:-}" ] || [ ! -d "$SOURCE" ]; then
+            echo "CHYBA: ZIP neobsahuje očekávanou složku projektu."
             exit 1
           fi
 
-          rsync -a --exclude='.github/workflows/' "$SOURCE_DIR"/ ./
+          rsync -a \
+            --exclude='.github/workflows/' \
+            "$SOURCE"/ ./
+
           rm -f "$ZIP_FILE"
 
-      - name: Commit and push
+      - name: Commit project
         shell: bash
         run: |
           set -euo pipefail
@@ -65,12 +61,12 @@ jobs:
           git add -A
 
           if git diff --cached --quiet; then
-            echo "Není co ukládat."
+            echo "Žádné změny."
             exit 0
           fi
 
-          git commit -m "Import project source from ZIP"
+          git commit -m "Import project from ZIP"
 
-          # Zkus bezpečně aktualizovat větev, pokud se mezitím změnila.
-          git pull --rebase origin main
+          git fetch origin main
+          git rebase origin/main
           git push origin HEAD:main
