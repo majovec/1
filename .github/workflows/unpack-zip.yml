@@ -56,7 +56,6 @@ jobs:
           else
             SOURCE=$(find "$TEMP_DIR" \
               -type f \
-              -name "composer.json" \
               -not -path "*/vendor/*" \
               -printf "%h\n" \
               | head -n 1)
