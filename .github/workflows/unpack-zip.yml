@@ -1,72 +1,155 @@
-
-name: Unpack ZIP
-
+name: Build Podnikatel SaaS
 on:
+  push:
+    branches:
+      - main
+      - master
   workflow_dispatch:
-
 permissions:
   contents: write
-
 jobs:
-  unpack:
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: main
           fetch-depth: 0
-
-      - name: Unzip project
+      - name: Find ZIP
         shell: bash
         run: |
-          set -euo pipefail
-
-          ZIP_FILE="$(find . -maxdepth 1 -type f -iname '*.zip' -print -quit)"
-
+          set -e
+          echo "Searching for ZIP..."
+          ZIP_FILE=$(find . \
+            -type f \
+            -iname "*.zip" \
+            -not -path "./.git/*" \
+            | head -n 1)
           if [ -z "$ZIP_FILE" ]; then
-            echo "CHYBA: ZIP musí být v kořenové složce repozitáře."
+            echo "ERROR: No ZIP file found in repository."
+            echo
+            echo "Repository contents:"
+            find . -maxdepth 4 -type f | sort
             exit 1
           fi
-
-          mkdir -p /tmp/project
-          unzip -oq "$ZIP_FILE" -d /tmp/project
-
-          SOURCE="/tmp/project/football-ai-analyst-v2"
-
-          if [ ! -d "$SOURCE" ]; then
-            SOURCE="$(find /tmp/project -mindepth 1 -maxdepth 1 -type d -print -quit)"
-          fi
-
-          if [ -z "${SOURCE:-}" ] || [ ! -d "$SOURCE" ]; then
-            echo "CHYBA: ZIP neobsahuje očekávanou složku projektu."
-            exit 1
-          fi
-
-          rsync -a \
-            --exclude='.github/workflows/' \
-            "$SOURCE"/ ./
-
-          rm -f "$ZIP_FILE"
-
-      - name: Commit project
+          echo "ZIP found:"
+          echo "$ZIP_FILE"
+          echo "ZIP_FILE=$ZIP_FILE" >> "$GITHUB_ENV"
+      - name: Test ZIP
+        run: |
+          set -e
+          echo "Testing ZIP: $ZIP_FILE"
+          unzip -t "$ZIP_FILE"
+      - name: Extract ZIP
         shell: bash
         run: |
-          set -euo pipefail
-
+          set -e
+          TEMP_DIR=$(mktemp -d)
+          echo "Extracting ZIP..."
+          unzip -q "$ZIP_FILE" -d "$TEMP_DIR"
+          echo "ZIP contents:"
+          find "$TEMP_DIR" -maxdepth 5 -type f | sort
+          echo
+          echo "Searching for composer.json..."
+          if [ -f "$TEMP_DIR/composer.json" ]; then
+            SOURCE="$TEMP_DIR"
+          else
+            SOURCE=$(find "$TEMP_DIR" \
+              -type f \
+              -name "composer.json" \
+              -not -path "*/vendor/*" \
+              -printf "%h\n" \
+              | head -n 1)
+          fi
+          if [ -z "$SOURCE" ]; then
+            echo "ERROR: composer.json not found."
+            exit 1
+          fi
+          echo "Application root:"
+          echo "$SOURCE"
+          echo
+          echo "Cleaning repository..."
+          find . -mindepth 1 -maxdepth 1 \
+            ! -name ".git" \
+            ! -name ".github" \
+            -exec rm -rf {} +
+          echo
+          echo "Copying project..."
+          cp -a "$SOURCE"/. .
+          echo
+          echo "Removing ZIP..."
+          rm -f "$ZIP_FILE"
+          echo
+          echo "PROJECT EXTRACTED SUCCESSFULLY"
+          echo
+          echo "Project:"
+          find . -maxdepth 3 -type f \
+            -not -path "./.git/*" \
+            | sort
+      - name: Commit extracted project
+        shell: bash
+        run: |
+          set -e
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
           git add -A
-
           if git diff --cached --quiet; then
-            echo "Žádné změny."
-            exit 0
+            echo "No changes detected."
+          else
+            git commit -m "Extract project from ZIP"
+            git push
           fi
-
-          git commit -m "Import project from ZIP"
-
-          git fetch origin main
-          git rebase origin/main
-          git push origin HEAD:main
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+          extensions: mbstring, sqlite3, pdo_sqlite, curl, fileinfo, openssl
+          tools: composer
+      - name: Composer validate
+        run: composer validate --no-check-publish
+      - name: Composer install
+        run: |
+          composer install \
+            --no-interaction \
+            --prefer-dist \
+            --no-progress
+      - name: PHP syntax check
+        shell: bash
+        run: |
+          set -e
+          echo "Checking PHP files..."
+          find . \
+            -path "./vendor" -prune \
+            -o -name "*.php" -type f -print0 |
+          while IFS= read -r -d '' file; do
+            php -l "$file"
+          done
+          echo "PHP syntax OK."
+      - name: Composer autoload test
+        run: |
+          php -r '
+            require "vendor/autoload.php";
+            echo "Composer autoload OK\n";
+          '
+      - name: SQLite test
+        run: |
+          php -r '
+            $pdo = new PDO("sqlite::memory:");
+            $pdo->query("SELECT 1");
+            echo "PDO SQLite OK\n";
+          '
+      - name: Required files
+        run: |
+          set -e
+          test -f composer.json
+          test -f public/index.php
+          test -f src/bootstrap.php
+          test -f src/Core/Kernel.php
+          echo "Required files OK."
+      - name: BUILD SUCCESS
+        run: |
+          echo
+          echo "========================================"
+          echo "       PODNIKATEL SAAS BUILD OK"
+          echo "========================================"
+          echo
