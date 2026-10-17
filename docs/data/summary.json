@@ -1,0 +1,144 @@
+{
+ "generated_at": "2026-10-17T19:02:57.299586",
+ "leagues": [
+  {
+   "code": "E0",
+   "name": "Premier League (ENG)"
+  }
+ ],
+ "history_matches": 1200,
+ "history_from": "2023-08-11T20:00:00",
+ "history_to": "2026-10-12T20:00:00",
+ "config": {
+  "half_life_days": 450.0,
+  "min_train_matches": 300,
+  "edge_threshold": 0.05,
+  "upcoming_days": 10
+ },
+ "backtest": {
+  "matches_tested": 900,
+  "from": "2024-04-03T20:15:00",
+  "to": "2026-10-12T20:00:00",
+  "model": {
+   "n": 900,
+   "accuracy": 0.5066666666666667,
+   "log_loss": 0.9946756767568516,
+   "brier": 0.5939434573418729
+  },
+  "baseline": {
+   "n": 900,
+   "accuracy": 0.41888888888888887,
+   "log_loss": 1.0812357019498646,
+   "brier": 0.6550268740828367
+  },
+  "calibration": [
+   {
+    "predicted": 0.07358939885595513,
+    "observed": 0.045454545454545456,
+    "n": 44
+   },
+   {
+    "predicted": 0.1606145049093111,
+    "observed": 0.12666666666666668,
+    "n": 300
+   },
+   {
+    "predicted": 0.2507343469849485,
+    "observed": 0.26541554959785524,
+    "n": 1119
+   },
+   {
+    "predicted": 0.3456784118191532,
+    "observed": 0.32644628099173556,
+    "n": 484
+   },
+   {
+    "predicted": 0.4438347109236633,
+    "observed": 0.42,
+    "n": 350
+   },
+   {
+    "predicted": 0.5478741889194759,
+    "observed": 0.586046511627907,
+    "n": 215
+   },
+   {
+    "predicted": 0.6414786492864766,
+    "observed": 0.6384615384615384,
+    "n": 130
+   },
+   {
+    "predicted": 0.7422364407920172,
+    "observed": 0.8260869565217391,
+    "n": 46
+   },
+   {
+    "predicted": 0.8356191046894043,
+    "observed": 0.9166666666666666,
+    "n": 12
+   }
+  ],
+  "over25": {
+   "accuracy": 0.5844444444444444,
+   "brier": 0.24461166880867255,
+   "base_rate": 0.5688888888888889
+  },
+  "btts": {
+   "accuracy": 0.5744444444444444,
+   "brier": 0.24620094293133643,
+   "base_rate": 0.5677777777777778
+  },
+  "by_league": {
+   "E0": {
+    "n": 900,
+    "accuracy": 0.5066666666666667,
+    "log_loss": 0.9946756767568516,
+    "brier": 0.5939434573418729
+   }
+  },
+  "market": {
+   "n": 900,
+   "accuracy": 0.5266666666666666,
+   "log_loss": 0.9829718899913392,
+   "brier": 0.586922560736022
+  },
+  "model_on_market_subset": {
+   "n": 900,
+   "accuracy": 0.5066666666666667,
+   "log_loss": 0.9946756767568516,
+   "brier": 0.5939434573418729
+  },
+  "value_bets": [
+   {
+    "threshold": 0.02,
+    "bets": 712,
+    "hit_rate": 0.25280898876404495,
+    "roi": -0.10182584269662921,
+    "avg_odds": 4.705660112359551
+   },
+   {
+    "threshold": 0.05,
+    "bets": 601,
+    "hit_rate": 0.22795341098169716,
+    "roi": -0.12622296173044925,
+    "avg_odds": 5.009101497504159
+   },
+   {
+    "threshold": 0.1,
+    "bets": 461,
+    "hit_rate": 0.21691973969631237,
+    "roi": -0.09796095444685468,
+    "avg_odds": 5.40590021691974
+   }
+  ],
+  "verdict": "Model má skutečný signál: log loss 0.995 je lepší než naivní odhad 1.081. Kurzy bookmakerů jsou přesnější (0.983 vs 0.995). To je běžné; sázky podle modelu by pravděpodobně prodělávaly."
+ },
+ "live": {
+  "settled": 0,
+  "pending": 5,
+  "awaiting_result": 0
+ },
+ "league_names": {
+  "E0": "Premier League (ENG)"
+ }
+}
