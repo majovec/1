@@ -1,20 +1,9 @@
 name: Unpack ZIP
 
 on:
+  push:
+    paths: ["*.zip"]
   workflow_dispatch:
-    inputs:
-      zip_path:
-        description: "Cesta k ZIP souboru v repozitáři (např. upload/soubory.zip)"
-        required: true
-        default: "upload/soubory.zip"
-      target_dir:
-        description: "Cílová složka pro rozbalené soubory (. = kořen repozitáře)"
-        required: true
-        default: "unpacked"
-      delete_zip:
-        description: "Smazat ZIP po rozbalení?"
-        type: boolean
-        default: false
 
 permissions:
   contents: write
@@ -23,30 +12,35 @@ jobs:
   unpack:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repozitáře
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Rozbalit ZIP
+      - name: Rozbalit všechny ZIPy v kořeni
         run: |
-          if [ ! -f "${{ inputs.zip_path }}" ]; then
-            echo "ZIP soubor ${{ inputs.zip_path }} nebyl nalezen!"
-            exit 1
-          fi
-          mkdir -p "${{ inputs.target_dir }}"
-          unzip -o "${{ inputs.zip_path }}" -d "${{ inputs.target_dir }}"
-
-      - name: Smazat ZIP (volitelně)
-        if: ${{ inputs.delete_zip }}
-        run: git rm -f "${{ inputs.zip_path }}"
+          set -e
+          shopt -s nullglob
+          zips=(*.zip)
+          [ ${#zips[@]} -gt 0 ] || { echo "V kořeni není žádný ZIP."; exit 1; }
+          for z in "${zips[@]}"; do
+            tmp="$(mktemp -d)"
+            unzip -q -o "$z" -d "$tmp"
+            if [ "$(ls -A "$tmp" | wc -l)" = "1" ] && [ -d "$tmp/$(ls -A "$tmp")" ]; then
+              src="$tmp/$(ls -A "$tmp")"
+            else
+              src="$tmp"
+            fi
+            rm -rf "$src/.github"
+            cp -a "$src/." .
+            git rm -f -q "$z"
+          done
 
       - name: Commit a push
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           if git diff --cached --quiet; then
-            echo "Žádné změny k commitu."
+            echo "Žádné změny."
           else
-            git commit -m "Rozbalen ${{ inputs.zip_path }} do ${{ inputs.target_dir }}"
+            git commit -m "Rozbaleno z ZIPu"
             git push
           fi
