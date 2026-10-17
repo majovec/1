@@ -1,0 +1,68 @@
+
+name: Unpack uploaded ZIP
+
+on:
+  push:
+    paths:
+      - "*.zip"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Find and extract ZIP
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          ZIP_FILE="$(find . -maxdepth 1 -type f -iname '*.zip' -print -quit)"
+
+          if [ -z "$ZIP_FILE" ]; then
+            echo "V kořenové složce repozitáře není žádný ZIP."
+            exit 1
+          fi
+
+          mkdir -p /tmp/zip-import
+          unzip -q "$ZIP_FILE" -d /tmp/zip-import
+
+          SOURCE_DIR="/tmp/zip-import/football-ai-analyst-v2"
+
+          if [ ! -d "$SOURCE_DIR" ]; then
+            SOURCE_DIR="$(find /tmp/zip-import -mindepth 1 -maxdepth 1 -type d -print -quit)"
+          fi
+
+          if [ -z "${SOURCE_DIR:-}" ] || [ ! -d "$SOURCE_DIR" ]; then
+            echo "V ZIPu se nepodařilo najít složku projektu."
+            exit 1
+          fi
+
+          cp -a "$SOURCE_DIR"/. .
+          rm -f "$ZIP_FILE"
+
+      - name: Commit extracted project
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "Žádné změny k uložení."
+            exit 0
+          fi
+
+          git commit -m "Import project files from ZIP"
+          git push
