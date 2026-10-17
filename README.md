@@ -21,6 +21,10 @@ Fotbalový analytik, který běží **zdarma jen na GitHubu** (Actions + Pages),
 - Bez nastavení otevře stránku Actions, kde klikneš *Run workflow*.
 - **Na jedno kliknutí:** vytvoř *fine-grained token* (GitHub → Settings → Developer settings → Fine-grained tokens), jen pro tento repozitář, oprávnění **Actions: Read and write**. Vlož ho tlačítkem *Token* na dashboardu. Uloží se jen v tvém prohlížeči. Token drž jen pro tento repozitář a nikomu ho neukazuj.
 
+## Tenis a automatické obnovení (v6)
+- **Tenis** (ATP + WTA): historie a kurzy z tennis-data.co.uk, síla hráčů jako Elo (celkové + podle povrchu), backtest proti kurzům a naučená váha trhu. Nadcházející zápasy jdou z ESPN (bez kurzů); hráči, které systém nezná, se přeskočí. Chyba v tenise nikdy neshodí fotbal.
+- **Automaticky:** workflow *Analyze* běží každé 3 hodiny (v `.github/workflows/analyze.yml`; zkopíruj upravený soubor podle kroku 3 výše), dashboard si nová data sám načte každých 5 minut. GitHub může plánované běhy vypnout, když je repozitář dlouho bez aktivity; pak stačí workflow jednou spustit ručně.
+
 ## Ligy a země (v4)
 Výchozí sada: 🇨🇿 Fortuna liga (`CZ1`), Premier League, Bundesliga, La Liga, Serie A, Ligue 1, Eredivisie, Belgie, Portugalsko, Turecko, Skotsko, Rakousko, Dánsko, Polsko, Švýcarsko.
 - **Hlavní ligy** (`E0 D1 SP1 I1 F1 N1 B1 P1 T1 G1 SC0 E1 D2 SP2 I2 F2`) jdou z football-data.co.uk **s kurzy bookmakerů**.

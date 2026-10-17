@@ -158,3 +158,55 @@ def test_espn_slug_fallback_and_fail_fast(monkeypatch=None):
         assert df.empty and len(calls) == before            # neexistující liga se nestahuje měsíc po měsíci
     finally:
         espn._request = orig
+
+
+def _tennis_hist(n=6000, seed=3):
+    rng = np.random.default_rng(seed)
+    names = [f"Player{chr(65 + i)} {chr(65 + i)}." for i in range(30)] + ["De Minaur A.", "Auger-Aliassime F."]
+    skill = rng.normal(0, 1.0, len(names))
+    rows, d0 = [], pd.Timestamp("2024-01-01")
+    for i in range(n):
+        a, b = rng.choice(len(names), 2, replace=False)
+        p = 1 / (1 + np.exp(-(skill[a] - skill[b])))
+        w, l = (a, b) if rng.random() < p else (b, a)
+        pm = 1 / (1 + np.exp(-(skill[w if w == a else a] - skill[b if w == a else b])))
+        fair = 1 / (1 + np.exp(-(skill[w] - skill[l])))
+        rows.append({"tour": "atp", "date": d0 + pd.Timedelta(hours=3 * i), "tournament": "Open X", "surface": "Hard",
+                     "round": "1st", "w": names[w], "l": names[l],
+                     "odds_w": round(1.05 / fair, 2), "odds_l": round(1.05 / (1 - fair), 2)})
+    return pd.DataFrame(rows)
+
+
+def test_tennis_end_to_end_and_names(tmp_path):
+    from app import tennis
+    hist = _tennis_hist()
+    now = hist["date"].max() + pd.Timedelta(hours=1)
+    raw = [{"tour": "atp", "date": now + pd.Timedelta(hours=5), "tournament": "Open X", "a": "Alex de Minaur", "b": "Felix Auger-Aliassime"},
+           {"tour": "atp", "date": now + pd.Timedelta(hours=6), "tournament": "Open X", "a": "Neznámý Hráč", "b": "Felix Auger-Aliassime"}]
+    s = tennis.run(now, tmp_path / "d", tmp_path / "w", hist=hist, raw_upcoming=raw, log=lambda *_: None)
+    assert s["backtest"]["accuracy"] > 0.55                     # Elo se skutečně naučí sílu hráčů
+    assert s["backtest"]["log_loss"] < s["backtest"]["naive_log_loss"]
+    out = json.loads((tmp_path / "w" / "tennis.json").read_text(encoding="utf-8"))
+    assert len(out["upcoming"]) == 1                            # neznámý hráč se přeskočí
+    u = out["upcoming"][0]
+    assert u["a"] == "De Minaur A." and u["b"] == "Auger-Aliassime F." and 0 < u["p_a"] < 1
+
+
+def test_tennis_parse_frame_and_espn():
+    from app import tennis
+    raw = pd.DataFrame({"Date": ["2026-01-05", "2026-01-06"], "Tournament": ["Brisbane", "Brisbane"], "Surface": ["Hard"] * 2,
+                        "Round": ["1st Round"] * 2, "Winner": ["Sinner J.", "Zverev A."], "Loser": ["Kyrgios N.", "Ruud C."],
+                        "B365W": [1.2, 1.5], "B365L": [4.5, 2.6], "AvgW": [1.25, None], "AvgL": [4.2, None],
+                        "Comment": ["Completed", "Retired"]})
+    df = tennis.parse_frame(raw, "atp")
+    assert len(df) == 1 and df.iloc[0]["odds_w"] == 1.25        # skreč se nepočítá, preferuje průměr trhu
+    js = {"events": [{"name": "Brisbane", "groupings": [
+        {"grouping": {"displayName": "Men's Singles"}, "competitions": [
+            {"date": "2026-10-18T10:00Z", "status": {"type": {"state": "pre"}},
+             "competitors": [{"athlete": {"displayName": "Jannik Sinner"}}, {"athlete": {"displayName": "Nick Kyrgios"}}]}]},
+        {"grouping": {"displayName": "Men's Doubles"}, "competitions": [
+            {"date": "2026-10-18T10:00Z", "status": {"type": {"state": "pre"}},
+             "competitors": [{"athlete": {"displayName": "A B"}}, {"athlete": {"displayName": "C D"}}]}]}]}]}
+    got = tennis.parse_espn_tennis(js, "atp")
+    assert len(got) == 1 and got[0]["a"] == "Jannik Sinner"
+    assert tennis.match_name("Jannik Sinner", tennis.build_index(df)) == "Sinner J."

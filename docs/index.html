@@ -74,6 +74,8 @@ svg text{fill:var(--mute);font-size:10px}
   </div>
 </header>
 <div id="status"></div>
+<div class="chips" id="tabs"><button class="chip on" data-t="fb">⚽ Fotbal</button><button class="chip" data-t="tn">🎾 Tenis</button></div>
+<div id="fb">
 
 <div class="card verdict" id="verdict" style="margin-top:14px"></div>
 
@@ -109,6 +111,18 @@ svg text{fill:var(--mute);font-size:10px}
   <div class="card" style="overflow-x:auto"><b>Sázky na „hodnotu“ (simulace)</b><div class="sub">Plochá sázka 1 jednotky, když model vidí výhodu oproti kurzu.</div><div id="vb"></div></div>
 </div>
 
+</div>
+<div id="tn" hidden>
+  <div class="card" id="tnInfo" style="margin-top:6px"></div>
+  <h2>Nadcházející zápasy (tenis)</h2>
+  <div class="sub">Tenis nemá remízu: u každého zápasu je jen šance prvního a druhého hráče. Odhad vychází z hodnocení hráčů (Elo) celkově a podle povrchu. Kurzy trhu u nadcházejících zápasů nejsou, takže jde jen o model.</div>
+  <div id="tnUp"></div>
+  <h2>Úspěšnost mých vlastních předpovědí (tenis)</h2>
+  <div class="grid" id="tnLive"></div>
+  <div class="card" style="margin-top:12px;overflow-x:auto"><div id="tnSettled"></div></div>
+  <h2>Historický test (tenis)</h2>
+  <div class="grid" id="tnBt"></div>
+</div>
 <footer>
   Pravděpodobnostní odhady nejsou jisté tipy. Model je jednoduchý (góly, síla týmů, domácí prostředí) a bookmakeři mají víc informací.
   Kurzy jsou průměr trhu z football-data.co.uk (jen hlavní ligy). Česká liga a menší ligy jdou z ESPN bez kurzů, tam je odhad jen z modelu. Časy zápasů jsou český čas. Nic z toho není finanční poradenství.
@@ -328,6 +342,48 @@ $('#run').onclick = async () => {
 };
 
 render();
+
+/* ---------- TENIS ---------- */
+const tbar = p => `<div class="bar"><span class="h" style="width:${p * 100}%">${Math.round(p * 100)}</span><span class="a" style="width:${(1 - p) * 100}%">${Math.round((1 - p) * 100)}</span></div>`;
+function tnCard(m) {
+  const f = fmtDate(m.date), pa = m.p_a, fav = pa >= .5 ? m.a_full : m.b_full, pr = Math.max(pa, 1 - pa);
+  const cls = pr >= .7 ? 'fav-strong' : pr >= .58 ? 'fav-mid' : 'fav-weak';
+  const lab = pr >= .7 ? 'silný favorit' : pr >= .58 ? 'mírný favorit' : 'vyrovnaný zápas';
+  const low = Math.min(...m.games) < 15;
+  return `<div class="card match"><div class="top"><span>${m.tour.toUpperCase()} · ${esc(m.tournament)}${m.surface && m.surface !== 'nan' ? ' · ' + esc(m.surface) : ''}</span><span>${f.day.split(' ').slice(-2).join(' ')} ${f.time}</span></div>
+    <div class="teams">${esc(m.a_full)} – ${esc(m.b_full)}</div>${tbar(pa)}
+    <div class="fair" style="grid-template-columns:1fr 1fr"><div><small>${esc(m.a_full)} · férový kurz</small><b>${fair(pa)}</b></div><div><small>${esc(m.b_full)}</small><b>${fair(1 - pa)}</b></div></div>
+    <div class="say"><b class="${cls}">${lab}: ${esc(fav)}</b> – ${Math.round(pr * 100)} %. Z 10 takových zápasů vyjde zhruba ${Math.round(pr * 10)}.</div>
+    <div class="meta"><span>Hodnocení (Elo): ${m.rating[0]} vs ${m.rating[1]}</span><span>Odehraných zápasů v datech: ${m.games[0]} / ${m.games[1]}</span><span class="${low ? 'fav-weak' : 'fav-mid'}">Spolehlivost: ${low ? 'nízká (málo dat o hráči)' : 'střední (jen model, bez kurzů)'}</span></div></div>`;
+}
+async function renderTennis() {
+  try {
+    const t = await load('tennis'), s = t.summary, b = s.backtest || {};
+    $('#tnInfo').innerHTML = `<b>Tenis.</b> Poslední analýza: ${s.generated_at.replace('T', ' ').slice(0, 16)} (UK čas) · ${s.history_matches} historických zápasů do ${(s.history_to || '').slice(0, 10)}.<div class="note">Zdroj výsledků a kurzů (tennis-data.co.uk) se doplňuje se zpožděním, vlastní předpovědi se proto vyhodnocují až po dnech. Hráči, které systém nezná, se přeskakují.</div>`;
+    $('#tnUp').innerHTML = t.upcoming.length ? t.upcoming.map(tnCard).join('') : '<div class="card empty">Zatím žádné nadcházející zápasy (zdroj ESPN je nevrátil nebo hráči nejsou v datech).</div>';
+    const l = s.live || {};
+    $('#tnLive').innerHTML = kpi('Vyhodnoceno', l.settled || 0, `čeká: ${l.pending || 0}`) + (l.settled ? kpi('Přesnost', pct(l.accuracy), 'trefený favorit') + kpi('Log loss', num(l.log_loss), '') : '');
+    $('#tnSettled').innerHTML = (t.settled || []).length ? `<table><tr><th>Datum</th><th>Zápas</th><th class="n">Vítěz</th><th class="n"></th></tr>` + t.settled.map(r => `<tr><td>${fmtDate(r.date).key.slice(5).replace('-', '.')}.</td><td>${esc(r.a)} – ${esc(r.b)}</td><td class="n">${esc(r.winner)}</td><td class="n ${r.correct ? 'ok' : 'no'}">${r.correct ? '✔' : '✘'}</td></tr>`).join('') + '</table>' : '<div class="empty">Zatím žádný vyhodnocený zápas.</div>';
+    let k = '';
+    if (b.accuracy != null) {
+      k += kpi('Otestováno zápasů', b.matches, 'poslední 2 roky, hráči s aspoň 8 zápasy');
+      k += kpi('Přesnost favorita', pct(b.accuracy), 'náhoda = 50 %' + (b.market_accuracy != null ? ` · kurzy: ${pct(b.market_accuracy)}` : ''));
+      k += kpi('Log loss (nižší = lepší)', num(b.log_loss), 'náhoda: ' + num(b.naive_log_loss) + (b.market_log_loss != null ? ` · kurzy: ${num(b.market_log_loss)}` : ''));
+      if (b.market_n) k += kpi('Naučená váha kurzů', pct(b.weight, 0), `ověřeno na neviděných: model ${num(b.model_log_loss_test)}, kurzy ${num(b.market_log_loss_test)}, směs ${num(b.blend_log_loss_test)}`);
+    } else k = `<div class="card empty">${esc(b.note || 'Zatím nedostatek dat.')}</div>`;
+    $('#tnBt').innerHTML = k;
+  } catch (e) {
+    $('#tnInfo').innerHTML = 'Tenis zatím nemá data. Spusť analýzu (tlačítko nahoře); pokud ani potom nepřibyde, tenisový zdroj se nepodařilo načíst, podrobnosti jsou v logu kroku „Stáhnout data…“.';
+    $('#tnUp').innerHTML = ''; $('#tnLive').innerHTML = ''; $('#tnBt').innerHTML = '';
+  }
+}
+document.querySelectorAll('#tabs .chip').forEach(b => b.onclick = () => {
+  document.querySelectorAll('#tabs .chip').forEach(x => x.classList.toggle('on', x === b));
+  $('#fb').hidden = b.dataset.t !== 'fb'; $('#tn').hidden = b.dataset.t !== 'tn';
+});
+renderTennis();
+/* automatické obnovení dat na stránce každých 5 minut (stránka jen načte nové soubory, analýzu spouští GitHub sám) */
+setInterval(() => { if (!document.hidden) { render(); renderTennis(); } }, 5 * 60 * 1000);
 </script>
 </body>
 </html>

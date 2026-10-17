@@ -10,7 +10,7 @@ from pathlib import Path
 import pandas as pd
 
 import config
-from app import data, demo, evaluate, export, features, stack, tracker
+from app import data, demo, evaluate, export, features, stack, tennis, tracker
 
 
 def london_now() -> pd.Timestamp:
@@ -90,6 +90,11 @@ def main(argv=None) -> None:
         fixtures = data.fetch_fixtures(config.LEAGUES, now, config.UPCOMING_DAYS)
         print(f"Nadcházející zápasy ve zdroji: {len(fixtures)}")
     run(history, fixtures, now, data_dir, Path(args.docs_dir))
+    if not args.demo:
+        try:
+            tennis.run(now, data_dir, Path(args.docs_dir))
+        except Exception as exc:  # noqa: BLE001  tenis nesmí shodit fotbal
+            print(f"VAROVÁNÍ: tenis selhal: {exc}")
 
 
 if __name__ == "__main__":
