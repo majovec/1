@@ -267,7 +267,7 @@ function renderUpcoming() {
   const flag = c => (Object.values(INFO).find(i => i.country === c) || {}).flag || '';
   $('#chips').innerHTML = [['all', 'Vše (' + UP.length + ')'], ...ctys.map(c => [c, `${flag(c)} ${c} (${UP.filter(m => (INFO[m.div] || {}).country === c).length})`])]
     .map(([k, l]) => `<button class="chip ${k === COUNTRY ? 'on' : ''}" data-c="${esc(k)}">${esc(l)}</button>`).join('');
-  document.querySelectorAll('.chip').forEach(b => b.onclick = () => { COUNTRY = b.dataset.c; renderUpcoming(); });
+  document.querySelectorAll('#chips .chip').forEach(b => b.onclick = () => { COUNTRY = b.dataset.c; renderUpcoming(); });
   const sure = $('#sort').value === 'sure';
   let html = '';
   for (const c of ctys) {
