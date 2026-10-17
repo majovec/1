@@ -10,6 +10,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: unpack-zip-main
+  cancel-in-progress: false
+
 jobs:
   unpack:
     runs-on: ubuntu-latest
@@ -17,6 +21,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Extract project files
         shell: bash
@@ -44,12 +51,10 @@ jobs:
             exit 1
           fi
 
-          # Importuj zdrojové soubory, ale nepřepisuj GitHub Actions workflow.
           rsync -a --exclude='.github/workflows/' "$SOURCE_DIR"/ ./
-
           rm -f "$ZIP_FILE"
 
-      - name: Commit project files
+      - name: Commit and push
         shell: bash
         run: |
           set -euo pipefail
@@ -65,4 +70,7 @@ jobs:
           fi
 
           git commit -m "Import project source from ZIP"
-          git push
+
+          # Zkus bezpečně aktualizovat větev, pokud se mezitím změnila.
+          git pull --rebase origin main
+          git push origin HEAD:main
