@@ -134,3 +134,27 @@ def test_features_use_only_past():
     assert np.isnan(f.loc[0, "hform"]) and f.loc[0, "hrest"] != f.loc[0, "hrest"]
     assert f.loc[3, "hform"] == (3 + 3 + 0) / 3        # jen zápasy před čtvrtým
     assert f.loc[3, "hrest"] == 4
+
+
+def test_espn_slug_fallback_and_fail_fast(monkeypatch=None):
+    from app import espn
+    calls = []
+    good = {"events": []}
+    def fake(url, params=None, tries=3):
+        calls.append((url, params))
+        if "sports.core" in url:
+            return 200, {"items": [{"$ref": "http://x/leagues/cze.2?lang=en"}, {"$ref": "http://x/leagues/cze.1?lang=en"}], "pageCount": 1}
+        if "/bad.1/" in url or "/cze.9/" in url:
+            return 400, None
+        return 200, good
+    orig = espn._request
+    espn._request, espn._RESOLVED = fake, {}
+    espn._SLUGS = None
+    try:
+        assert espn.resolve("cze.9") == "cze.1"            # špatný slug se nahradí funkčním ze stejné země
+        assert espn.resolve("bad.1") is None
+        before = len(calls)
+        df = espn.fetch_range("X", "bad.1", pd.Timestamp("2020-01-01"), pd.Timestamp("2024-01-01"))
+        assert df.empty and len(calls) == before            # neexistující liga se nestahuje měsíc po měsíci
+    finally:
+        espn._request = orig
