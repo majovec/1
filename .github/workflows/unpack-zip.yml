@@ -17,10 +17,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          persist-credentials: true
 
-      - name: Find and extract ZIP
+      - name: Extract project files
         shell: bash
         run: |
           set -euo pipefail
@@ -28,28 +26,30 @@ jobs:
           ZIP_FILE="$(find . -maxdepth 1 -type f -iname '*.zip' -print -quit)"
 
           if [ -z "$ZIP_FILE" ]; then
-            echo "V kořenové složce repozitáře není žádný ZIP."
+            echo "ZIP nebyl nalezen v kořenové složce."
             exit 1
           fi
 
-          mkdir -p /tmp/zip-import
-          unzip -q "$ZIP_FILE" -d /tmp/zip-import
+          mkdir -p /tmp/project-import
+          unzip -q "$ZIP_FILE" -d /tmp/project-import
 
-          SOURCE_DIR="/tmp/zip-import/football-ai-analyst-v2"
+          SOURCE_DIR="/tmp/project-import/football-ai-analyst-v2"
 
           if [ ! -d "$SOURCE_DIR" ]; then
-            SOURCE_DIR="$(find /tmp/zip-import -mindepth 1 -maxdepth 1 -type d -print -quit)"
+            SOURCE_DIR="$(find /tmp/project-import -mindepth 1 -maxdepth 1 -type d -print -quit)"
           fi
 
           if [ -z "${SOURCE_DIR:-}" ] || [ ! -d "$SOURCE_DIR" ]; then
-            echo "V ZIPu se nepodařilo najít složku projektu."
+            echo "Nepodařilo se najít složku projektu v ZIPu."
             exit 1
           fi
 
-          cp -a "$SOURCE_DIR"/. .
+          # Importuj zdrojové soubory, ale nepřepisuj GitHub Actions workflow.
+          rsync -a --exclude='.github/workflows/' "$SOURCE_DIR"/ ./
+
           rm -f "$ZIP_FILE"
 
-      - name: Commit extracted project
+      - name: Commit project files
         shell: bash
         run: |
           set -euo pipefail
@@ -60,9 +60,9 @@ jobs:
           git add -A
 
           if git diff --cached --quiet; then
-            echo "Žádné změny k uložení."
+            echo "Není co ukládat."
             exit 0
           fi
 
-          git commit -m "Import project files from ZIP"
+          git commit -m "Import project source from ZIP"
           git push
