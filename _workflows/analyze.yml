@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       leagues:
-        description: "Kódy líg oddělené čárkou, např. E0,D1,SP1,I1,F1 (prázdné = proměnná LEAGUES, jinak E0)"
+        description: "Kódy líg oddělené čárkou, např. E0,D1,SP1,I1,F1 (prázdné = proměnná LEAGUES, jinak výchozí sada včetně české ligy CZ1)"
         required: false
         default: ""
   schedule:
@@ -33,7 +33,7 @@ jobs:
 
       - name: Stáhnout data, otestovat model, předpovědět zápasy
         env:
-          LEAGUES: ${{ inputs.leagues || vars.LEAGUES || 'E0' }}
+          LEAGUES: ${{ inputs.leagues || vars.LEAGUES }}
         run: python -m app.pipeline
 
       - name: Uložit výsledky do repozitáře

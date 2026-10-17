@@ -10,7 +10,7 @@ from pathlib import Path
 import pandas as pd
 
 import config
-from app import data, demo, evaluate, export, tracker
+from app import data, demo, evaluate, export, features, stack, tracker
 
 
 def london_now() -> pd.Timestamp:
@@ -32,11 +32,16 @@ def run(history: pd.DataFrame, fixtures: pd.DataFrame, now: pd.Timestamp, data_d
     finished = history[history["hg"].notna() & history["ag"].notna()].copy()
     log(f"Historie: {len(finished)} dohraných zápasů")
 
+    finished = features.build(finished)
     bt = evaluate.backtest(finished, min_train, half_life, log=log)
+    learned, learn_report = stack.train(bt, evaluate.blend_probs)
+    stack.save(learned, learn_report, Path(data_dir) / "stacker.json")
+    for k, v in learn_report.items():
+        log(f"Učení ({k}): " + ("zapnuto" if v["enabled"] else "vypnuto – " + v.get("reason", "")))
     bt_summary = evaluate.summarise(bt)
     log(bt_summary["verdict"])
 
-    preds = tracker.predict_upcoming(finished, fixtures, now, upcoming_days, half_life)
+    preds = tracker.predict_upcoming(finished, fixtures, now, upcoming_days, half_life, learned)
     log(f"Předpovězeno nadcházejících zápasů: {len(preds)}")
     log_path = Path(data_dir) / "predictions_log.csv"
     plog = tracker.update_log(tracker.load_log(log_path), preds, now)
@@ -48,14 +53,17 @@ def run(history: pd.DataFrame, fixtures: pd.DataFrame, now: pd.Timestamp, data_d
     summary = {
         "generated_at": now,
         "leagues": [{"code": c, "name": config.LEAGUE_NAMES.get(c, c)} for c in leagues],
+        "market_weight": config.MARKET_WEIGHT,
         "history_matches": int(len(finished)),
         "history_from": finished["date"].min() if len(finished) else None,
         "history_to": finished["date"].max() if len(finished) else None,
         "config": {"half_life_days": half_life, "min_train_matches": min_train, "edge_threshold": edge,
                    "upcoming_days": upcoming_days},
         "backtest": bt_summary,
+        "learning": learn_report,
         "live": live,
-        "league_names": {c: config.LEAGUE_NAMES.get(c, c) for c in leagues},
+        "league_info": {c: dict(zip(("country", "flag", "name"), config.LEAGUE_INFO.get(c, (c, "", c)))) for c in leagues},
+        "no_odds": [c for c in leagues if c in config.ESPN_LEAGUES],
     }
     docs_dir = Path(docs_dir)
     export.write_json(docs_dir / "summary.json", summary)
@@ -79,7 +87,7 @@ def main(argv=None) -> None:
     else:
         history = data.fetch_history(config.LEAGUES, config.N_SEASONS, now, data_dir / "matches.csv")
         history.to_csv(data_dir / "matches.csv", index=False)
-        fixtures = data.fetch_fixtures(config.LEAGUES)
+        fixtures = data.fetch_fixtures(config.LEAGUES, now, config.UPCOMING_DAYS)
         print(f"Nadcházející zápasy ve zdroji: {len(fixtures)}")
     run(history, fixtures, now, data_dir, Path(args.docs_dir))
 

@@ -11,6 +11,9 @@ import numpy as np
 import pandas as pd
 import requests
 
+import config
+from app import espn
+
 BASE = "https://www.football-data.co.uk"
 HEADERS = {"User-Agent": "football-ai-analyst/3.0 (GitHub Actions)"}
 COLUMNS = ["div", "date", "home", "away", "hg", "ag", "odds_h", "odds_d", "odds_a"]
@@ -84,8 +87,20 @@ def parse_csv(content: bytes, div_fallback: str = "") -> pd.DataFrame:
 
 def fetch_history(leagues, n_seasons: int, today: pd.Timestamp, cache_path: Path) -> pd.DataFrame:
     """Dohrané zápasy za posledních n sezón. Při výpadku zdroje použije dřívější uloženou kopii."""
+    cached = None
+    if Path(cache_path).exists():
+        cached = pd.read_csv(cache_path, parse_dates=["date"])
     frames = []
     for div in leagues:
+        if div in config.ESPN_LEAGUES:
+            start = today - pd.Timedelta(days=365 * n_seasons)
+            if cached is not None and (cached["div"] == div).any():
+                start = max(start, cached.loc[cached["div"] == div, "date"].max() - pd.Timedelta(days=20))
+            df = espn.fetch_range(div, config.ESPN_LEAGUES[div], start, today)
+            df = df[df["hg"].notna() & df["ag"].notna()]
+            print(f"{div} (ESPN): {len(df)} nových zápasů")
+            frames.append(df)
+            continue
         for code in season_codes(today, n_seasons):
             url = f"{BASE}/mmz4281/{code}/{div}.csv"
             try:
@@ -102,8 +117,7 @@ def fetch_history(leagues, n_seasons: int, today: pd.Timestamp, cache_path: Path
             frames.append(df)
             print(f"{div} {code}: {len(df)} zápasů")
     parts = []
-    if Path(cache_path).exists():
-        cached = pd.read_csv(cache_path, parse_dates=["date"])
+    if cached is not None:
         parts.append(cached[cached["div"].isin(leagues)])
     parts.extend(frames)
     parts = [p for p in parts if len(p)]
@@ -114,17 +128,29 @@ def fetch_history(leagues, n_seasons: int, today: pd.Timestamp, cache_path: Path
     return hist.sort_values("date").reset_index(drop=True)
 
 
-def fetch_fixtures(leagues) -> pd.DataFrame:
-    """Nadcházející zápasy (fixtures.csv obsahuje hlavní evropské ligy na nejbližší dny)."""
-    try:
-        content = _download(f"{BASE}/fixtures.csv")
-    except RuntimeError as exc:
-        print(f"VAROVÁNÍ: {exc}", file=sys.stderr)
+def fetch_fixtures(leagues, now: pd.Timestamp, days: int = 10) -> pd.DataFrame:
+    """Nadcházející zápasy: hlavní ligy z fixtures.csv (s kurzy), ostatní z ESPN (bez kurzů)."""
+    out = []
+    fd = [d for d in leagues if d not in config.ESPN_LEAGUES]
+    if fd:
+        try:
+            content = _download(f"{BASE}/fixtures.csv")
+        except RuntimeError as exc:
+            print(f"VAROVÁNÍ: {exc}", file=sys.stderr)
+            content = None
+        if content is not None:
+            df = parse_csv(content)
+            df = df[df["div"].isin(fd)].copy()
+            df["hg"] = np.nan
+            df["ag"] = np.nan
+            out.append(df)
+    for div in leagues:
+        if div in config.ESPN_LEAGUES:
+            df = espn.fetch_range(div, config.ESPN_LEAGUES[div], now.normalize(), now + pd.Timedelta(days=days + 1))
+            df = df[df["hg"].isna()]
+            print(f"{div} (ESPN): {len(df)} nadcházejících zápasů")
+            out.append(df)
+    out = [o for o in out if len(o)]
+    if not out:
         return pd.DataFrame(columns=COLUMNS)
-    if content is None:
-        return pd.DataFrame(columns=COLUMNS)
-    df = parse_csv(content)
-    df = df[df["div"].isin(leagues)].copy()
-    df["hg"] = np.nan
-    df["ag"] = np.nan
-    return df.reset_index(drop=True)
+    return pd.concat(out, ignore_index=True)

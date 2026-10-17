@@ -5,13 +5,14 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from app.evaluate import EPS, THRESHOLDS, implied_probs, outcome_index, score, value_bets
+from app.evaluate import EPS, blend_probs, THRESHOLDS, implied_probs, outcome_index, score, value_bets
+from app import features, stack
 from app.model import fit, predict
 
 LOG_COLUMNS = [
     "key", "div", "date", "home", "away",
-    "p_home", "p_draw", "p_away", "p_over25", "p_btts", "xg_home", "xg_away", "top_scores",
-    "home_n", "away_n", "odds_h", "odds_d", "odds_a", "created_at", "updated_at",
+    "p_home", "p_draw", "p_away", "pm_h", "pm_d", "pm_a", "p_over25", "p_btts", "xg_home", "xg_away", "top_scores",
+    "home_n", "away_n", "hform", "aform", "hrest", "arest", "odds_h", "odds_d", "odds_a", "created_at", "updated_at",
 ]
 DATE_COLS = ["date", "created_at", "updated_at"]
 
@@ -24,7 +25,11 @@ def load_log(path: Path) -> pd.DataFrame:
     path = Path(path)
     if not path.exists():
         return pd.DataFrame(columns=LOG_COLUMNS)
-    return pd.read_csv(path, parse_dates=DATE_COLS)
+    df = pd.read_csv(path, parse_dates=DATE_COLS)
+    for c in LOG_COLUMNS:
+        if c not in df.columns:
+            df[c] = np.nan
+    return df
 
 
 def save_log(log: pd.DataFrame, path: Path) -> None:
@@ -33,7 +38,7 @@ def save_log(log: pd.DataFrame, path: Path) -> None:
 
 
 def predict_upcoming(finished: pd.DataFrame, fixtures: pd.DataFrame, now: pd.Timestamp,
-                     days: int, half_life: float) -> pd.DataFrame:
+                     days: int, half_life: float, learned: dict = None) -> pd.DataFrame:
     """Předpověď všech zápasů, které začnou v příštích `days` dnech (model učený k okamžiku `now`)."""
     up = fixtures[(fixtures["date"] > now) & (fixtures["date"] <= now + pd.Timedelta(days=days))]
     rows = []
@@ -42,16 +47,31 @@ def predict_upcoming(finished: pd.DataFrame, fixtures: pd.DataFrame, now: pd.Tim
         if hist.empty:
             continue
         model = fit(hist, now, half_life)
+        st = features.state(hist)
         for r in f.itertuples():
             p = predict(model, r.home, r.away)
+            pm = np.array([p["p_home"], p["p_draw"], p["p_away"]])
+            odds = np.array([r.odds_h, r.odds_d, r.odds_a], float)
+            f4 = features.for_fixture(st, r.home, r.away, r.date)
+            if not np.isnan(odds).any():
+                M = implied_probs(odds.reshape(1, 3))
+                pf = stack.apply(learned, "odds", pm.reshape(1, 3), f4, M)
+                if pf is None:
+                    pf = blend_probs(pm.reshape(1, 3), odds.reshape(1, 3))[0]
+            else:
+                pf = stack.apply(learned, "plain", pm.reshape(1, 3), f4)
+                if pf is None:
+                    pf = pm
             rows.append({
                 "key": f"{div}|{r.home}|{r.away}|{season_year(r.date)}",
                 "div": div, "date": r.date, "home": r.home, "away": r.away,
-                "p_home": p["p_home"], "p_draw": p["p_draw"], "p_away": p["p_away"],
+                "p_home": pf[0], "p_draw": pf[1], "p_away": pf[2],
+                "pm_h": pm[0], "pm_d": pm[1], "pm_a": pm[2],
                 "p_over25": p["p_over25"], "p_btts": p["p_btts"],
                 "xg_home": p["xg_home"], "xg_away": p["xg_away"],
                 "top_scores": json.dumps(p["top_scores"]),
                 "home_n": p["home_n"], "away_n": p["away_n"],
+                "hform": f4[0], "aform": f4[1], "hrest": f4[2], "arest": f4[3],
                 "odds_h": r.odds_h, "odds_d": r.odds_d, "odds_a": r.odds_a,
             })
     return pd.DataFrame(rows)
@@ -126,7 +146,7 @@ def settled_rows(settled: pd.DataFrame, limit: int = 150) -> list:
         p = [r.p_home, r.p_draw, r.p_away]
         pick = int(np.argmax(p))
         rows.append({
-            "div": r.div, "date": r.date, "home": r.home, "away": r.away,
+            "div": r.div, "date": r.date + pd.Timedelta(hours=1), "home": r.home, "away": r.away,
             "score": f"{int(r.hg)}:{int(r.ag)}", "p": p, "pick": pick, "actual": int(r.y),
             "correct": pick == int(r.y), "odds": [r.odds_h, r.odds_d, r.odds_a],
         })

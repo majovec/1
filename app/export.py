@@ -9,6 +9,8 @@ import pandas as pd
 
 from app.evaluate import implied_probs
 
+CZ_SHIFT = pd.Timedelta(hours=1)  # britský čas → český (oba přecházejí na letní čas ve stejný den)
+
 
 def clean(o):
     """Převede numpy/pandas typy na čisté JSON (NaN → null)."""
@@ -46,10 +48,12 @@ def upcoming_rows(log: pd.DataFrame, now: pd.Timestamp, edge_threshold: float) -
         p = np.array([r.p_home, r.p_draw, r.p_away])
         odds = np.array([r.odds_h, r.odds_d, r.odds_a], float)
         item = {
-            "div": r.div, "date": r.date, "home": r.home, "away": r.away,
-            "p": p, "xg": [r.xg_home, r.xg_away], "over25": r.p_over25, "btts": r.p_btts,
+            "div": r.div, "date": r.date + CZ_SHIFT, "home": r.home, "away": r.away,
+            "p": p, "model_p": [r.pm_h, r.pm_d, r.pm_a], "xg": [r.xg_home, r.xg_away], "over25": r.p_over25, "btts": r.p_btts,
             "top_scores": json.loads(r.top_scores) if isinstance(r.top_scores, str) else [],
             "low_confidence": bool(min(r.home_n, r.away_n) < 15),
+            "games": [int(r.home_n), int(r.away_n)],
+            "form": [r.hform, r.aform], "rest": [r.hrest, r.arest],
             "odds": None, "market": None, "edge": None, "best": None,
         }
         if not np.isnan(odds).any():

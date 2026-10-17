@@ -82,3 +82,55 @@ def test_log_predictions_frozen_after_kickoff(tmp_path):
     assert len(played) > 0
     for key, row in played.iterrows():  # odehrané zápasy se už nepřepisují
         assert after.loc[key, "p_home"] == row["p_home"]
+
+
+def test_espn_parse_and_blend():
+    from app import espn
+    js = {"events": [
+        {"date": "2026-10-17T15:00Z", "competitions": [{"status": {"type": {"completed": True, "state": "post"}},
+          "competitors": [{"homeAway": "home", "score": "2", "team": {"displayName": "Sparta"}},
+                          {"homeAway": "away", "score": "1", "team": {"displayName": "Slavia"}}]}]},
+        {"date": "2026-10-25T13:00Z", "competitions": [{"status": {"type": {"completed": False, "state": "pre"}},
+          "competitors": [{"homeAway": "home", "score": "0", "team": {"displayName": "Plzeň"}},
+                          {"homeAway": "away", "score": "0", "team": {"displayName": "Baník"}}]}]},
+        {"bad": 1}]}
+    df = espn.parse_events(js, "CZ1")
+    assert len(df) == 2
+    assert df.loc[0, "hg"] == 2 and df.loc[0, "date"] == pd.Timestamp("2026-10-17 16:00")  # UTC -> UK (BST)
+    assert np.isnan(df.loc[1, "hg"])
+    P = np.array([[0.5, 0.3, 0.2]])
+    O = np.array([[1.8, 3.6, 4.5]])
+    B = evaluate.blend_probs(P, O, 0.7)
+    assert abs(B.sum() - 1) < 1e-9
+    assert evaluate.blend_probs(P, O, 0.0)[0, 0] == 0.5
+
+
+def test_stacker_learns_real_signal_and_ignores_noise():
+    from app import stack
+    rng = np.random.default_rng(1)
+    n = 3000
+    P = rng.dirichlet([6, 3, 4], n)
+    hform, aform = rng.uniform(0.5, 2.5, n), rng.uniform(0.5, 2.5, n)
+    nan = np.full(n, np.nan)
+    def outcomes(effect):
+        lh = np.log(P[:, 0] / P[:, 1]) + effect * (hform - aform)
+        la = np.log(P[:, 2] / P[:, 1])
+        z = np.exp(np.column_stack([lh, np.zeros(n), la]))
+        z /= z.sum(axis=1, keepdims=True)
+        return np.array([rng.choice(3, p=r) for r in z])
+    X = stack.features(P, hform, aform, nan, nan)
+    p, rep = stack.train_one(X, outcomes(1.2), False, P)
+    assert rep["enabled"] and p is not None            # skutečný vliv formy se naučí
+    p2, rep2 = stack.train_one(X, outcomes(0.0), False, P)
+    assert not rep2["enabled"]                          # bez vlivu zůstane původní odhad
+
+
+def test_features_use_only_past():
+    from app import features
+    d = pd.DataFrame({"div": "X", "date": pd.to_datetime(["2026-01-01", "2026-01-04", "2026-01-08", "2026-01-12", "2026-01-15"]),
+                      "home": ["A", "A", "A", "A", "A"], "away": ["B", "B", "B", "B", "B"],
+                      "hg": [1, 2, 0, 3, 1], "ag": [0, 0, 1, 1, 1]})
+    f = features.build(d)
+    assert np.isnan(f.loc[0, "hform"]) and f.loc[0, "hrest"] != f.loc[0, "hrest"]
+    assert f.loc[3, "hform"] == (3 + 3 + 0) / 3        # jen zápasy před čtvrtým
+    assert f.loc[3, "hrest"] == 4

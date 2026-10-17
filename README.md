@@ -1,4 +1,4 @@
-# Football AI Analyst v3
+# Football AI Analyst v4
 
 Fotbalový analytik, který běží **zdarma jen na GitHubu** (Actions + Pages), bez serveru a bez API klíče.
 
@@ -21,10 +21,20 @@ Fotbalový analytik, který běží **zdarma jen na GitHubu** (Actions + Pages),
 - Bez nastavení otevře stránku Actions, kde klikneš *Run workflow*.
 - **Na jedno kliknutí:** vytvoř *fine-grained token* (GitHub → Settings → Developer settings → Fine-grained tokens), jen pro tento repozitář, oprávnění **Actions: Read and write**. Vlož ho tlačítkem *Token* na dashboardu. Uloží se jen v tvém prohlížeči. Token drž jen pro tento repozitář a nikomu ho neukazuj.
 
-## Ligy
-Výchozí je Premier League (`E0`). Další: `D1` Bundesliga, `SP1` La Liga, `I1` Serie A, `F1` Ligue 1, `N1`, `P1`, `B1`, `T1` … (seznam v `config.py`).
-Nastavení: **Settings → Secrets and variables → Actions → Variables → New** → `LEAGUES` = `E0,D1,SP1,I1,F1`.
-Další volitelné proměnné: `N_SEASONS`, `HALF_LIFE_DAYS`, `EDGE_THRESHOLD`, `UPCOMING_DAYS`.
+## Ligy a země (v4)
+Výchozí sada: 🇨🇿 Fortuna liga (`CZ1`), Premier League, Bundesliga, La Liga, Serie A, Ligue 1, Eredivisie, Belgie, Portugalsko, Turecko, Skotsko, Rakousko, Dánsko, Polsko, Švýcarsko.
+- **Hlavní ligy** (`E0 D1 SP1 I1 F1 N1 B1 P1 T1 G1 SC0 E1 D2 SP2 I2 F2`) jdou z football-data.co.uk **s kurzy bookmakerů**.
+- **Česká liga a menší ligy** (`CZ1 AT1 DK1 PL1 SE1 NO1 CH1 SK1`) jdou z veřejného ESPN API **bez kurzů** (`ESPN_LEAGUES` v `config.py`). Pokud ESPN danou ligu nevrátí, workflow ji přeskočí a vypíše varování do logu.
+- Změna sady: **Settings → Secrets and variables → Actions → Variables** → `LEAGUES` = `CZ1,E0,D1`.
+- Další proměnné: `N_SEASONS`, `HALF_LIFE_DAYS`, `EDGE_THRESHOLD`, `UPCOMING_DAYS`, `MARKET_WEIGHT` (0–1, výchozí 0,7).
+
+## Co se systém učí (v5)
+- **Forma** (body z posledních 5 zápasů) a **odpočinek** (dny od posledního zápasu) se počítají jen z dřívějších zápasů.
+- Malá učící vrstva (`app/stack.py`) se při každém běhu znovu naučí z backtestu, jak vážit model, formu, odpočinek a kurzy trhu. Učení se **zapne jen tehdy, když zlepší výsledek na posledních 30 % zápasů, které při učení neviděla**. Výsledek je v `data/stacker.json` a na dashboardu v sekci „Co se systém naučil“.
+- Vlastní předpovědi se dál ukládají a vyhodnocují (`data/predictions_log.csv`), nejdou zpětně přepsat.
+
+## Jak vzniká odhad
+U lig s kurzy se odhad modelu míchá s kurzy trhu bez marže (70 % trh, 30 % model), protože trh je v praxi nejpřesnější. U lig bez kurzů (Česko) je to jen model, proto je tam spolehlivost označena jako „střední“. Dashboard u každého zápasu ukazuje i **férový kurz** (1 ÷ pravděpodobnost) k porovnání s kurzem, který ti někdo nabízí.
 
 ## Jak číst výsledky
 - **Log loss** (nižší = lepší) je hlavní měřítko. Porovnávej model s „naivně“ a s „kurzy“. Pokud kurzy vyhrávají (běžné), model sám o sobě peníze nevydělá.

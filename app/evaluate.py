@@ -2,6 +2,8 @@
 import numpy as np
 import pandas as pd
 
+import config
+from app import features
 from app.model import fit, predict
 
 EPS = 1e-12
@@ -31,6 +33,13 @@ def implied_probs(odds):
     return inv / inv.sum(axis=1, keepdims=True)
 
 
+def blend_probs(P, O, w=None):
+    """Smíchá model s trhem: w * (kurzy bez marže) + (1-w) * model. Trh je v praxi přesnější než samotný model."""
+    w = config.MARKET_WEIGHT if w is None else w
+    out = w * implied_probs(O) + (1 - w) * np.asarray(P, float)
+    return out / out.sum(axis=1, keepdims=True)
+
+
 def value_bets(P, O, y, thresholds=THRESHOLDS):
     """Plochá sázka 1 jednotky na výsledek s největší očekávanou výhodou p*kurz-1 >= práh."""
     ev = P * O - 1.0
@@ -53,6 +62,8 @@ def value_bets(P, O, y, thresholds=THRESHOLDS):
 def backtest(finished: pd.DataFrame, min_train: int = 300, half_life: float = 450.0, log=print) -> pd.DataFrame:
     """Každý zápas se předpovídá jen z dřívějších dnů. Prvních `min_train` zápasů ligy slouží jen k učení."""
     rows = []
+    if "hform" not in finished.columns:
+        finished = features.build(finished)
     for div, g in finished.groupby("div"):
         g = g.sort_values("date").reset_index(drop=True)
         if len(g) <= min_train:
@@ -72,6 +83,7 @@ def backtest(finished: pd.DataFrame, min_train: int = 300, half_life: float = 45
                     "p_h": p["p_home"], "p_d": p["p_draw"], "p_a": p["p_away"],
                     "b_h": base[0], "b_d": base[1], "b_a": base[2],
                     "o_h": r.odds_h, "o_d": r.odds_d, "o_a": r.odds_a,
+                    "hform": r.hform, "aform": r.aform, "hrest": r.hrest, "arest": r.arest,
                     "p_over25": p["p_over25"], "p_btts": p["p_btts"],
                     "over25": int(r.hg + r.ag >= 3), "btts": int(r.hg > 0 and r.ag > 0),
                 })
@@ -143,6 +155,7 @@ def summarise(bt: pd.DataFrame) -> dict:
         O = bt.loc[has, ["o_h", "o_d", "o_a"]].to_numpy(float)
         out["market"] = score(implied_probs(O), y[has])
         out["model_on_market_subset"] = score(P[has], y[has])
-        out["value_bets"] = value_bets(P[has], O, y[has])
+        out["blend"] = score(blend_probs(P[has], O), y[has])
+        out["value_bets"] = value_bets(blend_probs(P[has], O), O, y[has])
     out["verdict"] = verdict(out)
     return out

@@ -45,6 +45,18 @@ td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media(max-width:700px){.two{grid-template-columns:1fr}}
 #status{font-size:13px;color:var(--mute);min-height:18px;margin:4px 0 0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.chip{background:var(--card);color:var(--ink);border:1px solid var(--line);font-weight:500;padding:6px 11px;font-size:13px;border-radius:999px}
+.chip.on{background:var(--h);color:#fff;border-color:var(--h)}
+.cty{font-size:18px;font-weight:700;margin:26px 0 4px}
+.say{margin-top:8px;font-size:13.5px}
+.say b{font-weight:700}
+.fav-strong{color:var(--good)}.fav-mid{color:var(--warn)}.fav-weak{color:var(--mute)}
+.fair{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:8px;font-size:12.5px;text-align:center}
+.fair div{background:var(--bg);border-radius:8px;padding:5px 4px}
+.fair small{display:block;color:var(--mute);font-size:11px}
+.gl dt{font-weight:700;margin-top:10px}.gl dd{margin:2px 0 0;color:var(--mute);font-size:13.5px}
+select{font:inherit;padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
 footer{color:var(--mute);font-size:12.5px;margin-top:30px}
 svg text{fill:var(--mute);font-size:10px}
 </style>
@@ -65,12 +77,30 @@ svg text{fill:var(--mute);font-size:10px}
 
 <div class="card verdict" id="verdict" style="margin-top:14px"></div>
 
+<details class="card" style="margin-top:12px"><summary style="margin:0;font-size:14px;color:var(--ink);font-weight:600">📖 Jak to číst (vysvětlení pro začátečníky)</summary>
+<dl class="gl">
+<dt>1 / X / 2</dt><dd>1 = vyhraje domácí tým, X = remíza, 2 = vyhraje host. Procenta říkají, jak moc tomu model věří. Čísla v barevném pruhu dávají dohromady 100 %.</dd>
+<dt>Kurz a férový kurz</dt><dd>Kurz je cena, kterou platí sázkovka (kurz 2,00 = z 1 Kč dostaneš 2 Kč zpět). „Férový kurz“ je 1 ÷ pravděpodobnost, tedy kurz bez marže. Pokud ti skupina nebo sázkovka nabízí <b>vyšší</b> kurz, než je férový, je to dobrá cena; pokud <b>nižší</b>, přeplácíš.</dd>
+<dt>Jistota (favorit)</dt><dd>Nad 60 % = silný favorit, 45–60 % = mírný favorit, pod 45 % = vyrovnaný zápas, kde se nedá moc věřit nikomu. I při 70 % jistotě to <b>vyjde jen v 7 případech z 10</b>; zbylé 3 z 10 prostě nevyjdou.</dd>
+<dt>Over 2,5 / Under 2,5</dt><dd>Over 2,5 = v zápase padnou 3 a více gólů dohromady. Under = 2 a méně.</dd>
+<dt>BTTS</dt><dd>„Both Teams To Score“ = skórují oba týmy (aspoň jeden gól každý).</dd>
+<dt>1X / X2 (dvojitá šance)</dt><dd>1X = domácí vyhrají nebo remíza (neprohrají). X2 = hosté vyhrají nebo remíza. Bezpečnější, ale kurz je nižší.</dd>
+<dt>Očekávané góly</dt><dd>Kolik gólů model čeká od každého týmu (třeba 1,6 : 0,9). Nejde o tip na přesný výsledek.</dd>
+<dt>Hodnota (value)</dt><dd>Zápas se označí, když je kurz sázkovky vyšší, než by měl být podle odhadu. U lig s kurzy model míchá vlastní odhad s trhem, takže tohle vyskočí zřídka, a to je záměr.</dd>
+<dt>Spolehlivost odhadu</dt><dd><b>Vysoká</b> = liga s kurzy trhu + dost historie. <b>Střední</b> = jen model (např. česká liga, kde zdroj kurzy nemá). <b>Nízká</b> = tým má málo odehraných zápasů.</dd>
+</dl></details>
+
 <h2>Nadcházející zápasy</h2>
+<div class="chips" id="chips"></div>
+<div class="sub">Řazení: <select id="sort"><option value="time">podle času</option><option value="sure">nejjistější nahoře</option></select> · časy jsou český čas</div>
 <div id="upcoming"></div>
 
 <h2>Úspěšnost mých vlastních předpovědí</h2>
 <div class="grid" id="liveKpi"></div>
 <div class="card" style="margin-top:12px;overflow-x:auto"><div id="settled"></div></div>
+
+<h2>Co se systém naučil</h2>
+<div class="card" id="learn"></div>
 
 <h2>Historický test (backtest)</h2>
 <div class="grid" id="btKpi"></div>
@@ -81,7 +111,7 @@ svg text{fill:var(--mute);font-size:10px}
 
 <footer>
   Pravděpodobnostní odhady nejsou jisté tipy. Model je jednoduchý (góly, síla týmů, domácí prostředí) a bookmakeři mají víc informací.
-  Kurzy jsou průměr trhu z football-data.co.uk. Časy zápasů jsou britský čas. Nic z toho není finanční poradenství.
+  Kurzy jsou průměr trhu z football-data.co.uk (jen hlavní ligy). Česká liga a menší ligy jdou z ESPN bez kurzů, tam je odhad jen z modelu. Časy zápasů jsou český čas. Nic z toho není finanční poradenství.
 </footer>
 </div>
 
@@ -118,6 +148,15 @@ function renderVerdict(s) {
 
 function kpi(l, v, sub) { return `<div class="card kpi"><div class="l">${l}</div><div class="v">${v}</div><div class="s">${sub || ''}</div></div>`; }
 
+function renderLearn(s) {
+  const L = s.learning || {}, nm = { plain: 'Ligy bez kurzů (např. Česko)', odds: 'Ligy s kurzy trhu' };
+  const keys = Object.keys(L);
+  if (!keys.length) { $('#learn').innerHTML = '<div class="empty">Zatím málo dat k učení.</div>'; return; }
+  $('#learn').innerHTML = `<div class="sub">Při každém spuštění se systém znovu učí z historie: zkouší, jestli forma týmů, odpočinek a kurzy trhu zlepšují odhad. Změnu použije <b>jen když pomůže na zápasech, které při učení neviděl</b>. Jinak zůstane u původního odhadu.</div>` +
+    keys.map(k => { const v = L[k]; return `<div class="say"><b>${nm[k] || k}:</b> ` + (v.enabled
+      ? `<span class="ok">učení zapnuto</span> (log loss ${num(v.base_log_loss)} → ${num(v.learned_log_loss)} na ${v.test_rows} neviděných zápasech)`
+      : `<span class="fav-weak">zatím vypnuto</span> – ${esc(v.reason || '')}${v.base_log_loss != null ? ` (původní ${num(v.base_log_loss)}, naučené ${num(v.learned_log_loss)})` : ''}`) + `</div>`; }).join('');
+}
 function renderBacktest(s) {
   const b = s.backtest || {};
   if (!b.model) { $('#btKpi').innerHTML = '<div class="card empty">Zatím nedostatek dat pro backtest.</div>'; return; }
@@ -166,31 +205,78 @@ function renderSettled(rows) {
     rows.map(r => `<tr><td>${fmtDate(r.date).key.slice(5).replace('-', '.')}.</td><td>${esc(r.home)} – ${esc(r.away)}</td><td class="n">${r.score}</td><td class="n">${PICK[r.pick]}</td><td class="n">${pct(r.p[r.pick], 0)}</td><td class="n ${r.correct ? 'ok' : 'no'}">${r.correct ? '✔' : '✘'}</td></tr>`).join('') + `</table>`;
 }
 
-function renderUpcoming(u, names) {
-  const ms = u.matches || [];
-  if (!ms.length) { $('#upcoming').innerHTML = '<div class="card empty">Žádné nadcházející zápasy v nejbližších dnech. Zdroj dat zveřejňuje jen zápasy na pár dní dopředu; zkus to později nebo spusť analýzu znovu.</div>'; return; }
-  let html = '', last = '';
-  for (const m of ms) {
-    const f = fmtDate(m.date);
-    if (f.key !== last) { html += `<div class="day">${f.day}</div>`; last = f.key; }
-    const best = m.best && m.best.flag ? `<span class="tag val">hodnota: ${PICK[m.best.pick]} (+${(m.best.edge * 100).toFixed(0)} % proti kurzu ${m.best.odds.toFixed(2)})</span>` : '';
-    const low = m.low_confidence ? '<span class="tag low">málo historie týmu</span>' : '';
-    const odds = m.odds ? `kurzy ${m.odds.map(o => o.toFixed(2)).join(' / ')}` : 'kurzy nejsou k dispozici';
-    const mk = m.market ? `trh: ${m.market.map(v => Math.round(v * 100)).join(' / ')} %` : '';
-    html += `<div class="card match"><div class="top"><span>${esc(names[m.div] || m.div)}</span><span>${f.time}</span></div>
-      <div class="teams">${esc(m.home)} – ${esc(m.away)}</div>${bar(m.p)}
-      <div class="meta"><span>1 / X / 2 (model)</span><span>${mk}</span><span>${odds}</span></div>
-      <div class="meta"><span>očekávané góly ${m.xg[0].toFixed(2)} : ${m.xg[1].toFixed(2)}</span><span>Over 2,5: ${pct(m.over25, 0)}</span><span>BTTS: ${pct(m.btts, 0)}</span>${best}${low}</div>
-      <details><summary>Nejpravděpodobnější skóre</summary><div class="meta">${m.top_scores.map(t => `<span>${t.score} (${pct(t.p, 0)})</span>`).join('')}</div></details></div>`;
-  }
-  $('#upcoming').innerHTML = html;
+let UP = [], INFO = {}, COUNTRY = 'all';
+const fair = p => p > 0.005 ? (1 / p).toFixed(2) : '–';
+const REL = { high: ['Vysoká', 'fav-strong'], mid: ['Střední (bez kurzů trhu)', 'fav-mid'], low: ['Nízká (málo historie)', 'fav-weak'] };
+function reliability(m) { if (m.low_confidence) return 'low'; return m.odds ? 'high' : 'mid'; }
+function say(m) {
+  const k = m.p.indexOf(Math.max(...m.p)), pr = m.p[k];
+  const who = k === 0 ? `domácí (${esc(m.home)})` : k === 2 ? `hosté (${esc(m.away)})` : 'remíza';
+  let cls, txt;
+  if (pr >= .6) { cls = 'fav-strong'; txt = `silný favorit: ${who}`; }
+  else if (pr >= .45) { cls = 'fav-mid'; txt = `mírný favorit: ${who}`; }
+  else { cls = 'fav-weak'; txt = 'vyrovnaný zápas, jasný favorit není'; }
+  const dc = k === 2 ? ['X2', m.p[1] + m.p[2]] : ['1X', m.p[0] + m.p[1]];
+  return `<div class="say"><b class="${cls}">Tip modelu (${PICK[k]}): ${txt}</b> – ${Math.round(pr * 100)} %. ` +
+    `Z 10 takových zápasů vyjde zhruba ${Math.round(pr * 10)}.<br><span class="sub">Bezpečnější varianta ${dc[0]}: ${Math.round(dc[1] * 100)} % (férový kurz ${fair(dc[1])}). ` +
+    `Gólů čekej celkem ${(m.xg[0] + m.xg[1]).toFixed(1)}; ${m.over25 >= .5 ? 'spíš 3 a více (Over 2,5)' : 'spíš 2 a méně (Under 2,5)'}; ${m.btts >= .5 ? 'skórovat budou asi oba týmy' : 'aspoň jeden tým asi skórovat nebude'}.</span></div>`;
 }
+function formLine(m) {
+  const f = m.form || [], r = m.rest || [], bits = [];
+  if (f[0] != null && f[1] != null) {
+    const d = f[0] - f[1];
+    bits.push(`Forma (body na zápas z posledních 5, max 3): domácí ${f[0].toFixed(1)}, hosté ${f[1].toFixed(1)}` + (Math.abs(d) >= .8 ? (d > 0 ? ' → domácí jsou ve výrazně lepší formě' : ' → hosté jsou ve výrazně lepší formě') : ''));
+  }
+  if (r[0] != null && r[1] != null) {
+    const d = r[0] - r[1];
+    bits.push(`Odpočinek: domácí ${Math.round(r[0])} dní, hosté ${Math.round(r[1])} dní` + (Math.abs(d) >= 3 ? (d > 0 ? ' → domácí odpočatější' : ' → hosté odpočatější') : ''));
+  }
+  return bits.length ? `<div class="meta">${bits.map(b => `<span>${b}</span>`).join('')}</div>` : '';
+}
+function matchCard(m) {
+  const f = fmtDate(m.date), rel = REL[reliability(m)];
+  const best = m.best && m.best.flag ? `<span class="tag val">hodnota: ${PICK[m.best.pick]} (+${(m.best.edge * 100).toFixed(0)} % proti kurzu ${m.best.odds.toFixed(2)})</span>` : '';
+  const odds = m.odds ? `kurzy trhu ${m.odds.map(o => o.toFixed(2)).join(' / ')}` : 'kurzy trhu nejsou k dispozici';
+  const lg = INFO[m.div] || {};
+  return `<div class="card match"><div class="top"><span>${esc(lg.name || m.div)}</span><span>${f.time}</span></div>
+    <div class="teams">${esc(m.home)} – ${esc(m.away)}</div>${bar(m.p)}
+    <div class="fair"><div><small>1 domácí · férový kurz</small><b>${fair(m.p[0])}</b></div><div><small>X remíza</small><b>${fair(m.p[1])}</b></div><div><small>2 host</small><b>${fair(m.p[2])}</b></div></div>
+    ${say(m)}
+    ${formLine(m)}<div class="meta"><span>Over 2,5: ${pct(m.over25, 0)}</span><span>BTTS: ${pct(m.btts, 0)}</span><span>${odds}</span><span class="${rel[1]}">Spolehlivost: ${rel[0]}</span>${best}</div>
+    <details><summary>Nejpravděpodobnější přesné skóre</summary><div class="meta">${m.top_scores.map(t => `<span>${t.score} (${pct(t.p, 0)})</span>`).join('')}</div></details></div>`;
+}
+function renderUpcoming() {
+  const el = $('#upcoming');
+  if (!UP.length) { el.innerHTML = '<div class="card empty">Žádné nadcházející zápasy v nejbližších dnech. Zdroje zveřejňují zápasy jen pár dní dopředu; zkus to později nebo spusť analýzu znovu.</div>'; $('#chips').innerHTML = ''; return; }
+  const order = Object.keys(INFO), ctys = [];
+  UP.slice().sort((a, b) => order.indexOf(a.div) - order.indexOf(b.div)).forEach(m => { const c = (INFO[m.div] || {}).country || m.div; if (!ctys.includes(c)) ctys.push(c); });
+  const flag = c => (Object.values(INFO).find(i => i.country === c) || {}).flag || '';
+  $('#chips').innerHTML = [['all', 'Vše (' + UP.length + ')'], ...ctys.map(c => [c, `${flag(c)} ${c} (${UP.filter(m => (INFO[m.div] || {}).country === c).length})`])]
+    .map(([k, l]) => `<button class="chip ${k === COUNTRY ? 'on' : ''}" data-c="${esc(k)}">${esc(l)}</button>`).join('');
+  document.querySelectorAll('.chip').forEach(b => b.onclick = () => { COUNTRY = b.dataset.c; renderUpcoming(); });
+  const sure = $('#sort').value === 'sure';
+  let html = '';
+  for (const c of ctys) {
+    if (COUNTRY !== 'all' && COUNTRY !== c) continue;
+    const ms = UP.filter(m => (INFO[m.div] || {}).country === c);
+    if (sure) ms.sort((a, b) => Math.max(...b.p) - Math.max(...a.p)); else ms.sort((a, b) => a.date.localeCompare(b.date));
+    html += `<div class="cty">${flag(c)} ${esc(c)}</div>`;
+    let last = '';
+    for (const m of ms) {
+      const f = fmtDate(m.date);
+      if (!sure && f.key !== last) { html += `<div class="day">${f.day}</div>`; last = f.key; }
+      html += matchCard(m);
+    }
+  }
+  el.innerHTML = html;
+}
+$('#sort').onchange = renderUpcoming;
 
 async function render() {
   try {
     const [s, u, st] = await Promise.all([load('summary'), load('upcoming'), load('settled')]);
     SUMMARY = s;
-    renderVerdict(s); renderUpcoming(u, s.league_names || {}); renderLive(s); renderSettled(st.matches || []); renderBacktest(s);
+    renderVerdict(s); UP = u.matches || []; INFO = s.league_info || {}; renderUpcoming(); renderLive(s); renderLearn(s); renderSettled(st.matches || []); renderBacktest(s);
   } catch (e) {
     $('#asof').textContent = 'Zatím nejsou k dispozici žádná data.';
     $('#verdict').innerHTML = 'Spusť první analýzu: tlačítko nahoře (nebo GitHub → Actions → „Analyze“ → Run workflow). Trvá to asi 2–3 minuty, pak stránku obnov.';
