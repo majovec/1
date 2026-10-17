@@ -1,0 +1,76 @@
+name: Unpack ZIP
+
+# Rozbalí ZIP nahraný do repozitáře a výsledek commitne.
+# GitHub nedovolí běžnému tokenu měnit složku .github/workflows, proto se ta při rozbalení přeskakuje
+# (pokud nemáš tajný klíč PAT_TOKEN s právem "workflow"; pak se rozbalí i ona).
+
+on:
+  workflow_dispatch:
+    inputs:
+      zip_path:
+        description: "Cesta k ZIP souboru v repozitáři (např. upload/soubory.zip)"
+        required: true
+        default: "upload/soubory.zip"
+      target_dir:
+        description: "Cílová složka (. = kořen repozitáře)"
+        required: true
+        default: "."
+      delete_zip:
+        description: "Smazat ZIP po rozbalení?"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT_TOKEN || github.token }}
+
+      - name: Rozbalit ZIP
+        env:
+          ZIP_PATH: ${{ inputs.zip_path }}
+          TARGET_DIR: ${{ inputs.target_dir }}
+          HAS_PAT: ${{ secrets.PAT_TOKEN != '' }}
+        run: |
+          set -e
+          [ -f "$ZIP_PATH" ] || { echo "ZIP $ZIP_PATH nebyl nalezen!"; exit 1; }
+          tmp="$(mktemp -d)"
+          unzip -q -o "$ZIP_PATH" -d "$tmp"
+          # Pokud je v ZIPu jediná složka (např. projekt/), vezmeme její obsah.
+          if [ "$(ls -A "$tmp" | wc -l)" = "1" ] && [ -d "$tmp/$(ls -A "$tmp")" ]; then
+            src="$tmp/$(ls -A "$tmp")"
+          else
+            src="$tmp"
+          fi
+          if [ "$HAS_PAT" != "true" ] && [ -d "$src/.github" ]; then
+            echo "Přeskakuji .github (chybí PAT_TOKEN)."
+            rm -rf "$src/.github"
+          fi
+          mkdir -p "$TARGET_DIR"
+          cp -a "$src/." "$TARGET_DIR/"
+
+      - name: Smazat ZIP
+        if: ${{ inputs.delete_zip }}
+        env:
+          ZIP_PATH: ${{ inputs.zip_path }}
+        run: git rm -f -q "$ZIP_PATH"
+
+      - name: Commit a push
+        env:
+          ZIP_PATH: ${{ inputs.zip_path }}
+          TARGET_DIR: ${{ inputs.target_dir }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Žádné změny."
+          else
+            git commit -m "Rozbalen $ZIP_PATH do $TARGET_DIR"
+            git push
+          fi
