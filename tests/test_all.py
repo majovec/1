@@ -268,3 +268,26 @@ def test_espn_day_mode_skips_league_without_data_and_is_fast():
         assert len(df) > 20 and df["hg"].notna().all()
     finally:
         espn._request = orig
+
+
+def test_tsdb_league_pick_parse_and_season():
+    from app import tsdb
+    js = {"countries": [{"idLeague": "1", "strLeague": "Czech National Football League", "strSport": "Soccer"},
+                        {"idLeague": "2", "strLeague": "Czech First League", "strSport": "Soccer"},
+                        {"idLeague": "3", "strLeague": "Czech Cup", "strSport": "Soccer"}]}
+    assert tsdb.pick_league(js, ["Czech First"])[0] == "2"
+    now = pd.Timestamp("2026-10-18 12:00")
+    def ev(d, h, a, hs, as_, st):
+        return {"strHomeTeam": h, "strAwayTeam": a, "intHomeScore": hs, "intAwayScore": as_, "strStatus": st,
+                "strTimestamp": f"{d}T15:00:00"}
+    rounds = {1: [ev("2026-08-01", "Sparta", "Slavia", "2", "1", "Match Finished")],
+              2: [ev("2026-08-08", "Plzeň", "Baník", "0", "0", "Match Finished"), ev("2026-08-09", "A", "B", None, None, "Postponed")],
+              3: [ev("2026-10-25", "Sparta", "Plzeň", None, None, "Not Started")]}
+    orig = tsdb._get
+    tsdb._get = lambda path, params=None: {"events": rounds.get(params.get("r"))} if path == "eventsround.php" else None
+    try:
+        df = tsdb.fetch_season("2", "2026-2027", "CZ1", now)
+        assert len(df) == 3                                    # odložený zápas se nepočítá
+        assert df["hg"].notna().sum() == 2 and df.iloc[0]["hg"] == 2   # budoucí zápas je rozpis bez výsledku
+    finally:
+        tsdb._get = orig

@@ -63,7 +63,7 @@ def run(history: pd.DataFrame, fixtures: pd.DataFrame, now: pd.Timestamp, data_d
         "learning": learn_report,
         "live": live,
         "league_info": {c: dict(zip(("country", "flag", "name"), config.LEAGUE_INFO.get(c, (c, "", c)))) for c in leagues},
-        "no_odds": [c for c in leagues if c in config.ESPN_LEAGUES],
+        "no_odds": [c for c in leagues if c in config.ESPN_LEAGUES or c in config.TSDB_LEAGUES],
     }
     docs_dir = Path(docs_dir)
     export.write_json(docs_dir / "summary.json", summary)

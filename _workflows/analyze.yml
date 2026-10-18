@@ -34,6 +34,7 @@ jobs:
       - name: Stáhnout data, otestovat model, předpovědět zápasy
         env:
           LEAGUES: ${{ inputs.leagues || vars.LEAGUES }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: python -m app.pipeline
 
       - name: Uložit výsledky do repozitáře

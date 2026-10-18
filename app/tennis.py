@@ -96,6 +96,34 @@ def parse_sackmann(raw: pd.DataFrame, tour: str) -> pd.DataFrame:
     return out.dropna(subset=["date"])[COLS]
 
 
+_SACK_FILES = {}
+
+
+def sack_files(repo: str, prefix: str) -> dict:
+    """Seznam souborů {rok: download_url} přímo z GitHub API (nemusíme hádat větev ani cestu)."""
+    if repo in _SACK_FILES:
+        return _SACK_FILES[repo]
+    import os
+    hdr = dict(BROWSER, Accept="application/vnd.github+json")
+    if os.environ.get("GITHUB_TOKEN"):
+        hdr["Authorization"] = f"Bearer {os.environ['GITHUB_TOKEN']}"
+    out = {}
+    try:
+        r = requests.get(f"https://api.github.com/repos/JeffSackmann/{repo}/contents/", headers=hdr, timeout=60)
+        if r.status_code == 200:
+            for it in r.json():
+                m = re.fullmatch(rf"{prefix}_matches_(\d{{4}})\.csv", it.get("name", ""))
+                if m and it.get("download_url"):
+                    out[int(m.group(1))] = it["download_url"]
+            print(f"Tenis (sack) {repo}: nalezeno souborů: {len(out)}" + (f", nejnovější rok {max(out)}" if out else ""))
+        else:
+            print(f"  GitHub API {repo} → HTTP {r.status_code} {r.text[:120]}", file=sys.stderr)
+    except Exception as exc:  # noqa: BLE001
+        print(f"  GitHub API {repo}: {type(exc).__name__}: {str(exc)[:80]}", file=sys.stderr)
+    _SACK_FILES[repo] = out
+    return out
+
+
 def _collect(today, years, source):
     frames = []
     for tour in TOURS:
@@ -103,7 +131,9 @@ def _collect(today, years, source):
             if source == "td":
                 urls = [f"{pre}://{host}/{TOURS[tour].format(y=y)}" for pre in ("https", "http") for host in ("www.tennis-data.co.uk", "tennis-data.co.uk")]
             else:
-                urls = SACK[tour].format(y=y)
+                found = sack_files(f"tennis_{tour}", tour).get(y)
+                urls = ([found] if found else []) + [SACK[tour].format(y=y), SACK[tour].format(y=y).replace("/master/", "/refs/heads/master/"),
+                                                      SACK[tour].format(y=y).replace("/master/", "/main/")]
             content = _download(urls)
             if content is None:
                 print(f"Tenis ({source}): {tour} {y} nelze stáhnout.", file=sys.stderr)

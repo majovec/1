@@ -12,7 +12,7 @@ import pandas as pd
 import requests
 
 import config
-from app import espn
+from app import espn, tsdb
 
 BASE = "https://www.football-data.co.uk"
 HEADERS = {"User-Agent": "football-ai-analyst/3.0 (GitHub Actions)"}
@@ -92,6 +92,12 @@ def fetch_history(leagues, n_seasons: int, today: pd.Timestamp, cache_path: Path
         cached = pd.read_csv(cache_path, parse_dates=["date"])
     frames = []
     for div in leagues:
+        if div in config.TSDB_LEAGUES:
+            ctry, kws = config.TSDB_LEAGUES[div]
+            have = cached is not None and (cached["div"] == div).any()
+            df = tsdb.fetch_history(div, ctry, kws, today, n_seasons, have)
+            frames.append(df)
+            continue
         if div in config.ESPN_LEAGUES:
             start = today - pd.Timedelta(days=365 * n_seasons)
             if cached is not None and (cached["div"] == div).any():
@@ -131,7 +137,7 @@ def fetch_history(leagues, n_seasons: int, today: pd.Timestamp, cache_path: Path
 def fetch_fixtures(leagues, now: pd.Timestamp, days: int = 10) -> pd.DataFrame:
     """Nadcházející zápasy: hlavní ligy z fixtures.csv (s kurzy), ostatní z ESPN (bez kurzů)."""
     out = []
-    fd = [d for d in leagues if d not in config.ESPN_LEAGUES]
+    fd = [d for d in leagues if d not in config.ESPN_LEAGUES and d not in config.TSDB_LEAGUES]
     if fd:
         try:
             content = _download(f"{BASE}/fixtures.csv")
@@ -145,6 +151,9 @@ def fetch_fixtures(leagues, now: pd.Timestamp, days: int = 10) -> pd.DataFrame:
             df["ag"] = np.nan
             out.append(df)
     for div in leagues:
+        if div in config.TSDB_LEAGUES:
+            ctry, kws = config.TSDB_LEAGUES[div]
+            out.append(tsdb.fetch_upcoming(div, ctry, kws, now, days))
         if div in config.ESPN_LEAGUES:
             df = espn.fetch_range(div, config.ESPN_LEAGUES[div], now.normalize(), now + pd.Timedelta(days=days + 1))
             df = df[df["hg"].isna()]

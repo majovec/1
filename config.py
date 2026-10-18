@@ -26,8 +26,12 @@ LEAGUE_INFO = {
 LEAGUE_NAMES = {k: f"{v[2]} ({v[0]})" for k, v in LEAGUE_INFO.items()}
 
 # Ligy bez football-data.co.uk: kód → ESPN slug (https://site.api.espn.com/apis/site/v2/sports/soccer/<slug>/scoreboard)
-ESPN_LEAGUES = {"CZ1": "cze.1", "AT1": "aut.1", "DK1": "den.1", "PL1": "pol.1", "SE1": "swe.1",
-                "NO1": "nor.1", "CH1": "sui.1", "SK1": "svk.1"}
+ESPN_LEAGUES = {"AT1": "aut.1", "DK1": "den.1", "SE1": "swe.1", "NO1": "nor.1"}
+# Ligy z TheSportsDB (bezplatné API): kód → (země pro vyhledání, klíčová slova v názvu ligy). ESPN české, polské ani švýcarské ligy nevrací.
+TSDB_LEAGUES = {"CZ1": ("Czech_Republic", ["Czech First", "Fortuna", "Chance"]),
+                "PL1": ("Poland", ["Ekstraklasa", "Polish"]),
+                "CH1": ("Switzerland", ["Swiss Super", "Super League"]),
+                "SK1": ("Slovakia", ["Slovak First", "Niké", "Nike", "Fortuna"])}
 
 DEFAULT_LEAGUES = "CZ1,E0,D1,SP1,I1,F1,N1,B1,P1,T1,SC0,AT1,DK1,PL1,CH1"
 

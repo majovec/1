@@ -150,8 +150,8 @@ def _fetch_days(div: str, slug: str, start: pd.Timestamp, end: pd.Timestamp) -> 
     """Po jednom dni, paralelně (8 vláken). U delší historie nejdřív zkontroluje posledních 75 dní:
     když tam ESPN nevrátí žádný zápas, liga se přeskočí (ušetří stovky zbytečných dotazů)."""
     end = end.normalize()
-    if (end - start).days > 500:
-        start = end - pd.Timedelta(days=500)
+    if (end - start).days > 900:
+        start = end - pd.Timedelta(days=900)
     days = list(pd.date_range(start, end))
     url = f"{BASE}/{slug}/scoreboard"
 
