@@ -1,26 +1,6 @@
 {
- "generated_at": "2026-10-18T21:53:41.525271",
+ "generated_at": "2026-10-19T00:21:43.644553",
  "matches": [
-  {
-   "div": "CZ1",
-   "date": "2026-10-18T18:00:00",
-   "home": "Jablonec",
-   "away": "Viktoria Plzeň",
-   "score": "2:3",
-   "p": [
-    0.3914545363222557,
-    0.2692605373558934,
-    0.3392849263218508
-   ],
-   "pick": 0,
-   "actual": 2,
-   "correct": false,
-   "odds": [
-    null,
-    null,
-    null
-   ]
-  },
   {
    "div": "DK1",
    "date": "2026-10-18T18:00:00",
@@ -34,6 +14,26 @@
    ],
    "pick": 0,
    "actual": 1,
+   "correct": false,
+   "odds": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "div": "CZ1",
+   "date": "2026-10-18T18:00:00",
+   "home": "Jablonec",
+   "away": "Viktoria Plzeň",
+   "score": "2:3",
+   "p": [
+    0.3914545363222557,
+    0.2692605373558934,
+    0.3392849263218508
+   ],
+   "pick": 0,
+   "actual": 2,
    "correct": false,
    "odds": [
     null,
