@@ -291,3 +291,30 @@ def test_tsdb_league_pick_parse_and_season():
         assert df["hg"].notna().sum() == 2 and df.iloc[0]["hg"] == 2   # budoucí zápas je rozpis bez výsledku
     finally:
         tsdb._get = orig
+
+
+def test_tennis_espn_results_and_history():
+    from app import tennis, espn
+    def comp(d, a, b, wa, detail="Final"):
+        return {"date": d, "round": {"displayName": "Round of 32"}, "status": {"type": {"completed": True, "state": "post", "detail": detail}},
+                "competitors": [{"winner": wa, "athlete": {"displayName": a}}, {"winner": not wa, "athlete": {"displayName": b}}]}
+    js = {"events": [{"name": "Monte-Carlo Masters", "groupings": [
+        {"grouping": {"displayName": "Men's Singles"}, "competitions": [
+            comp("2026-04-10T12:00Z", "Jannik Sinner", "Casper Ruud", True),
+            comp("2026-04-10T14:00Z", "Alex de Minaur", "Nick Kyrgios", False, "Retired"),
+            comp("2026-04-10T15:00Z", "A B", "C D", True)]},
+        {"grouping": {"displayName": "Men's Doubles"}, "competitions": [comp("2026-04-10T12:00Z", "X Y", "Z W", True)]}]}]}
+    df = tennis.parse_results(js, "atp")
+    assert len(df) == 2 and df.iloc[0]["w"] == "Jannik Sinner" and df.iloc[0]["surface"] == "Clay"   # skreč a čtyřhra pryč
+    calls = []
+    def fake(url, params=None, tries=3):
+        calls.append(params["dates"])
+        return 200, js if params["dates"] == "20260410" else {"events": []}
+    orig = espn._request
+    espn._request = fake
+    try:
+        h = tennis.espn_history(pd.Timestamp("2026-04-12"), 5, None)
+        assert len(h) == 4 and set(h["tour"]) == {"atp", "wta"}   # 2 zápasy × 2 túry
+        assert len(calls) == 2 * 6
+    finally:
+        espn._request = orig

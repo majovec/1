@@ -149,28 +149,120 @@ def _collect(today, years, source):
     return [f for f in frames if len(f)]
 
 
-def fetch_history(today: pd.Timestamp, years: int = 4, cache: Path = None) -> pd.DataFrame:
-    """tennis-data.co.uk (s kurzy); když nejde, záložní zdroj Jeff Sackmann (bez kurzů). Zdroje se nemíchají (jiná jména)."""
-    frames = _collect(today, years, "td")
-    if not frames:
-        print("Tenis: tennis-data.co.uk nedostupné, zkouším záložní zdroj (GitHub).")
-        frames = _collect(today, years, "sack")
-        cache = None if cache is None else Path(str(cache).replace(".csv", "_sack.csv"))
-    elif cache is not None:
-        cache = Path(cache)
-    if cache is not None and Path(cache).exists():
+CLAY = ("roland garros", "french open", "monte", "rome", "italian open", "madrid", "barcelona", "hamburg", "bastad", "gstaad", "kitzbuhel",
+        "umag", "estoril", "marrakech", "houston", "buenos aires", "rio ", "santiago", "bucharest", "geneva", "lyon", "parma", "palermo",
+        "bogota", "cordoba", "munich", "belgrade", "sardinia", "prague", "rabat", "charleston", "strasbourg", "lausanne", "bad gastein",
+        "warsaw", "budapest", "iasi", "cluj", "portoroz", "montreal 2", "clay")
+GRASS = ("wimbledon", "halle", "queen", "hertogenbosch", "stuttgart", "mallorca", "eastbourne", "newport", "birmingham", "nottingham",
+         "berlin", "bad homburg", "grass", "libema", "surbiton", "ilkley")
+
+
+def guess_surface(tournament: str) -> str:
+    """ESPN povrch neuvádí; odhad podle názvu turnaje (kolísá u výjimek, váha povrchu v modelu je proto jen poloviční)."""
+    n = str(tournament).lower()
+    if any(k in n for k in GRASS):
+        return "Grass"
+    if any(k in n for k in CLAY):
+        return "Clay"
+    return "Hard"
+
+
+_DIAG = {"done": False}
+
+
+def parse_results(js: dict, tour: str) -> pd.DataFrame:
+    """Dohrané dvouhry z ESPN scoreboardu (bez skečů a walkoverů)."""
+    out = []
+    for ev in (js or {}).get("events", []) or []:
+        groups = ev.get("groupings") or [{"grouping": {"displayName": "Singles"}, "competitions": ev.get("competitions", [])}]
+        for g in groups:
+            gname = str((g.get("grouping") or {}).get("displayName", "")).lower()
+            if "double" in gname or "mixed" in gname:
+                continue
+            for c in g.get("competitions", []) or []:
+                st = (c.get("status") or {}).get("type", {})
+                if not (st.get("completed") or st.get("state") == "post"):
+                    continue
+                detail = " ".join(str(st.get(k, "")) for k in ("detail", "description", "shortDetail")).lower()
+                if any(k in detail for k in ("retire", "walkover", "w/o", "default", "cancel", "postpon", "suspend", "abandon")):
+                    continue
+                comps = c.get("competitors") or []
+                if len(comps) != 2:
+                    continue
+                names = [((x.get("athlete") or {}).get("displayName") or "").strip() for x in comps]
+                wins = [bool(x.get("winner")) for x in comps]
+                if sum(wins) != 1 or not all(names):
+                    continue
+                try:
+                    when = pd.Timestamp(c.get("date") or c.get("startDate") or ev.get("date"))
+                    when = when.tz_localize("UTC") if when.tzinfo is None else when.tz_convert("UTC")
+                    when = when.tz_convert("Europe/London").tz_localize(None)
+                except Exception:  # noqa: BLE001
+                    continue
+                rd = c.get("round")
+                rd = rd.get("displayName", "") if isinstance(rd, dict) else str(rd or "")
+                w, l = (names[0], names[1]) if wins[0] else (names[1], names[0])
+                tn = ev.get("name", "")
+                out.append({"tour": tour, "date": when, "tournament": tn, "surface": guess_surface(tn), "round": rd,
+                            "w": w, "l": l, "odds_w": np.nan, "odds_l": np.nan})
+    return pd.DataFrame(out, columns=COLS)
+
+
+def espn_history(today: pd.Timestamp, days: int, cache: Path = None) -> pd.DataFrame:
+    """Výsledky ATP + WTA po dnech z ESPN (paralelně). Při dalších bězích se stahuje jen od posledního uloženého dne."""
+    from concurrent.futures import ThreadPoolExecutor
+    old = pd.read_csv(cache, parse_dates=["date"]) if cache is not None and Path(cache).exists() else None
+    start = today.normalize() - pd.Timedelta(days=days)
+    if old is not None and len(old):
+        start = max(start, old["date"].max().normalize() - pd.Timedelta(days=4))
+    jobs = [(tour, d) for tour in TOURS for d in pd.date_range(start, today.normalize())]
+
+    def one(job):
+        tour, d = job
         try:
-            frames.append(pd.read_csv(cache, parse_dates=["date"]))
-        except Exception:  # noqa: BLE001
-            pass
+            st, js = espn._request(f"{ESPN_TENNIS}/{tour}/scoreboard", {"dates": f"{d:%Y%m%d}"}, tries=2)
+        except RuntimeError:
+            return tour, d, 0, None
+        return tour, d, st, js
+
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        res = list(ex.map(one, jobs))
+    bad = sum(1 for _, _, st, _ in res if st != 200)
+    frames = [parse_results(js, tour) for tour, _, st, js in res if st == 200 and js]
     frames = [f for f in frames if len(f)]
+    got = sum(len(f) for f in frames)
+    print(f"Tenis (ESPN): {len(jobs)} dotazů, neúspěšných {bad}, nových dohraných zápasů {got}")
+    if got == 0 and not _DIAG["done"]:
+        _DIAG["done"] = True
+        sample = next((js for _, _, st, js in res if st == 200 and js and js.get("events")), None)
+        if sample:
+            ev = sample["events"][0]
+            print(f"  DIAGNOSTIKA: klíče události {list(ev.keys())[:12]}", file=sys.stderr)
+            gr = (ev.get("groupings") or [{}])[0]
+            print(f"  DIAGNOSTIKA: klíče skupiny {list(gr.keys())[:12]}; první zápas {str((gr.get('competitions') or [{}])[0])[:300]}", file=sys.stderr)
+        else:
+            print("  DIAGNOSTIKA: žádný den nevrátil žádnou událost", file=sys.stderr)
+    frames = ([old] if old is not None else []) + frames
     if not frames:
-        raise RuntimeError("Tenis: žádná historická data (ani ze záložního zdroje).")
-    h = pd.concat(frames, ignore_index=True).drop_duplicates(["tour", "date", "w", "l"], keep="first")
+        raise RuntimeError("Tenis: ESPN nevrátilo žádné výsledky.")
+    h = pd.concat(frames, ignore_index=True).drop_duplicates(["tour", "date", "w", "l"], keep="last")
     if cache is not None:
         Path(cache).parent.mkdir(parents=True, exist_ok=True)
         h.to_csv(cache, index=False)
     return h.sort_values("date").reset_index(drop=True)
+
+
+def fetch_history(today: pd.Timestamp, years: int = 4, cache: Path = None) -> pd.DataFrame:
+    """1) tennis-data.co.uk (s kurzy), pokud není blokované (z GitHubu vrací HTTP 403); 2) ESPN (bez kurzů).
+    Sackmannova data z GitHubu už nejsou dostupná (repozitář vrací 404)."""
+    if _download([f"https://www.tennis-data.co.uk/{today.year - 1}/{today.year - 1}.xlsx"]) is not None:
+        frames = _collect(today, years, "td")
+        if frames:
+            h = pd.concat(frames, ignore_index=True).drop_duplicates(["tour", "date", "w", "l"], keep="first")
+            return h.sort_values("date").reset_index(drop=True)
+    print("Tenis: tennis-data.co.uk nedostupné (kurzy nebudou), používám výsledky z ESPN.")
+    esp = None if cache is None else Path(cache).with_name("tennis_espn.csv")
+    return espn_history(today, 540, esp)
 
 
 # ---------- Elo ----------
