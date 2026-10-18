@@ -4,6 +4,7 @@
 """
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor
 
 import numpy as np
 import pandas as pd
@@ -145,6 +146,47 @@ def mode_for(slug: str, base: str = None):
     return chosen
 
 
+def _fetch_days(div: str, slug: str, start: pd.Timestamp, end: pd.Timestamp) -> pd.DataFrame:
+    """Po jednom dni, paralelně (8 vláken). U delší historie nejdřív zkontroluje posledních 75 dní:
+    když tam ESPN nevrátí žádný zápas, liga se přeskočí (ušetří stovky zbytečných dotazů)."""
+    end = end.normalize()
+    if (end - start).days > 500:
+        start = end - pd.Timedelta(days=500)
+    days = list(pd.date_range(start, end))
+    url = f"{BASE}/{slug}/scoreboard"
+
+    def one(d):
+        try:
+            st, js = _request(url, {"dates": f"{d:%Y%m%d}"}, tries=2)
+        except RuntimeError:
+            return d, 0, None
+        return d, st, js
+
+    def run(ds):
+        with ThreadPoolExecutor(max_workers=8) as ex:
+            return list(ex.map(one, ds))
+
+    results = []
+    if len(days) > 100:
+        probe = days[-75:]
+        results = run(probe)
+        got = sum(len((js or {}).get("events", []) or []) for _, st, js in results if st == 200)
+        ok = sum(1 for _, st, _ in results if st == 200)
+        if got == 0:
+            print(f"VAROVÁNÍ: ESPN {slug}: za posledních 75 dní žádný zápas (úspěšných dotazů {ok}/75), liga se přeskakuje.", file=sys.stderr)
+            return pd.DataFrame(columns=COLUMNS)
+        days = days[:-75]
+    results += run(days)
+    bad = sum(1 for _, st, _ in results if st != 200)
+    if bad:
+        print(f"VAROVÁNÍ: ESPN {slug}: {bad} z {len(results)} dní se nepodařilo stáhnout.", file=sys.stderr)
+    frames = [parse_events(js, div) for _, st, js in results if st == 200 and js]
+    frames = [f for f in frames if len(f)]
+    if not frames:
+        return pd.DataFrame(columns=COLUMNS)
+    return pd.concat(frames, ignore_index=True).drop_duplicates(["div", "date", "home", "away"])
+
+
 def fetch_range(div: str, slug: str, start: pd.Timestamp, end: pd.Timestamp, step_days: int = None) -> pd.DataFrame:
     slug = resolve(slug)
     if slug is None:
@@ -155,8 +197,8 @@ def fetch_range(div: str, slug: str, start: pd.Timestamp, end: pd.Timestamp, ste
         return pd.DataFrame(columns=COLUMNS)
     step, lim = mode
     start = start.normalize()
-    if step == 1 and (end - start).days > 800:        # po jednom dni je to pomalé, stačí posledních ~2 roky
-        start = end.normalize() - pd.Timedelta(days=800)
+    if step == 1:
+        return _fetch_days(div, slug, start, end)
     frames, cur, fails = [], start, 0
     while cur <= end and fails < 3:
         nxt = min(cur + pd.Timedelta(days=step - 1), end.normalize())

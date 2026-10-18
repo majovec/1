@@ -244,3 +244,27 @@ def test_tennis_sackmann_parse_and_fullname_match():
     idx = tennis.build_index(df)
     assert tennis.match_name("Jannik Sinner", idx) == "Jannik Sinner"
     assert tennis.match_name("Alex De Minaur", idx) == "Alex de Minaur"
+
+
+def test_espn_day_mode_skips_league_without_data_and_is_fast():
+    from app import espn
+    calls = []
+    def empty(url, params=None, tries=3):
+        calls.append(params)
+        return 200, {"events": []}
+    orig = espn._request
+    espn._request = empty
+    try:
+        df = espn._fetch_days("CZ1", "cze.1", pd.Timestamp("2024-01-01"), pd.Timestamp("2026-10-18"))
+        assert df.empty and len(calls) == 75                    # po kontrole 75 dní se liga vzdá, nestahuje 500 dní
+        def some(url, params=None, tries=3):
+            d = params["dates"]
+            ev = [{"date": f"{d[:4]}-{d[4:6]}-{d[6:]}T15:00Z", "competitions": [{"status": {"type": {"completed": True, "state": "post"}},
+                   "competitors": [{"homeAway": "home", "score": "1", "team": {"displayName": "A" + d}},
+                                   {"homeAway": "away", "score": "0", "team": {"displayName": "B"}}]}]}] if d.endswith("5") else []
+            return 200, {"events": ev}
+        espn._request = some
+        df = espn._fetch_days("CZ1", "cze.1", pd.Timestamp("2026-01-01"), pd.Timestamp("2026-10-18"))
+        assert len(df) > 20 and df["hg"].notna().all()
+    finally:
+        espn._request = orig
