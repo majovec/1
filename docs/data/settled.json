@@ -1,6 +1,26 @@
 {
- "generated_at": "2026-10-18T14:12:41.252496",
+ "generated_at": "2026-10-18T16:58:45.863983",
  "matches": [
+  {
+   "div": "DK1",
+   "date": "2026-10-18T16:00:00",
+   "home": "Odense Boldklub",
+   "away": "Brøndby IF",
+   "score": "2:1",
+   "p": [
+    0.3031148238786569,
+    0.2720623382523703,
+    0.4248228378689727
+   ],
+   "pick": 2,
+   "actual": 0,
+   "correct": false,
+   "odds": [
+    null,
+    null,
+    null
+   ]
+  },
   {
    "div": "CZ1",
    "date": "2026-10-18T15:00:00",
@@ -15,6 +35,86 @@
    "pick": 2,
    "actual": 1,
    "correct": false,
+   "odds": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "div": "AT1",
+   "date": "2026-10-18T14:30:00",
+   "home": "Wolfsberger",
+   "away": "WSG Swarovski Tirol",
+   "score": "0:2",
+   "p": [
+    0.4386472553989,
+    0.2699851648009475,
+    0.2913675798001525
+   ],
+   "pick": 0,
+   "actual": 2,
+   "correct": false,
+   "odds": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "div": "AT1",
+   "date": "2026-10-18T14:30:00",
+   "home": "RB Salzburg",
+   "away": "SC Rheindorf Altach",
+   "score": "3:0",
+   "p": [
+    0.6211930322836383,
+    0.2326980818280201,
+    0.1461088858883414
+   ],
+   "pick": 0,
+   "actual": 0,
+   "correct": true,
+   "odds": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "div": "DK1",
+   "date": "2026-10-18T14:00:00",
+   "home": "Lyngby Boldklub",
+   "away": "FC Nordsjælland",
+   "score": "3:3",
+   "p": [
+    0.2403827406297148,
+    0.2481591236443583,
+    0.5114581357259269
+   ],
+   "pick": 2,
+   "actual": 1,
+   "correct": false,
+   "odds": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "div": "DK1",
+   "date": "2026-10-18T14:00:00",
+   "home": "Sønderjyske Fodbold",
+   "away": "Silkeborg IF",
+   "score": "4:0",
+   "p": [
+    0.4575132615940572,
+    0.241997362088233,
+    0.3004893763177098
+   ],
+   "pick": 0,
+   "actual": 0,
+   "correct": true,
    "odds": [
     null,
     null,
