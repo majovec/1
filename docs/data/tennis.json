@@ -1,0 +1,1113 @@
+{
+ "summary": {
+  "generated_at": "2026-10-18T10:27:16.425196",
+  "version": "tennis-elo-v1",
+  "history_matches": 22780,
+  "backtest": {
+   "matches": 13887,
+   "weight": 0.0,
+   "accuracy": 0.6187081443076259,
+   "log_loss": 0.649223182833945,
+   "naive_log_loss": 0.6931471805599453,
+   "calibration": [
+    {
+     "predicted": 0.5489246554310278,
+     "observed": 0.5351903435468895,
+     "n": 5385
+    },
+    {
+     "predicted": 0.6464817485265137,
+     "observed": 0.6169188445667125,
+     "n": 4362
+    },
+    {
+     "predicted": 0.7449100359455411,
+     "observed": 0.6844325153374233,
+     "n": 2608
+    },
+    {
+     "predicted": 0.8412042456200131,
+     "observed": 0.7785123966942149,
+     "n": 1210
+    },
+    {
+     "predicted": 0.9302791699485475,
+     "observed": 0.906832298136646,
+     "n": 322
+    }
+   ]
+  },
+  "live": {
+   "settled": 0,
+   "pending": 56
+  },
+  "history_to": "2026-10-18T08:30:00"
+ },
+ "upcoming": [
+  {
+   "tour": "atp",
+   "date": "2026-10-18T12:00:00",
+   "tournament": "Almaty Open",
+   "surface": "Hard",
+   "a": "Stefanos Sakellaridis",
+   "b": "Aleksandr Shevchenko",
+   "a_full": "Stefanos Sakellaridis",
+   "b_full": "Aleksandr Shevchenko",
+   "p_a": 0.5115454464652083,
+   "games": [
+    16,
+    66
+   ],
+   "rating": [
+    1508,
+    1497
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-18T12:00:00",
+   "tournament": "Lisboa Belem Open",
+   "surface": "Hard",
+   "a": "Leyre Romero Gormaz",
+   "b": "Clara Burel",
+   "a_full": "Leyre Romero Gormaz",
+   "b_full": "Clara Burel",
+   "p_a": 0.242576628254465,
+   "games": [
+    77,
+    23
+   ],
+   "rating": [
+    1613,
+    1815
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-18T12:30:00",
+   "tournament": "BNP Paribas Fortis European Open",
+   "surface": "Hard",
+   "a": "Federico Cina",
+   "b": "Remy Bertola",
+   "a_full": "Federico Cina",
+   "b_full": "Remy Bertola",
+   "p_a": 0.5175444420661689,
+   "games": [
+    34,
+    14
+   ],
+   "rating": [
+    1560,
+    1535
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-18T12:30:00",
+   "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+   "surface": "",
+   "a": "Sascha Gueymard Wayenburg",
+   "b": "Kyrian Jacquet",
+   "a_full": "Sascha Gueymard Wayenburg",
+   "b_full": "Kyrian Jacquet",
+   "p_a": 0.0941540612111487,
+   "games": [
+    7,
+    50
+   ],
+   "rating": [
+    1254,
+    1648
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-18T12:30:00",
+   "tournament": "Dongfeng Voyah Wuhan Open",
+   "surface": "Hard",
+   "a": "Sonay Kartal",
+   "b": "Maja Chwalinska",
+   "a_full": "Sonay Kartal",
+   "b_full": "Maja Chwalinska",
+   "p_a": 0.5912562002213465,
+   "games": [
+    51,
+    81
+   ],
+   "rating": [
+    1924,
+    1884
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-18T14:00:00",
+   "tournament": "BNP Paribas Fortis European Open",
+   "surface": "Hard",
+   "a": "Gauthier Onclin",
+   "b": "Clement Chidekh",
+   "a_full": "Gauthier Onclin",
+   "b_full": "Clement Chidekh",
+   "p_a": 0.5351100393963725,
+   "games": [
+    18,
+    8
+   ],
+   "rating": [
+    1487,
+    1428
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-18T14:00:00",
+   "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+   "surface": "",
+   "a": "Clement Tabur",
+   "b": "Valentin Royer",
+   "a_full": "Clement Tabur",
+   "b_full": "Valentin Royer",
+   "p_a": 0.6172680436764827,
+   "games": [
+    29,
+    69
+   ],
+   "rating": [
+    1532,
+    1449
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-18T14:00:00",
+   "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+   "surface": "",
+   "a": "Borna Gojo",
+   "b": "Francesco Maestrelli",
+   "a_full": "Borna Gojo",
+   "b_full": "Francesco Maestrelli",
+   "p_a": 0.6717295580214658,
+   "games": [
+    16,
+    22
+   ],
+   "rating": [
+    1444,
+    1320
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-18T14:00:00",
+   "tournament": "RoveretOpen Città della Pace",
+   "surface": "Hard",
+   "a": "Dominika Salkova",
+   "b": "Bianca Andreescu",
+   "a_full": "Dominika Salkova",
+   "b_full": "Bianca Andreescu",
+   "p_a": 0.328815481022579,
+   "games": [
+    82,
+    57
+   ],
+   "rating": [
+    1605,
+    1710
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-18T15:00:00",
+   "tournament": "BNP Paribas Fortis European Open",
+   "surface": "Hard",
+   "a": "Aziz Dougaz",
+   "b": "Nishesh Basavareddy",
+   "a_full": "Aziz Dougaz",
+   "b_full": "Nishesh Basavareddy",
+   "p_a": 0.4029634225128773,
+   "games": [
+    13,
+    48
+   ],
+   "rating": [
+    1504,
+    1604
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-18T15:30:00",
+   "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+   "surface": "",
+   "a": "Nicolai Budkov Kjaer",
+   "b": "Ugo Blanchet",
+   "a_full": "Nicolai Budkov Kjaer",
+   "b_full": "Ugo Blanchet",
+   "p_a": 0.5733563552256079,
+   "games": [
+    41,
+    33
+   ],
+   "rating": [
+    1517,
+    1465
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-18T16:00:00",
+   "tournament": "BNP Paribas Fortis European Open",
+   "surface": "Hard",
+   "a": "Andrea Guerrieri",
+   "b": "Martin Damm",
+   "a_full": "Andrea Guerrieri",
+   "b_full": "Martin Damm",
+   "p_a": 0.5540448947119105,
+   "games": [
+    9,
+    47
+   ],
+   "rating": [
+    1616,
+    1591
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-19T04:30:00",
+   "tournament": "Kinoshita Group Japan Open",
+   "surface": "Hard",
+   "a": "Kaitlin Quevedo",
+   "b": "Lanlana Tararudee",
+   "a_full": "Kaitlin Quevedo",
+   "b_full": "Lanlana Tararudee",
+   "p_a": 0.4930740316380792,
+   "games": [
+    68,
+    79
+   ],
+   "rating": [
+    1719,
+    1715
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-19T04:30:00",
+   "tournament": "Kinoshita Group Japan Open",
+   "surface": "Hard",
+   "a": "Mai Hontama",
+   "b": "Viktorija Golubic",
+   "a_full": "Mai Hontama",
+   "b_full": "Viktorija Golubic",
+   "p_a": 0.26770764312568296,
+   "games": [
+    55,
+    96
+   ],
+   "rating": [
+    1530,
+    1710
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-19T04:30:00",
+   "tournament": "Kinoshita Group Japan Open",
+   "surface": "Hard",
+   "a": "Liudmila Samsonova",
+   "b": "Lilli Tagger",
+   "a_full": "Liudmila Samsonova",
+   "b_full": "Lilli Tagger",
+   "p_a": 0.6415874853937783,
+   "games": [
+    80,
+    51
+   ],
+   "rating": [
+    1770,
+    1688
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "BNP Paribas Fortis European Open",
+   "surface": "Hard",
+   "a": "Marcos Giron",
+   "b": "Jan-Lennard Struff",
+   "a_full": "Marcos Giron",
+   "b_full": "Jan-Lennard Struff",
+   "p_a": 0.25714366249034126,
+   "games": [
+    71,
+    69
+   ],
+   "rating": [
+    1452,
+    1653
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "BNP Paribas Fortis European Open",
+   "surface": "Hard",
+   "a": "Juan Manuel Cerundolo",
+   "b": "Mariano Navone",
+   "a_full": "Juan Manuel Cerundolo",
+   "b_full": "Mariano Navone",
+   "p_a": 0.4110374329233149,
+   "games": [
+    72,
+    69
+   ],
+   "rating": [
+    1624,
+    1643
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "BNP Paribas Fortis European Open",
+   "surface": "Hard",
+   "a": "Max Schoenhaus",
+   "b": "Tallon Griekspoor",
+   "a_full": "Max Schoenhaus",
+   "b_full": "Tallon Griekspoor",
+   "p_a": 0.4039868669333578,
+   "games": [
+    5,
+    57
+   ],
+   "rating": [
+    1511,
+    1515
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "BNP Paribas Fortis European Open",
+   "surface": "Hard",
+   "a": "Raphael Collignon",
+   "b": "Holger Rune",
+   "a_full": "Raphael Collignon",
+   "b_full": "Holger Rune",
+   "p_a": 0.35195712288663444,
+   "games": [
+    47,
+    29
+   ],
+   "rating": [
+    1576,
+    1656
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "BNP Paribas Fortis European Open",
+   "surface": "Hard",
+   "a": "Kamil Majchrzak",
+   "b": "Botic Van De Zandschulp",
+   "a_full": "Kamil Majchrzak",
+   "b_full": "Botic Van De Zandschulp",
+   "p_a": 0.2687787771239915,
+   "games": [
+    66,
+    85
+   ],
+   "rating": [
+    1596,
+    1772
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "BNP Paribas Fortis European Open",
+   "surface": "Hard",
+   "a": "Hugo Gaston",
+   "b": "Jacob Fearnley",
+   "a_full": "Hugo Gaston",
+   "b_full": "Jacob Fearnley",
+   "p_a": 0.47933888282800996,
+   "games": [
+    47,
+    54
+   ],
+   "rating": [
+    1559,
+    1551
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "BNP Paribas Fortis European Open",
+   "surface": "Hard",
+   "a": "Damir Dzumhur",
+   "b": "Dino Prizmic",
+   "a_full": "Damir Dzumhur",
+   "b_full": "Dino Prizmic",
+   "p_a": 0.26885326840763174,
+   "games": [
+    66,
+    48
+   ],
+   "rating": [
+    1572,
+    1709
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "BNP Paribas Fortis European Open",
+   "surface": "Hard",
+   "a": "Zizou Bergs",
+   "b": "Toby Samuel",
+   "a_full": "Zizou Bergs",
+   "b_full": "Toby Samuel",
+   "p_a": 0.5726916931209344,
+   "games": [
+    65,
+    15
+   ],
+   "rating": [
+    1710,
+    1656
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "Almaty Open",
+   "surface": "Hard",
+   "a": "Aleksandar Vukic",
+   "b": "Adrian Mannarino",
+   "a_full": "Aleksandar Vukic",
+   "b_full": "Adrian Mannarino",
+   "p_a": 0.35011243038083484,
+   "games": [
+    84,
+    80
+   ],
+   "rating": [
+    1474,
+    1584
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "Almaty Open",
+   "surface": "Hard",
+   "a": "Timofey Skatov",
+   "b": "Fabian Marozsan",
+   "a_full": "Timofey Skatov",
+   "b_full": "Fabian Marozsan",
+   "p_a": 0.40171244257672334,
+   "games": [
+    24,
+    74
+   ],
+   "rating": [
+    1528,
+    1596
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "Almaty Open",
+   "surface": "Hard",
+   "a": "James Duckworth",
+   "b": "Miomir Kecmanovic",
+   "a_full": "James Duckworth",
+   "b_full": "Miomir Kecmanovic",
+   "p_a": 0.6156953756632864,
+   "games": [
+    63,
+    69
+   ],
+   "rating": [
+    1573,
+    1504
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "Almaty Open",
+   "surface": "Hard",
+   "a": "Tomas Martin Etcheverry",
+   "b": "Mattia Bellucci",
+   "a_full": "Tomas Martin Etcheverry",
+   "b_full": "Mattia Bellucci",
+   "p_a": 0.4744156096249176,
+   "games": [
+    85,
+    62
+   ],
+   "rating": [
+    1572,
+    1574
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "Almaty Open",
+   "surface": "Hard",
+   "a": "Rinky Hijikata",
+   "b": "Terence Atmane",
+   "a_full": "Rinky Hijikata",
+   "b_full": "Terence Atmane",
+   "p_a": 0.5206236169971069,
+   "games": [
+    72,
+    62
+   ],
+   "rating": [
+    1619,
+    1601
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "Almaty Open",
+   "surface": "Hard",
+   "a": "Facundo Diaz Acosta",
+   "b": "Thiago Agustin Tirante",
+   "a_full": "Facundo Diaz Acosta",
+   "b_full": "Thiago Agustin Tirante",
+   "p_a": 0.15436856114101355,
+   "games": [
+    14,
+    61
+   ],
+   "rating": [
+    1461,
+    1732
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "Almaty Open",
+   "surface": "Hard",
+   "a": "Aleksandar Kovacevic",
+   "b": "Stefanos Tsitsipas",
+   "a_full": "Aleksandar Kovacevic",
+   "b_full": "Stefanos Tsitsipas",
+   "p_a": 0.1765759942703393,
+   "games": [
+    82,
+    65
+   ],
+   "rating": [
+    1534,
+    1807
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+   "surface": "",
+   "a": "Martin Landaluce",
+   "b": "Stan Wawrinka",
+   "a_full": "Martin Landaluce",
+   "b_full": "Stan Wawrinka",
+   "p_a": 0.555630178811009,
+   "games": [
+    56,
+    28
+   ],
+   "rating": [
+    1504,
+    1465
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+   "surface": "",
+   "a": "Moise Kouame",
+   "b": "Lorenzo Sonego",
+   "a_full": "Moise Kouame",
+   "b_full": "Lorenzo Sonego",
+   "p_a": 0.35402755162440863,
+   "games": [
+    16,
+    68
+   ],
+   "rating": [
+    1414,
+    1518
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+   "surface": "",
+   "a": "Cameron Norrie",
+   "b": "Benjamin Bonzi",
+   "a_full": "Cameron Norrie",
+   "b_full": "Benjamin Bonzi",
+   "p_a": 0.46233049492771294,
+   "games": [
+    84,
+    57
+   ],
+   "rating": [
+    1672,
+    1699
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+   "surface": "",
+   "a": "Felix Balshaw",
+   "b": "Jaime Faria",
+   "a_full": "Felix Balshaw",
+   "b_full": "Jaime Faria",
+   "p_a": 0.3085461684852445,
+   "games": [
+    3,
+    61
+   ],
+   "rating": [
+    1538,
+    1678
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+   "surface": "",
+   "a": "Brandon Nakashima",
+   "b": "Hamad Medjedovic",
+   "a_full": "Brandon Nakashima",
+   "b_full": "Hamad Medjedovic",
+   "p_a": 0.7999800417820224,
+   "games": [
+    90,
+    54
+   ],
+   "rating": [
+    1802,
+    1561
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+   "surface": "",
+   "a": "Titouan Droguet",
+   "b": "Daniel Altmaier",
+   "a_full": "Titouan Droguet",
+   "b_full": "Daniel Altmaier",
+   "p_a": 0.5713494092914072,
+   "games": [
+    45,
+    72
+   ],
+   "rating": [
+    1645,
+    1596
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+   "surface": "",
+   "a": "Corentin Moutet",
+   "b": "Ugo Humbert",
+   "a_full": "Corentin Moutet",
+   "b_full": "Ugo Humbert",
+   "p_a": 0.2798542845991547,
+   "games": [
+    70,
+    71
+   ],
+   "rating": [
+    1498,
+    1663
+   ]
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+   "surface": "",
+   "a": "Lorenzo Musetti",
+   "b": "Matteo Arnaldi",
+   "a_full": "Lorenzo Musetti",
+   "b_full": "Matteo Arnaldi",
+   "p_a": 0.730935299724427,
+   "games": [
+    76,
+    63
+   ],
+   "rating": [
+    1766,
+    1592
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "Kinoshita Group Japan Open",
+   "surface": "Hard",
+   "a": "Sinja Kraus",
+   "b": "Catherine McNally",
+   "a_full": "Sinja Kraus",
+   "b_full": "Catherine McNally",
+   "p_a": 0.4415657190179532,
+   "games": [
+    94,
+    78
+   ],
+   "rating": [
+    1715,
+    1785
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "Kinoshita Group Japan Open",
+   "surface": "Hard",
+   "a": "Harriet Dart",
+   "b": "Talia Gibson",
+   "a_full": "Harriet Dart",
+   "b_full": "Talia Gibson",
+   "p_a": 0.5905318677681902,
+   "games": [
+    46,
+    77
+   ],
+   "rating": [
+    1664,
+    1621
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-19T06:00:00",
+   "tournament": "BNB Ningbo Open",
+   "surface": "Hard",
+   "a": "Leylah Fernandez",
+   "b": "Elise Mertens",
+   "a_full": "Leylah Fernandez",
+   "b_full": "Elise Mertens",
+   "p_a": 0.41836791925790956,
+   "games": [
+    90,
+    80
+   ],
+   "rating": [
+    1799,
+    1872
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-19T07:30:00",
+   "tournament": "Kinoshita Group Japan Open",
+   "surface": "Hard",
+   "a": "Janice Tjen",
+   "b": "Ashlyn Krueger",
+   "a_full": "Janice Tjen",
+   "b_full": "Ashlyn Krueger",
+   "p_a": 0.4647805330572503,
+   "games": [
+    70,
+    79
+   ],
+   "rating": [
+    1658,
+    1754
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-19T09:00:00",
+   "tournament": "Kinoshita Group Japan Open",
+   "surface": "Hard",
+   "a": "Himeno Sakatsume",
+   "b": "Katie Boulter",
+   "a_full": "Himeno Sakatsume",
+   "b_full": "Katie Boulter",
+   "p_a": 0.4405890057497014,
+   "games": [
+    61,
+    71
+   ],
+   "rating": [
+    1616,
+    1684
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-19T13:30:00",
+   "tournament": "BNB Ningbo Open",
+   "surface": "Hard",
+   "a": "Diane Parry",
+   "b": "Alexandra Eala",
+   "a_full": "Diane Parry",
+   "b_full": "Alexandra Eala",
+   "p_a": 0.351601235021207,
+   "games": [
+    88,
+    100
+   ],
+   "rating": [
+    1727,
+    1848
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-20T06:00:00",
+   "tournament": "Kinoshita Group Japan Open",
+   "surface": "Hard",
+   "a": "Ena Shibahara",
+   "b": "Moyuka Uchijima",
+   "a_full": "Ena Shibahara",
+   "b_full": "Moyuka Uchijima",
+   "p_a": 0.22083593943507476,
+   "games": [
+    27,
+    79
+   ],
+   "rating": [
+    1384,
+    1560
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-20T06:00:00",
+   "tournament": "Kinoshita Group Japan Open",
+   "surface": "Hard",
+   "a": "Mary Stoiana",
+   "b": "Oleksandra Oliynykova",
+   "a_full": "Mary Stoiana",
+   "b_full": "Oleksandra Oliynykova",
+   "p_a": 0.512082136832756,
+   "games": [
+    49,
+    82
+   ],
+   "rating": [
+    1708,
+    1690
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-20T06:00:00",
+   "tournament": "Kinoshita Group Japan Open",
+   "surface": "Hard",
+   "a": "Zeynep Sonmez",
+   "b": "Maya Joint",
+   "a_full": "Zeynep Sonmez",
+   "b_full": "Maya Joint",
+   "p_a": 0.5212057420092024,
+   "games": [
+    89,
+    88
+   ],
+   "rating": [
+    1695,
+    1668
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-20T06:00:00",
+   "tournament": "Kinoshita Group Japan Open",
+   "surface": "Hard",
+   "a": "Kimberly Birrell",
+   "b": "Sonay Kartal",
+   "a_full": "Kimberly Birrell",
+   "b_full": "Sonay Kartal",
+   "p_a": 0.20364863958662247,
+   "games": [
+    89,
+    51
+   ],
+   "rating": [
+    1699,
+    1924
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-20T06:00:00",
+   "tournament": "Kinoshita Group Japan Open",
+   "surface": "Hard",
+   "a": "Emerson Jones",
+   "b": "Ann Li",
+   "a_full": "Emerson Jones",
+   "b_full": "Ann Li",
+   "p_a": 0.24648004678678267,
+   "games": [
+    37,
+    90
+   ],
+   "rating": [
+    1577,
+    1789
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-20T06:00:00",
+   "tournament": "Kinoshita Group Japan Open",
+   "surface": "Hard",
+   "a": "Antonia Ruzic",
+   "b": "Paula Badosa",
+   "a_full": "Antonia Ruzic",
+   "b_full": "Paula Badosa",
+   "p_a": 0.24346830132229733,
+   "games": [
+    96,
+    53
+   ],
+   "rating": [
+    1584,
+    1815
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-20T06:00:00",
+   "tournament": "Kinoshita Group Japan Open",
+   "surface": "Hard",
+   "a": "Magda Linette",
+   "b": "Claire Liu",
+   "a_full": "Magda Linette",
+   "b_full": "Claire Liu",
+   "p_a": 0.3329172711517728,
+   "games": [
+    63,
+    57
+   ],
+   "rating": [
+    1576,
+    1696
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-20T06:00:00",
+   "tournament": "Kinoshita Group Japan Open",
+   "surface": "Hard",
+   "a": "Peyton Stearns",
+   "b": "Katerina Siniakova",
+   "a_full": "Peyton Stearns",
+   "b_full": "Katerina Siniakova",
+   "p_a": 0.42712585717783863,
+   "games": [
+    70,
+    76
+   ],
+   "rating": [
+    1667,
+    1731
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-20T06:00:00",
+   "tournament": "Kinoshita Group Japan Open",
+   "surface": "Hard",
+   "a": "Zhang Shuai",
+   "b": "Tereza Valentova",
+   "a_full": "Zhang Shuai",
+   "b_full": "Tereza Valentova",
+   "p_a": 0.2280849252218994,
+   "games": [
+    75,
+    78
+   ],
+   "rating": [
+    1585,
+    1763
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-20T06:00:00",
+   "tournament": "BNB Ningbo Open",
+   "surface": "Hard",
+   "a": "Wang Xiyu",
+   "b": "Sara Bejlek",
+   "a_full": "Wang Xiyu",
+   "b_full": "Sara Bejlek",
+   "p_a": 0.422397897070166,
+   "games": [
+    50,
+    82
+   ],
+   "rating": [
+    1747,
+    1777
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-20T06:00:00",
+   "tournament": "BNB Ningbo Open",
+   "surface": "Hard",
+   "a": "Belinda Bencic",
+   "b": "Jelena Ostapenko",
+   "a_full": "Belinda Bencic",
+   "b_full": "Jelena Ostapenko",
+   "p_a": 0.4901920177888941,
+   "games": [
+    64,
+    60
+   ],
+   "rating": [
+    1858,
+    1849
+   ]
+  },
+  {
+   "tour": "wta",
+   "date": "2026-10-20T06:00:00",
+   "tournament": "BNB Ningbo Open",
+   "surface": "Hard",
+   "a": "Ekaterina Alexandrova",
+   "b": "Guo Hanyu",
+   "a_full": "Ekaterina Alexandrova",
+   "b_full": "Guo Hanyu",
+   "p_a": 0.7416954427268416,
+   "games": [
+    89,
+    39
+   ],
+   "rating": [
+    1791,
+    1591
+   ]
+  }
+ ],
+ "settled": []
+}
