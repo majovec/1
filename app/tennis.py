@@ -54,39 +54,91 @@ def parse_frame(raw: pd.DataFrame, tour: str) -> pd.DataFrame:
     return out.dropna(subset=["date"])[COLS]
 
 
-def _download(url: str):
-    for u in (url, url.replace("https://", "http://")):
+BROWSER = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"}
+
+
+def _download(urls):
+    """Zkusí postupně všechny adresy; vypíše, proč která selhala."""
+    for u in ([urls] if isinstance(urls, str) else urls):
         try:
-            r = requests.get(u, headers=HEADERS, timeout=60)
-            if r.status_code == 200:
+            r = requests.get(u, headers=BROWSER, timeout=60)
+            if r.status_code == 200 and len(r.content) > 500:
                 return r.content
-        except Exception:  # noqa: BLE001
-            time.sleep(1)
+            print(f"  {u} → HTTP {r.status_code}", file=sys.stderr)
+        except Exception as exc:  # noqa: BLE001
+            print(f"  {u} → {type(exc).__name__}: {str(exc)[:80]}", file=sys.stderr)
     return None
 
 
-def fetch_history(today: pd.Timestamp, years: int = 4, cache: Path = None) -> pd.DataFrame:
+ROUND_DAY = {"R128": 0, "R64": 1, "R32": 2, "R16": 3, "QF": 4, "SF": 5, "F": 6, "RR": 2, "BR": 5}
+SACK = {"atp": "https://raw.githubusercontent.com/JeffSackmann/tennis_atp/master/atp_matches_{y}.csv",
+        "wta": "https://raw.githubusercontent.com/JeffSackmann/tennis_wta/master/wta_matches_{y}.csv"}
+
+
+def parse_sackmann(raw: pd.DataFrame, tour: str) -> pd.DataFrame:
+    """Jeff Sackmann (GitHub, CC BY-NC-SA): plná jména, bez kurzů. Datum = začátek turnaje + posun podle kola."""
+    need = {"tourney_date", "winner_name", "loser_name"}
+    if not need <= set(raw.columns):
+        return pd.DataFrame(columns=COLS)
+    raw = raw.dropna(subset=list(need)).copy()
+    score = raw["score"].astype(str).str.upper() if "score" in raw else pd.Series("", index=raw.index)
+    raw = raw[~score.str.contains("RET|W/O|DEF|WALKOVER|ABD|UNP", regex=True)]
+    rnd = raw["round"].astype(str) if "round" in raw else pd.Series("", index=raw.index)
+    out = pd.DataFrame(index=raw.index)
+    out["tour"] = tour
+    out["date"] = pd.to_datetime(raw["tourney_date"].astype(int).astype(str), format="%Y%m%d", errors="coerce") + \
+        pd.to_timedelta(rnd.map(ROUND_DAY).fillna(0).astype(int), unit="D")
+    out["tournament"] = raw["tourney_name"].astype(str) if "tourney_name" in raw else ""
+    out["surface"] = raw["surface"].astype(str) if "surface" in raw else ""
+    out["round"] = rnd
+    out["w"], out["l"] = raw["winner_name"].astype(str).str.strip(), raw["loser_name"].astype(str).str.strip()
+    out["odds_w"], out["odds_l"] = np.nan, np.nan
+    return out.dropna(subset=["date"])[COLS]
+
+
+def _collect(today, years, source):
     frames = []
-    for tour, pat in TOURS.items():
+    for tour in TOURS:
         for y in range(today.year, today.year - years, -1):
-            content = _download("https://www.tennis-data.co.uk/" + pat.format(y=y))
+            if source == "td":
+                urls = [f"{pre}://{host}/{TOURS[tour].format(y=y)}" for pre in ("https", "http") for host in ("www.tennis-data.co.uk", "tennis-data.co.uk")]
+            else:
+                urls = SACK[tour].format(y=y)
+            content = _download(urls)
             if content is None:
-                print(f"Tenis: {tour} {y} nelze stáhnout (přeskakuji).", file=sys.stderr)
+                print(f"Tenis ({source}): {tour} {y} nelze stáhnout.", file=sys.stderr)
                 continue
             try:
-                df = parse_frame(pd.read_excel(io.BytesIO(content)), tour)
+                raw = pd.read_excel(io.BytesIO(content)) if source == "td" else pd.read_csv(io.BytesIO(content), low_memory=False)
+                df = parse_frame(raw, tour) if source == "td" else parse_sackmann(raw, tour)
             except Exception as exc:  # noqa: BLE001
-                print(f"Tenis: {tour} {y} nelze přečíst: {exc}", file=sys.stderr)
+                print(f"Tenis ({source}): {tour} {y} nelze přečíst: {exc}", file=sys.stderr)
                 continue
             frames.append(df)
-            print(f"Tenis {tour} {y}: {len(df)} zápasů")
+            print(f"Tenis ({source}) {tour} {y}: {len(df)} zápasů")
+    return [f for f in frames if len(f)]
+
+
+def fetch_history(today: pd.Timestamp, years: int = 4, cache: Path = None) -> pd.DataFrame:
+    """tennis-data.co.uk (s kurzy); když nejde, záložní zdroj Jeff Sackmann (bez kurzů). Zdroje se nemíchají (jiná jména)."""
+    frames = _collect(today, years, "td")
+    if not frames:
+        print("Tenis: tennis-data.co.uk nedostupné, zkouším záložní zdroj (GitHub).")
+        frames = _collect(today, years, "sack")
+        cache = None if cache is None else Path(str(cache).replace(".csv", "_sack.csv"))
+    elif cache is not None:
+        cache = Path(cache)
     if cache is not None and Path(cache).exists():
-        frames.append(pd.read_csv(cache, parse_dates=["date"]))
+        try:
+            frames.append(pd.read_csv(cache, parse_dates=["date"]))
+        except Exception:  # noqa: BLE001
+            pass
     frames = [f for f in frames if len(f)]
     if not frames:
-        raise RuntimeError("Tenis: žádná historická data.")
+        raise RuntimeError("Tenis: žádná historická data (ani ze záložního zdroje).")
     h = pd.concat(frames, ignore_index=True).drop_duplicates(["tour", "date", "w", "l"], keep="first")
     if cache is not None:
+        Path(cache).parent.mkdir(parents=True, exist_ok=True)
         h.to_csv(cache, index=False)
     return h.sort_values("date").reset_index(drop=True)
 
@@ -180,6 +232,7 @@ def build_index(hist: pd.DataFrame) -> dict:
     """'Sinner J.' → klíč ('sinner', 'j'). Hodnota = jméno tak, jak je v historii."""
     idx = {}
     for name in pd.unique(pd.concat([hist["w"], hist["l"]])):
+        idx[(_norm(str(name)), "")] = name                      # plné jméno (zdroj Sackmann)
         m = re.match(r"^(.*?)\s+([A-Z]\.(?:[A-Z]\.)*)$", str(name).strip())
         if m:
             idx[(_norm(m.group(1)), m.group(2)[0].lower())] = name
@@ -187,7 +240,10 @@ def build_index(hist: pd.DataFrame) -> dict:
 
 
 def match_name(espn_name: str, idx: dict):
-    toks = str(espn_name).replace("-", "-").split()
+    full = idx.get((_norm(str(espn_name)), ""))
+    if full:
+        return full
+    toks = str(espn_name).split()
     if len(toks) < 2:
         return None
     ini = _norm(toks[0])[:1]
@@ -229,15 +285,19 @@ def fetch_upcoming(now: pd.Timestamp, days: int = 3) -> list:
     rows = []
     for tour in TOURS:
         url = f"{ESPN_TENNIS}/{tour}/scoreboard"
-        try:
-            st, js = espn._request(url, {"dates": f"{now:%Y%m%d}-{now + pd.Timedelta(days=days):%Y%m%d}"})
-        except RuntimeError as exc:
-            print(f"VAROVÁNÍ: tenis ESPN {tour}: {exc}", file=sys.stderr)
-            continue
-        if st != 200:
-            print(f"VAROVÁNÍ: tenis ESPN {tour} vrátilo HTTP {st}", file=sys.stderr)
-            continue
-        got = parse_espn_tennis(js, tour)
+        got = []
+        for d in range(days + 1):                                # po jednom dni: formát, který ESPN přijímá vždy
+            day = now.normalize() + pd.Timedelta(days=d)
+            try:
+                st, js = espn._request(url, {"dates": f"{day:%Y%m%d}"})
+            except RuntimeError as exc:
+                print(f"VAROVÁNÍ: tenis ESPN {tour}: {exc}", file=sys.stderr)
+                continue
+            if st != 200:
+                print(f"VAROVÁNÍ: tenis ESPN {tour} {day:%Y%m%d} vrátilo HTTP {st}", file=sys.stderr)
+                continue
+            got += parse_espn_tennis(js, tour)
+        got = list({(g["date"], g["a"], g["b"]): g for g in got}.values())
         print(f"Tenis ESPN {tour}: {len(got)} nadcházejících zápasů")
         rows += got
     return rows

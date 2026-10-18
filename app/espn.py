@@ -42,6 +42,8 @@ def parse_events(js: dict, div: str) -> pd.DataFrame:
 
 CORE = "https://sports.core.api.espn.com/v2/sports/soccer/leagues"
 _RESOLVED = {}
+_MODE = {}
+LADDER = [(30, True), (30, False), (7, False), (1, False)]  # (délka okna ve dnech, posílat limit?)
 _SLUGS = None
 
 
@@ -112,16 +114,54 @@ def resolve(slug: str):
     return found
 
 
-def fetch_range(div: str, slug: str, start: pd.Timestamp, end: pd.Timestamp, step_days: int = 30) -> pd.DataFrame:
+def _params(cur, nxt, use_limit):
+    p = {"dates": f"{cur:%Y%m%d}" if cur == nxt else f"{cur:%Y%m%d}-{nxt:%Y%m%d}"}
+    if use_limit:
+        p["limit"] = 500
+    return p
+
+
+def mode_for(slug: str, base: str = None):
+    """ESPN u některých lig odmítá rozsah dat (HTTP 400). Najde první variantu, která projde:
+    30denní okno → bez limitu → týdenní okna → po jednom dni."""
+    base = base or BASE
+    key = (base, slug)
+    if key in _MODE:
+        return _MODE[key]
+    probe_end = pd.Timestamp.now().normalize() - pd.Timedelta(days=40)
+    chosen = None
+    for step, lim in LADDER:
+        cur = probe_end - pd.Timedelta(days=step - 1)
+        try:
+            st, js = _request(f"{base}/{slug}/scoreboard", _params(cur, probe_end, lim))
+        except RuntimeError:
+            continue
+        if st == 200:
+            chosen = (step, lim)
+            break
+        print(f"ESPN {slug}: okno {step} dní{' s limitem' if lim else ''} → HTTP {st} {str(js)[:120] if js else ''}", file=sys.stderr)
+    print(f"ESPN {slug}: použitý režim {chosen}")
+    _MODE[key] = chosen
+    return chosen
+
+
+def fetch_range(div: str, slug: str, start: pd.Timestamp, end: pd.Timestamp, step_days: int = None) -> pd.DataFrame:
     slug = resolve(slug)
     if slug is None:
         return pd.DataFrame(columns=COLUMNS)
-    frames, cur, fails = [], start.normalize(), 0
+    mode = mode_for(slug)
+    if mode is None:
+        print(f"VAROVÁNÍ: ESPN {slug} nepřijímá žádný formát dat, liga se přeskakuje.", file=sys.stderr)
+        return pd.DataFrame(columns=COLUMNS)
+    step, lim = mode
+    start = start.normalize()
+    if step == 1 and (end - start).days > 800:        # po jednom dni je to pomalé, stačí posledních ~2 roky
+        start = end.normalize() - pd.Timedelta(days=800)
+    frames, cur, fails = [], start, 0
     while cur <= end and fails < 3:
-        nxt = min(cur + pd.Timedelta(days=step_days - 1), end)
-        params = {"dates": f"{cur:%Y%m%d}-{nxt:%Y%m%d}", "limit": 500}
+        nxt = min(cur + pd.Timedelta(days=step - 1), end.normalize())
         try:
-            st, js = _request(f"{BASE}/{slug}/scoreboard", params)
+            st, js = _request(f"{BASE}/{slug}/scoreboard", _params(cur, nxt, lim))
         except RuntimeError as exc:
             print(f"VAROVÁNÍ: {exc}", file=sys.stderr)
             st, js = 0, None
@@ -130,9 +170,9 @@ def fetch_range(div: str, slug: str, start: pd.Timestamp, end: pd.Timestamp, ste
             frames.append(parse_events(js, div))
         else:
             fails += 1
-            print(f"VAROVÁNÍ: ESPN {slug} {params['dates']} vrátilo HTTP {st}", file=sys.stderr)
+            print(f"VAROVÁNÍ: ESPN {slug} {cur:%Y%m%d}-{nxt:%Y%m%d} vrátilo HTTP {st}", file=sys.stderr)
         cur = nxt + pd.Timedelta(days=1)
-        time.sleep(0.2)
+        time.sleep(0.12 if step == 1 else 0.25)
     frames = [f for f in frames if len(f)]
     if not frames:
         return pd.DataFrame(columns=COLUMNS)

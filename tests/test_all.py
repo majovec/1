@@ -210,3 +210,37 @@ def test_tennis_parse_frame_and_espn():
     got = tennis.parse_espn_tennis(js, "atp")
     assert len(got) == 1 and got[0]["a"] == "Jannik Sinner"
     assert tennis.match_name("Jannik Sinner", tennis.build_index(df)) == "Sinner J."
+
+
+def test_espn_mode_ladder_falls_back_to_single_day():
+    from app import espn
+    seen = []
+    def fake(url, params=None, tries=3):
+        seen.append(params)
+        if "sports.core" in url:
+            return 200, {"items": [], "pageCount": 1}
+        d = (params or {}).get("dates", "")
+        if "dates" not in (params or {}) or "-" not in d:   # jen jednodenní dotaz projde, rozsah = 400
+            return 200, {"events": []}
+        return 400, {"message": "bad"}
+    orig = espn._request
+    espn._request, espn._RESOLVED, espn._MODE = fake, {}, {}
+    try:
+        assert espn.mode_for("cze.1") == (1, False)
+        df = espn.fetch_range("CZ1", "cze.1", pd.Timestamp("2026-10-01"), pd.Timestamp("2026-10-04"))
+        assert df.empty
+        assert sum(1 for p in seen if p and p.get("dates") == "20261002") == 1   # skutečně po dnech
+    finally:
+        espn._request = orig
+
+
+def test_tennis_sackmann_parse_and_fullname_match():
+    from app import tennis
+    raw = pd.DataFrame({"tourney_date": [20260105, 20260105, 20260105], "tourney_name": ["Brisbane"] * 3, "surface": ["Hard"] * 3,
+                        "round": ["R32", "F", "R16"], "winner_name": ["Jannik Sinner", "Jannik Sinner", "Alex de Minaur"],
+                        "loser_name": ["Nick Kyrgios", "Carlos Alcaraz", "Casper Ruud"], "score": ["6-4 6-4", "6-3 RET", "6-1 6-2"]})
+    df = tennis.parse_sackmann(raw, "atp")
+    assert len(df) == 2                                         # skreč se nepočítá
+    idx = tennis.build_index(df)
+    assert tennis.match_name("Jannik Sinner", idx) == "Jannik Sinner"
+    assert tennis.match_name("Alex De Minaur", idx) == "Alex de Minaur"
