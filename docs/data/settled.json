@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-10-18T17:33:28.582909",
+ "generated_at": "2026-10-18T21:53:41.525271",
  "matches": [
   {
    "div": "CZ1",
    "date": "2026-10-18T18:00:00",
    "home": "Jablonec",
    "away": "Viktoria Plzeň",
-   "score": "0:2",
+   "score": "2:3",
    "p": [
     0.3914545363222557,
     0.2692605373558934,
@@ -15,6 +15,46 @@
    "pick": 0,
    "actual": 2,
    "correct": false,
+   "odds": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "div": "DK1",
+   "date": "2026-10-18T18:00:00",
+   "home": "F.C. København",
+   "away": "AGF",
+   "score": "1:1",
+   "p": [
+    0.4677183277901545,
+    0.2423362844828105,
+    0.2899453877270352
+   ],
+   "pick": 0,
+   "actual": 1,
+   "correct": false,
+   "odds": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "div": "AT1",
+   "date": "2026-10-18T17:00:00",
+   "home": "SK Sturm Graz",
+   "away": "Grazer AK",
+   "score": "6:1",
+   "p": [
+    0.5842622776934279,
+    0.2472152236028581,
+    0.1685224987037138
+   ],
+   "pick": 0,
+   "actual": 0,
+   "correct": true,
    "odds": [
     null,
     null,
