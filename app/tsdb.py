@@ -15,7 +15,15 @@ HEADERS = {"User-Agent": "Mozilla/5.0 football-ai-analyst"}
 COLUMNS = ["div", "date", "home", "away", "hg", "ag", "odds_h", "odds_d", "odds_a"]
 PAUSE = 2.2
 _IDS = {}
+BUDGET_S = 420            # nejvýš 7 minut celkem na všechny ligy z TheSportsDB za jeden běh
+_DEADLINE = {"t": None}
 BAD_WORDS = ("cup", "women", "second", "2.", " 2", "u19", "u21", "u23", "reserve", "playoff", "super cup", "division 2")
+
+
+def _over_budget() -> bool:
+    if _DEADLINE["t"] is None:
+        _DEADLINE["t"] = time.time() + BUDGET_S
+    return time.time() > _DEADLINE["t"]
 
 
 def _get(path: str, params: dict = None):
@@ -109,6 +117,9 @@ def season_labels(now: pd.Timestamp, n: int):
 def fetch_season(lid, season: str, div: str, now: pd.Timestamp) -> pd.DataFrame:
     frames, empty = [], 0
     for r in range(1, 45):
+        if _over_budget():
+            print(f"TheSportsDB {div} {season}: vyčerpán časový limit, stahování se dokončí při dalším běhu (kolo {r})")
+            break
         js = _get("eventsround.php", {"id": lid, "r": r, "s": season})
         df = parse_events(js, div, now)
         if len(df):
@@ -133,8 +144,13 @@ def fetch_history(div: str, country: str, keywords, now: pd.Timestamp, n_seasons
     if not lid:
         print(f"VAROVÁNÍ: TheSportsDB pro {div} nenašlo ligu.", file=sys.stderr)
         return pd.DataFrame(columns=COLUMNS)
-    seasons = season_labels(now, 1 if have_cache else min(n_seasons, 3))
-    frames = [fetch_season(lid, s, div, now) for s in seasons]
+    seasons = season_labels(now, 1 if have_cache else min(n_seasons, 2))
+    frames = []
+    for s in seasons:
+        t0 = time.time()
+        f = fetch_season(lid, s, div, now)
+        print(f"TheSportsDB {div} {s}: {len(f)} zápasů za {time.time() - t0:.0f} s")
+        frames.append(f)
     frames = [f for f in frames if len(f)]
     df = pd.concat(frames, ignore_index=True) if frames else pd.DataFrame(columns=COLUMNS)
     df = df[df["hg"].notna()]

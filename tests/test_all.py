@@ -318,3 +318,18 @@ def test_tennis_espn_results_and_history():
         assert len(calls) == 2 * 6
     finally:
         espn._request = orig
+
+
+def test_tsdb_respects_time_budget():
+    import time as _t
+    from app import tsdb
+    calls = []
+    orig = tsdb._get
+    tsdb._get = lambda *a, **k: calls.append(a) or {"events": None}
+    tsdb._DEADLINE["t"] = _t.time() - 1
+    try:
+        df = tsdb.fetch_season("2", "2026-2027", "CZ1", pd.Timestamp("2026-10-18"))
+        assert df.empty and not [c for c in calls if c[0] == "eventsround.php"]
+    finally:
+        tsdb._get = orig
+        tsdb._DEADLINE["t"] = None

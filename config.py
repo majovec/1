@@ -33,7 +33,7 @@ TSDB_LEAGUES = {"CZ1": ("Czech_Republic", ["Czech First", "Fortuna", "Chance"]),
                 "CH1": ("Switzerland", ["Swiss Super", "Super League"]),
                 "SK1": ("Slovakia", ["Slovak First", "Niké", "Nike", "Fortuna"])}
 
-DEFAULT_LEAGUES = "CZ1,E0,D1,SP1,I1,F1,N1,B1,P1,T1,SC0,AT1,DK1,PL1,CH1"
+DEFAULT_LEAGUES = "CZ1,E0,D1,SP1,I1,F1,N1,B1,P1,T1,SC0,AT1,DK1"
 
 
 def _env(name: str, default: str) -> str:

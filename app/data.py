@@ -94,7 +94,7 @@ def fetch_history(leagues, n_seasons: int, today: pd.Timestamp, cache_path: Path
     for div in leagues:
         if div in config.TSDB_LEAGUES:
             ctry, kws = config.TSDB_LEAGUES[div]
-            have = cached is not None and (cached["div"] == div).any()
+            have = cached is not None and (cached["div"] == div).sum() >= 150
             df = tsdb.fetch_history(div, ctry, kws, today, n_seasons, have)
             frames.append(df)
             continue
