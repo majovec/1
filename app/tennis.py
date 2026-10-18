@@ -16,7 +16,7 @@ import numpy as np
 import pandas as pd
 import requests
 
-from app import espn
+from app import espn, tennis_odds
 from app.export import CZ_SHIFT, write_json
 
 HEADERS = {"User-Agent": "football-ai-analyst/5 (GitHub Actions)"}
@@ -505,6 +505,12 @@ def run(now: pd.Timestamp, data_dir: Path, docs_dir: Path, upcoming_days: int = 
     log(f"Tenis backtest: {bt.get('matches')} zápasů, přesnost {bt.get('accuracy')}")
     raw = fetch_upcoming(now, upcoming_days) if raw_upcoming is None else raw_upcoming
     preds = predict_upcoming(raw, hist, elos, now, upcoming_days)
+    odds_feed = tennis_odds.fetch_feed(now)
+    preds = tennis_odds.match_odds(preds, odds_feed, now)
+    odds_log = tennis_odds.save_snapshots(data_dir / "tennis_odds_log.csv", preds, now)
+    odds_log = tennis_odds.settle_snapshots(data_dir / "tennis_odds_log.csv", hist)
+    log(f"Tenis kurzy: {sum(1 for p in preds if p.get('odds_a') is not None)} spárovaných z {len(preds)} předpovědí; "
+        f"zdroj: {odds_feed.get('reason') or 'aktualizace ' + str(odds_feed.get('updated_at'))}")
     tlog = update_log(data_dir / "tennis_log.csv", preds, now)
     settled = settle(tlog, hist)
     live = {"settled": int(len(settled)), "pending": int((tlog["date"] > now).sum()) if len(tlog) else 0}
@@ -514,6 +520,9 @@ def run(now: pd.Timestamp, data_dir: Path, docs_dir: Path, upcoming_days: int = 
         r["date"] = r["date"] + CZ_SHIFT
     srows = [] if settled.empty else [dict(r, date=r["date"] + CZ_SHIFT) for r in settled.sort_values("date", ascending=False).head(100).to_dict("records")]
     summary = {"generated_at": now, "version": VERSION, "history_matches": int(len(hist)), "backtest": bt, "live": live,
-               "history_to": hist["date"].max()}
+               "history_to": hist["date"].max(),
+               "odds": {"source": tennis_odds.SOURCE_NAME, "available": bool(odds_feed.get("ok")),
+                        "reason": odds_feed.get("reason", ""), "updated_at": odds_feed.get("updated_at"),
+                        "age_hours": odds_feed.get("age_hours"), "snapshots": int(len(odds_log))}}
     write_json(docs_dir / "tennis.json", {"summary": summary, "upcoming": preds, "settled": srows})
     return summary

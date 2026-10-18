@@ -22,7 +22,7 @@ Fotbalový analytik, který běží **zdarma jen na GitHubu** (Actions + Pages),
 - **Na jedno kliknutí:** vytvoř *fine-grained token* (GitHub → Settings → Developer settings → Fine-grained tokens), jen pro tento repozitář, oprávnění **Actions: Read and write**. Vlož ho tlačítkem *Token* na dashboardu. Uloží se jen v tvém prohlížeči. Token drž jen pro tento repozitář a nikomu ho neukazuj.
 
 ## Tenis a automatické obnovení (v6)
-- **Tenis** (ATP + WTA): historie a kurzy z tennis-data.co.uk, síla hráčů jako Elo (celkové + podle povrchu), backtest proti kurzům a naučená váha trhu. Nadcházející zápasy jdou z ESPN (bez kurzů); hráči, které systém nezná, se přeskočí. Chyba v tenise nikdy neshodí fotbal.
+- **Tenis** (ATP + WTA): historie výsledků a Elo model, backtest a nadcházející zápasy z ESPN. Externí kurzy pro nadcházející zápasy se načítají samostatně z bezplatného veřejného feedu; nejsou dostupné pro každý zápas a neuvádějí konkrétního bookmakera. Zastaralé nebo nejednoznačně spárované kurzy se nezobrazují. Chyba v tenise nikdy neshodí fotbal.
 - **Automaticky:** workflow *Analyze* běží každé 3 hodiny (v `.github/workflows/analyze.yml`; zkopíruj upravený soubor podle kroku 3 výše), dashboard si nová data sám načte každých 5 minut. GitHub může plánované běhy vypnout, když je repozitář dlouho bez aktivity; pak stačí workflow jednou spustit ručně.
 
 ## Ligy a země (v4)
@@ -57,3 +57,13 @@ python -m app.pipeline          # skutečná data
 - Model je jednoduchý: góly, síla týmů s časovým útlumem, domácí prostředí a Dixon–Coles korekce. Nezná zranění, sestavy, xG ani únavu.
 - Zdroj zveřejňuje jen zápasy na pár dní dopředu. Čas zápasů je britský.
 - Nic z toho není finanční poradenství a výsledky nejsou garance.
+
+## Tenis – externí kurzy
+
+Tenisová část může načítat externí tržní kurzy z veřejného feedu `matches.json` v repozitáři [Mriganka-codes/tennis_data](https://github.com/Mriganka-codes/tennis_data). Tento feed podle svého popisu shromažďuje dnešní zápasy a kurzy z Tennis Exploreru a aktualizuje se přibližně každých šest hodin. **Neuvádí konkrétního bookmakera**, proto je aplikace označuje jako externí tržní kurzy, nikoli jako kurzy Tipsportu nebo Fortuny.
+
+- Kurzy starší než 12 hodin se nepoužijí jako aktuální.
+- Zápas se propojí jen při dostatečné shodě obou hráčů, turnaje a data; při nejasné shodě se kurz nezobrazí.
+- Modelová pravděpodobnost a modelový férový kurz jsou oddělené od externích kurzů.
+- Časové snímky se ukládají do `data/tennis_odds_log.csv`; stejné kurzy se stejnou aktualizací feedu se při opakovaném běhu neduplikují. Po dostupnosti výsledku se doplní vítěz.
+- Zdroj je komunitní a může být dočasně nedostupný. V takovém případě zůstává tenisový model funkční a dashboard výslovně ukáže, že kurz není dostupný.

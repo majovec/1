@@ -115,7 +115,7 @@ svg text{fill:var(--mute);font-size:10px}
 <div id="tn" hidden>
   <div class="card" id="tnInfo" style="margin-top:6px"></div>
   <h2>Nadcházející zápasy (tenis)</h2>
-  <div class="sub">Tenis nemá remízu: u každého zápasu je jen šance prvního a druhého hráče. Odhad vychází z hodnocení hráčů (Elo) celkově a podle povrchu. Kurzy trhu u nadcházejících zápasů nejsou, takže jde jen o model.</div>
+  <div class="sub">Tenis nemá remízu. Pravděpodobnost a férový kurz jsou odhadem našeho Elo modelu. Skutečné externí tržní kurzy jsou uvedeny zvlášť, pokud je bezplatný zdroj aktuální a zápas se podaří bezpečně spárovat.</div>
   <div id="tnUp"></div>
   <h2>Úspěšnost mých vlastních předpovědí (tenis)</h2>
   <div class="grid" id="tnLive"></div>
@@ -350,16 +350,19 @@ function tnCard(m) {
   const cls = pr >= .7 ? 'fav-strong' : pr >= .58 ? 'fav-mid' : 'fav-weak';
   const lab = pr >= .7 ? 'silný favorit' : pr >= .58 ? 'mírný favorit' : 'vyrovnaný zápas';
   const low = Math.min(...m.games) < 15;
+  const hasOdds = Number.isFinite(Number(m.odds_a)) && Number(m.odds_a) > 1 && Number(m.odds_b) > 1;
+  const market = hasOdds ? `<div class="fair" style="grid-template-columns:1fr 1fr"><div><small>${esc(m.a_full)} · externí kurz</small><b>${Number(m.odds_a).toFixed(2)}</b><small>trh ${pct(m.market_p_a, 1)}</small></div><div><small>${esc(m.b_full)} · externí kurz</small><b>${Number(m.odds_b).toFixed(2)}</b><small>trh ${pct(m.market_p_b, 1)}</small></div></div><div class="meta"><span>Zdroj: ${esc(m.odds_source || 'externí zdroj')}</span><span>Aktualizováno: ${m.odds_updated_at ? esc(String(m.odds_updated_at).replace('T',' ').slice(0,16)) + ' UTC' : 'čas neuveden'}</span><span>Marže/overround: ${m.market_overround == null ? '–' : pct(m.market_overround, 1)}</span><span>Edge modelu: ${m.edge_a == null ? '–' : (m.edge_a*100).toFixed(1)+' %'} / ${m.edge_b == null ? '–' : (m.edge_b*100).toFixed(1)+' %'}</span></div>` : `<div class="note">Skutečný kurz nedostupný: ${esc(m.odds_status || 'zápas se nepodařilo bezpečně spárovat')}.</div>`;
   return `<div class="card match"><div class="top"><span>${m.tour.toUpperCase()} · ${esc(m.tournament)}${m.surface && m.surface !== 'nan' ? ' · ' + esc(m.surface) : ''}</span><span>${f.day.split(' ').slice(-2).join(' ')} ${f.time}</span></div>
     <div class="teams">${esc(m.a_full)} – ${esc(m.b_full)}</div>${tbar(pa)}
-    <div class="fair" style="grid-template-columns:1fr 1fr"><div><small>${esc(m.a_full)} · férový kurz</small><b>${fair(pa)}</b></div><div><small>${esc(m.b_full)}</small><b>${fair(1 - pa)}</b></div></div>
+    <div class="fair" style="grid-template-columns:1fr 1fr"><div><small>${esc(m.a_full)} · modelový férový kurz</small><b>${fair(pa)}</b><small>model ${pct(pa, 1)}</small></div><div><small>${esc(m.b_full)} · modelový férový kurz</small><b>${fair(1 - pa)}</b><small>model ${pct(1-pa, 1)}</small></div></div>
+    ${market}
     <div class="say"><b class="${cls}">${lab}: ${esc(fav)}</b> – ${Math.round(pr * 100)} %. Z 10 takových zápasů vyjde zhruba ${Math.round(pr * 10)}.</div>
-    <div class="meta"><span>Hodnocení (Elo): ${m.rating[0]} vs ${m.rating[1]}</span><span>Odehraných zápasů v datech: ${m.games[0]} / ${m.games[1]}</span><span class="${low ? 'fav-weak' : 'fav-mid'}">Spolehlivost: ${low ? 'nízká (málo dat o hráči)' : 'střední (jen model, bez kurzů)'}</span></div></div>`;
+    <div class="meta"><span>Hodnocení (Elo): ${m.rating[0]} vs ${m.rating[1]}</span><span>Odehraných zápasů v datech: ${m.games[0]} / ${m.games[1]}</span><span class="${low ? 'fav-weak' : 'fav-mid'}">Spolehlivost modelu: ${low ? 'nízká (málo dat o hráči)' : 'střední'}</span></div></div>`;
 }
 async function renderTennis() {
   try {
     const t = await load('tennis'), s = t.summary, b = s.backtest || {};
-    $('#tnInfo').innerHTML = `<b>Tenis.</b> Poslední analýza: ${s.generated_at.replace('T', ' ').slice(0, 16)} (UK čas) · ${s.history_matches} historických zápasů do ${(s.history_to || '').slice(0, 10)}.<div class="note">Zdroj výsledků a kurzů (tennis-data.co.uk) se doplňuje se zpožděním, vlastní předpovědi se proto vyhodnocují až po dnech. Hráči, které systém nezná, se přeskakují.</div>`;
+    $('#tnInfo').innerHTML = `<b>Tenis.</b> Poslední analýza: ${s.generated_at.replace('T', ' ').slice(0, 16)} (UK čas) · ${s.history_matches} historických zápasů do ${(s.history_to || '').slice(0, 10)}.<div class="note">Historické výsledky a Elo pocházejí ze stávajících zdrojů. Externí kurzy: ${esc((s.odds || {}).available ? 'zdroj aktualizován ' + String(s.odds.updated_at || '').replace('T',' ').slice(0,16) + ' UTC' : ((s.odds || {}).reason || 'nedostupné'))}. Zdroj neuvádí konkrétního bookmakera; zastaralé kurzy se nezobrazují.</div>`;
     $('#tnUp').innerHTML = t.upcoming.length ? t.upcoming.map(tnCard).join('') : '<div class="card empty">Zatím žádné nadcházející zápasy (zdroj ESPN je nevrátil nebo hráči nejsou v datech).</div>';
     const l = s.live || {};
     $('#tnLive').innerHTML = kpi('Vyhodnoceno', l.settled || 0, `čeká: ${l.pending || 0}`) + (l.settled ? kpi('Přesnost', pct(l.accuracy), 'trefený favorit') + kpi('Log loss', num(l.log_loss), '') : '');

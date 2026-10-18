@@ -333,3 +333,48 @@ def test_tsdb_respects_time_budget():
     finally:
         tsdb._get = orig
         tsdb._DEADLINE["t"] = None
+
+
+def test_tennis_odds_feed_parsing_matching_and_staleness(tmp_path):
+    from app import tennis_odds
+
+    now = pd.Timestamp("2026-10-18T12:00:00Z")
+    payload = {
+        "last_updated": "2026-10-18T09:00:00",
+        "matches": [{
+            "tournament": "Shanghai Masters", "time": "16:30",
+            "player1": "Zverev A. (1)", "player2": "De Minaur A. (9)",
+            "odds1": 1.5, "odds2": 2.7, "tour": "ATP"
+        }]
+    }
+    feed = tennis_odds.parse_feed(payload, now)
+    assert feed["ok"] is True
+    assert len(feed["matches"]) == 1
+    preds = [{
+        "tour": "atp", "date": pd.Timestamp("2026-10-18 16:30"),
+        "tournament": "Shanghai", "a": "De Minaur A.", "b": "Zverev A.", "p_a": 0.4
+    }]
+    linked = tennis_odds.match_odds(preds, feed, now)[0]
+    assert linked["odds_a"] == 2.7 and linked["odds_b"] == 1.5
+    assert abs(linked["market_p_a"] - ((1 / 2.7) / ((1 / 2.7) + (1 / 1.5)))) < 1e-9
+    assert linked["odds_status"] == "Dostupný externí tržní kurz"
+
+    stale = tennis_odds.parse_feed({"last_updated": "2026-10-17T20:00:00Z", "matches": payload["matches"]}, now)
+    assert stale["ok"] is False and "zastaralý" in stale["reason"]
+    assert stale["matches"] == []
+
+
+def test_tennis_odds_snapshot_is_idempotent(tmp_path):
+    from app import tennis_odds
+    path = tmp_path / "tennis_odds_log.csv"
+    pred = [{"tour": "atp", "date": "2026-10-18T16:30:00", "tournament": "Shanghai",
+             "a": "Zverev A.", "b": "De Minaur A.", "odds_a": 1.5, "odds_b": 2.7,
+             "odds_updated_at": "2026-10-18T09:00:00+00:00", "p_a": 0.65,
+             "market_p_a": 0.64, "market_overround": 0.04}]
+    now = pd.Timestamp("2026-10-18T12:00:00Z")
+    one = tennis_odds.save_snapshots(path, pred, now)
+    two = tennis_odds.save_snapshots(path, pred, now + pd.Timedelta(hours=1))
+    assert len(one) == 1 and len(two) == 1
+    pred[0]["odds_a"] = 1.52
+    three = tennis_odds.save_snapshots(path, pred, now + pd.Timedelta(hours=2))
+    assert len(three) == 2
