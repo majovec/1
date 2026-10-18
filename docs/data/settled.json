@@ -1,20 +1,40 @@
 {
- "generated_at": "2026-10-18T12:21:57.837638",
+ "generated_at": "2026-10-18T14:12:41.252496",
  "matches": [
+  {
+   "div": "CZ1",
+   "date": "2026-10-18T15:00:00",
+   "home": "Baník Ostrava",
+   "away": "Sparta Prague",
+   "score": "0:0",
+   "p": [
+    0.1607128554683207,
+    0.2256217411046484,
+    0.6136654034270309
+   ],
+   "pick": 2,
+   "actual": 1,
+   "correct": false,
+   "odds": [
+    null,
+    null,
+    null
+   ]
+  },
   {
    "div": "CZ1",
    "date": "2026-10-18T13:00:00",
    "home": "Slovácko",
    "away": "Zbrojovka Brno",
-   "score": "0:0",
+   "score": "1:2",
    "p": [
     0.3058981661619263,
     0.3041143639053104,
     0.3899874699327632
    ],
    "pick": 2,
-   "actual": 1,
-   "correct": false,
+   "actual": 2,
+   "correct": true,
    "odds": [
     null,
     null,
