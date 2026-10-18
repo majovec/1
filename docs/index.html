@@ -57,6 +57,17 @@ td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
 .fair small{display:block;color:var(--mute);font-size:11px}
 .gl dt{font-weight:700;margin-top:10px}.gl dd{margin:2px 0 0;color:var(--mute);font-size:13.5px}
 select{font:inherit;padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.betbox{display:grid;gap:6px;margin-top:10px}
+.betbtn{background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:7px 4px;font-weight:500;font-size:12.5px;text-align:center;line-height:1.35;width:100%}
+.betbtn b{display:block;font-size:15px}.betbtn small{display:block;color:var(--mute);font-size:11px}.betbtn .pay{display:block;color:var(--good);font-weight:600}
+#betModal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:flex-end;justify-content:center;z-index:50;padding:12px}
+#betModal[hidden]{display:none}
+#betForm{width:100%;max-width:520px}
+#betForm label{display:block;margin:10px 0 2px;font-size:13px;color:var(--mute)}
+#betForm input{width:100%;font:inherit;padding:10px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+#toast{position:fixed;left:50%;bottom:80px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:999px;font-size:14px;z-index:60}
+#toast[hidden]{display:none}
+.stake{margin:8px 0;padding:10px 14px}.stake input{width:84px;font:inherit;padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
 footer{color:var(--mute);font-size:12.5px;margin-top:30px}
 svg text{fill:var(--mute);font-size:10px}
 </style>
@@ -65,7 +76,7 @@ svg text{fill:var(--mute);font-size:10px}
 <div class="wrap">
 <header>
   <div>
-    <h1>⚽ Football AI Analyst <span class="sub" style="font-weight:400">v6.8</span></h1>
+    <h1>⚽ Football AI Analyst <span class="sub" style="font-weight:400">v7.0</span></h1>
     <div class="sub" id="asof">Načítám…</div>
   </div>
   <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
@@ -74,7 +85,8 @@ svg text{fill:var(--mute);font-size:10px}
   </div>
 </header>
 <div id="status"></div>
-<div class="chips" id="tabs"><button class="chip on" data-t="fb">⚽ Fotbal</button><button class="chip" data-t="tn">🎾 Tenis</button></div>
+<div class="chips" id="tabs"><button class="chip on" data-t="fb">⚽ Fotbal</button><button class="chip" data-t="tn">🎾 Tenis</button><button class="chip" data-t="bets">💰 Moje sázky</button></div>
+<div class="card stake" id="stakeBar">💰 <b>Kalkulačka:</b> vsadím <input id="stake" type="number" inputmode="decimal" min="1" value="100"> Kč <span class="sub">· u každého zápasu uvidíš možnou výhru</span></div>
 <div id="fb">
 
 <div class="card verdict" id="verdict" style="margin-top:14px"></div>
@@ -114,15 +126,39 @@ svg text{fill:var(--mute);font-size:10px}
 </div>
 <div id="tn" hidden>
   <div class="card" id="tnInfo" style="margin-top:6px"></div>
-  <h2>Nadcházející zápasy (tenis)</h2>
-  <div class="sub">Tenis nemá remízu. Pravděpodobnost a férový kurz jsou odhadem našeho Elo modelu. Skutečné externí tržní kurzy jsou uvedeny zvlášť, pokud je bezplatný zdroj aktuální a zápas se podaří bezpečně spárovat.</div>
-  <div id="tnUp"></div>
-  <h2>Úspěšnost mých vlastních předpovědí (tenis)</h2>
-  <div class="grid" id="tnLive"></div>
-  <div class="card" style="margin-top:12px;overflow-x:auto"><div id="tnSettled"></div></div>
-  <h2>Historický test (tenis)</h2>
-  <div class="grid" id="tnBt"></div>
+  <div class="chips" id="tnNav"><button class="chip on" data-s="up">🎾 Zápasy</button><button class="chip" data-s="ev">✔ Vyhodnocení</button><button class="chip" data-s="bt">📊 Backtest</button></div>
+  <div class="tsec" data-s="up">
+    <div class="sub">Tenis nemá remízu. Pravděpodobnost a férový kurz jsou odhadem našeho Elo modelu. Skutečné externí tržní kurzy jsou uvedeny zvlášť, pokud je bezplatný zdroj aktuální a zápas se podaří bezpečně spárovat.</div>
+    <div class="chips" id="tnFilter"></div>
+    <div id="tnUp"></div>
+  </div>
+  <div class="tsec" data-s="ev" hidden>
+    <h2>Úspěšnost mých vlastních předpovědí (tenis)</h2>
+    <div class="grid" id="tnLive"></div>
+    <div class="card" style="margin-top:12px;overflow-x:auto"><div id="tnSettled"></div></div>
+  </div>
+  <div class="tsec" data-s="bt" hidden>
+    <h2>Historický test (tenis)</h2>
+    <div class="grid" id="tnBt"></div>
+  </div>
 </div>
+<div id="bets" hidden>
+  <h2 style="margin-top:6px">Moje fiktivní sázky</h2>
+  <div class="sub">Zapisuješ si sázky, které bys vsadil. Systém je po odehrání zápasu sám vyhodnotí. Nejde o skutečné peníze. Data jsou uložená jen v tomto prohlížeči, proto je občas zálohuj tlačítkem „Export“.</div>
+  <div class="chips" id="betFilter"></div>
+  <div class="grid" id="betKpi"></div>
+  <div class="card" style="margin-top:12px" id="betChart"></div>
+  <div class="card" style="margin-top:12px;overflow-x:auto" id="betList"></div>
+  <div class="chips" style="margin-top:12px"><button class="ghost" id="bExpJson">⬇ Export JSON</button><button class="ghost" id="bExpCsv">⬇ Export CSV</button><button class="ghost" id="bImp">⬆ Import</button><button class="ghost" id="bClear">🗑 Smazat vše</button><input type="file" id="bFile" accept=".json" hidden></div>
+</div>
+<div id="betModal" hidden><div class="card" id="betForm">
+  <b id="bTitle"></b><div class="sub" id="bPick"></div>
+  <label>Kurz (přepiš na ten, který bys opravdu dostal)</label><input id="bOdds" type="number" step="0.01" inputmode="decimal">
+  <label>Částka (Kč)</label><input id="bStake" type="number" inputmode="decimal">
+  <div class="note" id="bNote"></div>
+  <div class="chips" style="margin-top:12px"><button id="bSave">Uložit sázku</button><button class="ghost" id="bCancel">Zrušit</button></div>
+</div></div>
+<div id="toast" hidden></div>
 <footer>
   Pravděpodobnostní odhady nejsou jisté tipy. Model je jednoduchý (góly, síla týmů, domácí prostředí) a bookmakeři mají víc informací.
   Kurzy jsou průměr trhu z football-data.co.uk (jen hlavní ligy). Česká liga a menší ligy jdou z ESPN bez kurzů, tam je odhad jen z modelu. Časy zápasů jsou český čas. Nic z toho není finanční poradenství.
@@ -255,6 +291,7 @@ function matchCard(m) {
   return `<div class="card match"><div class="top"><span>${esc(lg.name || m.div)}</span><span>${f.time}</span></div>
     <div class="teams">${esc(m.home)} – ${esc(m.away)}</div>${bar(m.p)}
     <div class="fair"><div><small>1 domácí · férový kurz</small><b>${fair(m.p[0])}</b></div><div><small>X remíza</small><b>${fair(m.p[1])}</b></div><div><small>2 host</small><b>${fair(m.p[2])}</b></div></div>
+    ${betBox(m, 'fb')}
     ${say(m)}
     ${formLine(m)}<div class="meta"><span>Over 2,5: ${pct(m.over25, 0)}</span><span>BTTS: ${pct(m.btts, 0)}</span><span>${odds}</span><span class="${rel[1]}">Spolehlivost: ${rel[0]}</span>${best}</div>
     <details><summary>Nejpravděpodobnější přesné skóre</summary><div class="meta">${m.top_scores.map(t => `<span>${t.score} (${pct(t.p, 0)})</span>`).join('')}</div></details></div>`;
@@ -290,7 +327,7 @@ async function render() {
   try {
     const [s, u, st] = await Promise.all([load('summary'), load('upcoming'), load('settled')]);
     SUMMARY = s;
-    renderVerdict(s); UP = u.matches || []; INFO = s.league_info || {}; renderUpcoming(); renderLive(s); renderLearn(s); renderSettled(st.matches || []); renderBacktest(s);
+    renderVerdict(s); UP = u.matches || []; INFO = s.league_info || {}; renderUpcoming(); renderLive(s); renderLearn(s); renderSettled(st.matches || []); FB_SET = st.matches || []; settleBets(); renderBets(); renderBacktest(s);
   } catch (e) {
     $('#asof').textContent = 'Zatím nejsou k dispozici žádná data.';
     $('#verdict').innerHTML = 'Spusť první analýzu: tlačítko nahoře (nebo GitHub → Actions → „Analyze“ → Run workflow). Trvá to asi 2–3 minuty, pak stránku obnov.';
@@ -356,14 +393,28 @@ function tnCard(m) {
     <div class="teams">${esc(m.a_full)} – ${esc(m.b_full)}</div>${tbar(pa)}
     <div class="fair" style="grid-template-columns:1fr 1fr"><div><small>${esc(m.a_full)} · modelový férový kurz</small><b>${fair(pa)}</b><small>model ${pct(pa, 1)}</small></div><div><small>${esc(m.b_full)} · modelový férový kurz</small><b>${fair(1 - pa)}</b><small>model ${pct(1-pa, 1)}</small></div></div>
     ${market}
+    ${betBox(m, 'tn')}
     <div class="say"><b class="${cls}">${lab}: ${esc(fav)}</b> – ${Math.round(pr * 100)} %. Z 10 takových zápasů vyjde zhruba ${Math.round(pr * 10)}.</div>
     <div class="meta"><span>Hodnocení (Elo): ${m.rating[0]} vs ${m.rating[1]}</span><span>Odehraných zápasů v datech: ${m.games[0]} / ${m.games[1]}</span><span class="${low ? 'fav-weak' : 'fav-mid'}">Spolehlivost modelu: ${low ? 'nízká (málo dat o hráči)' : 'střední'}</span></div></div>`;
+}
+let TN = [], TNF = 'all';
+function renderTnUp() {
+  const el = $('#tnUp');
+  if (!TN.length) { $('#tnFilter').innerHTML = ''; el.innerHTML = '<div class="card empty">Zatím žádné nadcházející zápasy (zdroj ESPN je nevrátil nebo hráči nejsou v datech).</div>'; return; }
+  const cnt = f => TN.filter(f).length, tours = ['atp', 'wta'].filter(x => cnt(m => m.tour === x));
+  const tns = [...new Set(TN.map(m => m.tournament))];
+  const chips = [['all', `Vše (${TN.length})`], ...tours.map(x => ['tour:' + x, `${x.toUpperCase()} (${cnt(m => m.tour === x)})`]), ...tns.map(n => ['t:' + n, `${n} (${cnt(m => m.tournament === n)})`])];
+  if (!chips.some(c => c[0] === TNF)) TNF = 'all';
+  $('#tnFilter').innerHTML = chips.map(([k, l]) => `<button class="chip ${k === TNF ? 'on' : ''}" data-f="${esc(k)}">${esc(l)}</button>`).join('');
+  document.querySelectorAll('#tnFilter .chip').forEach(b => b.onclick = () => { TNF = b.dataset.f; renderTnUp(); });
+  const f = TNF === 'all' ? () => true : TNF.startsWith('tour:') ? m => m.tour === TNF.slice(5) : m => m.tournament === TNF.slice(2);
+  el.innerHTML = TN.filter(f).map(tnCard).join('');
 }
 async function renderTennis() {
   try {
     const t = await load('tennis'), s = t.summary, b = s.backtest || {};
     $('#tnInfo').innerHTML = `<b>Tenis.</b> Poslední analýza: ${s.generated_at.replace('T', ' ').slice(0, 16)} (UK čas) · ${s.history_matches} historických zápasů do ${(s.history_to || '').slice(0, 10)}.<div class="note">Historické výsledky a Elo pocházejí ze stávajících zdrojů. Externí kurzy: ${esc((s.odds || {}).available ? 'zdroj aktualizován ' + String(s.odds.updated_at || '').replace('T',' ').slice(0,16) + ' UTC' : ((s.odds || {}).reason || 'nedostupné'))}. Zdroj neuvádí konkrétního bookmakera; zastaralé kurzy se nezobrazují.</div>`;
-    $('#tnUp').innerHTML = t.upcoming.length ? t.upcoming.map(tnCard).join('') : '<div class="card empty">Zatím žádné nadcházející zápasy (zdroj ESPN je nevrátil nebo hráči nejsou v datech).</div>';
+    TN = t.upcoming || []; TN_SET = t.settled || []; settleBets(); renderBets(); renderTnUp();
     const l = s.live || {};
     $('#tnLive').innerHTML = kpi('Vyhodnoceno', l.settled || 0, `čeká: ${l.pending || 0}`) + (l.settled ? kpi('Přesnost', pct(l.accuracy), 'trefený favorit') + kpi('Log loss', num(l.log_loss), '') : '');
     $('#tnSettled').innerHTML = (t.settled || []).length ? `<table><tr><th>Datum</th><th>Zápas</th><th class="n">Vítěz</th><th class="n"></th></tr>` + t.settled.map(r => `<tr><td>${fmtDate(r.date).key.slice(5).replace('-', '.')}.</td><td>${esc(r.a)} – ${esc(r.b)}</td><td class="n">${esc(r.winner)}</td><td class="n ${r.correct ? 'ok' : 'no'}">${r.correct ? '✔' : '✘'}</td></tr>`).join('') + '</table>' : '<div class="empty">Zatím žádný vyhodnocený zápas.</div>';
@@ -382,8 +433,112 @@ async function renderTennis() {
 }
 document.querySelectorAll('#tabs .chip').forEach(b => b.onclick = () => {
   document.querySelectorAll('#tabs .chip').forEach(x => x.classList.toggle('on', x === b));
-  $('#fb').hidden = b.dataset.t !== 'fb'; $('#tn').hidden = b.dataset.t !== 'tn';
+  $('#fb').hidden = b.dataset.t !== 'fb'; $('#tn').hidden = b.dataset.t !== 'tn'; $('#bets').hidden = b.dataset.t !== 'bets';
+  $('#stakeBar').hidden = b.dataset.t === 'bets';
 });
+document.querySelectorAll('#tnNav .chip').forEach(b => b.onclick = () => {
+  document.querySelectorAll('#tnNav .chip').forEach(x => x.classList.toggle('on', x === b));
+  document.querySelectorAll('.tsec').forEach(s => s.hidden = s.dataset.s !== b.dataset.s);
+});
+
+/* ---------- MOJE SÁZKY (fiktivní, uloženo v prohlížeči) ---------- */
+let BETS = []; try { BETS = JSON.parse(localStorage.getItem('bets_v1') || '[]'); } catch (e) { BETS = []; }
+const saveBets = () => { try { localStorage.setItem('bets_v1', JSON.stringify(BETS)); } catch (e) { toast('Prohlížeč neumožnil uložení, udělej Export.'); } };
+let FB_SET = [], TN_SET = [], BET_FILTER = 'real'; const MATCHES = {};
+const kc = v => Math.round(v).toLocaleString('cs-CZ');
+const stakeVal = () => Math.max(1, Number($('#stake').value) || 100);
+const payText = o => o > 1 ? `${kc(stakeVal() * o)} Kč (+${kc(stakeVal() * (o - 1))})` : '–';
+function toast(t) { const e = $('#toast'); e.textContent = t; e.hidden = false; setTimeout(() => e.hidden = true, 2200); }
+try { const s = localStorage.getItem('stake'); if (s) $('#stake').value = s; } catch (e) {}
+$('#stake').oninput = () => { try { localStorage.setItem('stake', $('#stake').value); } catch (e) {} document.querySelectorAll('.pay').forEach(e => e.textContent = payText(Number(e.dataset.o))); };
+
+function outcomes(m, sport) {
+  if (sport === 'fb') {
+    const mk = Array.isArray(m.odds) && m.odds.every(o => Number(o) > 1);
+    return [0, 1, 2].map(i => ({ i, name: i === 0 ? m.home : i === 2 ? m.away : 'Remíza', short: PICK[i], odds: mk ? Number(m.odds[i]) : 1 / m.p[i], kind: mk ? 'trh' : 'model', p: m.p[i] }));
+  }
+  const mk = Number(m.odds_a) > 1 && Number(m.odds_b) > 1, last = s => String(s).split(' ').slice(-1)[0];
+  return [{ i: 0, name: m.a, short: last(m.a_full), odds: mk ? Number(m.odds_a) : 1 / m.p_a, kind: mk ? 'trh' : 'model', p: m.p_a },
+          { i: 1, name: m.b, short: last(m.b_full), odds: mk ? Number(m.odds_b) : 1 / (1 - m.p_a), kind: mk ? 'trh' : 'model', p: 1 - m.p_a }];
+}
+const matchKey = (m, sport) => sport === 'fb' ? `fb|${m.div}|${m.home}|${m.away}` : `tn|${m.tour}|${[m.a, m.b].sort().join('|')}`;
+function betBox(m, sport) {
+  const key = matchKey(m, sport); MATCHES[key] = { m, sport };
+  const os = outcomes(m, sport);
+  return `<div class="betbox" style="grid-template-columns:repeat(${os.length},1fr)">` + os.map(o =>
+    `<button class="betbtn" data-k="${esc(key)}" data-i="${o.i}"><small>${esc(o.short)} · ${o.kind === 'trh' ? 'kurz trhu' : 'modelový kurz'}</small><b>${o.odds.toFixed(2)}</b><span class="pay" data-o="${o.odds}">${payText(o.odds)}</span><small>➕ zapsat sázku</small></button>`).join('') + '</div>';
+}
+let CUR = null;
+document.addEventListener('click', e => {
+  const b = e.target.closest('.betbtn');
+  if (b) {
+    const { m, sport } = MATCHES[b.dataset.k], o = outcomes(m, sport)[Number(b.dataset.i)];
+    CUR = { key: b.dataset.k, sport, m, o };
+    $('#bTitle').textContent = sport === 'fb' ? `${m.home} – ${m.away}` : `${m.a_full} – ${m.b_full}`;
+    $('#bPick').textContent = `Tip: ${o.name} (${sport === 'fb' ? PICK[o.i] : 'výhra'}) · model ${Math.round(o.p * 100)} %`;
+    $('#bOdds').value = o.odds.toFixed(2); $('#bStake').value = stakeVal();
+    $('#bNote').textContent = o.kind === 'trh' ? 'Předvyplněný kurz je tržní (cizí zdroj, ne nabídka Fortuny). Pokud znáš skutečný kurz své sázkovky, přepiš ho.' : 'Předvyplněný kurz je jen modelový (férový, bez marže). Žádná sázkovka ho nenabízí, takže se tato sázka počítá zvlášť jako fiktivní. Pro reálnou statistiku přepiš kurz na ten, který bys opravdu dostal.';
+    $('#betModal').hidden = false; return;
+  }
+  const d = e.target.closest('[data-del]'); if (d) { if (confirm('Smazat tuto sázku?')) { BETS = BETS.filter(x => x.id !== d.dataset.del); saveBets(); renderBets(); } return; }
+  const w = e.target.closest('[data-man]'); if (w) { const x = BETS.find(y => y.id === w.dataset.id); if (x) { x.status = w.dataset.man; saveBets(); renderBets(); } }
+});
+$('#bCancel').onclick = () => $('#betModal').hidden = true;
+$('#bSave').onclick = () => {
+  const odds = Number($('#bOdds').value), stake = Number($('#bStake').value);
+  if (!(odds > 1) || !(stake > 0)) { toast('Zadej kurz větší než 1 a kladnou částku.'); return; }
+  const { key, sport, m, o } = CUR, changed = Math.abs(odds - o.odds) > 0.004;
+  BETS.push({ id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), sport, key, title: sport === 'fb' ? `${m.home} – ${m.away}` : `${m.a_full} – ${m.b_full}`,
+    pick: o.i, pickName: o.name, odds, stake, kind: changed ? 'vlastní' : o.kind, p: o.p, kickoff: m.date, placed: new Date().toISOString(), status: 'open' });
+  saveBets(); $('#betModal').hidden = true; toast('Sázka uložena ✔'); renderBets();
+};
+const dd = (a, b) => (Date.parse(b) - Date.parse(a)) / 864e5;
+function settleBets() {
+  let ch = false;
+  for (const b of BETS) {
+    if (b.status !== 'open') continue;
+    let res = null;
+    if (b.sport === 'fb') { const r = FB_SET.find(r => b.key === `fb|${r.div}|${r.home}|${r.away}` && dd(b.kickoff, r.date) > -1 && dd(b.kickoff, r.date) < 4); if (r) res = r.actual === b.pick; }
+    else { const r = TN_SET.find(r => b.key === `tn|${r.tour}|${[r.a, r.b].sort().join('|')}` && dd(b.kickoff, r.date) > -1 && dd(b.kickoff, r.date) < 4); if (r) res = r.winner === b.pickName; }
+    if (res !== null) { b.status = res ? 'won' : 'lost'; ch = true; }
+  }
+  if (ch) saveBets();
+}
+const profitOf = b => b.status === 'won' ? b.stake * (b.odds - 1) : b.status === 'lost' ? -b.stake : 0;
+const signed = v => (v > 0 ? '+' : v < 0 ? '−' : '') + kc(Math.abs(v)) + ' Kč';
+function renderBets() {
+  const real = BETS.filter(b => b.kind !== 'model'), mod = BETS.filter(b => b.kind === 'model');
+  if (BET_FILTER === 'real' && !real.length && mod.length) BET_FILTER = 'all';
+  const list = BET_FILTER === 'real' ? real : BET_FILTER === 'model' ? mod : BETS;
+  $('#betFilter').innerHTML = [['real', `Tržní a vlastní kurzy (${real.length})`], ['model', `Modelové kurzy, fiktivní (${mod.length})`], ['all', `Vše (${BETS.length})`]]
+    .map(([k, l]) => `<button class="chip ${k === BET_FILTER ? 'on' : ''}" data-f="${k}">${l}</button>`).join('');
+  document.querySelectorAll('#betFilter .chip').forEach(b => b.onclick = () => { BET_FILTER = b.dataset.f; renderBets(); });
+  const done = list.filter(b => b.status !== 'open').sort((a, b) => String(a.kickoff).localeCompare(String(b.kickoff)));
+  const staked = done.reduce((s, b) => s + b.stake, 0), profit = done.reduce((s, b) => s + profitOf(b), 0), wins = done.filter(b => b.status === 'won').length;
+  const cls = profit > 0 ? 'ok' : profit < 0 ? 'no' : '';
+  $('#betKpi').innerHTML = kpi('Sázek', list.length, `vyhodnoceno ${done.length}, čeká ${list.length - done.length}`) + kpi('Vsazeno', kc(staked) + ' Kč', 'jen vyhodnocené') +
+    kpi('Zisk / ztráta', `<span class="${cls}">${signed(profit)}</span>`, '') + kpi('Návratnost (ROI)', staked ? pct(profit / staked) : '–', 'zisk ÷ vsazeno') + kpi('Úspěšnost', done.length ? pct(wins / done.length, 0) : '–', `${wins} z ${done.length}`);
+  let cum = 0; const pts = done.map(b => cum += profitOf(b));
+  if (pts.length < 2) $('#betChart').innerHTML = '<div class="empty">Graf vývoje zisku se objeví po dvou vyhodnocených sázkách.</div>';
+  else {
+    const lo = Math.min(0, ...pts), hi = Math.max(0, ...pts), sx = i => 10 + i * 280 / (pts.length - 1), sy = v => 100 - (v - lo) / ((hi - lo) || 1) * 90;
+    $('#betChart').innerHTML = `<b>Vývoj zisku</b><svg viewBox="0 0 300 110" style="width:100%;margin-top:6px"><line x1="10" x2="290" y1="${sy(0)}" y2="${sy(0)}" stroke="var(--line)"/><polyline fill="none" stroke="${cum >= 0 ? 'var(--good)' : 'var(--bad)'}" stroke-width="2" points="${pts.map((v, i) => sx(i) + ',' + sy(v)).join(' ')}"/></svg><div class="sub">Po ${pts.length} sázkách: ${signed(cum)}</div>`;
+  }
+  const rows = list.slice().sort((a, b) => String(b.placed).localeCompare(String(a.placed))).map(b => {
+    const p = profitOf(b), late = b.status === 'open' && Date.now() - Date.parse(b.kickoff) > 3 * 36e5;
+    return `<tr><td>${esc(String(b.kickoff).slice(5, 10).replace('-', '.'))}.</td><td>${esc(b.title)}<br><small class="sub">${esc(b.pickName)} @ ${b.odds.toFixed(2)} · ${kc(b.stake)} Kč · ${esc(b.kind)}</small>` +
+      (late ? `<br><button class="ghost" data-man="won" data-id="${b.id}">Vyhrála</button> <button class="ghost" data-man="lost" data-id="${b.id}">Prohrála</button>` : '') +
+      `</td><td class="n ${p > 0 ? 'ok' : p < 0 ? 'no' : ''}">${b.status === 'open' ? 'čeká' : signed(p)}</td><td><button class="ghost" data-del="${b.id}">✕</button></td></tr>`;
+  }).join('');
+  $('#betList').innerHTML = list.length ? `<table><tr><th>Datum</th><th>Sázka</th><th class="n">Výsledek</th><th></th></tr>${rows}</table>` : '<div class="empty">Zatím žádná sázka. V záložce Fotbal nebo Tenis klepni u zápasu na kurz.</div>';
+}
+function dl(name, text, type) { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([text], { type })); a.download = name; document.body.appendChild(a); a.click(); a.remove(); }
+$('#bExpJson').onclick = () => dl('moje-sazky.json', JSON.stringify(BETS, null, 1), 'application/json');
+$('#bExpCsv').onclick = () => dl('moje-sazky.csv', 'datum;zapas;tip;kurz;castka;druh_kurzu;stav;zisk\n' + BETS.map(b => [String(b.kickoff).slice(0, 16), b.title, b.pickName, b.odds, b.stake, b.kind, b.status, Math.round(profitOf(b))].map(v => '"' + String(v).replace(/"/g, '""') + '"').join(';')).join('\n'), 'text/csv');
+$('#bImp').onclick = () => $('#bFile').click();
+$('#bFile').onchange = async e => { try { const arr = JSON.parse(await e.target.files[0].text()), ids = new Set(BETS.map(b => b.id)); arr.filter(b => b && b.id && !ids.has(b.id)).forEach(b => BETS.push(b)); saveBets(); settleBets(); renderBets(); toast('Import hotov ✔'); } catch (err) { toast('Soubor se nepodařilo načíst.'); } };
+$('#bClear').onclick = () => { if (BETS.length && confirm('Opravdu smazat všechny sázky? Doporučuji nejdřív Export.')) { BETS = []; saveBets(); renderBets(); } };
+renderBets();
 renderTennis();
 /* automatické obnovení dat na stránce každých 5 minut (stránka jen načte nové soubory, analýzu spouští GitHub sám) */
 setInterval(() => { if (!document.hidden) { render(); renderTennis(); } }, 5 * 60 * 1000);

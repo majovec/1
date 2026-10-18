@@ -67,3 +67,11 @@ Tenisová část může načítat externí tržní kurzy z veřejného feedu `ma
 - Modelová pravděpodobnost a modelový férový kurz jsou oddělené od externích kurzů.
 - Časové snímky se ukládají do `data/tennis_odds_log.csv`; stejné kurzy se stejnou aktualizací feedu se při opakovaném běhu neduplikují. Po dostupnosti výsledku se doplní vítěz.
 - Zdroj je komunitní a může být dočasně nedostupný. V takovém případě zůstává tenisový model funkční a dashboard výslovně ukáže, že kurz není dostupný.
+
+
+## Kalkulačka a moje fiktivní sázky (v7.0)
+- Nahoře zadáš částku; u každého zápasu (fotbal i tenis) se u kurzů ukáže možná výhra. Klepnutím na kurz si sázku zapíšeš (kurz lze přepsat na ten, který bys opravdu dostal).
+- Záložka **💰 Moje sázky**: zisk/ztráta, ROI, úspěšnost, graf, seznam, export/import (JSON, CSV). Sázky se po odehrání zápasu vyhodnotí samy z dat systému, jinak je lze označit ručně.
+- Data jsou uložená **jen v prohlížeči** (localStorage). Při vymazání dat prohlížeče zmizí, proto občas použij Export.
+- Modelové (férové) kurzy nejsou nabídka sázkovky; sázky na ně se počítají zvlášť jako fiktivní.
+- Tenis má podmenu Zápasy / Vyhodnocení / Backtest a filtr podle ATP, WTA a turnaje.
