@@ -7,6 +7,10 @@ on:
         description: "Kódy líg oddělené čárkou, např. E0,D1,SP1,I1,F1 (prázdné = proměnná LEAGUES, jinak výchozí sada včetně české ligy CZ1)"
         required: false
         default: ""
+      only:
+        description: "Jen část: tennis nebo football (prázdné = obojí)"
+        required: false
+        default: ""
   schedule:
     - cron: "20 */3 * * *"
 
@@ -35,6 +39,7 @@ jobs:
         env:
           LEAGUES: ${{ inputs.leagues || vars.LEAGUES }}
           GITHUB_TOKEN: ${{ github.token }}
+          ONLY: ${{ inputs.only }}
         run: python -m app.pipeline
 
       - name: Uložit výsledky do repozitáře
