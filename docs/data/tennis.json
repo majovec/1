@@ -1,19 +1,19 @@
 {
  "summary": {
-  "generated_at": "2026-10-18T10:27:16.425196",
+  "generated_at": "2026-10-18T10:40:07.292298",
   "version": "tennis-elo-v1",
-  "history_matches": 22780,
+  "history_matches": 22781,
   "backtest": {
-   "matches": 13887,
+   "matches": 13888,
    "weight": 0.0,
-   "accuracy": 0.6187081443076259,
-   "log_loss": 0.649223182833945,
+   "accuracy": 0.618735599078341,
+   "log_loss": 0.6492207183253401,
    "naive_log_loss": 0.6931471805599453,
    "calibration": [
     {
-     "predicted": 0.5489246554310278,
-     "observed": 0.5351903435468895,
-     "n": 5385
+     "predicted": 0.5489231178066745,
+     "observed": 0.5352766431489046,
+     "n": 5386
     },
     {
      "predicted": 0.6464817485265137,
@@ -31,7 +31,7 @@
      "n": 1210
     },
     {
-     "predicted": 0.9302791699485475,
+     "predicted": 0.9302791699485478,
      "observed": 0.906832298136646,
      "n": 322
     }
@@ -41,7 +41,7 @@
    "settled": 0,
    "pending": 56
   },
-  "history_to": "2026-10-18T08:30:00"
+  "history_to": "2026-10-18T09:05:00"
  },
  "upcoming": [
   {
