@@ -1,6 +1,6 @@
 {
  "summary": {
-  "generated_at": "2026-10-18T10:40:07.292298",
+  "generated_at": "2026-10-18T11:02:02.371919",
   "version": "tennis-elo-v1",
   "history_matches": 22781,
   "backtest": {
@@ -39,33 +39,22 @@
   },
   "live": {
    "settled": 0,
-   "pending": 56
+   "pending": 54
   },
-  "history_to": "2026-10-18T09:05:00"
+  "history_to": "2026-10-18T09:05:00",
+  "odds": {
+   "source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "available": true,
+   "reason": "",
+   "updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "age_hours": 6.617496919444444,
+   "snapshots": 0
+  }
  },
  "upcoming": [
   {
-   "tour": "atp",
-   "date": "2026-10-18T12:00:00",
-   "tournament": "Almaty Open",
-   "surface": "Hard",
-   "a": "Stefanos Sakellaridis",
-   "b": "Aleksandr Shevchenko",
-   "a_full": "Stefanos Sakellaridis",
-   "b_full": "Aleksandr Shevchenko",
-   "p_a": 0.5115454464652083,
-   "games": [
-    16,
-    66
-   ],
-   "rating": [
-    1508,
-    1497
-   ]
-  },
-  {
    "tour": "wta",
-   "date": "2026-10-18T12:00:00",
+   "date": "2026-10-18T12:05:00",
    "tournament": "Lisboa Belem Open",
    "surface": "Hard",
    "a": "Leyre Romero Gormaz",
@@ -80,7 +69,18 @@
    "rating": [
     1613,
     1815
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -99,7 +99,18 @@
    "rating": [
     1560,
     1535
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -118,7 +129,18 @@
    "rating": [
     1254,
     1648
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "wta",
@@ -137,7 +159,18 @@
    "rating": [
     1924,
     1884
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -156,7 +189,18 @@
    "rating": [
     1487,
     1428
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -175,7 +219,18 @@
    "rating": [
     1532,
     1449
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -194,7 +249,18 @@
    "rating": [
     1444,
     1320
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "wta",
@@ -213,7 +279,18 @@
    "rating": [
     1605,
     1710
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -232,7 +309,18 @@
    "rating": [
     1504,
     1604
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -251,7 +339,18 @@
    "rating": [
     1517,
     1465
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -270,7 +369,18 @@
    "rating": [
     1616,
     1591
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "wta",
@@ -289,7 +399,18 @@
    "rating": [
     1719,
     1715
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "wta",
@@ -308,7 +429,18 @@
    "rating": [
     1530,
     1710
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "wta",
@@ -327,7 +459,18 @@
    "rating": [
     1770,
     1688
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -346,7 +489,18 @@
    "rating": [
     1452,
     1653
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -365,7 +519,18 @@
    "rating": [
     1624,
     1643
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -384,7 +549,18 @@
    "rating": [
     1511,
     1515
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -403,7 +579,18 @@
    "rating": [
     1576,
     1656
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -422,7 +609,18 @@
    "rating": [
     1596,
     1772
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -433,7 +631,7 @@
    "b": "Jacob Fearnley",
    "a_full": "Hugo Gaston",
    "b_full": "Jacob Fearnley",
-   "p_a": 0.47933888282800996,
+   "p_a": 0.4793388828280099,
    "games": [
     47,
     54
@@ -441,7 +639,18 @@
    "rating": [
     1559,
     1551
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -460,7 +669,18 @@
    "rating": [
     1572,
     1709
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -479,7 +699,18 @@
    "rating": [
     1710,
     1656
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -498,7 +729,18 @@
    "rating": [
     1474,
     1584
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -517,7 +759,18 @@
    "rating": [
     1528,
     1596
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -536,7 +789,18 @@
    "rating": [
     1573,
     1504
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -555,7 +819,18 @@
    "rating": [
     1572,
     1574
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -574,7 +849,18 @@
    "rating": [
     1619,
     1601
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -593,7 +879,18 @@
    "rating": [
     1461,
     1732
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -604,7 +901,7 @@
    "b": "Stefanos Tsitsipas",
    "a_full": "Aleksandar Kovacevic",
    "b_full": "Stefanos Tsitsipas",
-   "p_a": 0.1765759942703393,
+   "p_a": 0.17657599427033926,
    "games": [
     82,
     65
@@ -612,7 +909,18 @@
    "rating": [
     1534,
     1807
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -631,7 +939,18 @@
    "rating": [
     1504,
     1465
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -650,7 +969,18 @@
    "rating": [
     1414,
     1518
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -669,7 +999,18 @@
    "rating": [
     1672,
     1699
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -680,7 +1021,7 @@
    "b": "Jaime Faria",
    "a_full": "Felix Balshaw",
    "b_full": "Jaime Faria",
-   "p_a": 0.3085461684852445,
+   "p_a": 0.3085461684852448,
    "games": [
     3,
     61
@@ -688,7 +1029,18 @@
    "rating": [
     1538,
     1678
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -707,7 +1059,18 @@
    "rating": [
     1802,
     1561
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -718,7 +1081,7 @@
    "b": "Daniel Altmaier",
    "a_full": "Titouan Droguet",
    "b_full": "Daniel Altmaier",
-   "p_a": 0.5713494092914072,
+   "p_a": 0.5713494092914071,
    "games": [
     45,
     72
@@ -726,7 +1089,18 @@
    "rating": [
     1645,
     1596
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -745,7 +1119,18 @@
    "rating": [
     1498,
     1663
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "atp",
@@ -764,7 +1149,18 @@
    "rating": [
     1766,
     1592
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "wta",
@@ -783,7 +1179,18 @@
    "rating": [
     1715,
     1785
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "wta",
@@ -802,7 +1209,18 @@
    "rating": [
     1664,
     1621
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "wta",
@@ -821,7 +1239,18 @@
    "rating": [
     1799,
     1872
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "wta",
@@ -840,7 +1269,18 @@
    "rating": [
     1658,
     1754
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "wta",
@@ -859,7 +1299,18 @@
    "rating": [
     1616,
     1684
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "wta",
@@ -878,7 +1329,18 @@
    "rating": [
     1727,
     1848
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "wta",
@@ -897,7 +1359,18 @@
    "rating": [
     1384,
     1560
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "wta",
@@ -916,7 +1389,18 @@
    "rating": [
     1708,
     1690
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "wta",
@@ -935,7 +1419,18 @@
    "rating": [
     1695,
     1668
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "wta",
@@ -954,7 +1449,18 @@
    "rating": [
     1699,
     1924
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "wta",
@@ -973,7 +1479,18 @@
    "rating": [
     1577,
     1789
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "wta",
@@ -992,7 +1509,18 @@
    "rating": [
     1584,
     1815
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "wta",
@@ -1011,7 +1539,18 @@
    "rating": [
     1576,
     1696
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "wta",
@@ -1030,7 +1569,18 @@
    "rating": [
     1667,
     1731
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "wta",
@@ -1049,7 +1599,18 @@
    "rating": [
     1585,
     1763
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "wta",
@@ -1068,7 +1629,18 @@
    "rating": [
     1747,
     1777
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "wta",
@@ -1087,7 +1659,18 @@
    "rating": [
     1858,
     1849
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   },
   {
    "tour": "wta",
@@ -1106,7 +1689,18 @@
    "rating": [
     1791,
     1591
-   ]
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-18T03:24:59.383009+00:00",
+   "odds_age_hours": 6.617496919444444,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
   }
  ],
  "settled": []
