@@ -1,3 +1,5 @@
+import sys
+import os
 """Celý řetězec jedním příkazem: stáhnout data → backtest → předpovědi → vyhodnocení → JSON pro dashboard.
 
     python -m app.pipeline            # skutečná data z football-data.co.uk
@@ -79,9 +81,23 @@ def main(argv=None) -> None:
     ap.add_argument("--docs-dir", default=str(config.DOCS_DATA_DIR))
     args = ap.parse_args(argv)
 
+    try:
+        sys.stdout.reconfigure(line_buffering=True)          # ať se log v GitHubu řadí správně
+    except Exception:  # noqa: BLE001
+        pass
+    only = os.environ.get("ONLY", "").strip().lower()
     now = london_now()
     data_dir = Path(args.data_dir)
     data_dir.mkdir(parents=True, exist_ok=True)
+    if not args.demo and only != "football":
+        print("=== TENIS ===")
+        try:
+            tennis.run(now, data_dir, Path(args.docs_dir))
+        except Exception as exc:  # noqa: BLE001  tenis nesmí shodit fotbal
+            print(f"VAROVÁNÍ: tenis selhal: {exc}")
+        if only == "tennis":
+            return
+    print("=== FOTBAL ===")
     if args.demo:
         history, fixtures = demo.make_demo(now)
     else:
@@ -90,11 +106,6 @@ def main(argv=None) -> None:
         fixtures = data.fetch_fixtures(config.LEAGUES, now, config.UPCOMING_DAYS)
         print(f"Nadcházející zápasy ve zdroji: {len(fixtures)}")
     run(history, fixtures, now, data_dir, Path(args.docs_dir))
-    if not args.demo:
-        try:
-            tennis.run(now, data_dir, Path(args.docs_dir))
-        except Exception as exc:  # noqa: BLE001  tenis nesmí shodit fotbal
-            print(f"VAROVÁNÍ: tenis selhal: {exc}")
 
 
 if __name__ == "__main__":

@@ -51,11 +51,24 @@ def pick_league(js, keywords) -> tuple:
 
 
 def league_id(div: str, country: str, keywords):
+    """ID ligy: nejdřív podle země (různé zápisy názvu), pak ze seznamu všech lig. Neúspěch se pamatuje (nezkouší se znovu)."""
     if div in _IDS:
         return _IDS[div]
-    js = _get("search_all_leagues.php", {"c": country, "s": "Soccer"})
-    lid, name, seen = pick_league(js, keywords)
-    print(f"TheSportsDB {div}: ligy v zemi {country}: {seen} → použita: {name} (id {lid})")
+    lid = None
+    for c in dict.fromkeys([country.replace("_", " "), country, {"Czech_Republic": "Czechia"}.get(country, country)]):
+        js = _get("search_all_leagues.php", {"c": c, "s": "Soccer"})
+        lid, name, seen = pick_league(js, keywords)
+        print(f"TheSportsDB {div}: země '{c}': {len(seen)} lig {seen[:8]} → {name} (id {lid})")
+        if lid:
+            break
+    if not lid:
+        js = _get("all_leagues.php")
+        items = [x for x in ((js or {}).get("leagues") or (js or {}).get("countries") or []) if str(x.get("strSport", "")).lower() == "soccer"]
+        hits = [x for x in items if any(k.lower() in str(x.get("strLeague", "")).lower() for k in keywords)
+                and not any(b in str(x.get("strLeague", "")).lower() for b in ("cup", "women", "u19", "u21", "u23", "2"))]
+        print(f"TheSportsDB {div}: all_leagues.php má {len(items)} fotbalových lig, shody: {[h.get('strLeague') for h in hits[:6]]}")
+        if hits:
+            lid = hits[0]["idLeague"]
     _IDS[div] = lid
     return lid
 
