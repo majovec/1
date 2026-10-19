@@ -1,20 +1,20 @@
 {
- "generated_at": "2026-10-19T14:34:43.569019",
+ "generated_at": "2026-10-19T21:38:19.319779",
  "matches": [
   {
    "div": "DK1",
-   "date": "2026-10-18T18:00:00",
-   "home": "F.C. København",
-   "away": "AGF",
-   "score": "1:1",
+   "date": "2026-10-19T19:00:00",
+   "home": "Viborg FF",
+   "away": "FC Midtjylland",
+   "score": "1:2",
    "p": [
-    0.4677183277901545,
-    0.2423362844828105,
-    0.2899453877270352
+    0.2907691334708176,
+    0.2570972482667548,
+    0.4521336182624275
    ],
-   "pick": 0,
-   "actual": 1,
-   "correct": false,
+   "pick": 2,
+   "actual": 2,
+   "correct": true,
    "odds": [
     null,
     null,
@@ -34,6 +34,26 @@
    ],
    "pick": 0,
    "actual": 2,
+   "correct": false,
+   "odds": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "div": "DK1",
+   "date": "2026-10-18T18:00:00",
+   "home": "F.C. København",
+   "away": "AGF",
+   "score": "1:1",
+   "p": [
+    0.4677183277901545,
+    0.2423362844828105,
+    0.2899453877270352
+   ],
+   "pick": 0,
+   "actual": 1,
    "correct": false,
    "odds": [
     null,
