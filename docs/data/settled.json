@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-20T01:26:19.695095",
+ "generated_at": "2026-10-20T09:41:51.655588",
  "matches": [
   {
    "div": "DK1",
@@ -22,26 +22,6 @@
    ]
   },
   {
-   "div": "DK1",
-   "date": "2026-10-18T18:00:00",
-   "home": "F.C. København",
-   "away": "AGF",
-   "score": "1:1",
-   "p": [
-    0.4677183277901545,
-    0.2423362844828105,
-    0.2899453877270352
-   ],
-   "pick": 0,
-   "actual": 1,
-   "correct": false,
-   "odds": [
-    null,
-    null,
-    null
-   ]
-  },
-  {
    "div": "CZ1",
    "date": "2026-10-18T18:00:00",
    "home": "Jablonec",
@@ -54,6 +34,26 @@
    ],
    "pick": 0,
    "actual": 2,
+   "correct": false,
+   "odds": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "div": "DK1",
+   "date": "2026-10-18T18:00:00",
+   "home": "F.C. København",
+   "away": "AGF",
+   "score": "1:1",
+   "p": [
+    0.4677183277901545,
+    0.2423362844828105,
+    0.2899453877270352
+   ],
+   "pick": 0,
+   "actual": 1,
    "correct": false,
    "odds": [
     null,
