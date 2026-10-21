@@ -1,14 +1,14 @@
 {
  "summary": {
-  "generated_at": "2026-10-21T18:21:50.592101",
+  "generated_at": "2026-10-21T22:49:31.549996",
   "version": "tennis-elo-v1",
-  "history_matches": 22877,
+  "history_matches": 22881,
   "backtest": {
-   "matches": 13976,
+   "matches": 13980,
    "weight": 0.0,
-   "accuracy": 0.6186319404693761,
-   "log_loss": 0.6495676930666748,
-   "naive_log_loss": 0.6931471805599454,
+   "accuracy": 0.6186695278969957,
+   "log_loss": 0.6495132780612974,
+   "naive_log_loss": 0.6931471805599453,
    "calibration": [
     {
      "predicted": 0.54894614080326,
@@ -16,104 +16,44 @@
      "n": 5427
     },
     {
-     "predicted": 0.6464970148445492,
-     "observed": 0.6158759124087592,
-     "n": 4384
+     "predicted": 0.6464876979923688,
+     "observed": 0.6158230734154126,
+     "n": 4386
     },
     {
-     "predicted": 0.7449240505416983,
-     "observed": 0.6848115721355158,
-     "n": 2627
+     "predicted": 0.7449172593226137,
+     "observed": 0.684931506849315,
+     "n": 2628
     },
     {
-     "predicted": 0.8411772795456504,
-     "observed": 0.7779605263157895,
-     "n": 1216
+     "predicted": 0.841188524486042,
+     "observed": 0.7781429745275267,
+     "n": 1217
     },
     {
-     "predicted": 0.9302791699485475,
+     "predicted": 0.9302791699485478,
      "observed": 0.906832298136646,
      "n": 322
     }
    ]
   },
   "live": {
-   "settled": 107,
+   "settled": 112,
    "pending": 27,
-   "accuracy": 0.6355140186915887,
-   "log_loss": 0.6870407233001031
+   "accuracy": 0.6339285714285714,
+   "log_loss": 0.6810579732293702
   },
-  "history_to": "2026-10-21T16:15:00",
+  "history_to": "2026-10-21T20:20:00",
   "odds": {
    "source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
    "available": true,
    "reason": "",
-   "updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "age_hours": 0.6143697375,
+   "updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "age_hours": 0.4897552502777778,
    "snapshots": 0
   }
  },
  "upcoming": [
-  {
-   "tour": "atp",
-   "date": "2026-10-21T20:00:00",
-   "tournament": "BNP Paribas Fortis European Open",
-   "surface": "Hard",
-   "a": "Jan-Lennard Struff",
-   "b": "Gauthier Onclin",
-   "a_full": "Jan-Lennard Struff",
-   "b_full": "Gauthier Onclin",
-   "p_a": 0.7270767267867418,
-   "games": [
-    70,
-    19
-   ],
-   "rating": [
-    1664,
-    1445
-   ],
-   "odds_a": null,
-   "odds_b": null,
-   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
-   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
-   "market_p_a": null,
-   "market_p_b": null,
-   "market_overround": null,
-   "edge_a": null,
-   "edge_b": null
-  },
-  {
-   "tour": "atp",
-   "date": "2026-10-21T20:30:00",
-   "tournament": "Grand Prix Auvergne-Rhône-Alpes",
-   "surface": "Hard",
-   "a": "Tommy Paul",
-   "b": "Benjamin Bonzi",
-   "a_full": "Tommy Paul",
-   "b_full": "Benjamin Bonzi",
-   "p_a": 0.6476373877426548,
-   "games": [
-    80,
-    58
-   ],
-   "rating": [
-    1843,
-    1721
-   ],
-   "odds_a": null,
-   "odds_b": null,
-   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
-   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
-   "market_p_a": null,
-   "market_p_b": null,
-   "market_overround": null,
-   "edge_a": null,
-   "edge_b": null
-  },
   {
    "tour": "wta",
    "date": "2026-10-22T04:30:00",
@@ -135,8 +75,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -165,8 +105,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -195,8 +135,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -225,8 +165,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -255,8 +195,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -285,8 +225,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -315,8 +255,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -345,8 +285,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -375,8 +315,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -405,8 +345,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -435,8 +375,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -465,8 +405,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -495,8 +435,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -525,8 +465,38 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-22T15:00:00",
+   "tournament": "BNP Paribas Fortis European Open",
+   "surface": "Hard",
+   "a": "Alex Michelsen",
+   "b": "David Goffin",
+   "a_full": "Alex Michelsen",
+   "b_full": "David Goffin",
+   "p_a": 0.8470813057704244,
+   "games": [
+    77,
+    28
+   ],
+   "rating": [
+    1767,
+    1465
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -555,8 +525,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -585,8 +555,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -615,8 +585,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -645,8 +615,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -675,8 +645,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -705,8 +675,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -735,8 +705,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -765,8 +735,38 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
+  },
+  {
+   "tour": "atp",
+   "date": "2026-10-23T06:00:00",
+   "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+   "surface": "Hard",
+   "a": "Tommy Paul",
+   "b": "Corentin Moutet",
+   "a_full": "Tommy Paul",
+   "b_full": "Corentin Moutet",
+   "p_a": 0.8157389987016659,
+   "games": [
+    81,
+    72
+   ],
+   "rating": [
+    1857,
+    1558
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -795,8 +795,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -825,8 +825,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -855,8 +855,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-10-21T16:44:58.861046+00:00",
-   "odds_age_hours": 0.6143697375,
+   "odds_updated_at": "2026-10-21T21:20:08.431095+00:00",
+   "odds_age_hours": 0.4897552502777778,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -866,6 +866,26 @@
   }
  ],
  "settled": [
+  {
+   "date": "2026-10-21T20:30:00",
+   "tour": "atp",
+   "a": "Tommy Paul",
+   "b": "Benjamin Bonzi",
+   "p_a": 0.6476373877426548,
+   "winner": "Tommy Paul",
+   "correct": true,
+   "p_winner": 0.6476373877426548
+  },
+  {
+   "date": "2026-10-21T19:30:00",
+   "tour": "atp",
+   "a": "Jan-Lennard Struff",
+   "b": "Gauthier Onclin",
+   "p_a": 0.7270767267867418,
+   "winner": "Jan-Lennard Struff",
+   "correct": true,
+   "p_winner": 0.7270767267867418
+  },
   {
    "date": "2026-10-21T16:30:00",
    "tour": "atp",
@@ -939,6 +959,16 @@
   {
    "date": "2026-10-21T06:00:00",
    "tour": "atp",
+   "a": "Remy Bertola",
+   "b": "David Goffin",
+   "p_a": 0.6044929282833681,
+   "winner": "David Goffin",
+   "correct": false,
+   "p_winner": 0.3955070717166319
+  },
+  {
+   "date": "2026-10-21T06:00:00",
+   "tour": "atp",
    "a": "Francisco Cerundolo",
    "b": "Martin Damm",
    "p_a": 0.7358441765986722,
@@ -949,12 +979,12 @@
   {
    "date": "2026-10-21T06:00:00",
    "tour": "atp",
-   "a": "Luciano Darderi",
-   "b": "James Duckworth",
-   "p_a": 0.6743047553291421,
-   "winner": "James Duckworth",
+   "a": "Andrey Rublev",
+   "b": "Adrian Mannarino",
+   "p_a": 0.6669375055891089,
+   "winner": "Adrian Mannarino",
    "correct": false,
-   "p_winner": 0.32569524467085786
+   "p_winner": 0.3330624944108911
   },
   {
    "date": "2026-10-21T06:00:00",
@@ -979,12 +1009,12 @@
   {
    "date": "2026-10-21T06:00:00",
    "tour": "atp",
-   "a": "Andrey Rublev",
-   "b": "Adrian Mannarino",
-   "p_a": 0.6669375055891089,
-   "winner": "Adrian Mannarino",
+   "a": "Luciano Darderi",
+   "b": "James Duckworth",
+   "p_a": 0.6743047553291421,
+   "winner": "James Duckworth",
    "correct": false,
-   "p_winner": 0.3330624944108911
+   "p_winner": 0.32569524467085786
   },
   {
    "date": "2026-10-21T06:00:00",
@@ -995,6 +1025,16 @@
    "winner": "Talia Gibson",
    "correct": false,
    "p_winner": 0.4131978568452328
+  },
+  {
+   "date": "2026-10-21T06:00:00",
+   "tour": "atp",
+   "a": "Lorenzo Musetti",
+   "b": "Moise Kouame",
+   "p_a": 0.8548623720022746,
+   "winner": "Lorenzo Musetti",
+   "correct": true,
+   "p_winner": 0.8548623720022746
   },
   {
    "date": "2026-10-21T06:00:00",
@@ -1058,13 +1098,33 @@
   },
   {
    "date": "2026-10-20T06:00:00",
-   "tour": "wta",
-   "a": "Polina Kudermetova",
-   "b": "Cristina Bucsa",
-   "p_a": 0.5125638018481888,
-   "winner": "Polina Kudermetova",
+   "tour": "atp",
+   "a": "Karen Khachanov",
+   "b": "Rei Sakamoto",
+   "p_a": 0.5231686943867099,
+   "winner": "Karen Khachanov",
    "correct": true,
-   "p_winner": 0.5125638018481888
+   "p_winner": 0.5231686943867099
+  },
+  {
+   "date": "2026-10-20T06:00:00",
+   "tour": "atp",
+   "a": "Cameron Norrie",
+   "b": "Benjamin Bonzi",
+   "p_a": 0.4294293606567845,
+   "winner": "Benjamin Bonzi",
+   "correct": true,
+   "p_winner": 0.5705706393432155
+  },
+  {
+   "date": "2026-10-20T06:00:00",
+   "tour": "atp",
+   "a": "Martin Landaluce",
+   "b": "Stan Wawrinka",
+   "p_a": 0.4653538567448618,
+   "winner": "Stan Wawrinka",
+   "correct": true,
+   "p_winner": 0.5346461432551382
   },
   {
    "date": "2026-10-20T06:00:00",
@@ -1099,12 +1159,12 @@
   {
    "date": "2026-10-20T06:00:00",
    "tour": "atp",
-   "a": "Karen Khachanov",
-   "b": "Rei Sakamoto",
-   "p_a": 0.5231686943867099,
-   "winner": "Karen Khachanov",
+   "a": "Timofey Skatov",
+   "b": "Fabian Marozsan",
+   "p_a": 0.4017124425767233,
+   "winner": "Fabian Marozsan",
    "correct": true,
-   "p_winner": 0.5231686943867099
+   "p_winner": 0.5982875574232767
   },
   {
    "date": "2026-10-20T06:00:00",
@@ -1118,13 +1178,13 @@
   },
   {
    "date": "2026-10-20T06:00:00",
-   "tour": "atp",
-   "a": "Timofey Skatov",
-   "b": "Fabian Marozsan",
-   "p_a": 0.4017124425767233,
-   "winner": "Fabian Marozsan",
+   "tour": "wta",
+   "a": "Polina Kudermetova",
+   "b": "Cristina Bucsa",
+   "p_a": 0.5125638018481888,
+   "winner": "Polina Kudermetova",
    "correct": true,
-   "p_winner": 0.5982875574232767
+   "p_winner": 0.5125638018481888
   },
   {
    "date": "2026-10-20T06:00:00",
@@ -1135,16 +1195,6 @@
    "winner": "Diana Shnaider",
    "correct": true,
    "p_winner": 0.7224327810621622
-  },
-  {
-   "date": "2026-10-20T06:00:00",
-   "tour": "wta",
-   "a": "Anhelina Kalinina",
-   "b": "Jasmine Paolini",
-   "p_a": 0.4036002788049053,
-   "winner": "Jasmine Paolini",
-   "correct": true,
-   "p_winner": 0.5963997211950947
   },
   {
    "date": "2026-10-20T06:00:00",
@@ -1159,42 +1209,12 @@
   {
    "date": "2026-10-20T06:00:00",
    "tour": "atp",
-   "a": "Tomas Martin Etcheverry",
-   "b": "Mattia Bellucci",
-   "p_a": 0.4744156096249176,
-   "winner": "Mattia Bellucci",
+   "a": "Max Schoenhaus",
+   "b": "Tallon Griekspoor",
+   "p_a": 0.4039868669333578,
+   "winner": "Tallon Griekspoor",
    "correct": true,
-   "p_winner": 0.5255843903750824
-  },
-  {
-   "date": "2026-10-20T06:00:00",
-   "tour": "atp",
-   "a": "Cameron Norrie",
-   "b": "Benjamin Bonzi",
-   "p_a": 0.4294293606567845,
-   "winner": "Benjamin Bonzi",
-   "correct": true,
-   "p_winner": 0.5705706393432155
-  },
-  {
-   "date": "2026-10-20T06:00:00",
-   "tour": "atp",
-   "a": "Martin Landaluce",
-   "b": "Stan Wawrinka",
-   "p_a": 0.4653538567448618,
-   "winner": "Stan Wawrinka",
-   "correct": true,
-   "p_winner": 0.5346461432551382
-  },
-  {
-   "date": "2026-10-20T06:00:00",
-   "tour": "atp",
-   "a": "Clement Tabur",
-   "b": "Luca Van Assche",
-   "p_a": 0.5451989840001227,
-   "winner": "Luca Van Assche",
-   "correct": false,
-   "p_winner": 0.4548010159998773
+   "p_winner": 0.5960131330666423
   },
   {
    "date": "2026-10-20T06:00:00",
@@ -1209,12 +1229,12 @@
   {
    "date": "2026-10-20T06:00:00",
    "tour": "atp",
-   "a": "Max Schoenhaus",
-   "b": "Tallon Griekspoor",
-   "p_a": 0.4039868669333578,
-   "winner": "Tallon Griekspoor",
-   "correct": true,
-   "p_winner": 0.5960131330666423
+   "a": "Sebastian Baez",
+   "b": "Pierre-Hugues Herbert",
+   "p_a": 0.5737209561735075,
+   "winner": "Pierre-Hugues Herbert",
+   "correct": false,
+   "p_winner": 0.4262790438264925
   },
   {
    "date": "2026-10-20T06:00:00",
@@ -1259,6 +1279,16 @@
   {
    "date": "2026-10-20T06:00:00",
    "tour": "atp",
+   "a": "Remy Bertola",
+   "b": "David Goffin",
+   "p_a": 0.6044929282833681,
+   "winner": "David Goffin",
+   "correct": false,
+   "p_winner": 0.3955070717166319
+  },
+  {
+   "date": "2026-10-20T06:00:00",
+   "tour": "atp",
    "a": "Raphael Collignon",
    "b": "Nishesh Basavareddy",
    "p_a": 0.4064079789392655,
@@ -1288,13 +1318,13 @@
   },
   {
    "date": "2026-10-20T06:00:00",
-   "tour": "wta",
-   "a": "Zhang Shuai",
-   "b": "Tereza Valentova",
-   "p_a": 0.2280849252218994,
-   "winner": "Tereza Valentova",
-   "correct": true,
-   "p_winner": 0.7719150747781006
+   "tour": "atp",
+   "a": "Clement Tabur",
+   "b": "Luca Van Assche",
+   "p_a": 0.5451989840001227,
+   "winner": "Luca Van Assche",
+   "correct": false,
+   "p_winner": 0.4548010159998773
   },
   {
    "date": "2026-10-20T06:00:00",
@@ -1309,12 +1339,12 @@
   {
    "date": "2026-10-20T06:00:00",
    "tour": "atp",
-   "a": "Sebastian Baez",
-   "b": "Pierre-Hugues Herbert",
-   "p_a": 0.5737209561735075,
-   "winner": "Pierre-Hugues Herbert",
-   "correct": false,
-   "p_winner": 0.4262790438264925
+   "a": "Tomas Martin Etcheverry",
+   "b": "Mattia Bellucci",
+   "p_a": 0.4744156096249176,
+   "winner": "Mattia Bellucci",
+   "correct": true,
+   "p_winner": 0.5255843903750824
   },
   {
    "date": "2026-10-20T06:00:00",
@@ -1328,6 +1358,36 @@
   },
   {
    "date": "2026-10-20T06:00:00",
+   "tour": "atp",
+   "a": "Aleksandar Kovacevic",
+   "b": "Stefanos Tsitsipas",
+   "p_a": 0.1765759942703393,
+   "winner": "Stefanos Tsitsipas",
+   "correct": true,
+   "p_winner": 0.8234240057296607
+  },
+  {
+   "date": "2026-10-20T06:00:00",
+   "tour": "wta",
+   "a": "Anhelina Kalinina",
+   "b": "Jasmine Paolini",
+   "p_a": 0.4036002788049053,
+   "winner": "Jasmine Paolini",
+   "correct": true,
+   "p_winner": 0.5963997211950947
+  },
+  {
+   "date": "2026-10-20T06:00:00",
+   "tour": "wta",
+   "a": "Ena Shibahara",
+   "b": "Moyuka Uchijima",
+   "p_a": 0.2208359394350747,
+   "winner": "Moyuka Uchijima",
+   "correct": true,
+   "p_winner": 0.7791640605649253
+  },
+  {
+   "date": "2026-10-20T06:00:00",
    "tour": "wta",
    "a": "Ekaterina Alexandrova",
    "b": "Guo Hanyu",
@@ -1338,13 +1398,13 @@
   },
   {
    "date": "2026-10-20T06:00:00",
-   "tour": "atp",
-   "a": "Aleksandar Kovacevic",
-   "b": "Stefanos Tsitsipas",
-   "p_a": 0.1765759942703393,
-   "winner": "Stefanos Tsitsipas",
+   "tour": "wta",
+   "a": "Zhang Shuai",
+   "b": "Tereza Valentova",
+   "p_a": 0.2280849252218994,
+   "winner": "Tereza Valentova",
    "correct": true,
-   "p_winner": 0.8234240057296607
+   "p_winner": 0.7719150747781006
   },
   {
    "date": "2026-10-20T06:00:00",
@@ -1397,16 +1457,6 @@
    "p_winner": 0.512082136832756
   },
   {
-   "date": "2026-10-20T06:00:00",
-   "tour": "wta",
-   "a": "Ena Shibahara",
-   "b": "Moyuka Uchijima",
-   "p_a": 0.2208359394350747,
-   "winner": "Moyuka Uchijima",
-   "correct": true,
-   "p_winner": 0.7791640605649253
-  },
-  {
    "date": "2026-10-20T05:30:00",
    "tour": "wta",
    "a": "Himeno Sakatsume",
@@ -1439,22 +1489,22 @@
   {
    "date": "2026-10-19T13:30:00",
    "tour": "atp",
-   "a": "Nicolai Budkov Kjaer",
-   "b": "Clement Tabur",
-   "p_a": 0.4885847517305129,
-   "winner": "Clement Tabur",
-   "correct": true,
-   "p_winner": 0.5114152482694871
-  },
-  {
-   "date": "2026-10-19T13:30:00",
-   "tour": "atp",
    "a": "Martin Damm",
    "b": "Yannick Hanfmann",
    "p_a": 0.3594432576035127,
    "winner": "Martin Damm",
    "correct": false,
    "p_winner": 0.3594432576035127
+  },
+  {
+   "date": "2026-10-19T13:30:00",
+   "tour": "atp",
+   "a": "Nicolai Budkov Kjaer",
+   "b": "Clement Tabur",
+   "p_a": 0.4885847517305129,
+   "winner": "Clement Tabur",
+   "correct": true,
+   "p_winner": 0.5114152482694871
   },
   {
    "date": "2026-10-19T13:30:00",
@@ -1469,22 +1519,22 @@
   {
    "date": "2026-10-19T12:00:00",
    "tour": "atp",
-   "a": "Borna Gojo",
-   "b": "Vitaliy Sachko",
-   "p_a": 0.4613018486539467,
-   "winner": "Borna Gojo",
-   "correct": false,
-   "p_winner": 0.4613018486539467
-  },
-  {
-   "date": "2026-10-19T12:00:00",
-   "tour": "atp",
    "a": "Jaume Munar",
    "b": "Federico Cina",
    "p_a": 0.6607899680892807,
    "winner": "Jaume Munar",
    "correct": true,
    "p_winner": 0.6607899680892807
+  },
+  {
+   "date": "2026-10-19T12:00:00",
+   "tour": "atp",
+   "a": "Borna Gojo",
+   "b": "Vitaliy Sachko",
+   "p_a": 0.4613018486539467,
+   "winner": "Borna Gojo",
+   "correct": false,
+   "p_winner": 0.4613018486539467
   },
   {
    "date": "2026-10-19T11:30:00",
@@ -1539,16 +1589,6 @@
   {
    "date": "2026-10-19T07:30:00",
    "tour": "wta",
-   "a": "Shi Han",
-   "b": "Sorana Cirstea",
-   "p_a": 0.267178406796445,
-   "winner": "Sorana Cirstea",
-   "correct": true,
-   "p_winner": 0.732821593203555
-  },
-  {
-   "date": "2026-10-19T07:30:00",
-   "tour": "wta",
    "a": "Janice Tjen",
    "b": "Ashlyn Krueger",
    "p_a": 0.4647805330572503,
@@ -1557,74 +1597,14 @@
    "p_winner": 0.5352194669427497
   },
   {
-   "date": "2026-10-19T06:00:00",
-   "tour": "atp",
-   "a": "Lorenzo Musetti",
-   "b": "Matteo Arnaldi",
-   "p_a": 0.7382959773663678,
-   "winner": "Lorenzo Musetti",
+   "date": "2026-10-19T07:30:00",
+   "tour": "wta",
+   "a": "Shi Han",
+   "b": "Sorana Cirstea",
+   "p_a": 0.267178406796445,
+   "winner": "Sorana Cirstea",
    "correct": true,
-   "p_winner": 0.7382959773663678
-  },
-  {
-   "date": "2026-10-19T06:00:00",
-   "tour": "atp",
-   "a": "Rinky Hijikata",
-   "b": "Terence Atmane",
-   "p_a": 0.5206236169971069,
-   "winner": "Terence Atmane",
-   "correct": false,
-   "p_winner": 0.4793763830028931
-  },
-  {
-   "date": "2026-10-19T06:00:00",
-   "tour": "atp",
-   "a": "Marcos Giron",
-   "b": "Jan-Lennard Struff",
-   "p_a": 0.2571436624903412,
-   "winner": "Jan-Lennard Struff",
-   "correct": true,
-   "p_winner": 0.7428563375096588
-  },
-  {
-   "date": "2026-10-19T06:00:00",
-   "tour": "atp",
-   "a": "Juan Manuel Cerundolo",
-   "b": "Mariano Navone",
-   "p_a": 0.4110374329233149,
-   "winner": "Mariano Navone",
-   "correct": true,
-   "p_winner": 0.5889625670766852
-  },
-  {
-   "date": "2026-10-19T06:00:00",
-   "tour": "atp",
-   "a": "Max Schoenhaus",
-   "b": "Tallon Griekspoor",
-   "p_a": 0.4039868669333578,
-   "winner": "Tallon Griekspoor",
-   "correct": true,
-   "p_winner": 0.5960131330666423
-  },
-  {
-   "date": "2026-10-19T06:00:00",
-   "tour": "atp",
-   "a": "Hugo Gaston",
-   "b": "Jacob Fearnley",
-   "p_a": 0.4793388828280099,
-   "winner": "Jacob Fearnley",
-   "correct": true,
-   "p_winner": 0.5206611171719902
-  },
-  {
-   "date": "2026-10-19T06:00:00",
-   "tour": "atp",
-   "a": "Damir Dzumhur",
-   "b": "Dino Prizmic",
-   "p_a": 0.2688532684076317,
-   "winner": "Damir Dzumhur",
-   "correct": false,
-   "p_winner": 0.2688532684076317
+   "p_winner": 0.732821593203555
   },
   {
    "date": "2026-10-19T06:00:00",
@@ -1639,12 +1619,62 @@
   {
    "date": "2026-10-19T06:00:00",
    "tour": "atp",
-   "a": "Corentin Moutet",
-   "b": "Ugo Humbert",
-   "p_a": 0.3183645075346159,
-   "winner": "Corentin Moutet",
+   "a": "Aleksandar Vukic",
+   "b": "Adrian Mannarino",
+   "p_a": 0.3501124303808348,
+   "winner": "Adrian Mannarino",
+   "correct": true,
+   "p_winner": 0.6498875696191653
+  },
+  {
+   "date": "2026-10-19T06:00:00",
+   "tour": "atp",
+   "a": "Damir Dzumhur",
+   "b": "Dino Prizmic",
+   "p_a": 0.2688532684076317,
+   "winner": "Damir Dzumhur",
    "correct": false,
-   "p_winner": 0.3183645075346159
+   "p_winner": 0.2688532684076317
+  },
+  {
+   "date": "2026-10-19T06:00:00",
+   "tour": "atp",
+   "a": "Hugo Gaston",
+   "b": "Jacob Fearnley",
+   "p_a": 0.4793388828280099,
+   "winner": "Jacob Fearnley",
+   "correct": true,
+   "p_winner": 0.5206611171719902
+  },
+  {
+   "date": "2026-10-19T06:00:00",
+   "tour": "atp",
+   "a": "Max Schoenhaus",
+   "b": "Tallon Griekspoor",
+   "p_a": 0.4039868669333578,
+   "winner": "Tallon Griekspoor",
+   "correct": true,
+   "p_winner": 0.5960131330666423
+  },
+  {
+   "date": "2026-10-19T06:00:00",
+   "tour": "atp",
+   "a": "Juan Manuel Cerundolo",
+   "b": "Mariano Navone",
+   "p_a": 0.4110374329233149,
+   "winner": "Mariano Navone",
+   "correct": true,
+   "p_winner": 0.5889625670766852
+  },
+  {
+   "date": "2026-10-19T06:00:00",
+   "tour": "atp",
+   "a": "Facundo Diaz Acosta",
+   "b": "Thiago Agustin Tirante",
+   "p_a": 0.1543685611410135,
+   "winner": "Facundo Diaz Acosta",
+   "correct": false,
+   "p_winner": 0.1543685611410135
   },
   {
    "date": "2026-10-19T06:00:00",
@@ -1655,6 +1685,16 @@
    "winner": "Fabian Marozsan",
    "correct": true,
    "p_winner": 0.5982875574232767
+  },
+  {
+   "date": "2026-10-19T06:00:00",
+   "tour": "atp",
+   "a": "Marcos Giron",
+   "b": "Jan-Lennard Struff",
+   "p_a": 0.2571436624903412,
+   "winner": "Jan-Lennard Struff",
+   "correct": true,
+   "p_winner": 0.7428563375096588
   },
   {
    "date": "2026-10-19T06:00:00",
@@ -1679,42 +1719,22 @@
   {
    "date": "2026-10-19T06:00:00",
    "tour": "atp",
-   "a": "Aleksandar Vukic",
-   "b": "Adrian Mannarino",
-   "p_a": 0.3501124303808348,
-   "winner": "Adrian Mannarino",
-   "correct": true,
-   "p_winner": 0.6498875696191653
+   "a": "Rinky Hijikata",
+   "b": "Terence Atmane",
+   "p_a": 0.5206236169971069,
+   "winner": "Terence Atmane",
+   "correct": false,
+   "p_winner": 0.4793763830028931
   },
   {
    "date": "2026-10-19T06:00:00",
    "tour": "atp",
-   "a": "Facundo Diaz Acosta",
-   "b": "Thiago Agustin Tirante",
-   "p_a": 0.1543685611410135,
-   "winner": "Facundo Diaz Acosta",
-   "correct": false,
-   "p_winner": 0.1543685611410135
-  },
-  {
-   "date": "2026-10-19T06:00:00",
-   "tour": "wta",
-   "a": "Leylah Fernandez",
-   "b": "Elise Mertens",
-   "p_a": 0.4183679192579095,
-   "winner": "Leylah Fernandez",
-   "correct": false,
-   "p_winner": 0.4183679192579095
-  },
-  {
-   "date": "2026-10-19T06:00:00",
-   "tour": "wta",
-   "a": "Harriet Dart",
-   "b": "Talia Gibson",
-   "p_a": 0.5905318677681902,
-   "winner": "Talia Gibson",
-   "correct": false,
-   "p_winner": 0.4094681322318098
+   "a": "Cameron Norrie",
+   "b": "Benjamin Bonzi",
+   "p_a": 0.4294293606567846,
+   "winner": "Benjamin Bonzi",
+   "correct": true,
+   "p_winner": 0.5705706393432154
   },
   {
    "date": "2026-10-19T06:00:00",
@@ -1749,16 +1769,6 @@
   {
    "date": "2026-10-19T06:00:00",
    "tour": "atp",
-   "a": "Cameron Norrie",
-   "b": "Benjamin Bonzi",
-   "p_a": 0.4294293606567846,
-   "winner": "Benjamin Bonzi",
-   "correct": true,
-   "p_winner": 0.5705706393432154
-  },
-  {
-   "date": "2026-10-19T06:00:00",
-   "tour": "atp",
    "a": "Felix Balshaw",
    "b": "Jaime Faria",
    "p_a": 0.3351113333802147,
@@ -1785,6 +1795,46 @@
    "winner": "Daniel Altmaier",
    "correct": false,
    "p_winner": 0.43315331111336275
+  },
+  {
+   "date": "2026-10-19T06:00:00",
+   "tour": "atp",
+   "a": "Corentin Moutet",
+   "b": "Ugo Humbert",
+   "p_a": 0.3183645075346159,
+   "winner": "Corentin Moutet",
+   "correct": false,
+   "p_winner": 0.3183645075346159
+  },
+  {
+   "date": "2026-10-19T06:00:00",
+   "tour": "atp",
+   "a": "Lorenzo Musetti",
+   "b": "Matteo Arnaldi",
+   "p_a": 0.7382959773663678,
+   "winner": "Lorenzo Musetti",
+   "correct": true,
+   "p_winner": 0.7382959773663678
+  },
+  {
+   "date": "2026-10-19T06:00:00",
+   "tour": "wta",
+   "a": "Harriet Dart",
+   "b": "Talia Gibson",
+   "p_a": 0.5905318677681902,
+   "winner": "Talia Gibson",
+   "correct": false,
+   "p_winner": 0.4094681322318098
+  },
+  {
+   "date": "2026-10-19T06:00:00",
+   "tour": "wta",
+   "a": "Leylah Fernandez",
+   "b": "Elise Mertens",
+   "p_a": 0.4183679192579095,
+   "winner": "Leylah Fernandez",
+   "correct": false,
+   "p_winner": 0.4183679192579095
   },
   {
    "date": "2026-10-19T04:30:00",
@@ -1815,56 +1865,6 @@
    "winner": "Lilli Tagger",
    "correct": false,
    "p_winner": 0.3584125146062217
-  },
-  {
-   "date": "2026-10-18T16:00:00",
-   "tour": "atp",
-   "a": "Andrea Guerrieri",
-   "b": "Martin Damm",
-   "p_a": 0.5540448947119105,
-   "winner": "Andrea Guerrieri",
-   "correct": true,
-   "p_winner": 0.5540448947119105
-  },
-  {
-   "date": "2026-10-18T15:30:00",
-   "tour": "atp",
-   "a": "Nicolai Budkov Kjaer",
-   "b": "Ugo Blanchet",
-   "p_a": 0.5524033196634309,
-   "winner": "Nicolai Budkov Kjaer",
-   "correct": true,
-   "p_winner": 0.5524033196634309
-  },
-  {
-   "date": "2026-10-18T15:00:00",
-   "tour": "atp",
-   "a": "Aziz Dougaz",
-   "b": "Nishesh Basavareddy",
-   "p_a": 0.4029634225128773,
-   "winner": "Nishesh Basavareddy",
-   "correct": true,
-   "p_winner": 0.5970365774871227
-  },
-  {
-   "date": "2026-10-18T14:00:00",
-   "tour": "wta",
-   "a": "Dominika Salkova",
-   "b": "Bianca Andreescu",
-   "p_a": 0.328815481022579,
-   "winner": "Bianca Andreescu",
-   "correct": true,
-   "p_winner": 0.671184518977421
-  },
-  {
-   "date": "2026-10-18T14:00:00",
-   "tour": "atp",
-   "a": "Borna Gojo",
-   "b": "Francesco Maestrelli",
-   "p_a": 0.6213621575655589,
-   "winner": "Borna Gojo",
-   "correct": true,
-   "p_winner": 0.6213621575655589
   }
  ]
 }
