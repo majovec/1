@@ -99,7 +99,7 @@ atp|2026-10-20|Kyrian Jacquet|Matteo Berrettini,2026-10-20 05:00:00,atp,Kyrian J
 atp|2026-10-20|Pierre-Hugues Herbert|Sebastian Baez,2026-10-20 05:00:00,atp,Sebastian Baez,Pierre-Hugues Herbert,0.5737209561735075,Hard,2026-10-19 14:34:43.569019
 atp|2026-10-20|Arthur Fery|Borna Gojo,2026-10-20 05:00:00,atp,Borna Gojo,Arthur Fery,0.3105271113530529,Hard,2026-10-19 14:34:43.569019
 wta|2026-10-20|Alycia Parks|Sara Bejlek,2026-10-20 06:00:00,wta,Alycia Parks,Sara Bejlek,0.1944112123390036,Hard,2026-10-19 14:34:43.569019
-atp|2026-10-21|Damir Dzumhur|Dino Prizmic,2026-10-21 05:00:00,atp,Damir Dzumhur,Dino Prizmic,0.26885326840763174,Hard,2026-10-19 14:34:43.569019
+atp|2026-10-21|Damir Dzumhur|Dino Prizmic,2026-10-21 05:00:00,atp,Damir Dzumhur,Dino Prizmic,0.2688532684076317,Hard,2026-10-19 14:34:43.569019
 atp|2026-10-21|David Goffin|Remy Bertola,2026-10-21 05:00:00,atp,Remy Bertola,David Goffin,0.6044929282833681,Hard,2026-10-19 14:34:43.569019
 atp|2026-10-21|Francisco Cerundolo|Martin Damm,2026-10-21 05:00:00,atp,Francisco Cerundolo,Martin Damm,0.7358441765986722,Hard,2026-10-19 14:34:43.569019
 atp|2026-10-21|Arthur Fils|Jaume Munar,2026-10-21 05:00:00,atp,Jaume Munar,Arthur Fils,0.2426347653273226,Hard,2026-10-19 14:34:43.569019
@@ -109,12 +109,12 @@ atp|2026-10-21|Facundo Diaz Acosta|Nikoloz Basilashvili,2026-10-21 05:00:00,atp,
 atp|2026-10-21|Mattia Bellucci|Tomas Martin Etcheverry,2026-10-21 05:00:00,atp,Tomas Martin Etcheverry,Mattia Bellucci,0.4744156096249176,Hard,2026-10-19 14:34:43.569019
 wta|2026-10-21|Ashlyn Krueger|Lanlana Tararudee,2026-10-21 05:00:00,wta,Ashlyn Krueger,Lanlana Tararudee,0.4490273010113823,Hard,2026-10-19 14:34:43.569019
 wta|2026-10-21|Sinja Kraus|Talia Gibson,2026-10-21 05:00:00,wta,Sinja Kraus,Talia Gibson,0.5868021431547672,Hard,2026-10-19 14:34:43.569019
-wta|2026-10-21|Aliaksandra Sasnovich|Leylah Fernandez,2026-10-21 05:00:00,wta,Aliaksandra Sasnovich,Leylah Fernandez,0.32051020165407645,Hard,2026-10-19 14:34:43.569019
+wta|2026-10-21|Aliaksandra Sasnovich|Leylah Fernandez,2026-10-21 05:00:00,wta,Aliaksandra Sasnovich,Leylah Fernandez,0.3205102016540764,Hard,2026-10-19 14:34:43.569019
 wta|2026-10-21|Iga Swiatek|Marie Bouzkova,2026-10-21 05:00:00,wta,Iga Swiatek,Marie Bouzkova,0.7919932220534832,Hard,2026-10-19 14:34:43.569019
 atp|2026-10-21|Lorenzo Musetti|Moise Kouame,2026-10-21 05:00:00,atp,Lorenzo Musetti,Moise Kouame,0.8548623720022746,Hard,2026-10-19 21:38:19.319779
 atp|2026-10-21|Martin Landaluce|Stan Wawrinka,2026-10-21 05:00:00,atp,Martin Landaluce,Stan Wawrinka,0.4653538567448618,Hard,2026-10-19 21:38:19.319779
 wta|2026-10-21|Lilli Tagger|Tereza Valentova,2026-10-21 04:30:00,wta,Lilli Tagger,Tereza Valentova,0.3628894821219858,Hard,2026-10-20 09:41:51.655588
-wta|2026-10-21|Sara Bejlek|Sorana Cirstea,2026-10-21 05:00:00,wta,Sara Bejlek,Sorana Cirstea,0.37259497200186703,Hard,2026-10-20 09:41:51.655588
+wta|2026-10-21|Sara Bejlek|Sorana Cirstea,2026-10-21 05:00:00,wta,Sara Bejlek,Sorana Cirstea,0.372594972001867,Hard,2026-10-20 09:41:51.655588
 wta|2026-10-21|Anastasia Zakharova|Marie Bouzkova,2026-10-21 05:00:00,wta,Anastasia Zakharova,Marie Bouzkova,0.299536964357035,Hard,2026-10-20 09:41:51.655588
 wta|2026-10-21|Alexandra Eala|Diana Shnaider,2026-10-21 05:00:00,wta,Diana Shnaider,Alexandra Eala,0.5951139511523782,Hard,2026-10-20 09:41:51.655588
 wta|2026-10-21|Katie Boulter|Viktorija Golubic,2026-10-21 06:00:00,wta,Viktorija Golubic,Katie Boulter,0.5087527982950855,Hard,2026-10-20 09:41:51.655588
@@ -140,3 +140,4 @@ atp|2026-10-22|Borna Gojo|Daniel Altmaier,2026-10-22 05:00:00,atp,Daniel Altmaie
 wta|2026-10-22|Belinda Bencic|Katarzyna Kawa,2026-10-22 05:00:00,wta,Belinda Bencic,Katarzyna Kawa,0.7825955750967749,Hard,2026-10-20 20:22:09.436061
 atp|2026-10-22|Jiri Lehecka|Raphael Collignon,2026-10-22 05:00:00,atp,Jiri Lehecka,Raphael Collignon,0.7956515471531249,Hard,2026-10-21 00:57:36.749702
 atp|2026-10-22|Brandon Nakashima|Kyrian Jacquet,2026-10-22 05:00:00,atp,Brandon Nakashima,Kyrian Jacquet,0.6936333132631819,Hard,2026-10-21 00:57:36.749702
+wta|2026-10-23|Ashlyn Krueger|Talia Gibson,2026-10-23 05:00:00,wta,Ashlyn Krueger,Talia Gibson,0.579706679286414,Hard,2026-10-21 06:00:08.758794
