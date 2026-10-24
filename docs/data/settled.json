@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-24T21:58:26.309299",
+ "generated_at": "2026-10-25T00:22:29.834980",
  "matches": [
   {
    "div": "AT1",
@@ -24,26 +24,6 @@
   {
    "div": "AT1",
    "date": "2026-10-24T17:00:00",
-   "home": "TSV Hartberg",
-   "away": "Wolfsberger",
-   "score": "1:0",
-   "p": [
-    0.5255158918785114,
-    0.25789479724422887,
-    0.21658931087725944
-   ],
-   "pick": 0,
-   "actual": 0,
-   "correct": true,
-   "odds": [
-    null,
-    null,
-    null
-   ]
-  },
-  {
-   "div": "AT1",
-   "date": "2026-10-24T17:00:00",
    "home": "WSG Swarovski Tirol",
    "away": "Grazer AK",
    "score": "1:1",
@@ -55,6 +35,26 @@
    "pick": 0,
    "actual": 1,
    "correct": false,
+   "odds": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "div": "AT1",
+   "date": "2026-10-24T17:00:00",
+   "home": "TSV Hartberg",
+   "away": "Wolfsberger",
+   "score": "1:0",
+   "p": [
+    0.5255158918785114,
+    0.25789479724422887,
+    0.21658931087725944
+   ],
+   "pick": 0,
+   "actual": 0,
+   "correct": true,
    "odds": [
     null,
     null,
@@ -222,26 +222,6 @@
    ]
   },
   {
-   "div": "DK1",
-   "date": "2026-10-19T19:00:00",
-   "home": "Viborg FF",
-   "away": "FC Midtjylland",
-   "score": "1:2",
-   "p": [
-    0.2907691334708176,
-    0.2570972482667548,
-    0.4521336182624275
-   ],
-   "pick": 2,
-   "actual": 2,
-   "correct": true,
-   "odds": [
-    null,
-    null,
-    null
-   ]
-  },
-  {
    "div": "T1",
    "date": "2026-10-19T19:00:00",
    "home": "Trabzonspor",
@@ -259,6 +239,26 @@
     2.8,
     3.65,
     2.17
+   ]
+  },
+  {
+   "div": "DK1",
+   "date": "2026-10-19T19:00:00",
+   "home": "Viborg FF",
+   "away": "FC Midtjylland",
+   "score": "1:2",
+   "p": [
+    0.2907691334708176,
+    0.2570972482667548,
+    0.4521336182624275
+   ],
+   "pick": 2,
+   "actual": 2,
+   "correct": true,
+   "odds": [
+    null,
+    null,
+    null
    ]
   },
   {
@@ -402,46 +402,6 @@
    ]
   },
   {
-   "div": "CZ1",
-   "date": "2026-10-18T18:00:00",
-   "home": "Jablonec",
-   "away": "Viktoria Plzeň",
-   "score": "2:3",
-   "p": [
-    0.3914545363222557,
-    0.2692605373558934,
-    0.3392849263218508
-   ],
-   "pick": 0,
-   "actual": 2,
-   "correct": false,
-   "odds": [
-    null,
-    null,
-    null
-   ]
-  },
-  {
-   "div": "I1",
-   "date": "2026-10-18T18:00:00",
-   "home": "Milan",
-   "away": "Atalanta",
-   "score": "3:2",
-   "p": [
-    0.518123515188492,
-    0.2689514503306312,
-    0.2129250344808768
-   ],
-   "pick": 0,
-   "actual": 0,
-   "correct": true,
-   "odds": [
-    1.81,
-    3.7,
-    4.12
-   ]
-  },
-  {
    "div": "DK1",
    "date": "2026-10-18T18:00:00",
    "home": "F.C. København",
@@ -482,23 +442,43 @@
    ]
   },
   {
-   "div": "D1",
-   "date": "2026-10-18T17:30:00",
-   "home": "M'gladbach",
-   "away": "Hoffenheim",
-   "score": "1:2",
+   "div": "I1",
+   "date": "2026-10-18T18:00:00",
+   "home": "Milan",
+   "away": "Atalanta",
+   "score": "3:2",
    "p": [
-    0.2874619003267827,
-    0.2489941256977337,
-    0.4635439739754836
+    0.518123515188492,
+    0.2689514503306312,
+    0.2129250344808768
    ],
-   "pick": 2,
-   "actual": 2,
+   "pick": 0,
+   "actual": 0,
    "correct": true,
    "odds": [
-    3.05,
-    3.94,
-    2.04
+    1.81,
+    3.7,
+    4.12
+   ]
+  },
+  {
+   "div": "CZ1",
+   "date": "2026-10-18T18:00:00",
+   "home": "Jablonec",
+   "away": "Viktoria Plzeň",
+   "score": "2:3",
+   "p": [
+    0.3914545363222557,
+    0.2692605373558934,
+    0.3392849263218508
+   ],
+   "pick": 0,
+   "actual": 2,
+   "correct": false,
+   "odds": [
+    null,
+    null,
+    null
    ]
   },
   {
@@ -519,6 +499,26 @@
     5.59,
     3.82,
     1.6
+   ]
+  },
+  {
+   "div": "D1",
+   "date": "2026-10-18T17:30:00",
+   "home": "M'gladbach",
+   "away": "Hoffenheim",
+   "score": "1:2",
+   "p": [
+    0.2874619003267827,
+    0.2489941256977337,
+    0.4635439739754836
+   ],
+   "pick": 2,
+   "actual": 2,
+   "correct": true,
+   "odds": [
+    3.05,
+    3.94,
+    2.04
    ]
   },
   {
@@ -642,26 +642,6 @@
    ]
   },
   {
-   "div": "DK1",
-   "date": "2026-10-18T16:00:00",
-   "home": "Odense Boldklub",
-   "away": "Brøndby IF",
-   "score": "2:1",
-   "p": [
-    0.3031148238786569,
-    0.2720623382523703,
-    0.4248228378689727
-   ],
-   "pick": 2,
-   "actual": 0,
-   "correct": false,
-   "odds": [
-    null,
-    null,
-    null
-   ]
-  },
-  {
    "div": "SC0",
    "date": "2026-10-18T16:00:00",
    "home": "Celtic",
@@ -679,6 +659,26 @@
     1.57,
     4.32,
     4.81
+   ]
+  },
+  {
+   "div": "DK1",
+   "date": "2026-10-18T16:00:00",
+   "home": "Odense Boldklub",
+   "away": "Brøndby IF",
+   "score": "2:1",
+   "p": [
+    0.3031148238786569,
+    0.2720623382523703,
+    0.4248228378689727
+   ],
+   "pick": 2,
+   "actual": 0,
+   "correct": false,
+   "odds": [
+    null,
+    null,
+    null
    ]
   },
   {
@@ -842,23 +842,23 @@
    ]
   },
   {
-   "div": "N1",
+   "div": "AT1",
    "date": "2026-10-18T14:30:00",
-   "home": "Cambuur",
-   "away": "AZ Alkmaar",
-   "score": "2:2",
+   "home": "Wolfsberger",
+   "away": "WSG Swarovski Tirol",
+   "score": "0:2",
    "p": [
-    0.1301783671954298,
-    0.1930249699061444,
-    0.6767966628984257
+    0.4386472553989,
+    0.2699851648009475,
+    0.2913675798001525
    ],
-   "pick": 2,
-   "actual": 1,
+   "pick": 0,
+   "actual": 2,
    "correct": false,
    "odds": [
-    5.8,
-    4.83,
-    1.44
+    null,
+    null,
+    null
    ]
   },
   {
@@ -882,23 +882,23 @@
    ]
   },
   {
-   "div": "AT1",
+   "div": "N1",
    "date": "2026-10-18T14:30:00",
-   "home": "Wolfsberger",
-   "away": "WSG Swarovski Tirol",
-   "score": "0:2",
+   "home": "Cambuur",
+   "away": "AZ Alkmaar",
+   "score": "2:2",
    "p": [
-    0.4386472553989,
-    0.2699851648009475,
-    0.2913675798001525
+    0.1301783671954298,
+    0.1930249699061444,
+    0.6767966628984257
    ],
-   "pick": 0,
-   "actual": 2,
+   "pick": 2,
+   "actual": 1,
    "correct": false,
    "odds": [
-    null,
-    null,
-    null
+    5.8,
+    4.83,
+    1.44
    ]
   },
   {
