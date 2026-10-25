@@ -1,6 +1,86 @@
 {
- "generated_at": "2026-10-25T11:45:36.960572",
+ "generated_at": "2026-10-25T16:33:46.811063",
  "matches": [
+  {
+   "div": "AT1",
+   "date": "2026-10-25T14:30:00",
+   "home": "SK Sturm Graz",
+   "away": "SV Josko Ried",
+   "score": "2:2",
+   "p": [
+    0.5881203535703496,
+    0.23960470075831689,
+    0.1722749456713335
+   ],
+   "pick": 0,
+   "actual": 1,
+   "correct": false,
+   "odds": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "div": "DK1",
+   "date": "2026-10-25T14:00:00",
+   "home": "Silkeborg IF",
+   "away": "FC Nordsjælland",
+   "score": "1:1",
+   "p": [
+    0.24377100902890192,
+    0.24153505901474884,
+    0.5146939319563494
+   ],
+   "pick": 2,
+   "actual": 1,
+   "correct": false,
+   "odds": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "div": "DK1",
+   "date": "2026-10-25T14:00:00",
+   "home": "FC Midtjylland",
+   "away": "Lyngby Boldklub",
+   "score": "3:2",
+   "p": [
+    0.7375611053490339,
+    0.1568708400149068,
+    0.10556805463605928
+   ],
+   "pick": 0,
+   "actual": 0,
+   "correct": true,
+   "odds": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "div": "CZ1",
+   "date": "2026-10-25T13:00:00",
+   "home": "Hradec Králové",
+   "away": "Jablonec",
+   "score": "1:2",
+   "p": [
+    0.3780712159710648,
+    0.2906566975822813,
+    0.33127208644665407
+   ],
+   "pick": 0,
+   "actual": 2,
+   "correct": false,
+   "odds": [
+    null,
+    null,
+    null
+   ]
+  },
   {
    "div": "AT1",
    "date": "2026-10-24T19:30:00",
@@ -11,6 +91,26 @@
     0.690646601202112,
     0.18534478398823856,
     0.12400861480964939
+   ],
+   "pick": 0,
+   "actual": 0,
+   "correct": true,
+   "odds": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "div": "AT1",
+   "date": "2026-10-24T17:00:00",
+   "home": "TSV Hartberg",
+   "away": "Wolfsberger",
+   "score": "1:0",
+   "p": [
+    0.5255158918785114,
+    0.25789479724422887,
+    0.21658931087725944
    ],
    "pick": 0,
    "actual": 0,
@@ -35,26 +135,6 @@
    "pick": 0,
    "actual": 1,
    "correct": false,
-   "odds": [
-    null,
-    null,
-    null
-   ]
-  },
-  {
-   "div": "AT1",
-   "date": "2026-10-24T17:00:00",
-   "home": "TSV Hartberg",
-   "away": "Wolfsberger",
-   "score": "1:0",
-   "p": [
-    0.5255158918785114,
-    0.25789479724422887,
-    0.21658931087725944
-   ],
-   "pick": 0,
-   "actual": 0,
-   "correct": true,
    "odds": [
     null,
     null,
@@ -222,26 +302,6 @@
    ]
   },
   {
-   "div": "T1",
-   "date": "2026-10-19T19:00:00",
-   "home": "Trabzonspor",
-   "away": "Besiktas",
-   "score": "2:0",
-   "p": [
-    0.3032944399010376,
-    0.2648538562683335,
-    0.4318517038306287
-   ],
-   "pick": 2,
-   "actual": 0,
-   "correct": false,
-   "odds": [
-    2.8,
-    3.65,
-    2.17
-   ]
-  },
-  {
    "div": "DK1",
    "date": "2026-10-19T19:00:00",
    "home": "Viborg FF",
@@ -259,6 +319,26 @@
     null,
     null,
     null
+   ]
+  },
+  {
+   "div": "T1",
+   "date": "2026-10-19T19:00:00",
+   "home": "Trabzonspor",
+   "away": "Besiktas",
+   "score": "2:0",
+   "p": [
+    0.3032944399010376,
+    0.2648538562683335,
+    0.4318517038306287
+   ],
+   "pick": 2,
+   "actual": 0,
+   "correct": false,
+   "odds": [
+    2.8,
+    3.65,
+    2.17
    ]
   },
   {
@@ -402,23 +482,23 @@
    ]
   },
   {
-   "div": "T1",
+   "div": "I1",
    "date": "2026-10-18T18:00:00",
-   "home": "Buyuksehyr",
-   "away": "Gaziantep",
-   "score": "2:1",
+   "home": "Milan",
+   "away": "Atalanta",
+   "score": "3:2",
    "p": [
-    0.571282931410933,
-    0.242804358053691,
-    0.1859127105353759
+    0.518123515188492,
+    0.2689514503306312,
+    0.2129250344808768
    ],
    "pick": 0,
    "actual": 0,
    "correct": true,
    "odds": [
-    1.64,
-    3.96,
-    4.45
+    1.81,
+    3.7,
+    4.12
    ]
   },
   {
@@ -462,23 +542,23 @@
    ]
   },
   {
-   "div": "I1",
+   "div": "T1",
    "date": "2026-10-18T18:00:00",
-   "home": "Milan",
-   "away": "Atalanta",
-   "score": "3:2",
+   "home": "Buyuksehyr",
+   "away": "Gaziantep",
+   "score": "2:1",
    "p": [
-    0.518123515188492,
-    0.2689514503306312,
-    0.2129250344808768
+    0.571282931410933,
+    0.242804358053691,
+    0.1859127105353759
    ],
    "pick": 0,
    "actual": 0,
    "correct": true,
    "odds": [
-    1.81,
-    3.7,
-    4.12
+    1.64,
+    3.96,
+    4.45
    ]
   },
   {
@@ -642,26 +722,6 @@
    ]
   },
   {
-   "div": "SC0",
-   "date": "2026-10-18T16:00:00",
-   "home": "Celtic",
-   "away": "Hearts",
-   "score": "7:1",
-   "p": [
-    0.6071400965309746,
-    0.2229308490935009,
-    0.1699290543755245
-   ],
-   "pick": 0,
-   "actual": 0,
-   "correct": true,
-   "odds": [
-    1.57,
-    4.32,
-    4.81
-   ]
-  },
-  {
    "div": "DK1",
    "date": "2026-10-18T16:00:00",
    "home": "Odense Boldklub",
@@ -679,6 +739,26 @@
     null,
     null,
     null
+   ]
+  },
+  {
+   "div": "SC0",
+   "date": "2026-10-18T16:00:00",
+   "home": "Celtic",
+   "away": "Hearts",
+   "score": "7:1",
+   "p": [
+    0.6071400965309746,
+    0.2229308490935009,
+    0.1699290543755245
+   ],
+   "pick": 0,
+   "actual": 0,
+   "correct": true,
+   "odds": [
+    1.57,
+    4.32,
+    4.81
    ]
   },
   {
@@ -702,23 +782,43 @@
    ]
   },
   {
-   "div": "CZ1",
+   "div": "E0",
    "date": "2026-10-18T15:00:00",
-   "home": "Baník Ostrava",
-   "away": "Sparta Prague",
-   "score": "0:0",
+   "home": "Bournemouth",
+   "away": "Sunderland",
+   "score": "2:0",
    "p": [
-    0.1607128554683207,
-    0.2256217411046484,
-    0.6136654034270309
+    0.4579507056024371,
+    0.2819896908682148,
+    0.260059603529348
+   ],
+   "pick": 0,
+   "actual": 0,
+   "correct": true,
+   "odds": [
+    2.04,
+    3.51,
+    3.44
+   ]
+  },
+  {
+   "div": "T1",
+   "date": "2026-10-18T15:00:00",
+   "home": "Kocaelispor",
+   "away": "Goztep",
+   "score": "1:2",
+   "p": [
+    0.2942133573414387,
+    0.2915722725783495,
+    0.4142143700802116
    ],
    "pick": 2,
-   "actual": 1,
-   "correct": false,
+   "actual": 2,
+   "correct": true,
    "odds": [
-    null,
-    null,
-    null
+    2.81,
+    3.36,
+    2.3
    ]
   },
   {
@@ -762,46 +862,6 @@
    ]
   },
   {
-   "div": "T1",
-   "date": "2026-10-18T15:00:00",
-   "home": "Kocaelispor",
-   "away": "Goztep",
-   "score": "1:2",
-   "p": [
-    0.2942133573414387,
-    0.2915722725783495,
-    0.4142143700802116
-   ],
-   "pick": 2,
-   "actual": 2,
-   "correct": true,
-   "odds": [
-    2.81,
-    3.36,
-    2.3
-   ]
-  },
-  {
-   "div": "E0",
-   "date": "2026-10-18T15:00:00",
-   "home": "Bournemouth",
-   "away": "Sunderland",
-   "score": "2:0",
-   "p": [
-    0.4579507056024371,
-    0.2819896908682148,
-    0.260059603529348
-   ],
-   "pick": 0,
-   "actual": 0,
-   "correct": true,
-   "odds": [
-    2.04,
-    3.51,
-    3.44
-   ]
-  },
-  {
    "div": "I1",
    "date": "2026-10-18T15:00:00",
    "home": "Fiorentina",
@@ -842,39 +902,19 @@
    ]
   },
   {
-   "div": "AT1",
-   "date": "2026-10-18T14:30:00",
-   "home": "Wolfsberger",
-   "away": "WSG Swarovski Tirol",
-   "score": "0:2",
+   "div": "CZ1",
+   "date": "2026-10-18T15:00:00",
+   "home": "Baník Ostrava",
+   "away": "Sparta Prague",
+   "score": "0:0",
    "p": [
-    0.4386472553989,
-    0.2699851648009475,
-    0.2913675798001525
+    0.1607128554683207,
+    0.2256217411046484,
+    0.6136654034270309
    ],
-   "pick": 0,
-   "actual": 2,
+   "pick": 2,
+   "actual": 1,
    "correct": false,
-   "odds": [
-    null,
-    null,
-    null
-   ]
-  },
-  {
-   "div": "AT1",
-   "date": "2026-10-18T14:30:00",
-   "home": "RB Salzburg",
-   "away": "SC Rheindorf Altach",
-   "score": "3:0",
-   "p": [
-    0.6211930322836383,
-    0.2326980818280201,
-    0.1461088858883414
-   ],
-   "pick": 0,
-   "actual": 0,
-   "correct": true,
    "odds": [
     null,
     null,
@@ -899,6 +939,46 @@
     5.8,
     4.83,
     1.44
+   ]
+  },
+  {
+   "div": "AT1",
+   "date": "2026-10-18T14:30:00",
+   "home": "RB Salzburg",
+   "away": "SC Rheindorf Altach",
+   "score": "3:0",
+   "p": [
+    0.6211930322836383,
+    0.2326980818280201,
+    0.1461088858883414
+   ],
+   "pick": 0,
+   "actual": 0,
+   "correct": true,
+   "odds": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "div": "AT1",
+   "date": "2026-10-18T14:30:00",
+   "home": "Wolfsberger",
+   "away": "WSG Swarovski Tirol",
+   "score": "0:2",
+   "p": [
+    0.4386472553989,
+    0.2699851648009475,
+    0.2913675798001525
+   ],
+   "pick": 0,
+   "actual": 2,
+   "correct": false,
+   "odds": [
+    null,
+    null,
+    null
    ]
   },
   {
