@@ -319,7 +319,7 @@ atp|2026-10-26|Adrian Mannarino|Ignacio Buse,2026-10-26 04:00:00,atp,Ignacio Bus
 atp|2026-10-26|Alex de Minaur|Tomas Machac,2026-10-26 04:00:00,atp,Alex de Minaur,Tomas Machac,0.7724176965173701,Hard,2026-10-25 16:33:46.811063
 atp|2026-10-26|Jakub Mensik|Lukas Neumayer,2026-10-26 04:00:00,atp,Lukas Neumayer,Jakub Mensik,0.1439086960852419,Hard,2026-10-25 16:33:46.811063
 wta|2026-10-26|Alja Senica|Yelyzaveta Kotliar,2026-10-26 12:00:00,wta,Alja Senica,Yelyzaveta Kotliar,0.2920178429907976,Hard,2026-10-25 16:33:46.811063
-wta|2026-10-26|Gaia Maduzzi|Li Zongyu,2026-10-26 13:30:00,wta,Gaia Maduzzi,Li Zongyu,0.5620061715354948,Hard,2026-10-25 16:33:46.811063
+wta|2026-10-26|Gaia Maduzzi|Li Zongyu,2026-10-26 13:30:00,wta,Gaia Maduzzi,Li Zongyu,0.562006171535495,Hard,2026-10-25 16:33:46.811063
 wta|2026-10-26|Ayla Aksu|Lisa Zaar,2026-10-26 15:00:00,wta,Ayla Aksu,Lisa Zaar,0.8041725884849553,Hard,2026-10-25 16:33:46.811063
 wta|2026-10-26|Gabriela Knutson|Rositsa Dencheva,2026-10-26 16:30:00,wta,Gabriela Knutson,Rositsa Dencheva,0.36693384857707734,Hard,2026-10-25 16:33:46.811063
 wta|2026-10-26|Elizara Yaneva|Jessica Pieri,2026-10-26 17:00:00,wta,Elizara Yaneva,Jessica Pieri,0.5901578489213527,Hard,2026-10-25 16:33:46.811063
@@ -357,11 +357,11 @@ wta|2026-10-26|Martina Capurro Taborda|Polona Hercog,2026-10-26 04:00:00,wta,Mar
 wta|2026-10-26|Carolina Alves|Julia Grabher,2026-10-26 04:00:00,wta,Julia Grabher,Carolina Alves,0.885894469824663,Hard,2026-10-25 20:58:03.492273
 atp|2026-10-26|Mika Brunold|Nuno Borges,2026-10-26 12:30:00,atp,Nuno Borges,Mika Brunold,0.8000282962406586,Hard,2026-10-25 20:58:03.492273
 wta|2026-10-26|Enola Chiesa|Sapfo Sakellaridi,2026-10-26 13:30:00,wta,Enola Chiesa,Sapfo Sakellaridi,0.7327507174471104,Hard,2026-10-25 20:58:03.492273
-atp|2026-10-26|Daniel Altmaier|Juan Manuel Cerundolo,2026-10-26 14:00:00,atp,Juan Manuel Cerundolo,Daniel Altmaier,0.47995833276875666,Hard,2026-10-25 20:58:03.492273
+atp|2026-10-26|Daniel Altmaier|Juan Manuel Cerundolo,2026-10-26 14:00:00,atp,Juan Manuel Cerundolo,Daniel Altmaier,0.47995833276875655,Hard,2026-10-25 20:58:03.492273
 wta|2026-10-26|Alice Tubello|Laura Samson,2026-10-26 14:00:00,wta,Alice Tubello,Laura Samson,0.23813057310459826,Hard,2026-10-25 20:58:03.492273
-wta|2026-10-26|Fernanda Labrana|Gabriela Ce,2026-10-26 15:30:00,wta,Gabriela Ce,Fernanda Labrana,0.38370100907010235,Hard,2026-10-25 20:58:03.492273
+wta|2026-10-26|Fernanda Labrana|Gabriela Ce,2026-10-26 15:30:00,wta,Gabriela Ce,Fernanda Labrana,0.3837010090701025,Hard,2026-10-25 20:58:03.492273
 wta|2026-10-26|Julia Konishi Camargo Silva|Leyre Romero Gormaz,2026-10-26 15:30:00,wta,Julia Konishi Camargo Silva,Leyre Romero Gormaz,0.2971009285281129,Hard,2026-10-25 20:58:03.492273
-wta|2026-10-26|Jazmin Ortenzi|Victoria Bosio,2026-10-26 17:00:00,wta,Jazmin Ortenzi,Victoria Bosio,0.6014509734221395,Hard,2026-10-25 20:58:03.492273
+wta|2026-10-26|Jazmin Ortenzi|Victoria Bosio,2026-10-26 17:00:00,wta,Jazmin Ortenzi,Victoria Bosio,0.6014509734221397,Hard,2026-10-25 20:58:03.492273
 wta|2026-10-26|Lourdes Ayala|Luiza Fullana,2026-10-26 17:00:00,wta,Lourdes Ayala,Luiza Fullana,0.8240553527101426,Hard,2026-10-25 20:58:03.492273
 wta|2026-10-26|Lucia Bronzetti|Luisina Giovannini,2026-10-26 19:30:00,wta,Lucia Bronzetti,Luisina Giovannini,0.5202226994286717,Hard,2026-10-25 20:58:03.492273
 wta|2026-10-26|Despina Papamichail|Nauhany Vitoria Leme Da Silva,2026-10-26 21:00:00,wta,Despina Papamichail,Nauhany Vitoria Leme Da Silva,0.5354729344706822,Hard,2026-10-25 20:58:03.492273
@@ -391,10 +391,15 @@ wta|2026-10-27|Diletta Cherubini|Mell Reasco Gonzalez,2026-10-27 04:00:00,wta,Di
 wta|2026-10-27|Katrina Scott|Tamara Zidansek,2026-10-27 04:00:00,wta,Katrina Scott,Tamara Zidansek,0.2702855043917934,Hard,2026-10-25 23:20:56.687232
 wta|2026-10-27|Elizabeth Mandlik|Emiliana Arango,2026-10-27 04:00:00,wta,Emiliana Arango,Elizabeth Mandlik,0.5566618302488021,Hard,2026-10-25 23:20:56.687232
 wta|2026-10-27|Fiona Ferro|Sofia Johnson,2026-10-27 04:00:00,wta,Sofia Johnson,Fiona Ferro,0.25595651126872043,Hard,2026-10-25 23:20:56.687232
-wta|2026-10-27|Martina Capurro Taborda|Polona Hercog,2026-10-27 04:00:00,wta,Martina Capurro Taborda,Polona Hercog,0.2331160832019847,Hard,2026-10-25 23:20:56.687232
+wta|2026-10-27|Martina Capurro Taborda|Polona Hercog,2026-10-27 04:00:00,wta,Martina Capurro Taborda,Polona Hercog,0.2331160832019846,Hard,2026-10-25 23:20:56.687232
 wta|2026-10-27|Carole Monnet|Leolia Jeanjean,2026-10-27 04:00:00,wta,Leolia Jeanjean,Carole Monnet,0.7622316714594314,Hard,2026-10-25 23:20:56.687232
 wta|2026-10-27|Carlota Garibay Romero|Tatjana Maria,2026-10-27 04:00:00,wta,Carlota Garibay Romero,Tatjana Maria,0.14674273552656428,Hard,2026-10-25 23:20:56.687232
 wta|2026-10-27|Alice Rame|Nadia Podoroska,2026-10-27 04:00:00,wta,Alice Rame,Nadia Podoroska,0.16825105222573775,Hard,2026-10-25 23:20:56.687232
 wta|2026-10-27|Ana Grubor|Selena Janicijevic,2026-10-27 00:00:00,wta,Ana Grubor,Selena Janicijevic,0.4143855912539259,Hard,2026-10-26 04:58:33.562886
 wta|2026-10-27|Janice Tjen|Polina Kudermetova,2026-10-27 04:00:00,wta,Janice Tjen,Polina Kudermetova,0.39445407783772723,Hard,2026-10-26 04:58:33.562886
 wta|2026-10-28|Alycia Parks|Maja Chwalinska,2026-10-28 04:00:00,wta,Maja Chwalinska,Alycia Parks,0.8541331946634262,Hard,2026-10-26 04:58:33.562886
+wta|2026-10-27|Aliaksandra Sasnovich|Nikola Bartunkova,2026-10-27 05:00:00,wta,Nikola Bartunkova,Aliaksandra Sasnovich,0.7075932999341586,Hard,2026-10-26 13:17:55.024966
+wta|2026-10-28|Katerina Siniakova|Lanlana Tararudee,2026-10-28 04:00:00,wta,Lanlana Tararudee,Katerina Siniakova,0.39010550669951116,Hard,2026-10-26 13:17:55.024966
+wta|2026-10-28|Paula Badosa|Sinja Kraus,2026-10-28 04:00:00,wta,Sinja Kraus,Paula Badosa,0.42823459049620843,Hard,2026-10-26 13:17:55.024966
+wta|2026-10-28|Alycia Parks|Kimberly Birrell,2026-10-28 04:00:00,wta,Kimberly Birrell,Alycia Parks,0.6332705133009672,Hard,2026-10-26 13:17:55.024966
+wta|2026-10-28|Alexandra Eala|Talia Gibson,2026-10-28 04:00:00,wta,Talia Gibson,Alexandra Eala,0.31728568172346366,Hard,2026-10-26 13:17:55.024966
