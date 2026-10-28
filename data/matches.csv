@@ -6531,9 +6531,9 @@ T1,2025-06-01 17:00:00,Samsunspor,Kayserispor,2.0,1.0,1.76,3.46,4.79
 T1,2025-06-01 17:00:00,Bodrumspor,Besiktas,0.0,4.0,4.09,3.89,1.77
 CZ1,2025-07-18 18:00:00,Pardubice,Viktoria Plzeň,1.0,5.0,,,
 DK1,2025-07-18 18:00:00,Viborg FF,F.C. København,2.0,3.0,,,
-CZ1,2025-07-19 16:00:00,Karviná,Dukla Praha,2.0,0.0,,,
 CZ1,2025-07-19 16:00:00,Bohemians 1905,Baník Ostrava,1.0,0.0,,,
 CZ1,2025-07-19 16:00:00,Teplice,Zlín,1.0,3.0,,,
+CZ1,2025-07-19 16:00:00,Karviná,Dukla Praha,2.0,0.0,,,
 CZ1,2025-07-19 19:00:00,Jablonec,Sparta Prague,1.0,1.0,,,
 DK1,2025-07-20 13:00:00,Vejle Boldklub,Randers FC,1.0,1.0,,,
 DK1,2025-07-20 13:00:00,FC Fredericia,FC Nordsjælland,2.0,3.0,,,
@@ -6541,8 +6541,8 @@ CZ1,2025-07-20 14:00:00,Slovácko,Sigma Olomouc,0.0,1.0,,,
 DK1,2025-07-20 15:00:00,Sønderjyske Fodbold,AGF,1.0,1.0,,,
 CZ1,2025-07-20 16:00:00,Mladá Boleslav,Slovan Liberec,3.0,3.0,,,
 DK1,2025-07-20 17:00:00,FC Midtjylland,Odense Boldklub,3.0,3.0,,,
-DK1,2025-07-20 19:00:00,Brøndby IF,Silkeborg IF,3.0,0.0,,,
 CZ1,2025-07-20 19:00:00,Slavia Prague,Hradec Králové,2.0,2.0,,,
+DK1,2025-07-20 19:00:00,Brøndby IF,Silkeborg IF,3.0,0.0,,,
 DK1,2025-07-25 18:00:00,AGF,Randers FC,1.0,2.0,,,
 B1,2025-07-25 19:45:00,Antwerp,St. Gilloise,1.0,1.0,3.87,3.45,1.9
 B1,2025-07-26 15:00:00,Dender,Cercle Brugge,0.0,0.0,2.79,3.39,2.37
@@ -6570,19 +6570,19 @@ AT1,2025-08-01 19:30:00,LASK Linz,SK Sturm Graz,0.0,2.0,,,
 B1,2025-08-01 19:45:00,Mechelen,Club Brugge,2.0,1.0,3.82,3.83,1.83
 SC0,2025-08-02 15:00:00,Kilmarnock,Livingston,2.0,2.0,2.0,3.47,3.55
 B1,2025-08-02 15:00:00,Westerlo,Waregem,3.0,1.0,1.79,3.92,3.86
-CZ1,2025-08-02 16:00:00,Karviná,Zlín,0.0,1.0,,,
-CZ1,2025-08-02 16:00:00,Jablonec,Hradec Králové,2.0,0.0,,,
-AT1,2025-08-02 16:00:00,Wolfsberger,SC Rheindorf Altach,0.0,2.0,,,
 CZ1,2025-08-02 16:00:00,Teplice,Bohemians 1905,3.0,0.0,,,
+CZ1,2025-08-02 16:00:00,Jablonec,Hradec Králové,2.0,0.0,,,
+CZ1,2025-08-02 16:00:00,Karviná,Zlín,0.0,1.0,,,
 AT1,2025-08-02 16:00:00,WSG Swarovski Tirol,TSV Hartberg,4.0,2.0,,,
+AT1,2025-08-02 16:00:00,Wolfsberger,SC Rheindorf Altach,0.0,2.0,,,
 B1,2025-08-02 17:15:00,Standard,Dender,1.0,1.0,1.88,3.36,4.08
 SC0,2025-08-02 17:30:00,Motherwell,Rangers,1.0,1.0,6.8,5.03,1.38
 AT1,2025-08-02 18:30:00,SV Josko Ried,RB Salzburg,2.0,2.0,,,
 CZ1,2025-08-02 19:00:00,Sigma Olomouc,Slovan Liberec,2.0,1.0,,,
 B1,2025-08-02 19:45:00,Gent,RAAL La Louviere,1.0,0.0,1.7,3.76,4.56
 B1,2025-08-03 12:30:00,Genk,Antwerp,1.0,1.0,1.58,4.15,4.98
-DK1,2025-08-03 13:00:00,Sønderjyske Fodbold,FC Nordsjælland,3.0,2.0,,,
 DK1,2025-08-03 13:00:00,Randers FC,Silkeborg IF,1.0,0.0,,,
+DK1,2025-08-03 13:00:00,Sønderjyske Fodbold,FC Nordsjælland,3.0,2.0,,,
 SC0,2025-08-03 14:00:00,Falkirk,Dundee United,2.0,2.0,1.88,3.65,3.8
 CZ1,2025-08-03 14:00:00,Slovácko,Slavia Prague,0.0,1.0,,,
 SC0,2025-08-03 15:00:00,Dundee,Hibernian,1.0,2.0,3.92,3.69,1.83
@@ -6637,9 +6637,9 @@ SC0,2025-08-10 15:00:00,Hibernian,Kilmarnock,2.0,2.0,1.68,3.87,4.55
 DK1,2025-08-10 15:00:00,Silkeborg IF,FC Nordsjælland,4.0,2.0,,,
 B1,2025-08-10 15:00:00,Anderlecht,Waregem,2.0,3.0,1.46,4.62,5.85
 N1,2025-08-10 15:45:00,Utrecht,Heracles,4.0,0.0,1.52,4.3,5.55
+AT1,2025-08-10 16:00:00,Austria Vienna,Wolfsberger,0.0,2.0,,,
 AT1,2025-08-10 16:00:00,WSG Swarovski Tirol,LASK Linz,3.0,1.0,,,
 AT1,2025-08-10 16:00:00,SK Sturm Graz,Rapid Vienna,1.0,2.0,,,
-AT1,2025-08-10 16:00:00,Austria Vienna,Wolfsberger,0.0,2.0,,,
 CZ1,2025-08-10 16:30:00,Baník Ostrava,Karviná,1.0,2.0,,,
 T1,2025-08-10 17:00:00,Rizespor,Goztep,0.0,3.0,2.11,3.55,3.05
 DK1,2025-08-10 17:00:00,Brøndby IF,Vejle Boldklub,2.0,1.0,,,
@@ -6672,11 +6672,11 @@ B1,2025-08-16 15:00:00,Waregem,Club Brugge,0.0,1.0,5.54,4.53,1.49
 P1,2025-08-16 15:30:00,Tondela,Famalicao,0.0,1.0,2.82,3.17,2.46
 CZ1,2025-08-16 16:00:00,Mladá Boleslav,Hradec Králové,3.0,2.0,,,
 F1,2025-08-16 16:00:00,Lens,Lyon,0.0,1.0,2.29,3.56,2.87
+AT1,2025-08-16 16:00:00,Grazer AK,WSG Swarovski Tirol,1.0,1.0,,,
+CZ1,2025-08-16 16:00:00,Dukla Praha,Viktoria Plzeň,2.0,0.0,,,
+CZ1,2025-08-16 16:00:00,Sigma Olomouc,Zlín,1.0,0.0,,,
 CZ1,2025-08-16 16:00:00,Slovácko,Teplice,2.0,1.0,,,
 AT1,2025-08-16 16:00:00,TSV Hartberg,RB Salzburg,1.0,2.0,,,
-CZ1,2025-08-16 16:00:00,Dukla Praha,Viktoria Plzeň,2.0,0.0,,,
-AT1,2025-08-16 16:00:00,Grazer AK,WSG Swarovski Tirol,1.0,1.0,,,
-CZ1,2025-08-16 16:00:00,Sigma Olomouc,Zlín,1.0,0.0,,,
 T1,2025-08-16 17:00:00,Kocaelispor,Samsunspor,0.0,1.0,2.8,3.26,2.4
 B1,2025-08-16 17:15:00,Mechelen,Gent,1.0,1.0,1.94,3.66,3.46
 E0,2025-08-16 17:30:00,Wolves,Man City,0.0,4.0,6.73,4.73,1.44
@@ -6708,9 +6708,9 @@ DK1,2025-08-17 15:00:00,Viborg FF,Silkeborg IF,2.0,3.0,,,
 B1,2025-08-17 15:00:00,St Truiden,RAAL La Louviere,2.0,1.0,1.63,3.78,5.1
 P1,2025-08-17 15:30:00,Rio Ave,Nacional,1.0,1.0,2.28,3.22,3.01
 N1,2025-08-17 15:45:00,Volendam,AZ Alkmaar,2.0,2.0,4.87,4.51,1.56
-AT1,2025-08-17 16:00:00,Wolfsberger,FC Blau-Weiß Linz,3.0,0.0,,,
-SP1,2025-08-17 16:00:00,Celta,Getafe,0.0,2.0,1.71,3.48,5.25
 AT1,2025-08-17 16:00:00,Rapid Vienna,SC Rheindorf Altach,0.0,0.0,,,
+SP1,2025-08-17 16:00:00,Celta,Getafe,0.0,2.0,1.71,3.48,5.25
+AT1,2025-08-17 16:00:00,Wolfsberger,FC Blau-Weiß Linz,3.0,0.0,,,
 AT1,2025-08-17 16:00:00,LASK Linz,Austria Vienna,2.0,1.0,,,
 F1,2025-08-17 16:15:00,Angers,Paris FC,1.0,0.0,2.62,3.12,2.74
 F1,2025-08-17 16:15:00,Auxerre,Lorient,1.0,0.0,2.32,3.35,2.96
@@ -6757,11 +6757,11 @@ E0,2025-08-23 15:00:00,Brentford,Aston Villa,1.0,0.0,3.11,3.53,2.21
 SC0,2025-08-23 15:00:00,Hearts,Motherwell,3.0,3.0,1.58,4.03,5.31
 N1,2025-08-23 15:30:00,Go Ahead Eagles,Sparta Rotterdam,0.0,3.0,2.02,3.72,3.31
 CZ1,2025-08-23 16:00:00,Teplice,Jablonec,0.0,1.0,,,
-CZ1,2025-08-23 16:00:00,Viktoria Plzeň,Karviná,2.0,1.0,,,
+AT1,2025-08-23 16:00:00,RB Salzburg,LASK Linz,3.0,0.0,,,
 F1,2025-08-23 16:00:00,Marseille,Paris FC,5.0,2.0,1.36,4.89,7.89
 CZ1,2025-08-23 16:00:00,Zlín,Slovan Liberec,1.0,0.0,,,
-AT1,2025-08-23 16:00:00,RB Salzburg,LASK Linz,3.0,0.0,,,
 AT1,2025-08-23 16:00:00,FC Blau-Weiß Linz,SV Josko Ried,0.0,2.0,,,
+CZ1,2025-08-23 16:00:00,Viktoria Plzeň,Karviná,2.0,1.0,,,
 P1,2025-08-23 16:00:00,Moreirense,Guimaraes,2.0,0.0,3.36,3.14,2.17
 SP1,2025-08-23 16:00:00,Mallorca,Celta,1.0,1.0,2.94,3.09,2.52
 DK1,2025-08-23 17:00:00,F.C. København,Odense Boldklub,1.0,1.0,,,
@@ -6788,8 +6788,8 @@ P1,2025-08-23 20:30:00,Benfica,Tondela,3.0,0.0,1.15,7.15,15.97
 N1,2025-08-24 11:15:00,Heerenveen,Twente,1.0,2.0,2.78,3.7,2.28
 SC0,2025-08-24 12:00:00,St Mirren,Rangers,1.0,1.0,4.06,3.96,1.74
 B1,2025-08-24 12:30:00,Antwerp,Mechelen,2.0,1.0,1.96,3.64,3.46
-DK1,2025-08-24 13:00:00,FC Fredericia,Randers FC,1.0,0.0,,,
 DK1,2025-08-24 13:00:00,FC Midtjylland,Silkeborg IF,4.0,2.0,,,
+DK1,2025-08-24 13:00:00,FC Fredericia,Randers FC,1.0,0.0,,,
 N1,2025-08-24 13:30:00,Nijmegen,NAC Breda,3.0,0.0,1.52,4.32,5.61
 N1,2025-08-24 13:30:00,Utrecht,Excelsior,4.0,1.0,1.37,5.2,6.87
 CZ1,2025-08-24 14:00:00,Hradec Králové,Sigma Olomouc,1.0,0.0,,,
@@ -6802,8 +6802,8 @@ P1,2025-08-24 15:30:00,Famalicao,Gil Vicente,0.0,0.0,2.07,3.13,3.66
 N1,2025-08-24 15:45:00,Ajax,Heracles,2.0,0.0,1.16,7.54,14.34
 SP1,2025-08-24 16:00:00,Osasuna,Valencia,1.0,0.0,2.36,3.11,3.13
 AT1,2025-08-24 16:00:00,SC Rheindorf Altach,Grazer AK,1.0,1.0,,,
-AT1,2025-08-24 16:00:00,Wolfsberger,Rapid Vienna,1.0,2.0,,,
 AT1,2025-08-24 16:00:00,Austria Vienna,TSV Hartberg,1.0,3.0,,,
+AT1,2025-08-24 16:00:00,Wolfsberger,Rapid Vienna,1.0,2.0,,,
 F1,2025-08-24 16:15:00,Le Havre,Lens,1.0,2.0,3.69,3.61,1.93
 F1,2025-08-24 16:15:00,Strasbourg,Nantes,1.0,0.0,1.76,3.65,4.46
 F1,2025-08-24 16:15:00,Toulouse,Brest,2.0,0.0,2.07,3.46,3.41
@@ -6860,14 +6860,14 @@ E0,2025-08-30 15:00:00,Sunderland,Brentford,2.0,1.0,2.92,3.27,2.46
 E0,2025-08-30 15:00:00,Wolves,Everton,2.0,3.0,2.66,3.19,2.74
 N1,2025-08-30 15:30:00,Volendam,Ajax,1.0,1.0,7.53,5.39,1.34
 P1,2025-08-30 15:30:00,Casa Pia,Nacional,0.0,2.0,2.23,3.19,3.18
-CZ1,2025-08-30 16:00:00,Slovácko,Jablonec,0.0,2.0,,,
-SP1,2025-08-30 16:00:00,Alaves,Ath Madrid,1.0,1.0,4.64,3.55,1.78
-CZ1,2025-08-30 16:00:00,Pardubice,Bohemians 1905,1.0,1.0,,,
-F1,2025-08-30 16:00:00,Lorient,Lille,1.0,7.0,3.3,3.48,2.11
-AT1,2025-08-30 16:00:00,LASK Linz,SV Josko Ried,1.0,3.0,,,
 CZ1,2025-08-30 16:00:00,Dukla Praha,Hradec Králové,1.0,1.0,,,
+SP1,2025-08-30 16:00:00,Alaves,Ath Madrid,1.0,1.0,4.64,3.55,1.78
+AT1,2025-08-30 16:00:00,LASK Linz,SV Josko Ried,1.0,3.0,,,
+F1,2025-08-30 16:00:00,Lorient,Lille,1.0,7.0,3.3,3.48,2.11
 CZ1,2025-08-30 16:00:00,Karviná,Teplice,4.0,1.0,,,
+CZ1,2025-08-30 16:00:00,Pardubice,Bohemians 1905,1.0,1.0,,,
 AT1,2025-08-30 16:00:00,RB Salzburg,FC Blau-Weiß Linz,2.0,2.0,,,
+CZ1,2025-08-30 16:00:00,Slovácko,Jablonec,0.0,2.0,,,
 T1,2025-08-30 17:00:00,Kocaelispor,Kayserispor,1.0,1.0,2.12,3.39,3.18
 T1,2025-08-30 17:00:00,Kasimpasa,Gaziantep,2.0,3.0,1.81,3.95,3.64
 B1,2025-08-30 17:15:00,Westerlo,Antwerp,2.0,0.0,2.47,3.49,2.62
@@ -6913,8 +6913,8 @@ B1,2025-08-31 15:00:00,Oud-Heverlee Leuven,Standard,1.0,0.0,2.2,3.33,3.12
 P1,2025-08-31 15:30:00,Tondela,Estoril,2.0,2.0,2.87,3.11,2.45
 N1,2025-08-31 15:45:00,NAC Breda,AZ Alkmaar,0.0,1.0,5.22,4.34,1.55
 SP1,2025-08-31 16:00:00,Celta,Villarreal,1.0,1.0,2.71,3.53,2.43
-AT1,2025-08-31 16:00:00,Austria Vienna,SC Rheindorf Altach,1.0,0.0,,,
 AT1,2025-08-31 16:00:00,WSG Swarovski Tirol,Wolfsberger,1.0,1.0,,,
+AT1,2025-08-31 16:00:00,Austria Vienna,SC Rheindorf Altach,1.0,0.0,,,
 AT1,2025-08-31 16:00:00,TSV Hartberg,Rapid Vienna,0.0,1.0,,,
 F1,2025-08-31 16:15:00,Le Havre,Nice,3.0,1.0,3.44,3.51,2.05
 F1,2025-08-31 16:15:00,Monaco,Strasbourg,3.0,2.0,1.53,4.34,5.5
@@ -6954,12 +6954,12 @@ P1,2025-09-12 20:15:00,Benfica,Santa Clara,1.0,1.0,1.34,4.57,9.29
 P1,2025-09-12 20:15:00,Alverca,Tondela,1.0,0.0,2.35,3.17,3.01
 E0,2025-09-13 12:30:00,Arsenal,Nott'm Forest,3.0,0.0,1.38,4.85,8.16
 SP1,2025-09-13 13:00:00,Getafe,Oviedo,2.0,0.0,1.96,3.06,4.45
-CZ1,2025-09-13 14:00:00,Zlín,Dukla Praha,1.0,1.0,,,
-CZ1,2025-09-13 14:00:00,Teplice,Mladá Boleslav,2.0,3.0,,,
-CZ1,2025-09-13 14:00:00,Baník Ostrava,Slovan Liberec,0.0,2.0,,,
-DK1,2025-09-13 14:00:00,Brøndby IF,F.C. København,2.0,1.0,,,
-I1,2025-09-13 14:00:00,Cagliari,Parma,2.0,0.0,2.17,3.21,3.49
 CZ1,2025-09-13 14:00:00,Viktoria Plzeň,Sigma Olomouc,1.0,0.0,,,
+CZ1,2025-09-13 14:00:00,Baník Ostrava,Slovan Liberec,0.0,2.0,,,
+CZ1,2025-09-13 14:00:00,Teplice,Mladá Boleslav,2.0,3.0,,,
+CZ1,2025-09-13 14:00:00,Zlín,Dukla Praha,1.0,1.0,,,
+I1,2025-09-13 14:00:00,Cagliari,Parma,2.0,0.0,2.17,3.21,3.49
+DK1,2025-09-13 14:00:00,Brøndby IF,F.C. København,2.0,1.0,,,
 D1,2025-09-13 14:30:00,Union Berlin,Hoffenheim,2.0,4.0,2.56,3.39,2.64
 D1,2025-09-13 14:30:00,Freiburg,Stuttgart,3.0,1.0,2.84,3.59,2.29
 D1,2025-09-13 14:30:00,Heidenheim,Dortmund,0.0,2.0,5.16,4.39,1.55
@@ -7012,10 +7012,10 @@ CZ1,2025-09-14 12:00:00,Jablonec,Pardubice,3.0,2.0,,,
 B1,2025-09-14 12:30:00,Antwerp,Gent,1.0,2.0,2.36,3.45,2.79
 DK1,2025-09-14 13:00:00,Viborg FF,AGF,1.0,2.0,,,
 SP1,2025-09-14 13:00:00,Celta,Girona,1.0,1.0,1.69,3.97,4.61
-AT1,2025-09-14 13:30:00,Rapid Vienna,WSG Swarovski Tirol,4.0,1.0,,,
+AT1,2025-09-14 13:30:00,SV Josko Ried,TSV Hartberg,0.0,2.0,,,
 N1,2025-09-14 13:30:00,Heracles,AZ Alkmaar,1.0,2.0,5.74,4.36,1.51
 N1,2025-09-14 13:30:00,Utrecht,Groningen,0.0,1.0,1.75,3.8,4.16
-AT1,2025-09-14 13:30:00,SV Josko Ried,TSV Hartberg,0.0,2.0,,,
+AT1,2025-09-14 13:30:00,Rapid Vienna,WSG Swarovski Tirol,4.0,1.0,,,
 E0,2025-09-14 14:00:00,Burnley,Liverpool,0.0,1.0,8.6,5.43,1.33
 F1,2025-09-14 14:00:00,Lille,Toulouse,2.0,1.0,1.76,3.81,4.25
 I1,2025-09-14 14:00:00,Atalanta,Lecce,4.0,1.0,1.4,4.56,7.85
@@ -7122,8 +7122,8 @@ CZ1,2025-09-21 12:00:00,Dukla Praha,Bohemians 1905,0.0,2.0,,,
 B1,2025-09-21 12:30:00,Genk,St. Gilloise,1.0,2.0,2.92,3.43,2.28
 DK1,2025-09-21 13:00:00,Vejle Boldklub,Sønderjyske Fodbold,2.0,2.0,,,
 SP1,2025-09-21 13:00:00,Vallecano,Celta,1.0,1.0,2.31,3.23,3.09
-AT1,2025-09-21 13:30:00,LASK Linz,FC Blau-Weiß Linz,2.0,0.0,,,
 AT1,2025-09-21 13:30:00,SC Rheindorf Altach,WSG Swarovski Tirol,1.0,1.0,,,
+AT1,2025-09-21 13:30:00,LASK Linz,FC Blau-Weiß Linz,2.0,0.0,,,
 N1,2025-09-21 13:30:00,PSV Eindhoven,Ajax,2.0,2.0,1.71,4.08,4.24
 N1,2025-09-21 13:30:00,Heerenveen,Nijmegen,3.0,2.0,2.49,3.69,2.54
 I1,2025-09-21 14:00:00,Cremonese,Parma,0.0,0.0,2.52,3.13,2.87
@@ -7191,8 +7191,8 @@ P1,2025-09-26 20:15:00,Benfica,Gil Vicente,2.0,1.0,1.3,4.98,9.28
 E0,2025-09-27 12:30:00,Brentford,Man United,3.0,1.0,3.4,3.77,2.02
 SP1,2025-09-27 13:00:00,Getafe,Levante,1.0,1.0,2.05,3.13,3.95
 I1,2025-09-27 14:00:00,Como,Cremonese,1.0,1.0,1.44,4.41,7.45
-CZ1,2025-09-27 14:00:00,Bohemians 1905,Sigma Olomouc,2.0,2.0,,,
 CZ1,2025-09-27 14:00:00,Slovácko,Karviná,1.0,2.0,,,
+CZ1,2025-09-27 14:00:00,Bohemians 1905,Sigma Olomouc,2.0,2.0,,,
 CZ1,2025-09-27 14:00:00,Baník Ostrava,Sparta Prague,0.0,3.0,,,
 D1,2025-09-27 14:30:00,Mainz,Dortmund,0.0,2.0,3.14,3.74,2.08
 D1,2025-09-27 14:30:00,Wolfsburg,RB Leipzig,0.0,1.0,2.54,3.65,2.5
@@ -7212,13 +7212,13 @@ SC0,2025-09-27 15:00:00,Dundee United,Kilmarnock,0.0,2.0,2.08,3.4,3.36
 SP1,2025-09-27 15:15:00,Ath Madrid,Real Madrid,5.0,2.0,2.94,3.53,2.29
 P1,2025-09-27 15:30:00,Moreirense,Casa Pia,2.0,1.0,2.09,3.09,3.61
 N1,2025-09-27 15:30:00,Ajax,NAC Breda,2.0,1.0,1.26,6.15,9.25
-AT1,2025-09-27 16:00:00,SV Josko Ried,Grazer AK,0.0,0.0,,,
+AT1,2025-09-27 16:00:00,Wolfsberger,LASK Linz,1.0,0.0,,,
 F1,2025-09-27 16:00:00,Lorient,Monaco,3.0,1.0,4.93,4.25,1.6
 AT1,2025-09-27 16:00:00,FC Blau-Weiß Linz,SC Rheindorf Altach,1.0,0.0,,,
-AT1,2025-09-27 16:00:00,Wolfsberger,LASK Linz,1.0,0.0,,,
+AT1,2025-09-27 16:00:00,SV Josko Ried,Grazer AK,0.0,0.0,,,
 P1,2025-09-27 16:30:00,Santa Clara,Tondela,1.0,2.0,1.7,3.39,5.18
-DK1,2025-09-27 17:00:00,Sønderjyske Fodbold,F.C. København,1.0,2.0,,,
 CZ1,2025-09-27 17:00:00,Hradec Králové,Slovan Liberec,2.0,3.0,,,
+DK1,2025-09-27 17:00:00,Sønderjyske Fodbold,F.C. København,1.0,2.0,,,
 I1,2025-09-27 17:00:00,Juventus,Atalanta,1.0,1.0,1.86,3.55,4.16
 B1,2025-09-27 17:15:00,Standard,Club Brugge,1.0,2.0,5.23,4.1,1.57
 E0,2025-09-27 17:30:00,Nott'm Forest,Sunderland,0.0,1.0,1.77,3.67,4.64
@@ -7304,9 +7304,9 @@ P1,2025-10-03 20:15:00,Casa Pia,Estoril,2.0,2.0,2.44,3.22,2.79
 T1,2025-10-04 12:30:00,Genclerbirligi,Alanyaspor,2.0,2.0,2.94,3.28,2.32
 E0,2025-10-04 12:30:00,Leeds,Tottenham,1.0,2.0,2.75,3.46,2.49
 SP1,2025-10-04 13:00:00,Oviedo,Levante,0.0,2.0,2.48,3.26,2.86
+CZ1,2025-10-04 14:00:00,Pardubice,Karviná,2.0,1.0,,,
 CZ1,2025-10-04 14:00:00,Dukla Praha,Teplice,1.0,3.0,,,
 CZ1,2025-10-04 14:00:00,Mladá Boleslav,Slovácko,0.0,0.0,,,
-CZ1,2025-10-04 14:00:00,Pardubice,Karviná,2.0,1.0,,,
 I1,2025-10-04 14:00:00,Parma,Lecce,0.0,1.0,1.83,3.54,4.33
 I1,2025-10-04 14:00:00,Lazio,Torino,3.0,3.0,1.71,3.56,5.11
 D1,2025-10-04 14:30:00,Augsburg,Wolfsburg,3.0,1.0,2.71,3.53,2.42
@@ -7323,10 +7323,10 @@ SP1,2025-10-04 15:15:00,Girona,Valencia,2.0,1.0,2.43,3.37,2.84
 P1,2025-10-04 15:30:00,Nacional,Moreirense,3.0,2.0,2.34,3.13,3.05
 N1,2025-10-04 15:30:00,Sparta Rotterdam,Ajax,3.0,3.0,3.97,4.0,1.77
 P1,2025-10-04 15:30:00,Gil Vicente,Estrela,2.0,0.0,1.65,3.54,5.38
-AT1,2025-10-04 16:00:00,SV Josko Ried,WSG Swarovski Tirol,2.0,0.0,,,
-F1,2025-10-04 16:00:00,Metz,Marseille,0.0,3.0,6.2,4.57,1.46
 AT1,2025-10-04 16:00:00,Austria Vienna,FC Blau-Weiß Linz,0.0,1.0,,,
+F1,2025-10-04 16:00:00,Metz,Marseille,0.0,3.0,6.2,4.57,1.46
 AT1,2025-10-04 16:00:00,Grazer AK,Wolfsberger,1.0,3.0,,,
+AT1,2025-10-04 16:00:00,SV Josko Ried,WSG Swarovski Tirol,2.0,0.0,,,
 CZ1,2025-10-04 17:00:00,Slovan Liberec,Bohemians 1905,0.0,0.0,,,
 I1,2025-10-04 17:00:00,Inter,Cremonese,4.0,1.0,1.18,6.95,14.36
 B1,2025-10-04 17:15:00,RAAL La Louviere,Waregem,0.0,0.0,2.35,3.35,2.88
@@ -7363,8 +7363,8 @@ E0,2025-10-05 14:00:00,Everton,Crystal Palace,2.0,1.0,2.53,3.21,2.89
 I1,2025-10-05 14:00:00,Fiorentina,Roma,1.0,2.0,2.94,3.26,2.39
 F1,2025-10-05 14:00:00,Lyon,Toulouse,1.0,2.0,1.89,3.63,3.86
 E0,2025-10-05 14:00:00,Newcastle,Nott'm Forest,2.0,0.0,1.58,4.21,5.46
-CZ1,2025-10-05 14:30:00,Viktoria Plzeň,Hradec Králové,3.0,3.0,,,
 CZ1,2025-10-05 14:30:00,Sigma Olomouc,Jablonec,2.0,0.0,,,
+CZ1,2025-10-05 14:30:00,Viktoria Plzeň,Hradec Králové,3.0,3.0,,,
 D1,2025-10-05 14:30:00,Stuttgart,Heidenheim,1.0,0.0,1.42,4.81,6.48
 B1,2025-10-05 15:00:00,Genk,Dender,2.0,1.0,1.35,4.95,7.68
 DK1,2025-10-05 15:00:00,AGF,Silkeborg IF,3.0,1.0,,,
@@ -7427,8 +7427,8 @@ T1,2025-10-18 15:00:00,Rizespor,Trabzonspor,1.0,2.0,2.68,3.44,2.4
 E0,2025-10-18 15:00:00,Brighton,Newcastle,2.0,1.0,2.61,3.48,2.62
 SP1,2025-10-18 15:15:00,Barcelona,Girona,2.0,1.0,1.19,7.39,12.16
 N1,2025-10-18 15:30:00,Nijmegen,Twente,3.0,3.0,2.37,3.66,2.66
-AT1,2025-10-18 16:00:00,Wolfsberger,SV Josko Ried,1.0,2.0,,,
 AT1,2025-10-18 16:00:00,WSG Swarovski Tirol,Austria Vienna,2.0,3.0,,,
+AT1,2025-10-18 16:00:00,Wolfsberger,SV Josko Ried,1.0,2.0,,,
 AT1,2025-10-18 16:00:00,Grazer AK,TSV Hartberg,0.0,0.0,,,
 F1,2025-10-18 16:00:00,Nice,Lyon,3.0,2.0,2.42,3.46,2.76
 I1,2025-10-18 17:00:00,Torino,Napoli,1.0,0.0,4.98,3.41,1.77
@@ -7549,11 +7549,11 @@ T1,2025-10-26 11:30:00,Antalyaspor,Buyuksehyr,0.0,4.0,2.91,3.33,2.3
 SC0,2025-10-26 12:00:00,Hearts,Celtic,3.0,1.0,3.19,3.58,2.1
 B1,2025-10-26 12:30:00,Antwerp,Club Brugge,0.0,1.0,4.93,4.15,1.59
 SP1,2025-10-26 13:00:00,Mallorca,Levante,1.0,1.0,2.1,3.26,3.58
-DK1,2025-10-26 13:00:00,FC Fredericia,FC Midtjylland,0.0,4.0,,,
 DK1,2025-10-26 13:00:00,Vejle Boldklub,Silkeborg IF,1.0,2.0,,,
+DK1,2025-10-26 13:00:00,FC Fredericia,FC Midtjylland,0.0,4.0,,,
 N1,2025-10-26 13:30:00,Feyenoord,PSV Eindhoven,2.0,3.0,2.4,3.82,2.57
-AT1,2025-10-26 13:30:00,SV Josko Ried,Rapid Vienna,0.0,2.0,,,
 AT1,2025-10-26 13:30:00,SK Sturm Graz,Wolfsberger,1.0,3.0,,,
+AT1,2025-10-26 13:30:00,SV Josko Ried,Rapid Vienna,0.0,2.0,,,
 F1,2025-10-26 14:00:00,Lille,Metz,6.0,1.0,1.31,5.35,9.04
 T1,2025-10-26 14:00:00,Galatasaray,Goztep,3.0,1.0,1.42,4.55,6.58
 E0,2025-10-26 14:00:00,Bournemouth,Nott'm Forest,2.0,0.0,1.79,3.79,4.29
@@ -7646,9 +7646,9 @@ SP1,2025-11-01 15:15:00,Ath Madrid,Sevilla,3.0,0.0,1.32,5.3,8.78
 P1,2025-11-01 15:30:00,Nacional,Famalicao,0.0,1.0,3.08,3.33,2.21
 N1,2025-11-01 15:30:00,Ajax,Heerenveen,1.0,1.0,1.53,4.52,5.12
 AT1,2025-11-01 16:00:00,TSV Hartberg,Austria Vienna,2.0,1.0,,,
-AT1,2025-11-01 16:00:00,Grazer AK,SC Rheindorf Altach,3.0,1.0,,,
-F1,2025-11-01 16:00:00,Paris SG,Nice,1.0,0.0,1.24,6.28,10.01
 AT1,2025-11-01 16:00:00,FC Blau-Weiß Linz,LASK Linz,0.0,1.0,,,
+F1,2025-11-01 16:00:00,Paris SG,Nice,1.0,0.0,1.24,6.28,10.01
+AT1,2025-11-01 16:00:00,Grazer AK,SC Rheindorf Altach,3.0,1.0,,,
 I1,2025-11-01 17:00:00,Napoli,Como,0.0,0.0,1.93,3.21,4.35
 T1,2025-11-01 17:00:00,Galatasaray,Trabzonspor,0.0,0.0,1.4,4.85,6.2
 DK1,2025-11-01 17:00:00,F.C. København,FC Fredericia,3.0,2.0,,,
@@ -7674,8 +7674,8 @@ I1,2025-11-02 11:30:00,Verona,Inter,1.0,2.0,7.59,4.7,1.39
 B1,2025-11-02 12:30:00,Westerlo,Genk,0.0,1.0,3.0,3.83,2.1
 DK1,2025-11-02 13:00:00,Viborg FF,Randers FC,3.0,2.0,,,
 SP1,2025-11-02 13:00:00,Levante,Celta,1.0,2.0,2.81,3.35,2.43
-AT1,2025-11-02 13:30:00,RB Salzburg,SV Josko Ried,4.0,1.0,,,
 AT1,2025-11-02 13:30:00,Wolfsberger,WSG Swarovski Tirol,0.0,0.0,,,
+AT1,2025-11-02 13:30:00,RB Salzburg,SV Josko Ried,4.0,1.0,,,
 N1,2025-11-02 13:30:00,Groningen,Twente,1.0,1.0,2.76,3.35,2.42
 N1,2025-11-02 13:30:00,Sparta Rotterdam,AZ Alkmaar,0.0,1.0,3.94,4.02,1.75
 T1,2025-11-02 14:00:00,Kayserispor,Kasimpasa,3.0,2.0,2.39,3.45,2.69
@@ -7848,8 +7848,8 @@ SP1,2025-11-22 15:15:00,Barcelona,Ath Bilbao,4.0,0.0,1.41,5.01,6.7
 N1,2025-11-22 15:30:00,NAC Breda,PSV Eindhoven,0.0,1.0,7.88,5.63,1.31
 F1,2025-11-22 16:00:00,Lens,Strasbourg,1.0,0.0,2.0,3.68,3.43
 AT1,2025-11-22 16:00:00,SC Rheindorf Altach,Wolfsberger,3.0,1.0,,,
-AT1,2025-11-22 16:00:00,FC Blau-Weiß Linz,Austria Vienna,2.0,3.0,,,
 AT1,2025-11-22 16:00:00,TSV Hartberg,SV Josko Ried,2.0,0.0,,,
+AT1,2025-11-22 16:00:00,FC Blau-Weiß Linz,Austria Vienna,2.0,3.0,,,
 T1,2025-11-22 17:00:00,Galatasaray,Genclerbirligi,3.0,2.0,1.15,7.48,14.19
 I1,2025-11-22 17:00:00,Fiorentina,Juventus,1.0,1.0,3.8,3.38,2.0
 B1,2025-11-22 17:15:00,Westerlo,Gent,0.0,0.0,2.29,3.54,2.81
@@ -7966,9 +7966,9 @@ I1,2025-11-30 11:30:00,Lecce,Torino,2.0,1.0,2.95,2.95,2.61
 E0,2025-11-30 12:00:00,Crystal Palace,Man United,1.0,2.0,2.32,3.51,2.93
 SC0,2025-11-30 12:00:00,Hibernian,Celtic,1.0,2.0,4.22,3.92,1.72
 B1,2025-11-30 12:30:00,Club Brugge,Antwerp,0.0,1.0,1.36,4.85,7.47
-DK1,2025-11-30 13:00:00,AGF,F.C. København,2.0,0.0,,,
-SP1,2025-11-30 13:00:00,Sociedad,Villarreal,2.0,3.0,2.81,3.35,2.43
 DK1,2025-11-30 13:00:00,Silkeborg IF,Randers FC,0.0,0.0,,,
+SP1,2025-11-30 13:00:00,Sociedad,Villarreal,2.0,3.0,2.81,3.35,2.43
+DK1,2025-11-30 13:00:00,AGF,F.C. København,2.0,0.0,,,
 AT1,2025-11-30 13:30:00,TSV Hartberg,SK Sturm Graz,0.0,1.0,,,
 AT1,2025-11-30 13:30:00,SC Rheindorf Altach,RB Salzburg,1.0,1.0,,,
 N1,2025-11-30 13:30:00,Go Ahead Eagles,Utrecht,2.0,2.0,2.77,3.55,2.33
@@ -8062,8 +8062,8 @@ SC0,2025-12-06 15:00:00,Dundee,Aberdeen,1.0,3.0,3.37,3.29,2.12
 SP1,2025-12-06 15:15:00,Alaves,Sociedad,1.0,0.0,2.75,2.98,2.77
 N1,2025-12-06 15:30:00,Heerenveen,PSV Eindhoven,0.0,2.0,4.63,4.71,1.56
 P1,2025-12-06 15:30:00,Santa Clara,Casa Pia,1.0,0.0,1.88,3.11,4.53
-AT1,2025-12-06 16:00:00,FC Blau-Weiß Linz,RB Salzburg,0.0,2.0,,,
 AT1,2025-12-06 16:00:00,TSV Hartberg,LASK Linz,2.0,2.0,,,
+AT1,2025-12-06 16:00:00,FC Blau-Weiß Linz,RB Salzburg,0.0,2.0,,,
 AT1,2025-12-06 16:00:00,Rapid Vienna,SV Josko Ried,1.0,2.0,,,
 F1,2025-12-06 16:00:00,Nantes,Lens,1.0,2.0,4.84,3.95,1.66
 I1,2025-12-06 17:00:00,Inter,Como,4.0,0.0,1.52,4.21,6.04
@@ -8087,13 +8087,13 @@ N1,2025-12-07 11:15:00,Utrecht,Twente,1.0,1.0,2.44,3.45,2.71
 I1,2025-12-07 11:30:00,Cremonese,Lecce,2.0,0.0,2.43,3.01,3.15
 T1,2025-12-07 11:30:00,Genclerbirligi,Karagumruk,3.0,0.0,2.21,3.25,3.14
 B1,2025-12-07 12:30:00,Mechelen,Charleroi,1.0,0.0,2.85,3.37,2.35
-DK1,2025-12-07 13:00:00,FC Nordsjælland,Silkeborg IF,5.0,0.0,,,
 DK1,2025-12-07 13:00:00,Viborg FF,FC Midtjylland,3.0,3.0,,,
+DK1,2025-12-07 13:00:00,FC Nordsjælland,Silkeborg IF,5.0,0.0,,,
 SP1,2025-12-07 13:00:00,Elche,Girona,3.0,0.0,2.12,3.41,3.34
 N1,2025-12-07 13:30:00,Volendam,Nijmegen,2.0,3.0,3.78,4.03,1.8
 N1,2025-12-07 13:30:00,AZ Alkmaar,Go Ahead Eagles,2.0,2.0,1.4,4.96,6.47
-AT1,2025-12-07 13:30:00,WSG Swarovski Tirol,SC Rheindorf Altach,0.0,3.0,,,
 AT1,2025-12-07 13:30:00,Wolfsberger,Austria Vienna,2.0,1.0,,,
+AT1,2025-12-07 13:30:00,WSG Swarovski Tirol,SC Rheindorf Altach,0.0,3.0,,,
 I1,2025-12-07 14:00:00,Cagliari,Roma,1.0,0.0,5.26,3.6,1.68
 E0,2025-12-07 14:00:00,Brighton,West Ham,1.0,1.0,1.55,4.32,5.63
 T1,2025-12-07 14:00:00,Kocaelispor,Kasimpasa,0.0,0.0,1.83,3.41,4.17
@@ -8153,10 +8153,10 @@ SC0,2025-12-13 15:00:00,Dundee United,Motherwell,0.0,0.0,2.86,3.31,2.36
 SP1,2025-12-13 15:15:00,Mallorca,Elche,3.0,1.0,2.42,3.07,3.1
 P1,2025-12-13 15:30:00,Casa Pia,Gil Vicente,1.0,1.0,3.6,3.01,2.13
 N1,2025-12-13 15:30:00,Telstar,Nijmegen,2.0,2.0,3.52,3.89,1.89
-AT1,2025-12-13 16:00:00,TSV Hartberg,WSG Swarovski Tirol,2.0,1.0,,,
 AT1,2025-12-13 16:00:00,Grazer AK,LASK Linz,1.0,2.0,,,
-F1,2025-12-13 16:00:00,Rennes,Brest,3.0,1.0,1.82,3.7,4.06
 AT1,2025-12-13 16:00:00,SV Josko Ried,SC Rheindorf Altach,3.0,0.0,,,
+F1,2025-12-13 16:00:00,Rennes,Brest,3.0,1.0,1.82,3.7,4.06
+AT1,2025-12-13 16:00:00,TSV Hartberg,WSG Swarovski Tirol,2.0,1.0,,,
 T1,2025-12-13 17:00:00,Antalyaspor,Galatasaray,1.0,4.0,8.11,5.13,1.31
 I1,2025-12-13 17:00:00,Parma,Lazio,0.0,1.0,3.62,3.25,2.09
 B1,2025-12-13 17:15:00,Waregem,RAAL La Louviere,2.0,2.0,2.24,3.23,3.14
@@ -8804,8 +8804,8 @@ DK1,2026-02-08 13:00:00,FC Nordsjælland,Sønderjyske Fodbold,2.0,1.0,,,
 DK1,2026-02-08 13:00:00,Silkeborg IF,Viborg FF,0.0,1.0,,,
 SP1,2026-02-08 13:00:00,Alaves,Getafe,0.0,2.0,2.3,2.78,3.69
 N1,2026-02-08 13:30:00,Go Ahead Eagles,Telstar,1.0,1.0,1.89,3.71,3.65
-AT1,2026-02-08 13:30:00,SC Rheindorf Altach,FC Blau-Weiß Linz,1.0,0.0,,,
 AT1,2026-02-08 13:30:00,Wolfsberger,Grazer AK,2.0,2.0,,,
+AT1,2026-02-08 13:30:00,SC Rheindorf Altach,FC Blau-Weiß Linz,1.0,0.0,,,
 N1,2026-02-08 13:30:00,AZ Alkmaar,Ajax,1.0,1.0,2.18,3.62,2.96
 F1,2026-02-08 14:00:00,Nice,Monaco,0.0,0.0,3.01,3.76,2.13
 E0,2026-02-08 14:00:00,Brighton,Crystal Palace,0.0,1.0,1.96,3.57,3.68
@@ -8891,10 +8891,10 @@ SC0,2026-02-14 15:00:00,Dundee,Livingston,2.0,2.0,2.1,3.26,3.43
 SP1,2026-02-14 15:15:00,Getafe,Villarreal,2.0,1.0,3.23,3.07,2.31
 P1,2026-02-14 15:30:00,Casa Pia,Arouca,3.0,2.0,2.64,3.1,2.65
 N1,2026-02-14 15:30:00,Heracles,NAC Breda,0.0,1.0,2.61,3.38,2.54
-AT1,2026-02-14 16:00:00,WSG Swarovski Tirol,SK Sturm Graz,1.0,0.0,,,
-AT1,2026-02-14 16:00:00,TSV Hartberg,SC Rheindorf Altach,0.0,0.0,,,
-DK1,2026-02-14 16:00:00,F.C. København,FC Nordsjælland,1.0,2.0,,,
 AT1,2026-02-14 16:00:00,SV Josko Ried,LASK Linz,1.0,1.0,,,
+DK1,2026-02-14 16:00:00,F.C. København,FC Nordsjælland,1.0,2.0,,,
+AT1,2026-02-14 16:00:00,TSV Hartberg,SC Rheindorf Altach,0.0,0.0,,,
+AT1,2026-02-14 16:00:00,WSG Swarovski Tirol,SK Sturm Graz,1.0,0.0,,,
 F1,2026-02-14 16:00:00,Marseille,Strasbourg,2.0,2.0,1.66,4.06,4.54
 I1,2026-02-14 17:00:00,Lazio,Atalanta,0.0,2.0,3.46,3.26,2.13
 T1,2026-02-14 17:00:00,Trabzonspor,Fenerbahce,2.0,3.0,3.36,3.59,1.98
@@ -8986,9 +8986,9 @@ SP1,2026-02-21 15:15:00,Betis,Vallecano,1.0,1.0,1.88,3.45,4.19
 P1,2026-02-21 15:30:00,Alverca,Santa Clara,1.0,1.0,2.85,2.88,2.62
 P1,2026-02-21 15:30:00,Arouca,Nacional,3.0,0.0,2.3,3.29,2.94
 F1,2026-02-21 16:00:00,Lens,Monaco,2.0,3.0,1.63,4.21,4.63
-AT1,2026-02-21 16:00:00,TSV Hartberg,Grazer AK,1.0,0.0,,,
-AT1,2026-02-21 16:00:00,SC Rheindorf Altach,Austria Vienna,2.0,1.0,,,
 AT1,2026-02-21 16:00:00,Rapid Vienna,Wolfsberger,2.0,0.0,,,
+AT1,2026-02-21 16:00:00,SC Rheindorf Altach,Austria Vienna,2.0,1.0,,,
+AT1,2026-02-21 16:00:00,TSV Hartberg,Grazer AK,1.0,0.0,,,
 I1,2026-02-21 17:00:00,Lecce,Inter,0.0,2.0,8.06,4.22,1.42
 T1,2026-02-21 17:00:00,Konyaspor,Galatasaray,2.0,0.0,5.99,4.44,1.45
 B1,2026-02-21 17:15:00,Club Brugge,Oud-Heverlee Leuven,2.0,1.0,1.36,4.92,7.55
@@ -9126,18 +9126,18 @@ B1,2026-03-01 15:00:00,Westerlo,St. Gilloise,0.0,0.0,4.57,3.88,1.66
 SP1,2026-03-01 15:15:00,Valencia,Osasuna,1.0,0.0,2.33,3.12,3.13
 P1,2026-03-01 15:30:00,Tondela,Santa Clara,2.0,2.0,3.16,2.96,2.35
 N1,2026-03-01 15:45:00,Utrecht,AZ Alkmaar,2.0,0.0,2.21,3.47,3.01
+AT1,2026-03-01 16:00:00,SC Rheindorf Altach,Rapid Vienna,1.0,1.0,,,
+DK1,2026-03-01 16:00:00,F.C. København,Randers FC,1.0,2.0,,,
 DK1,2026-03-01 16:00:00,Vejle Boldklub,AGF,1.0,2.0,,,
 DK1,2026-03-01 16:00:00,Sønderjyske Fodbold,Odense Boldklub,1.0,0.0,,,
 DK1,2026-03-01 16:00:00,Viborg FF,FC Nordsjælland,2.0,1.0,,,
 AT1,2026-03-01 16:00:00,Grazer AK,SV Josko Ried,2.0,1.0,,,
 AT1,2026-03-01 16:00:00,FC Blau-Weiß Linz,WSG Swarovski Tirol,2.0,3.0,,,
+DK1,2026-03-01 16:00:00,FC Fredericia,Silkeborg IF,2.0,1.0,,,
 AT1,2026-03-01 16:00:00,Austria Vienna,LASK Linz,2.0,2.0,,,
 AT1,2026-03-01 16:00:00,Wolfsberger,SK Sturm Graz,2.0,2.0,,,
 DK1,2026-03-01 16:00:00,FC Midtjylland,Brøndby IF,0.0,0.0,,,
 AT1,2026-03-01 16:00:00,RB Salzburg,TSV Hartberg,0.0,0.0,,,
-DK1,2026-03-01 16:00:00,FC Fredericia,Silkeborg IF,2.0,1.0,,,
-AT1,2026-03-01 16:00:00,SC Rheindorf Altach,Rapid Vienna,1.0,1.0,,,
-DK1,2026-03-01 16:00:00,F.C. København,Randers FC,1.0,2.0,,,
 F1,2026-03-01 16:15:00,Lille,Nantes,1.0,0.0,1.45,4.34,6.79
 F1,2026-03-01 16:15:00,Lorient,Auxerre,2.0,2.0,2.03,3.22,3.73
 F1,2026-03-01 16:15:00,Metz,Brest,0.0,1.0,3.38,3.35,2.09
@@ -9227,11 +9227,11 @@ B1,2026-03-08 15:00:00,Gent,Mechelen,3.0,1.0,1.97,3.59,3.43
 SP1,2026-03-08 15:15:00,Getafe,Betis,2.0,0.0,2.8,2.84,2.72
 P1,2026-03-08 15:30:00,Estrela,Gil Vicente,2.0,2.0,4.25,3.31,1.83
 N1,2026-03-08 15:45:00,NAC Breda,Feyenoord,3.0,3.0,3.99,3.74,1.8
-AT1,2026-03-08 16:00:00,TSV Hartberg,FC Blau-Weiß Linz,1.0,1.0,,,
-AT1,2026-03-08 16:00:00,SK Sturm Graz,SC Rheindorf Altach,2.0,0.0,,,
-AT1,2026-03-08 16:00:00,SV Josko Ried,Austria Vienna,0.0,2.0,,,
-AT1,2026-03-08 16:00:00,Rapid Vienna,RB Salzburg,1.0,0.0,,,
 AT1,2026-03-08 16:00:00,WSG Swarovski Tirol,Grazer AK,2.0,0.0,,,
+AT1,2026-03-08 16:00:00,Rapid Vienna,RB Salzburg,1.0,0.0,,,
+AT1,2026-03-08 16:00:00,SV Josko Ried,Austria Vienna,0.0,2.0,,,
+AT1,2026-03-08 16:00:00,SK Sturm Graz,SC Rheindorf Altach,2.0,0.0,,,
+AT1,2026-03-08 16:00:00,TSV Hartberg,FC Blau-Weiß Linz,1.0,1.0,,,
 AT1,2026-03-08 16:00:00,LASK Linz,Wolfsberger,3.0,1.0,,,
 F1,2026-03-08 16:15:00,Brest,Le Havre,2.0,0.0,1.86,3.46,3.97
 F1,2026-03-08 16:15:00,Lille,Lorient,1.0,1.0,1.55,4.0,5.74
@@ -9281,9 +9281,9 @@ SP1,2026-03-14 15:15:00,Ath Madrid,Getafe,1.0,0.0,1.55,3.67,6.91
 N1,2026-03-14 15:30:00,Volendam,For Sittard,1.0,2.0,2.28,3.63,2.76
 P1,2026-03-14 15:30:00,Guimaraes,Famalicao,1.0,2.0,2.37,3.22,2.84
 F1,2026-03-14 16:00:00,Lorient,Lens,2.0,1.0,4.04,3.6,1.84
-AT1,2026-03-14 16:00:00,SV Josko Ried,WSG Swarovski Tirol,2.0,1.0,,,
-AT1,2026-03-14 16:00:00,Grazer AK,Wolfsberger,2.0,0.0,,,
 AT1,2026-03-14 16:00:00,SC Rheindorf Altach,FC Blau-Weiß Linz,3.0,1.0,,,
+AT1,2026-03-14 16:00:00,Grazer AK,Wolfsberger,2.0,0.0,,,
+AT1,2026-03-14 16:00:00,SV Josko Ried,WSG Swarovski Tirol,2.0,1.0,,,
 T1,2026-03-14 17:00:00,Galatasaray,Buyuksehyr,3.0,0.0,1.57,4.17,4.6
 T1,2026-03-14 17:00:00,Trabzonspor,Rizespor,1.0,0.0,1.68,3.81,4.31
 T1,2026-03-14 17:00:00,Goztep,Alanyaspor,2.0,2.0,2.07,3.18,3.44
@@ -9501,8 +9501,8 @@ T1,2026-04-05 12:30:00,Karagumruk,Rizespor,2.0,1.0,2.78,3.4,2.29
 T1,2026-04-05 12:30:00,Samsunspor,Konyaspor,2.0,2.0,2.25,3.12,3.11
 SP1,2026-04-05 13:00:00,Getafe,Ath Bilbao,2.0,0.0,2.99,2.82,2.63
 N1,2026-04-05 13:30:00,Heerenveen,Heracles,4.0,1.0,1.46,4.63,5.63
-AT1,2026-04-05 13:30:00,TSV Hartberg,RB Salzburg,1.0,2.0,,,
 AT1,2026-04-05 13:30:00,LASK Linz,Austria Vienna,4.0,1.0,,,
+AT1,2026-04-05 13:30:00,TSV Hartberg,RB Salzburg,1.0,2.0,,,
 N1,2026-04-05 13:30:00,Volendam,Feyenoord,0.0,0.0,5.99,4.71,1.43
 F1,2026-04-05 14:00:00,Angers,Lyon,0.0,0.0,4.59,3.45,1.78
 SC0,2026-04-05 14:00:00,Livingston,Hearts,2.0,2.0,6.09,4.2,1.47
@@ -9600,8 +9600,8 @@ SC0,2026-04-12 12:00:00,Falkirk,Rangers,3.0,6.0,4.18,3.66,1.76
 T1,2026-04-12 12:30:00,Konyaspor,Karagumruk,3.0,0.0,1.64,3.61,4.98
 B1,2026-04-12 12:30:00,Mechelen,St. Gilloise,0.0,1.0,4.82,3.7,1.65
 SP1,2026-04-12 13:00:00,Osasuna,Betis,1.0,1.0,2.2,3.39,3.14
-DK1,2026-04-12 13:00:00,Sønderjyske Fodbold,Viborg FF,0.0,2.0,,,
 DK1,2026-04-12 13:00:00,Silkeborg IF,Odense Boldklub,3.0,1.0,,,
+DK1,2026-04-12 13:00:00,Sønderjyske Fodbold,Viborg FF,0.0,2.0,,,
 N1,2026-04-12 13:30:00,Nijmegen,Feyenoord,1.0,1.0,2.16,3.84,2.84
 AT1,2026-04-12 13:30:00,SK Sturm Graz,TSV Hartberg,0.0,0.0,,,
 N1,2026-04-12 13:30:00,Zwolle,Excelsior,2.0,2.0,2.11,3.65,3.04
@@ -9681,10 +9681,10 @@ P1,2026-04-18 20:30:00,Gil Vicente,Guimaraes,0.0,1.0,2.11,3.22,3.34
 I1,2026-04-19 11:30:00,Cremonese,Torino,0.0,0.0,2.86,3.08,2.54
 B1,2026-04-19 12:30:00,Gent,St Truiden,0.0,0.0,2.54,3.46,2.5
 T1,2026-04-19 12:30:00,Kasimpasa,Alanyaspor,1.0,0.0,2.64,3.18,2.53
-DK1,2026-04-19 13:00:00,Odense Boldklub,Randers FC,3.0,1.0,,,
 DK1,2026-04-19 13:00:00,Silkeborg IF,FC Fredericia,2.0,2.0,,,
-AT1,2026-04-19 13:30:00,TSV Hartberg,Rapid Vienna,2.0,2.0,,,
+DK1,2026-04-19 13:00:00,Odense Boldklub,Randers FC,3.0,1.0,,,
 AT1,2026-04-19 13:30:00,Austria Vienna,RB Salzburg,1.0,3.0,,,
+AT1,2026-04-19 13:30:00,TSV Hartberg,Rapid Vienna,2.0,2.0,,,
 I1,2026-04-19 14:00:00,Verona,Milan,0.0,1.0,6.12,3.83,1.56
 F1,2026-04-19 14:00:00,Monaco,Auxerre,2.0,2.0,1.54,4.18,5.59
 E0,2026-04-19 14:00:00,Nott'm Forest,Burnley,4.0,1.0,1.49,4.25,6.32
@@ -9717,8 +9717,8 @@ DK1,2026-04-20 18:00:00,FC Midtjylland,AGF,2.0,1.0,,,
 I1,2026-04-20 19:45:00,Lecce,Fiorentina,1.0,1.0,3.42,3.28,2.13
 E0,2026-04-20 20:00:00,Crystal Palace,West Ham,0.0,0.0,2.31,3.21,3.11
 P1,2026-04-20 20:15:00,Moreirense,Estoril,1.0,0.0,2.92,3.29,2.27
-AT1,2026-04-21 17:30:00,SC Rheindorf Altach,WSG Swarovski Tirol,0.0,0.0,,,
 AT1,2026-04-21 17:30:00,FC Blau-Weiß Linz,Wolfsberger,3.0,0.0,,,
+AT1,2026-04-21 17:30:00,SC Rheindorf Altach,WSG Swarovski Tirol,0.0,0.0,,,
 SP1,2026-04-21 18:00:00,Mallorca,Valencia,1.0,1.0,2.51,3.12,2.88
 SP1,2026-04-21 18:00:00,Ath Bilbao,Osasuna,1.0,0.0,1.82,3.47,4.4
 B1,2026-04-21 19:30:00,Oud-Heverlee Leuven,Westerlo,0.0,2.0,2.86,3.51,2.26
@@ -9730,8 +9730,8 @@ SP1,2026-04-21 20:30:00,Girona,Betis,2.0,3.0,2.39,3.37,2.88
 SP1,2026-04-21 20:30:00,Real Madrid,Alaves,2.0,1.0,1.23,6.46,11.23
 DK1,2026-04-22 17:00:00,F.C. København,Odense Boldklub,2.0,1.0,,,
 DK1,2026-04-22 17:00:00,Vejle Boldklub,Silkeborg IF,1.0,2.0,,,
-AT1,2026-04-22 17:30:00,Rapid Vienna,TSV Hartberg,0.0,2.0,,,
 AT1,2026-04-22 17:30:00,RB Salzburg,Austria Vienna,3.0,1.0,,,
+AT1,2026-04-22 17:30:00,Rapid Vienna,TSV Hartberg,0.0,2.0,,,
 SP1,2026-04-22 18:00:00,Elche,Ath Madrid,3.0,2.0,2.65,3.61,2.44
 F1,2026-04-22 18:00:00,Paris SG,Nantes,3.0,0.0,1.17,7.28,12.84
 DK1,2026-04-22 19:00:00,Viborg FF,Brøndby IF,0.0,1.0,,,
@@ -9743,8 +9743,8 @@ B1,2026-04-22 19:30:00,St. Gilloise,Gent,0.0,0.0,1.44,4.28,6.7
 E0,2026-04-22 20:00:00,Bournemouth,Leeds,2.0,2.0,2.02,3.51,3.57
 E0,2026-04-22 20:00:00,Burnley,Man City,0.0,1.0,16.53,8.3,1.14
 SP1,2026-04-22 20:30:00,Barcelona,Celta,1.0,0.0,1.23,6.72,10.25
-DK1,2026-04-23 17:00:00,Randers FC,FC Fredericia,2.0,2.0,,,
 DK1,2026-04-23 17:00:00,FC Nordsjælland,AGF,1.0,1.0,,,
+DK1,2026-04-23 17:00:00,Randers FC,FC Fredericia,2.0,2.0,,,
 N1,2026-04-23 17:45:00,Go Ahead Eagles,AZ Alkmaar,0.0,0.0,2.93,3.74,2.14
 SP1,2026-04-23 18:00:00,Levante,Sevilla,2.0,0.0,2.49,3.19,2.81
 SP1,2026-04-23 19:00:00,Vallecano,Espanol,1.0,0.0,2.08,3.2,3.65
@@ -9782,8 +9782,8 @@ SC0,2026-04-25 15:00:00,St Mirren,Livingston,0.0,2.0,1.65,3.81,4.81
 SP1,2026-04-25 15:15:00,Getafe,Barcelona,0.0,2.0,5.2,3.93,1.61
 P1,2026-04-25 15:30:00,Tondela,Nacional,0.0,2.0,2.7,3.29,2.43
 N1,2026-04-25 15:30:00,Feyenoord,Groningen,3.0,1.0,1.6,4.22,4.63
-AT1,2026-04-25 16:00:00,Wolfsberger,Grazer AK,1.0,0.0,,,
 AT1,2026-04-25 16:00:00,WSG Swarovski Tirol,SV Josko Ried,1.0,0.0,,,
+AT1,2026-04-25 16:00:00,Wolfsberger,Grazer AK,1.0,0.0,,,
 I1,2026-04-25 17:00:00,Bologna,Roma,0.0,2.0,2.98,3.21,2.38
 B1,2026-04-25 17:15:00,Genk,Standard,1.0,1.0,1.62,3.8,4.92
 SC0,2026-04-25 17:30:00,Celtic,Falkirk,3.0,1.0,1.42,4.76,6.18
@@ -9860,8 +9860,8 @@ E0,2026-05-01 20:00:00,Leeds,Burnley,3.0,1.0,1.34,5.09,8.57
 SP1,2026-05-02 13:00:00,Villarreal,Levante,5.0,1.0,1.7,4.09,4.31
 F1,2026-05-02 14:00:00,Nantes,Marseille,3.0,0.0,4.45,3.95,1.68
 I1,2026-05-02 14:00:00,Udinese,Torino,2.0,0.0,2.25,3.19,3.2
-CZ1,2026-05-02 14:00:00,Baník Ostrava,Mladá Boleslav,0.0,0.0,,,
 CZ1,2026-05-02 14:00:00,Zlín,Dukla Praha,2.0,1.0,,,
+CZ1,2026-05-02 14:00:00,Baník Ostrava,Mladá Boleslav,0.0,0.0,,,
 D1,2026-05-02 14:30:00,Bayern Munich,Heidenheim,3.0,3.0,1.22,6.75,9.61
 D1,2026-05-02 14:30:00,Hoffenheim,Stuttgart,3.0,3.0,2.27,3.98,2.63
 D1,2026-05-02 14:30:00,Ein Frankfurt,Hamburg,1.0,2.0,1.7,4.05,4.26
@@ -9879,8 +9879,8 @@ P1,2026-05-02 15:30:00,Nacional,AVS,1.0,2.0,1.44,4.37,6.2
 P1,2026-05-02 15:30:00,Moreirense,Estrela,3.0,2.0,2.43,3.15,2.8
 P1,2026-05-02 15:30:00,Arouca,Santa Clara,2.0,2.0,2.81,3.05,2.5
 N1,2026-05-02 15:30:00,Utrecht,NAC Breda,2.0,0.0,1.75,3.85,3.96
-AT1,2026-05-02 16:00:00,Grazer AK,WSG Swarovski Tirol,4.0,0.0,,,
 AT1,2026-05-02 16:00:00,SV Josko Ried,FC Blau-Weiß Linz,2.0,0.0,,,
+AT1,2026-05-02 16:00:00,Grazer AK,WSG Swarovski Tirol,4.0,0.0,,,
 F1,2026-05-02 16:00:00,Paris SG,Lorient,2.0,2.0,1.29,5.67,8.6
 CZ1,2026-05-02 17:00:00,Slovan Liberec,Slavia Prague,1.0,2.0,,,
 I1,2026-05-02 17:00:00,Como,Napoli,0.0,0.0,2.24,3.26,3.18
@@ -9906,8 +9906,8 @@ I1,2026-05-03 11:30:00,Bologna,Cagliari,0.0,0.0,1.78,3.43,4.55
 SC0,2026-05-03 12:00:00,Hibernian,Celtic,1.0,2.0,4.07,3.94,1.73
 CZ1,2026-05-03 12:00:00,Teplice,Slovácko,1.0,1.0,,,
 B1,2026-05-03 12:30:00,Mechelen,Gent,1.0,0.0,2.56,3.48,2.49
-DK1,2026-05-03 13:00:00,Randers FC,Vejle Boldklub,1.0,0.0,,,
 DK1,2026-05-03 13:00:00,Odense Boldklub,Silkeborg IF,2.0,3.0,,,
+DK1,2026-05-03 13:00:00,Randers FC,Vejle Boldklub,1.0,0.0,,,
 SP1,2026-05-03 13:00:00,Celta,Elche,3.0,1.0,1.75,3.81,4.24
 AT1,2026-05-03 13:30:00,Austria Vienna,TSV Hartberg,1.0,0.0,,,
 N1,2026-05-03 13:30:00,Zwolle,Heracles,1.0,0.0,1.44,4.68,5.81
@@ -9964,8 +9964,8 @@ SP1,2026-05-08 20:00:00,Levante,Osasuna,3.0,2.0,2.51,3.23,2.81
 E0,2026-05-09 12:30:00,Liverpool,Chelsea,1.0,1.0,1.82,3.95,3.81
 CZ1,2026-05-09 13:00:00,Dukla Praha,Slovácko,0.0,1.0,,,
 SP1,2026-05-09 13:00:00,Elche,Alaves,1.0,1.0,2.22,3.32,3.2
-CZ1,2026-05-09 13:00:00,Teplice,Baník Ostrava,2.0,1.0,,,
 CZ1,2026-05-09 13:00:00,Mladá Boleslav,Zlín,1.0,1.0,,,
+CZ1,2026-05-09 13:00:00,Teplice,Baník Ostrava,2.0,1.0,,,
 I1,2026-05-09 14:00:00,Cagliari,Udinese,0.0,2.0,2.5,3.12,2.89
 D1,2026-05-09 14:30:00,Augsburg,M'gladbach,3.0,1.0,2.06,3.66,3.2
 D1,2026-05-09 14:30:00,Hoffenheim,Werder Bremen,1.0,0.0,1.44,4.91,5.7
@@ -9982,9 +9982,9 @@ CZ1,2026-05-09 15:00:00,Viktoria Plzeň,Slovan Liberec,2.0,0.0,,,
 SC0,2026-05-09 15:00:00,Dundee,Livingston,3.0,0.0,1.77,3.71,4.11
 SC0,2026-05-09 15:00:00,St Mirren,Kilmarnock,0.0,3.0,1.97,3.52,3.5
 SP1,2026-05-09 15:15:00,Sevilla,Espanol,2.0,1.0,2.02,3.34,3.66
+AT1,2026-05-09 16:00:00,Grazer AK,SC Rheindorf Altach,2.0,2.0,,,
 AT1,2026-05-09 16:00:00,WSG Swarovski Tirol,FC Blau-Weiß Linz,1.0,1.0,,,
 AT1,2026-05-09 16:00:00,SV Josko Ried,Wolfsberger,0.0,1.0,,,
-AT1,2026-05-09 16:00:00,Grazer AK,SC Rheindorf Altach,2.0,2.0,,,
 I1,2026-05-09 17:00:00,Lazio,Inter,0.0,3.0,4.37,3.72,1.75
 D1,2026-05-09 17:30:00,Wolfsburg,Bayern Munich,0.0,1.0,4.28,4.48,1.62
 SP1,2026-05-09 17:30:00,Ath Madrid,Celta,0.0,1.0,2.08,3.47,3.34
@@ -10027,9 +10027,9 @@ N1,2026-05-10 15:45:00,Ajax,Utrecht,1.0,2.0,1.62,4.31,4.41
 N1,2026-05-10 15:45:00,Twente,Sparta Rotterdam,4.0,0.0,1.33,5.22,7.51
 N1,2026-05-10 15:45:00,NAC Breda,Heerenveen,2.0,0.0,2.45,3.77,2.47
 N1,2026-05-10 15:45:00,Go Ahead Eagles,PSV Eindhoven,1.0,4.0,4.34,4.57,1.59
-AT1,2026-05-10 16:00:00,Rapid Vienna,Austria Vienna,0.0,2.0,,,
-AT1,2026-05-10 16:00:00,TSV Hartberg,SK Sturm Graz,2.0,4.0,,,
 AT1,2026-05-10 16:00:00,LASK Linz,RB Salzburg,2.0,1.0,,,
+AT1,2026-05-10 16:00:00,TSV Hartberg,SK Sturm Graz,2.0,4.0,,,
+AT1,2026-05-10 16:00:00,Rapid Vienna,Austria Vienna,0.0,2.0,,,
 D1,2026-05-10 16:30:00,FC Koln,Heidenheim,1.0,3.0,1.88,3.93,3.48
 E0,2026-05-10 16:30:00,West Ham,Arsenal,0.0,1.0,5.29,4.09,1.58
 I1,2026-05-10 17:00:00,Parma,Roma,2.0,3.0,6.12,4.01,1.53
@@ -10106,11 +10106,11 @@ B1,2026-05-16 15:00:00,Charleroi,Westerlo,0.0,1.0,2.0,3.6,3.23
 T1,2026-05-16 15:00:00,Karagumruk,Alanyaspor,2.0,1.0,2.66,3.26,2.46
 P1,2026-05-16 15:30:00,Porto,Santa Clara,1.0,0.0,1.31,4.81,8.82
 P1,2026-05-16 15:30:00,Moreirense,AVS,0.0,0.0,1.76,3.62,4.16
+AT1,2026-05-16 16:00:00,Wolfsberger,WSG Swarovski Tirol,2.0,0.0,,,
 CZ1,2026-05-16 16:00:00,Teplice,Dukla Praha,2.0,0.0,,,
 AT1,2026-05-16 16:00:00,SC Rheindorf Altach,SV Josko Ried,2.0,0.0,,,
 AT1,2026-05-16 16:00:00,FC Blau-Weiß Linz,Grazer AK,0.0,3.0,,,
 CZ1,2026-05-16 16:00:00,Slovácko,Mladá Boleslav,0.0,3.0,,,
-AT1,2026-05-16 16:00:00,Wolfsberger,WSG Swarovski Tirol,2.0,0.0,,,
 CZ1,2026-05-16 16:00:00,Baník Ostrava,Zlín,2.0,0.0,,,
 B1,2026-05-16 17:15:00,Standard,Genk,0.0,0.0,3.08,3.43,2.12
 P1,2026-05-16 18:00:00,Sp Braga,Estrela,2.0,2.0,1.61,3.86,4.84
@@ -10130,17 +10130,17 @@ I1,2026-05-17 11:00:00,Como,Parma,1.0,0.0,1.24,5.69,11.34
 I1,2026-05-17 11:00:00,Juventus,Fiorentina,0.0,2.0,1.31,5.28,8.38
 E0,2026-05-17 12:30:00,Man United,Nott'm Forest,3.0,2.0,1.58,4.23,4.94
 B1,2026-05-17 12:30:00,Anderlecht,Mechelen,2.0,2.0,1.8,3.72,3.79
-DK1,2026-05-17 13:00:00,F.C. København,Randers FC,5.0,0.0,,,
-DK1,2026-05-17 13:00:00,FC Fredericia,Silkeborg IF,4.0,1.0,,,
 DK1,2026-05-17 13:00:00,Odense Boldklub,Vejle Boldklub,0.0,1.0,,,
+DK1,2026-05-17 13:00:00,FC Fredericia,Silkeborg IF,4.0,1.0,,,
+DK1,2026-05-17 13:00:00,F.C. København,Randers FC,5.0,0.0,,,
 N1,2026-05-17 13:30:00,Heracles,Groningen,1.0,2.0,4.63,4.43,1.57
 N1,2026-05-17 13:30:00,AZ Alkmaar,NAC Breda,3.0,3.0,1.34,5.17,7.19
 N1,2026-05-17 13:30:00,PSV Eindhoven,Twente,5.0,1.0,2.04,4.06,2.91
 N1,2026-05-17 13:30:00,Zwolle,Feyenoord,0.0,2.0,4.32,4.3,1.63
 N1,2026-05-17 13:30:00,Sparta Rotterdam,Excelsior,2.0,3.0,2.02,3.9,3.04
-AT1,2026-05-17 13:30:00,SK Sturm Graz,Rapid Vienna,2.0,0.0,,,
-AT1,2026-05-17 13:30:00,RB Salzburg,TSV Hartberg,1.0,3.0,,,
 AT1,2026-05-17 13:30:00,Austria Vienna,LASK Linz,0.0,3.0,,,
+AT1,2026-05-17 13:30:00,RB Salzburg,TSV Hartberg,1.0,3.0,,,
+AT1,2026-05-17 13:30:00,SK Sturm Graz,Rapid Vienna,2.0,0.0,,,
 N1,2026-05-17 13:30:00,Utrecht,For Sittard,2.0,0.0,1.46,4.66,5.61
 N1,2026-05-17 13:30:00,Volendam,Telstar,1.0,2.0,2.65,3.63,2.34
 N1,2026-05-17 13:30:00,Nijmegen,Go Ahead Eagles,2.0,1.0,1.35,5.25,6.98
@@ -10154,11 +10154,11 @@ T1,2026-05-17 15:00:00,Kayserispor,Konyaspor,2.0,1.0,1.87,3.68,3.53
 E0,2026-05-17 15:00:00,Wolves,Fulham,1.0,1.0,3.68,3.78,1.87
 E0,2026-05-17 15:00:00,Leeds,Brighton,1.0,0.0,3.09,3.57,2.14
 E0,2026-05-17 15:00:00,Brentford,Crystal Palace,2.0,2.0,1.71,4.09,4.17
-CZ1,2026-05-17 16:00:00,Hradec Králové,Slavia Prague,3.0,1.0,,,
-CZ1,2026-05-17 16:00:00,Slovan Liberec,Sparta Prague,0.0,2.0,,,
 CZ1,2026-05-17 16:00:00,Viktoria Plzeň,Jablonec,5.0,0.0,,,
-DK1,2026-05-17 17:00:00,Sønderjyske Fodbold,FC Nordsjælland,1.0,4.0,,,
+CZ1,2026-05-17 16:00:00,Slovan Liberec,Sparta Prague,0.0,2.0,,,
+CZ1,2026-05-17 16:00:00,Hradec Králové,Slavia Prague,3.0,1.0,,,
 DK1,2026-05-17 17:00:00,FC Midtjylland,Brøndby IF,2.0,3.0,,,
+DK1,2026-05-17 17:00:00,Sønderjyske Fodbold,FC Nordsjælland,1.0,4.0,,,
 DK1,2026-05-17 17:00:00,AGF,Viborg FF,6.0,2.0,,,
 I1,2026-05-17 17:00:00,Atalanta,Bologna,0.0,1.0,1.64,4.06,4.65
 E0,2026-05-17 17:30:00,Newcastle,West Ham,3.0,1.0,2.05,3.78,3.15
@@ -10219,9 +10219,9 @@ SP1,2026-05-23 20:00:00,Real Madrid,Ath Bilbao,4.0,2.0,1.46,4.63,5.84
 SP1,2026-05-23 20:00:00,Mallorca,Oviedo,3.0,0.0,1.45,4.33,6.9
 SP1,2026-05-23 20:00:00,Alaves,Vallecano,1.0,2.0,2.41,3.31,2.82
 SP1,2026-05-23 20:00:00,Getafe,Osasuna,1.0,0.0,2.41,2.77,3.38
-CZ1,2026-05-24 13:00:00,Sparta Prague,Hradec Králové,2.0,1.0,,,
 CZ1,2026-05-24 13:00:00,Slavia Prague,Viktoria Plzeň,3.0,0.0,,,
 CZ1,2026-05-24 13:00:00,Jablonec,Slovan Liberec,2.0,1.0,,,
+CZ1,2026-05-24 13:00:00,Sparta Prague,Hradec Králové,2.0,1.0,,,
 I1,2026-05-24 14:00:00,Parma,Sassuolo,1.0,0.0,2.61,3.3,2.55
 E0,2026-05-24 16:00:00,Fulham,Newcastle,2.0,0.0,2.82,3.66,2.27
 E0,2026-05-24 16:00:00,Crystal Palace,Arsenal,1.0,2.0,4.13,3.86,1.76
@@ -10270,8 +10270,8 @@ DK1,2026-08-01 17:00:00,Lyngby Boldklub,AGF,2.0,2.0,,,
 SC0,2026-08-01 17:30:00,Aberdeen,Hearts,2.0,1.0,3.0,3.5,2.18
 AT1,2026-08-01 18:30:00,RB Salzburg,TSV Hartberg,1.0,0.0,,,
 CZ1,2026-08-01 19:00:00,Viktoria Plzeň,Zbrojovka Brno,1.0,1.0,,,
-DK1,2026-08-02 13:00:00,FC Midtjylland,AC Horsens,2.0,1.0,,,
 DK1,2026-08-02 13:00:00,FC Nordsjælland,Randers FC,1.0,0.0,,,
+DK1,2026-08-02 13:00:00,FC Midtjylland,AC Horsens,2.0,1.0,,,
 CZ1,2026-08-02 14:00:00,Sigma Olomouc,Mladá Boleslav,2.0,2.0,,,
 SC0,2026-08-02 14:00:00,St Johnstone,Kilmarnock,4.0,3.0,2.17,3.4,3.08
 DK1,2026-08-02 15:00:00,Brøndby IF,Viborg FF,1.0,0.0,,,
@@ -10319,11 +10319,11 @@ B1,2026-08-09 15:00:00,Charleroi,Oud-Heverlee Leuven,3.0,1.0,1.76,3.52,4.26
 SC0,2026-08-09 15:00:00,Hearts,Dundee United,4.0,0.0,1.61,4.0,4.85
 B1,2026-08-09 15:00:00,Waregem,Genk,2.0,1.0,3.03,3.52,2.12
 N1,2026-08-09 15:45:00,Heerenveen,Twente,1.0,0.0,2.93,3.78,2.13
-AT1,2026-08-09 16:00:00,SV Josko Ried,Rapid Vienna,1.0,2.0,,,
+AT1,2026-08-09 16:00:00,Wolfsberger,RB Salzburg,1.0,1.0,,,
 SC0,2026-08-09 16:00:00,Rangers,Hibernian,1.0,2.0,1.52,4.23,5.35
 CZ1,2026-08-09 16:00:00,Hradec Králové,Baník Ostrava,2.0,1.0,,,
 CZ1,2026-08-09 16:00:00,Jablonec,Slovácko,1.0,0.0,,,
-AT1,2026-08-09 16:00:00,Wolfsberger,RB Salzburg,1.0,1.0,,,
+AT1,2026-08-09 16:00:00,SV Josko Ried,Rapid Vienna,1.0,2.0,,,
 DK1,2026-08-09 17:00:00,AC Horsens,Brøndby IF,0.0,2.0,,,
 B1,2026-08-09 17:30:00,Anderlecht,RAAL La Louviere,2.0,1.0,1.75,3.53,4.39
 P1,2026-08-09 18:00:00,Porto,Alverca,2.0,0.0,1.17,6.4,13.33
@@ -10366,8 +10366,8 @@ P1,2026-08-15 20:30:00,Rio Ave,Porto,0.0,2.0,7.38,4.51,1.4
 SP1,2026-08-15 20:30:00,Sevilla,Vallecano,2.0,1.0,2.29,3.17,3.26
 N1,2026-08-16 11:15:00,Den Haag,Groningen,1.0,4.0,2.7,3.59,2.34
 B1,2026-08-16 12:30:00,Beveren,Anderlecht,1.0,0.0,3.28,3.44,2.05
-DK1,2026-08-16 13:00:00,FC Nordsjælland,Silkeborg IF,1.0,0.0,,,
 DK1,2026-08-16 13:00:00,Odense Boldklub,AC Horsens,1.0,2.0,,,
+DK1,2026-08-16 13:00:00,FC Nordsjælland,Silkeborg IF,1.0,0.0,,,
 N1,2026-08-16 13:30:00,Twente,Zwolle,3.0,1.0,1.23,6.24,10.1
 N1,2026-08-16 13:30:00,Feyenoord,Go Ahead Eagles,2.0,2.0,1.35,5.31,6.72
 CZ1,2026-08-16 14:00:00,Baník Ostrava,Artis Brno,1.0,0.0,,,
@@ -10375,8 +10375,8 @@ DK1,2026-08-16 15:00:00,Lyngby Boldklub,FC Midtjylland,1.0,1.0,,,
 B1,2026-08-16 15:00:00,RAAL La Louviere,Gent,1.0,2.0,2.92,3.34,2.28
 P1,2026-08-16 15:30:00,Nacional,Estoril,2.0,0.0,2.61,3.33,2.54
 N1,2026-08-16 15:45:00,Ajax,Heerenveen,2.0,2.0,1.41,4.74,6.15
-AT1,2026-08-16 16:00:00,TSV Hartberg,Austria Vienna,0.0,2.0,,,
 AT1,2026-08-16 16:00:00,WSG Swarovski Tirol,RB Salzburg,0.0,3.0,,,
+AT1,2026-08-16 16:00:00,TSV Hartberg,Austria Vienna,0.0,2.0,,,
 SP1,2026-08-16 16:00:00,Santander,Villarreal,2.0,2.0,3.14,3.5,2.16
 DK1,2026-08-16 17:00:00,Randers FC,F.C. København,0.0,4.0,,,
 T1,2026-08-16 17:00:00,Buyuksehyr,Kocaelispor,2.0,0.0,1.46,4.08,6.41
@@ -10439,8 +10439,8 @@ P1,2026-08-22 20:30:00,Sp Lisbon,Alverca,3.0,1.0,1.2,6.25,11.23
 SP1,2026-08-22 20:30:00,Espanol,Real Madrid,1.0,2.0,7.36,4.59,1.41
 DK1,2026-08-23 11:00:00,Sønderjyske Fodbold,FC Nordsjælland,0.0,3.0,,,
 N1,2026-08-23 11:15:00,Go Ahead Eagles,Den Haag,3.0,1.0,1.71,3.98,4.16
-DK1,2026-08-23 13:00:00,FC Midtjylland,Randers FC,1.0,0.0,,,
 DK1,2026-08-23 13:00:00,AGF,Odense Boldklub,2.0,2.0,,,
+DK1,2026-08-23 13:00:00,FC Midtjylland,Randers FC,1.0,0.0,,,
 N1,2026-08-23 13:30:00,PSV Eindhoven,Groningen,5.0,1.0,1.33,5.41,7.24
 F1,2026-08-23 14:00:00,Angers,Lille,0.0,2.0,4.88,3.69,1.69
 E0,2026-08-23 14:00:00,Brighton,Aston Villa,4.0,0.0,2.19,3.54,3.08
@@ -10502,38 +10502,38 @@ D1,2026-08-29 14:30:00,Union Berlin,Ein Frankfurt,3.0,3.0,2.55,3.57,2.52
 B1,2026-08-29 15:00:00,RAAL La Louviere,Mechelen,2.0,2.0,2.34,3.13,2.95
 E0,2026-08-29 15:00:00,Bournemouth,Everton,1.0,1.0,2.1,3.5,3.41
 E0,2026-08-29 15:00:00,Coventry,Hull,0.0,1.0,1.87,3.53,4.19
-SC0,2026-08-29 15:00:00,Kilmarnock,Dundee United,0.0,4.0,2.39,3.45,2.69
-SC0,2026-08-29 15:00:00,Hearts,St Johnstone,2.0,1.0,1.72,3.82,4.27
 SC0,2026-08-29 15:00:00,Celtic,Falkirk,2.0,1.0,1.2,6.52,10.81
+SC0,2026-08-29 15:00:00,Hearts,St Johnstone,2.0,1.0,1.72,3.82,4.27
+SC0,2026-08-29 15:00:00,Kilmarnock,Dundee United,0.0,4.0,2.39,3.45,2.69
+P1,2026-08-29 15:30:00,Arouca,Maritimo,2.0,1.0,2.15,3.25,3.31
 P1,2026-08-29 15:30:00,Alverca,Santa Clara,1.0,1.0,2.63,3.11,2.67
 N1,2026-08-29 15:30:00,Excelsior,Sparta Rotterdam,2.0,1.0,2.33,3.67,2.66
-P1,2026-08-29 15:30:00,Arouca,Maritimo,2.0,1.0,2.15,3.25,3.31
-CZ1,2026-08-29 16:00:00,Zbrojovka Brno,Zlín,3.0,2.0,,,
 CZ1,2026-08-29 16:00:00,Pardubice,Artis Brno,1.0,2.0,,,
-SP1,2026-08-29 16:00:00,Levante,Betis,5.0,2.0,3.28,3.33,2.19
+CZ1,2026-08-29 16:00:00,Zbrojovka Brno,Zlín,3.0,2.0,,,
 AT1,2026-08-29 16:00:00,Grazer AK,Wolfsberger,0.0,0.0,,,
+SP1,2026-08-29 16:00:00,Levante,Betis,5.0,2.0,3.28,3.33,2.19
 F1,2026-08-29 16:15:00,Strasbourg,Lens,2.0,1.0,3.39,3.55,2.04
 T1,2026-08-29 17:00:00,Konyaspor,Kocaelispor,1.0,2.0,1.97,3.31,3.63
 B1,2026-08-29 17:15:00,Kortrijk,Charleroi,1.0,3.0,3.58,3.49,1.94
 I1,2026-08-29 17:30:00,Fiorentina,Frosinone,0.0,3.0,1.62,4.0,5.1
 E0,2026-08-29 17:30:00,Tottenham,Newcastle,0.0,2.0,2.25,3.65,2.88
-I1,2026-08-29 17:30:00,Monza,Udinese,2.0,3.0,3.12,3.12,2.38
 I1,2026-08-29 17:30:00,Sassuolo,Torino,2.0,1.0,2.25,3.28,3.21
 D1,2026-08-29 17:30:00,Dortmund,Hamburg,2.0,0.0,1.31,5.4,8.58
+I1,2026-08-29 17:30:00,Monza,Udinese,2.0,3.0,3.12,3.12,2.38
 N1,2026-08-29 17:45:00,AZ Alkmaar,Go Ahead Eagles,5.0,2.0,1.37,5.1,6.74
-P1,2026-08-29 18:00:00,Academico Viseu,Porto,0.0,3.0,8.87,4.9,1.31
 SP1,2026-08-29 18:00:00,Sociedad,Espanol,2.0,1.0,1.88,3.64,3.92
+P1,2026-08-29 18:00:00,Academico Viseu,Porto,0.0,3.0,8.87,4.9,1.31
 AT1,2026-08-29 18:30:00,LASK Linz,SC Rheindorf Altach,3.0,0.0,,,
 CZ1,2026-08-29 19:00:00,Baník Ostrava,Sigma Olomouc,1.0,0.0,,,
 T1,2026-08-29 19:30:00,Gaziantep,Rizespor,1.0,2.0,2.42,3.46,2.6
 T1,2026-08-29 19:30:00,Galatasaray,Goztep,3.0,2.0,1.37,4.59,6.9
+B1,2026-08-29 19:45:00,Cercle Brugge,Lommel SK,0.0,1.0,1.5,4.38,5.38
+I1,2026-08-29 19:45:00,Juventus,Parma,2.0,0.0,1.22,6.17,13.19
+F1,2026-08-29 19:45:00,Auxerre,Angers,1.0,3.0,1.93,3.47,3.88
+F1,2026-08-29 19:45:00,Brest,Toulouse,2.0,2.0,2.62,3.32,2.61
 F1,2026-08-29 19:45:00,Lorient,Troyes,1.0,2.0,1.84,3.5,4.17
 F1,2026-08-29 19:45:00,Lyon,Le Havre,1.0,1.0,1.45,4.43,6.58
 B1,2026-08-29 19:45:00,Oud-Heverlee Leuven,Standard,1.0,2.0,2.79,3.33,2.35
-F1,2026-08-29 19:45:00,Brest,Toulouse,2.0,2.0,2.62,3.32,2.61
-F1,2026-08-29 19:45:00,Auxerre,Angers,1.0,3.0,1.93,3.47,3.88
-B1,2026-08-29 19:45:00,Cercle Brugge,Lommel SK,0.0,1.0,1.5,4.38,5.38
-I1,2026-08-29 19:45:00,Juventus,Parma,2.0,0.0,1.22,6.17,13.19
 N1,2026-08-29 20:00:00,Zwolle,Nijmegen,1.0,3.0,4.31,4.27,1.65
 SP1,2026-08-29 20:30:00,Sevilla,Ath Madrid,1.0,3.0,3.46,3.39,2.09
 N1,2026-08-30 11:15:00,Utrecht,PSV Eindhoven,1.0,6.0,4.26,4.3,1.65
@@ -10541,13 +10541,13 @@ SC0,2026-08-30 12:00:00,Aberdeen,Rangers,0.0,1.0,4.07,3.81,1.76
 B1,2026-08-30 12:30:00,Gent,Club Brugge,2.0,1.0,4.15,3.9,1.7
 DK1,2026-08-30 13:00:00,Silkeborg IF,FC Midtjylland,1.0,1.0,,,
 DK1,2026-08-30 13:00:00,Lyngby Boldklub,Odense Boldklub,1.0,1.0,,,
-N1,2026-08-30 13:30:00,Feyenoord,Den Haag,2.0,2.0,1.15,7.8,13.58
 N1,2026-08-30 13:30:00,Willem II,Heerenveen,2.0,2.0,3.77,4.1,1.77
+N1,2026-08-30 13:30:00,Feyenoord,Den Haag,2.0,2.0,1.15,7.8,13.58
 F1,2026-08-30 14:00:00,Paris FC,Nice,3.0,0.0,2.07,3.29,3.57
-CZ1,2026-08-30 14:00:00,Slovan Liberec,Hradec Králové,2.0,0.0,,,
-E0,2026-08-30 14:00:00,Leeds,Brentford,1.0,1.0,2.58,3.36,2.67
 E0,2026-08-30 14:00:00,Sunderland,Fulham,1.0,0.0,2.39,3.24,2.96
+CZ1,2026-08-30 14:00:00,Slovan Liberec,Hradec Králové,2.0,0.0,,,
 E0,2026-08-30 14:00:00,Chelsea,Brighton,4.0,3.0,1.82,3.85,3.93
+E0,2026-08-30 14:00:00,Leeds,Brentford,1.0,1.0,2.58,3.36,2.67
 D1,2026-08-30 14:30:00,Freiburg,Werder Bremen,4.0,1.0,1.94,3.59,3.66
 B1,2026-08-30 15:00:00,Antwerp,St Truiden,1.0,4.0,2.42,3.41,2.65
 SC0,2026-08-30 15:00:00,St Mirren,Motherwell,3.0,3.0,2.51,3.21,2.72
@@ -10555,28 +10555,28 @@ DK1,2026-08-30 15:00:00,Randers FC,AGF,2.0,1.0,,,
 SC0,2026-08-30 15:00:00,Dundee,Hibernian,1.0,2.0,3.05,3.37,2.22
 P1,2026-08-30 15:30:00,Nacional,Estrela,2.0,3.0,2.28,3.28,2.98
 N1,2026-08-30 15:45:00,Telstar,Ajax,0.0,4.0,4.73,4.41,1.56
-AT1,2026-08-30 16:00:00,TSV Hartberg,SV Josko Ried,3.0,2.0,,,
 AT1,2026-08-30 16:00:00,Rapid Vienna,SK Sturm Graz,3.0,1.0,,,
-CZ1,2026-08-30 16:00:00,Teplice,Jablonec,2.0,0.0,,,
+AT1,2026-08-30 16:00:00,TSV Hartberg,SV Josko Ried,3.0,2.0,,,
 CZ1,2026-08-30 16:00:00,Viktoria Plzeň,Slovácko,1.0,1.0,,,
 SP1,2026-08-30 16:00:00,Real Madrid,Malaga,4.0,0.0,1.11,8.86,18.31
+CZ1,2026-08-30 16:00:00,Teplice,Jablonec,2.0,0.0,,,
 F1,2026-08-30 16:15:00,Rennes,Le Mans,3.0,2.0,1.42,4.67,6.63
 E0,2026-08-30 16:30:00,Man United,Ipswich,5.0,2.0,1.4,4.82,6.94
 D1,2026-08-30 16:30:00,Augsburg,Schalke 04,3.0,0.0,2.13,3.59,3.09
 DK1,2026-08-30 17:00:00,FC Nordsjælland,Brøndby IF,3.0,1.0,,,
 T1,2026-08-30 17:00:00,Eyupspor,Alanyaspor,2.0,1.0,3.08,3.23,2.21
-B1,2026-08-30 17:30:00,St. Gilloise,Anderlecht,3.0,0.0,1.67,3.76,4.54
 I1,2026-08-30 17:30:00,Napoli,Como,1.0,2.0,2.47,3.08,2.96
+B1,2026-08-30 17:30:00,St. Gilloise,Anderlecht,3.0,0.0,1.67,3.76,4.54
 P1,2026-08-30 18:00:00,Casa Pia,Moreirense,0.0,1.0,2.36,3.04,3.07
 AT1,2026-08-30 18:00:00,RB Salzburg,Austria Vienna,4.0,1.0,,,
 B1,2026-08-30 18:15:00,Westerlo,Waregem,2.0,2.0,2.79,3.65,2.22
 SP1,2026-08-30 18:30:00,La Coruna,Valencia,3.0,1.0,2.53,3.02,2.91
-CZ1,2026-08-30 19:00:00,Sparta Prague,Slavia Prague,0.0,3.0,,,
 N1,2026-08-30 19:00:00,Cambuur,Twente,1.0,4.0,7.6,5.28,1.32
+CZ1,2026-08-30 19:00:00,Sparta Prague,Slavia Prague,0.0,3.0,,,
 T1,2026-08-30 19:30:00,Buyuksehyr,Kasimpasa,1.0,1.0,1.64,3.83,4.69
 T1,2026-08-30 19:30:00,Samsunspor,Fenerbahce,0.0,2.0,4.85,4.06,1.57
-I1,2026-08-30 19:45:00,Lazio,Genoa,1.0,0.0,1.97,3.13,4.15
 I1,2026-08-30 19:45:00,Cagliari,Inter,0.0,1.0,7.42,4.35,1.42
+I1,2026-08-30 19:45:00,Lazio,Genoa,1.0,0.0,1.97,3.13,4.15
 F1,2026-08-30 19:45:00,Monaco,Marseille,2.0,0.0,2.38,3.68,2.66
 P1,2026-08-30 20:30:00,Famalicao,Gil Vicente,0.0,0.0,2.14,3.17,3.38
 SP1,2026-08-30 20:30:00,Celta,Ath Bilbao,0.0,2.0,2.36,3.23,2.97
@@ -10587,26 +10587,26 @@ T1,2026-08-31 19:30:00,Besiktas,Corum,6.0,2.0,1.43,4.28,6.59
 T1,2026-08-31 19:30:00,Amedspor,Trabzonspor,2.0,1.0,3.39,3.58,1.93
 I1,2026-08-31 19:45:00,Atalanta,Bologna,1.0,0.0,1.88,3.55,3.95
 E0,2026-08-31 20:00:00,Aston Villa,Arsenal,0.0,1.0,5.99,4.11,1.52
-P1,2026-08-31 20:15:00,Sp Braga,Guimaraes,1.0,0.0,1.72,3.55,4.57
 P1,2026-08-31 20:15:00,Benfica,Estoril,2.0,1.0,1.16,6.97,12.88
+P1,2026-08-31 20:15:00,Sp Braga,Guimaraes,1.0,0.0,1.72,3.55,4.57
 SP1,2026-08-31 20:30:00,Barcelona,Vallecano,5.0,2.0,1.16,7.46,14.04
 AT1,2026-09-01 18:30:00,Wolfsberger,LASK Linz,1.0,3.0,,,
 CZ1,2026-09-02 17:00:00,Zbrojovka Brno,Hradec Králové,1.0,0.0,,,
 AT1,2026-09-02 17:30:00,Austria Vienna,WSG Swarovski Tirol,0.0,1.0,,,
-DK1,2026-09-02 19:00:00,AGF,FC Midtjylland,0.0,2.0,,,
 CZ1,2026-09-02 19:00:00,Bohemians 1905,Jablonec,1.0,1.0,,,
-AT1,2026-09-02 19:30:00,RB Salzburg,Rapid Vienna,5.0,1.0,,,
+DK1,2026-09-02 19:00:00,AGF,FC Midtjylland,0.0,2.0,,,
 B1,2026-09-02 19:30:00,St Truiden,St. Gilloise,0.0,3.0,3.53,3.45,1.96
+AT1,2026-09-02 19:30:00,RB Salzburg,Rapid Vienna,5.0,1.0,,,
+SC0,2026-09-02 19:45:00,Motherwell,Dundee United,3.0,0.0,1.94,3.63,3.51
 SC0,2026-09-02 19:45:00,Celtic,Aberdeen,3.0,0.0,1.23,5.99,9.99
 SC0,2026-09-02 19:45:00,Dundee,St Johnstone,1.0,1.0,2.57,3.4,2.55
-SC0,2026-09-02 19:45:00,Motherwell,Dundee United,3.0,0.0,1.94,3.63,3.51
 SC0,2026-09-02 19:45:00,Kilmarnock,St Mirren,0.0,1.0,2.74,3.38,2.4
 SC0,2026-09-02 20:00:00,Falkirk,Rangers,1.0,2.0,4.98,4.15,1.57
 DK1,2026-09-03 19:00:00,F.C. København,FC Nordsjælland,2.0,0.0,,,
 B1,2026-09-03 19:30:00,Anderlecht,Kortrijk,1.0,0.0,1.49,4.33,5.49
 B1,2026-09-03 19:30:00,Gent,Oud-Heverlee Leuven,1.0,0.0,1.6,3.89,4.96
-SC0,2026-09-03 19:45:00,Hibernian,Hearts,1.0,3.0,2.48,3.34,2.66
 F1,2026-09-03 19:45:00,Toulouse,Lille,0.0,1.0,3.36,3.3,2.12
+SC0,2026-09-03 19:45:00,Hibernian,Hearts,1.0,3.0,2.48,3.34,2.66
 SP1,2026-09-03 20:00:00,Sociedad,Celta,0.0,0.0,1.95,3.48,3.69
 F1,2026-09-04 18:00:00,Lyon,Auxerre,3.0,1.0,1.42,4.63,7.12
 T1,2026-09-04 18:00:00,Buyuksehyr,Galatasaray,2.0,3.0,4.86,4.29,1.54
@@ -10620,25 +10620,25 @@ SP1,2026-09-04 20:00:00,Betis,Real Madrid,1.0,0.0,6.33,5.06,1.42
 F1,2026-09-04 20:05:00,Paris SG,Monaco,1.0,2.0,1.34,5.59,7.44
 P1,2026-09-04 20:15:00,Porto,Moreirense,2.0,1.0,1.13,7.23,18.35
 E0,2026-09-05 12:30:00,Newcastle,Bournemouth,2.0,2.0,2.1,3.64,3.19
+CZ1,2026-09-05 14:00:00,Sigma Olomouc,Bohemians 1905,3.0,0.0,,,
+CZ1,2026-09-05 14:00:00,Slavia Prague,Zbrojovka Brno,4.0,0.0,,,
 I1,2026-09-05 14:00:00,Fiorentina,Torino,1.0,2.0,1.91,3.3,4.31
 CZ1,2026-09-05 14:00:00,Slovácko,Pardubice,0.0,0.0,,,
-CZ1,2026-09-05 14:00:00,Slavia Prague,Zbrojovka Brno,4.0,0.0,,,
-CZ1,2026-09-05 14:00:00,Sigma Olomouc,Bohemians 1905,3.0,0.0,,,
-D1,2026-09-05 14:30:00,M'gladbach,Elversberg,3.0,4.0,1.86,3.78,3.76
-D1,2026-09-05 14:30:00,Hoffenheim,Dortmund,2.0,3.0,2.84,3.8,2.2
-D1,2026-09-05 14:30:00,Leverkusen,Union Berlin,4.0,0.0,1.43,4.8,6.16
 D1,2026-09-05 14:30:00,Werder Bremen,RB Leipzig,3.0,1.0,4.04,4.03,1.75
+D1,2026-09-05 14:30:00,M'gladbach,Elversberg,3.0,4.0,1.86,3.78,3.76
 D1,2026-09-05 14:30:00,Paderborn,Freiburg,0.0,1.0,3.41,3.65,1.99
-E0,2026-09-05 15:00:00,Brentford,Sunderland,1.0,1.0,1.62,3.9,5.29
+D1,2026-09-05 14:30:00,Leverkusen,Union Berlin,4.0,0.0,1.43,4.8,6.16
+D1,2026-09-05 14:30:00,Hoffenheim,Dortmund,2.0,3.0,2.84,3.8,2.2
+E0,2026-09-05 15:00:00,Nott'm Forest,Tottenham,0.0,0.0,2.4,3.36,2.86
+E0,2026-09-05 15:00:00,Man City,Coventry,1.0,0.0,1.17,7.64,13.85
+T1,2026-09-05 15:00:00,Erzurumspor,Konyaspor,1.0,0.0,2.26,3.29,2.91
 E0,2026-09-05 15:00:00,Brighton,Leeds,1.0,1.0,1.98,3.52,3.68
 E0,2026-09-05 15:00:00,Fulham,Crystal Palace,2.0,3.0,2.32,3.37,3.03
-E0,2026-09-05 15:00:00,Man City,Coventry,1.0,0.0,1.17,7.64,13.85
-E0,2026-09-05 15:00:00,Nott'm Forest,Tottenham,0.0,0.0,2.4,3.36,2.86
-SC0,2026-09-05 15:00:00,Aberdeen,Kilmarnock,0.0,0.0,1.72,3.85,4.29
+E0,2026-09-05 15:00:00,Brentford,Sunderland,1.0,1.0,1.62,3.9,5.29
 SC0,2026-09-05 15:00:00,Dundee United,Falkirk,1.0,1.0,1.94,3.62,3.52
 B1,2026-09-05 15:00:00,Charleroi,St. Gilloise,2.0,3.0,3.11,3.37,2.14
+SC0,2026-09-05 15:00:00,Aberdeen,Kilmarnock,0.0,0.0,1.72,3.85,4.29
 SC0,2026-09-05 15:00:00,Rangers,Motherwell,1.0,0.0,1.46,4.41,6.06
-T1,2026-09-05 15:00:00,Erzurumspor,Konyaspor,1.0,0.0,2.26,3.29,2.91
 SP1,2026-09-05 15:15:00,Ath Bilbao,Ath Madrid,3.0,0.0,2.97,3.41,2.33
 N1,2026-09-05 15:30:00,Nijmegen,Feyenoord,1.0,3.0,2.78,4.0,2.14
 P1,2026-09-05 15:30:00,Estrela,Famalicao,2.0,2.0,2.98,3.17,2.35
@@ -10650,62 +10650,62 @@ B1,2026-09-05 17:15:00,Mechelen,Westerlo,0.0,4.0,2.07,3.6,3.08
 E0,2026-09-05 17:30:00,Hull,Aston Villa,0.0,0.0,4.04,3.62,1.86
 D1,2026-09-05 17:30:00,Schalke 04,Bayern Munich,0.0,0.0,13.58,8.32,1.15
 SP1,2026-09-05 17:30:00,Vallecano,Santander,3.0,2.0,2.25,3.38,3.12
-P1,2026-09-05 18:00:00,Alverca,Sp Braga,1.0,2.0,4.46,3.48,1.76
-P1,2026-09-05 18:00:00,Maritimo,Benfica,0.0,3.0,10.88,5.59,1.24
 T1,2026-09-05 18:00:00,Fenerbahce,Besiktas,1.0,2.0,1.79,3.7,3.89
+P1,2026-09-05 18:00:00,Maritimo,Benfica,0.0,3.0,10.88,5.59,1.24
+P1,2026-09-05 18:00:00,Alverca,Sp Braga,1.0,2.0,4.46,3.48,1.76
 N1,2026-09-05 19:00:00,Ajax,PSV Eindhoven,1.0,3.0,2.55,3.97,2.32
-F1,2026-09-05 19:45:00,Nice,Le Mans,1.0,1.0,1.83,3.63,4.15
-B1,2026-09-05 19:45:00,Standard,Antwerp,1.0,0.0,2.14,3.42,3.09
 B1,2026-09-05 19:45:00,St Truiden,RAAL La Louviere,4.0,0.0,1.6,3.92,4.93
-I1,2026-09-05 19:45:00,Roma,Atalanta,2.0,1.0,1.71,3.72,4.77
+B1,2026-09-05 19:45:00,Standard,Antwerp,1.0,0.0,2.14,3.42,3.09
+F1,2026-09-05 19:45:00,Nice,Le Mans,1.0,1.0,1.83,3.63,4.15
 F1,2026-09-05 19:45:00,Le Havre,Brest,1.0,2.0,2.59,3.23,2.7
-SP1,2026-09-05 20:00:00,Villarreal,La Coruna,2.0,3.0,1.46,4.44,6.58
+I1,2026-09-05 19:45:00,Roma,Atalanta,2.0,1.0,1.71,3.72,4.77
 N1,2026-09-05 20:00:00,Willem II,Excelsior,0.0,3.0,2.8,3.57,2.27
 SC0,2026-09-05 20:00:00,St Mirren,Celtic,1.0,2.0,5.79,4.53,1.46
+SP1,2026-09-05 20:00:00,Villarreal,La Coruna,2.0,3.0,1.46,4.44,6.58
 P1,2026-09-05 20:30:00,Sp Lisbon,Nacional,2.0,0.0,1.2,6.35,11.96
 N1,2026-09-06 11:15:00,Groningen,Twente,2.0,2.0,3.17,3.76,2.02
 CZ1,2026-09-06 12:00:00,Mladá Boleslav,Baník Ostrava,4.0,0.0,,,
 B1,2026-09-06 12:30:00,Cercle Brugge,Gent,0.0,3.0,2.75,3.49,2.29
 DK1,2026-09-06 13:00:00,Sønderjyske Fodbold,AC Horsens,2.0,5.0,,,
-N1,2026-09-06 13:30:00,Heerenveen,AZ Alkmaar,2.0,3.0,3.74,4.03,1.77
 N1,2026-09-06 13:30:00,Telstar,Cambuur,2.0,2.0,1.6,4.28,4.55
-CZ1,2026-09-06 14:00:00,Jablonec,Slovan Liberec,1.0,2.0,,,
-CZ1,2026-09-06 14:00:00,Zlín,Teplice,1.0,3.0,,,
+N1,2026-09-06 13:30:00,Heerenveen,AZ Alkmaar,2.0,3.0,3.74,4.03,1.77
 E0,2026-09-06 14:00:00,Everton,Man United,2.0,2.0,3.21,3.54,2.12
-F1,2026-09-06 14:00:00,Troyes,Strasbourg,2.0,6.0,3.01,3.35,2.28
-I1,2026-09-06 14:00:00,Parma,Monza,1.0,1.0,2.49,3.08,2.94
+CZ1,2026-09-06 14:00:00,Zlín,Teplice,1.0,3.0,,,
 I1,2026-09-06 14:00:00,Frosinone,Venezia,3.0,2.0,2.69,3.35,2.52
+F1,2026-09-06 14:00:00,Troyes,Strasbourg,2.0,6.0,3.01,3.35,2.28
+CZ1,2026-09-06 14:00:00,Jablonec,Slovan Liberec,1.0,2.0,,,
+I1,2026-09-06 14:00:00,Parma,Monza,1.0,1.0,2.49,3.08,2.94
 D1,2026-09-06 14:30:00,Hamburg,Mainz,0.0,5.0,2.76,3.51,2.37
-T1,2026-09-06 15:00:00,Kasimpasa,Amedspor,2.0,2.0,2.13,3.27,3.18
 B1,2026-09-06 15:00:00,Kortrijk,Waregem,0.0,2.0,3.09,3.49,2.1
 DK1,2026-09-06 15:00:00,Odense Boldklub,F.C. København,0.0,5.0,,,
-SC0,2026-09-06 15:00:00,Hearts,Dundee,2.0,1.0,1.5,4.3,5.62
-SC0,2026-09-06 15:00:00,St Johnstone,Hibernian,2.0,1.0,2.75,3.25,2.46
 T1,2026-09-06 15:00:00,Corum,Eyupspor,3.0,0.0,1.68,3.62,4.56
+SC0,2026-09-06 15:00:00,St Johnstone,Hibernian,2.0,1.0,2.75,3.25,2.46
+SC0,2026-09-06 15:00:00,Hearts,Dundee,2.0,1.0,1.5,4.3,5.62
+T1,2026-09-06 15:00:00,Kasimpasa,Amedspor,2.0,2.0,2.13,3.27,3.18
 SP1,2026-09-06 15:15:00,Valencia,Barcelona,0.0,5.0,9.13,5.81,1.27
 P1,2026-09-06 15:30:00,Santa Clara,Rio Ave,4.0,0.0,1.75,3.41,4.61
 N1,2026-09-06 15:45:00,Den Haag,For Sittard,2.0,3.0,2.02,3.87,3.07
 F1,2026-09-06 16:15:00,Angers,Rennes,1.0,2.0,3.79,3.75,1.86
 E0,2026-09-06 16:30:00,Arsenal,Chelsea,2.0,1.0,1.69,3.8,4.82
 D1,2026-09-06 16:30:00,Ein Frankfurt,Augsburg,1.0,4.0,1.91,3.97,3.42
-I1,2026-09-06 17:00:00,Bologna,Sassuolo,2.0,2.0,1.98,3.4,3.73
-CZ1,2026-09-06 17:00:00,Hradec Králové,Sparta Prague,2.0,1.0,,,
 DK1,2026-09-06 17:00:00,Brøndby IF,Randers FC,0.0,3.0,,,
-SP1,2026-09-06 17:30:00,Alaves,Osasuna,5.0,2.0,2.23,3.04,3.43
+CZ1,2026-09-06 17:00:00,Hradec Králové,Sparta Prague,2.0,1.0,,,
+I1,2026-09-06 17:00:00,Bologna,Sassuolo,2.0,2.0,1.98,3.4,3.73
 SP1,2026-09-06 17:30:00,Malaga,Levante,0.0,0.0,2.39,3.25,2.91
+SP1,2026-09-06 17:30:00,Alaves,Osasuna,5.0,2.0,2.23,3.04,3.43
 B1,2026-09-06 17:30:00,Anderlecht,Genk,0.0,0.0,2.35,3.47,2.69
 P1,2026-09-06 18:00:00,Guimaraes,Casa Pia,0.0,0.0,1.5,3.93,6.24
-T1,2026-09-06 18:00:00,Kocaelispor,Samsunspor,1.0,0.0,2.43,3.03,2.86
 T1,2026-09-06 18:00:00,Trabzonspor,Genclerbirligi,5.0,0.0,1.53,3.99,5.3
+T1,2026-09-06 18:00:00,Kocaelispor,Samsunspor,1.0,0.0,2.43,3.03,2.86
 B1,2026-09-06 18:15:00,Beveren,Oud-Heverlee Leuven,3.0,0.0,2.02,3.65,3.15
-I1,2026-09-06 19:45:00,Juventus,Milan,1.0,1.0,2.08,3.26,3.57
 F1,2026-09-06 19:45:00,Marseille,Paris FC,2.0,3.0,1.75,3.86,4.16
+I1,2026-09-06 19:45:00,Juventus,Milan,1.0,1.0,2.08,3.26,3.57
 SP1,2026-09-06 20:00:00,Espanol,Sevilla,1.0,1.0,2.24,3.12,3.31
 P1,2026-09-06 20:30:00,Gil Vicente,Academico Viseu,0.0,1.0,1.88,3.39,3.94
 I1,2026-09-07 17:30:00,Cagliari,Lecce,1.0,0.0,2.0,3.15,3.99
-T1,2026-09-07 18:00:00,Goztep,Gaziantep,2.0,4.0,1.82,3.55,3.79
-SP1,2026-09-07 18:00:00,Getafe,Celta,1.0,1.0,2.4,2.86,3.28
 DK1,2026-09-07 18:00:00,FC Midtjylland,FC Nordsjælland,2.0,2.0,,,
+SP1,2026-09-07 18:00:00,Getafe,Celta,1.0,1.0,2.4,2.86,3.28
+T1,2026-09-07 18:00:00,Goztep,Gaziantep,2.0,4.0,1.82,3.55,3.79
 T1,2026-09-07 18:00:00,Rizespor,Alanyaspor,0.0,1.0,1.87,3.36,3.84
 I1,2026-09-07 19:45:00,Udinese,Lazio,1.0,2.0,2.86,3.12,2.54
 P1,2026-09-07 20:15:00,Estoril,Arouca,0.0,0.0,2.24,3.37,2.94
@@ -10724,28 +10724,28 @@ T1,2026-09-11 18:00:00,Besiktas,Erzurumspor,3.0,0.0,1.23,5.67,9.92
 AT1,2026-09-11 18:30:00,SV Josko Ried,RB Salzburg,1.0,1.0,,,
 N1,2026-09-11 19:00:00,AZ Alkmaar,Willem II,1.0,1.0,1.14,7.94,13.69
 D1,2026-09-11 19:30:00,Union Berlin,Schalke 04,1.0,3.0,2.34,3.52,2.79
-I1,2026-09-11 19:45:00,Venezia,Fiorentina,2.0,4.0,2.8,3.4,2.44
-F1,2026-09-11 19:45:00,Rennes,Marseille,1.0,0.0,2.09,3.81,3.07
 B1,2026-09-11 19:45:00,Mechelen,Anderlecht,0.0,1.0,3.87,3.66,1.81
+F1,2026-09-11 19:45:00,Rennes,Marseille,1.0,0.0,2.09,3.81,3.07
+I1,2026-09-11 19:45:00,Venezia,Fiorentina,2.0,4.0,2.8,3.4,2.44
 SP1,2026-09-11 20:00:00,Sevilla,Valencia,1.0,0.0,1.96,3.31,4.02
 SP1,2026-09-12 13:00:00,Santander,Alaves,2.0,1.0,2.42,3.5,2.76
+CZ1,2026-09-12 14:00:00,Zbrojovka Brno,Artis Brno,2.0,1.0,,,
 CZ1,2026-09-12 14:00:00,Slovan Liberec,Mladá Boleslav,3.0,0.0,,,
 CZ1,2026-09-12 14:00:00,Bohemians 1905,Slovácko,2.0,0.0,,,
-CZ1,2026-09-12 14:00:00,Zbrojovka Brno,Artis Brno,2.0,1.0,,,
 I1,2026-09-12 14:00:00,Genoa,Frosinone,1.0,1.0,2.1,3.37,3.46
-D1,2026-09-12 14:30:00,Augsburg,Leverkusen,2.0,2.0,3.9,4.08,1.76
-D1,2026-09-12 14:30:00,Dortmund,Paderborn,3.0,0.0,1.23,6.42,10.04
-D1,2026-09-12 14:30:00,Freiburg,M'gladbach,5.0,0.0,1.68,4.02,4.41
-D1,2026-09-12 14:30:00,Hoffenheim,Stuttgart,2.0,1.0,2.3,3.94,2.63
 D1,2026-09-12 14:30:00,Mainz,Ein Frankfurt,1.0,3.0,1.97,3.85,3.32
-T1,2026-09-12 15:00:00,Samsunspor,Corum,1.0,5.0,2.14,3.26,3.21
-T1,2026-09-12 15:00:00,Eyupspor,Rizespor,0.0,2.0,3.81,3.47,1.86
-B1,2026-09-12 15:00:00,Beveren,St Truiden,2.0,0.0,2.97,3.53,2.15
-E0,2026-09-12 15:00:00,Liverpool,Fulham,0.0,0.0,1.44,4.85,6.37
-E0,2026-09-12 15:00:00,Aston Villa,Nott'm Forest,1.0,2.0,2.22,3.39,3.17
-E0,2026-09-12 15:00:00,Bournemouth,Brentford,2.0,2.0,2.45,3.58,2.68
+D1,2026-09-12 14:30:00,Dortmund,Paderborn,3.0,0.0,1.23,6.42,10.04
+D1,2026-09-12 14:30:00,Augsburg,Leverkusen,2.0,2.0,3.9,4.08,1.76
+D1,2026-09-12 14:30:00,Hoffenheim,Stuttgart,2.0,1.0,2.3,3.94,2.63
+D1,2026-09-12 14:30:00,Freiburg,M'gladbach,5.0,0.0,1.68,4.02,4.41
 E0,2026-09-12 15:00:00,Chelsea,Hull,2.0,2.0,1.21,6.5,11.92
+E0,2026-09-12 15:00:00,Liverpool,Fulham,0.0,0.0,1.44,4.85,6.37
 E0,2026-09-12 15:00:00,Crystal Palace,Ipswich,2.0,3.0,1.84,3.74,3.98
+E0,2026-09-12 15:00:00,Bournemouth,Brentford,2.0,2.0,2.45,3.58,2.68
+B1,2026-09-12 15:00:00,Beveren,St Truiden,2.0,0.0,2.97,3.53,2.15
+T1,2026-09-12 15:00:00,Samsunspor,Corum,1.0,5.0,2.14,3.26,3.21
+E0,2026-09-12 15:00:00,Aston Villa,Nott'm Forest,1.0,2.0,2.22,3.39,3.17
+T1,2026-09-12 15:00:00,Eyupspor,Rizespor,0.0,2.0,3.81,3.47,1.86
 SP1,2026-09-12 15:15:00,Osasuna,Espanol,0.0,2.0,2.11,3.25,3.58
 N1,2026-09-12 15:30:00,Twente,Den Haag,2.0,0.0,1.22,6.4,9.97
 P1,2026-09-12 15:30:00,Nacional,Alverca,1.0,3.0,2.56,3.27,2.62
@@ -10754,69 +10754,69 @@ F1,2026-09-12 16:15:00,Strasbourg,Monaco,1.0,1.0,3.01,3.71,2.15
 CZ1,2026-09-12 17:00:00,Sparta Prague,Jablonec,2.0,0.0,,,
 I1,2026-09-12 17:00:00,Lazio,Milan,2.0,2.0,3.28,3.21,2.26
 B1,2026-09-12 17:15:00,Westerlo,Standard,4.0,2.0,2.4,3.58,2.57
-SP1,2026-09-12 17:30:00,Ath Bilbao,Elche,1.0,1.0,1.41,4.73,7.35
 D1,2026-09-12 17:30:00,FC Koln,Werder Bremen,1.0,1.0,2.07,3.73,3.18
+SP1,2026-09-12 17:30:00,Ath Bilbao,Elche,1.0,1.0,1.41,4.73,7.35
 E0,2026-09-12 17:30:00,Tottenham,Everton,0.0,0.0,2.02,3.53,3.55
 N1,2026-09-12 17:45:00,Go Ahead Eagles,Groningen,1.0,1.0,2.25,3.83,2.69
 P1,2026-09-12 18:00:00,Casa Pia,Porto,1.0,4.0,11.19,5.49,1.24
-T1,2026-09-12 18:00:00,Alanyaspor,Goztep,2.0,2.0,2.14,3.34,3.1
 T1,2026-09-12 18:00:00,Konyaspor,Trabzonspor,1.0,0.0,3.37,3.61,1.95
+T1,2026-09-12 18:00:00,Alanyaspor,Goztep,2.0,2.0,2.14,3.34,3.1
 AT1,2026-09-12 18:30:00,Wolfsberger,Rapid Vienna,0.0,3.0,,,
 N1,2026-09-12 19:00:00,For Sittard,Ajax,1.0,5.0,5.97,4.88,1.41
 F1,2026-09-12 19:45:00,Paris FC,Lyon,0.0,0.0,2.62,3.58,2.47
-B1,2026-09-12 19:45:00,Oud-Heverlee Leuven,Cercle Brugge,1.0,1.0,2.5,3.53,2.49
-F1,2026-09-12 19:45:00,Le Havre,Angers,0.0,0.0,2.46,3.21,2.86
 F1,2026-09-12 19:45:00,Lorient,Toulouse,2.0,2.0,2.56,3.3,2.68
-B1,2026-09-12 19:45:00,St. Gilloise,Lommel SK,5.0,0.0,1.2,6.16,10.85
-I1,2026-09-12 19:45:00,Atalanta,Cagliari,1.0,2.0,1.57,3.97,5.79
 F1,2026-09-12 19:45:00,Auxerre,Nice,1.0,0.0,2.54,3.32,2.71
+F1,2026-09-12 19:45:00,Le Havre,Angers,0.0,0.0,2.46,3.21,2.86
+B1,2026-09-12 19:45:00,Oud-Heverlee Leuven,Cercle Brugge,1.0,1.0,2.5,3.53,2.49
+I1,2026-09-12 19:45:00,Atalanta,Cagliari,1.0,2.0,1.57,3.97,5.79
+B1,2026-09-12 19:45:00,St. Gilloise,Lommel SK,5.0,0.0,1.2,6.16,10.85
+E0,2026-09-12 20:00:00,Sunderland,Arsenal,0.0,2.0,7.36,4.12,1.46
 N1,2026-09-12 20:00:00,Cambuur,Nijmegen,3.0,0.0,4.96,4.68,1.51
 SP1,2026-09-12 20:00:00,Real Madrid,Vallecano,4.0,1.0,1.11,9.06,18.38
-E0,2026-09-12 20:00:00,Sunderland,Arsenal,0.0,2.0,7.36,4.12,1.46
 P1,2026-09-12 20:30:00,Academico Viseu,Guimaraes,2.0,1.0,3.56,3.31,2.01
 N1,2026-09-13 11:15:00,Excelsior,Utrecht,1.0,2.0,2.21,3.6,2.86
 CZ1,2026-09-13 12:00:00,Baník Ostrava,Pardubice,1.0,2.0,,,
 B1,2026-09-13 12:30:00,Club Brugge,Antwerp,3.0,1.0,1.24,5.85,9.33
+SP1,2026-09-13 13:00:00,Celta,Malaga,1.0,1.0,1.7,3.62,4.89
 DK1,2026-09-13 13:00:00,Silkeborg IF,Viborg FF,1.0,1.0,,,
 DK1,2026-09-13 13:00:00,Lyngby Boldklub,Sønderjyske Fodbold,1.0,1.0,,,
-SP1,2026-09-13 13:00:00,Celta,Malaga,1.0,1.0,1.7,3.62,4.89
+N1,2026-09-13 13:30:00,Heerenveen,Telstar,0.0,0.0,1.61,4.28,4.46
 AT1,2026-09-13 13:30:00,WSG Swarovski Tirol,TSV Hartberg,2.0,2.0,,,
 AT1,2026-09-13 13:30:00,Austria Vienna,Austria Lustenau,2.0,1.0,,,
-N1,2026-09-13 13:30:00,Heerenveen,Telstar,0.0,0.0,1.61,4.28,4.46
-F1,2026-09-13 14:00:00,Lille,Troyes,2.0,0.0,1.39,4.69,7.36
 CZ1,2026-09-13 14:00:00,Viktoria Plzeň,Sigma Olomouc,2.0,3.0,,,
-E0,2026-09-13 14:00:00,Coventry,Brighton,0.0,5.0,3.91,3.73,1.85
 I1,2026-09-13 14:00:00,Lecce,Monza,3.0,2.0,2.6,3.09,2.78
+E0,2026-09-13 14:00:00,Coventry,Brighton,0.0,5.0,3.91,3.73,1.85
+F1,2026-09-13 14:00:00,Lille,Troyes,2.0,0.0,1.39,4.69,7.36
 CZ1,2026-09-13 14:00:00,Zlín,Hradec Králové,1.0,2.0,,,
 D1,2026-09-13 14:30:00,RB Leipzig,Hamburg,5.0,0.0,1.34,5.24,7.53
-T1,2026-09-13 15:00:00,Genclerbirligi,Kasimpasa,1.0,2.0,2.22,3.21,3.05
 B1,2026-09-13 15:00:00,Genk,Gent,1.0,1.0,1.98,3.4,3.48
+T1,2026-09-13 15:00:00,Genclerbirligi,Kasimpasa,1.0,2.0,2.22,3.21,3.05
 DK1,2026-09-13 15:00:00,Randers FC,Odense Boldklub,1.0,2.0,,,
 SP1,2026-09-13 15:15:00,Levante,Barcelona,2.0,4.0,14.46,7.89,1.15
 N1,2026-09-13 15:45:00,Zwolle,Feyenoord,0.0,7.0,5.98,4.91,1.42
 AT1,2026-09-13 16:00:00,SK Sturm Graz,LASK Linz,2.0,1.0,,,
 F1,2026-09-13 16:15:00,Le Mans,Lens,2.0,2.0,4.77,4.02,1.64
-E0,2026-09-13 16:30:00,Man United,Man City,0.0,1.0,3.08,3.78,2.1
 D1,2026-09-13 16:30:00,Elversberg,Bayern Munich,1.0,2.0,12.77,8.35,1.15
+E0,2026-09-13 16:30:00,Man United,Man City,0.0,1.0,3.08,3.78,2.1
 CZ1,2026-09-13 17:00:00,Teplice,Slavia Prague,0.0,2.0,,,
 DK1,2026-09-13 17:00:00,FC Nordsjælland,AGF,2.0,0.0,,,
 I1,2026-09-13 17:00:00,Napoli,Bologna,1.0,0.0,1.75,3.53,4.72
-B1,2026-09-13 17:30:00,Waregem,Charleroi,0.0,1.0,2.5,3.41,2.55
 SP1,2026-09-13 17:30:00,Getafe,La Coruna,1.0,1.0,2.4,2.79,3.38
+B1,2026-09-13 17:30:00,Waregem,Charleroi,0.0,1.0,2.5,3.41,2.55
 T1,2026-09-13 18:00:00,Amedspor,Buyuksehyr,5.0,0.0,2.49,3.38,2.55
-P1,2026-09-13 18:00:00,Benfica,Gil Vicente,3.0,1.0,1.13,7.44,17.46
-P1,2026-09-13 18:00:00,Arouca,Santa Clara,1.0,2.0,2.56,3.08,2.72
 T1,2026-09-13 18:00:00,Galatasaray,Kocaelispor,1.0,0.0,1.3,5.14,7.96
+P1,2026-09-13 18:00:00,Arouca,Santa Clara,1.0,2.0,2.56,3.08,2.72
+P1,2026-09-13 18:00:00,Benfica,Gil Vicente,3.0,1.0,1.13,7.44,17.46
 B1,2026-09-13 18:15:00,RAAL La Louviere,Kortrijk,3.0,0.0,2.37,3.28,2.78
 N1,2026-09-13 19:00:00,PSV Eindhoven,Sparta Rotterdam,4.0,1.0,1.16,7.63,11.58
 F1,2026-09-13 19:45:00,Brest,Paris SG,0.0,1.0,9.85,5.88,1.25
 I1,2026-09-13 19:45:00,Sassuolo,Juventus,3.0,2.0,5.12,3.94,1.62
 SP1,2026-09-13 20:00:00,Sociedad,Ath Madrid,0.0,3.0,2.81,3.48,2.35
 P1,2026-09-13 20:30:00,Famalicao,Sp Lisbon,1.0,1.0,5.47,4.13,1.52
-I1,2026-09-14 17:30:00,Torino,Roma,0.0,2.0,5.71,3.98,1.56
 I1,2026-09-14 17:30:00,Como,Parma,2.0,1.0,1.22,5.86,13.15
-DK1,2026-09-14 18:00:00,FC Midtjylland,Brøndby IF,4.0,1.0,,,
+I1,2026-09-14 17:30:00,Torino,Roma,0.0,2.0,5.71,3.98,1.56
 T1,2026-09-14 18:00:00,Gaziantep,Fenerbahce,0.0,0.0,5.29,3.98,1.53
+DK1,2026-09-14 18:00:00,FC Midtjylland,Brøndby IF,4.0,1.0,,,
 P1,2026-09-14 18:45:00,Rio Ave,Estrela,3.0,3.0,2.7,3.2,2.48
 I1,2026-09-14 19:45:00,Inter,Udinese,5.0,3.0,1.25,5.85,11.15
 E0,2026-09-14 20:00:00,Leeds,Newcastle,4.0,1.0,2.38,3.45,2.81
@@ -10826,180 +10826,180 @@ P1,2026-09-14 20:45:00,Sp Braga,Estoril,1.0,0.0,1.44,4.3,6.41
 SP1,2026-09-15 18:00:00,Vallecano,Espanol,2.0,1.0,2.3,3.37,3.03
 N1,2026-09-15 19:00:00,Ajax,Willem II,5.0,1.0,1.11,9.4,16.44
 SP1,2026-09-15 19:00:00,Alaves,Valencia,0.0,1.0,1.73,3.49,5.16
+SC0,2026-09-15 19:45:00,Motherwell,Aberdeen,0.0,4.0,1.82,3.73,3.98
 SC0,2026-09-15 19:45:00,Hibernian,Kilmarnock,0.0,1.0,1.4,4.82,6.73
 SC0,2026-09-15 19:45:00,Falkirk,Hearts,2.0,1.0,3.76,3.64,1.89
-SC0,2026-09-15 19:45:00,Motherwell,Aberdeen,0.0,4.0,1.82,3.73,3.98
 SP1,2026-09-15 20:30:00,Elche,Real Madrid,2.0,3.0,11.64,7.39,1.2
 SP1,2026-09-16 18:00:00,La Coruna,Sevilla,0.0,1.0,2.45,3.1,3.01
 SP1,2026-09-16 18:00:00,Ath Madrid,Osasuna,4.0,0.0,1.38,4.73,7.91
 SP1,2026-09-16 20:30:00,Barcelona,Santander,7.0,2.0,1.06,13.81,24.23
 SP1,2026-09-17 18:00:00,Betis,Getafe,1.0,0.0,1.64,3.62,5.42
 SP1,2026-09-17 20:30:00,Malaga,Villarreal,1.0,3.0,3.53,3.69,1.94
-DK1,2026-09-18 18:00:00,Lyngby Boldklub,Silkeborg IF,0.0,4.0,,,
 T1,2026-09-18 18:00:00,Kasimpasa,Konyaspor,0.0,0.0,2.4,3.13,2.87
+DK1,2026-09-18 18:00:00,Lyngby Boldklub,Silkeborg IF,0.0,4.0,,,
 AT1,2026-09-18 18:30:00,Rapid Vienna,WSG Swarovski Tirol,3.0,0.0,,,
 N1,2026-09-18 19:00:00,Groningen,Zwolle,3.0,0.0,1.5,4.52,5.23
 D1,2026-09-18 19:30:00,Bayern Munich,Union Berlin,7.0,0.0,1.04,16.58,32.77
 B1,2026-09-18 19:45:00,Gent,Standard,2.0,1.0,1.77,3.5,4.34
-I1,2026-09-18 19:45:00,Monza,Sassuolo,2.0,1.0,2.7,3.4,2.53
 F1,2026-09-18 19:45:00,Monaco,Lens,2.0,1.0,2.01,3.71,3.42
-E0,2026-09-18 20:00:00,Brentford,Chelsea,3.0,0.0,2.62,3.7,2.48
+I1,2026-09-18 19:45:00,Monza,Sassuolo,2.0,1.0,2.7,3.4,2.53
 SP1,2026-09-18 20:00:00,Espanol,Elche,1.0,3.0,1.8,3.59,4.41
+E0,2026-09-18 20:00:00,Brentford,Chelsea,3.0,0.0,2.62,3.7,2.48
 E0,2026-09-19 12:30:00,Tottenham,Aston Villa,2.0,3.0,1.99,3.59,3.62
 SP1,2026-09-19 13:00:00,Osasuna,Vallecano,1.0,1.0,2.39,3.25,2.99
-I1,2026-09-19 14:00:00,Udinese,Cagliari,0.0,1.0,2.25,3.22,3.28
 CZ1,2026-09-19 14:00:00,Mladá Boleslav,Zbrojovka Brno,2.0,0.0,,,
-CZ1,2026-09-19 14:00:00,Pardubice,Bohemians 1905,2.0,1.0,,,
 CZ1,2026-09-19 14:00:00,Artis Brno,Slovan Liberec,0.0,0.0,,,
+CZ1,2026-09-19 14:00:00,Pardubice,Bohemians 1905,2.0,1.0,,,
 I1,2026-09-19 14:00:00,Bologna,Torino,1.0,1.0,1.93,3.46,3.92
+I1,2026-09-19 14:00:00,Udinese,Cagliari,0.0,1.0,2.25,3.22,3.28
 D1,2026-09-19 14:30:00,Hamburg,FC Koln,2.0,1.0,2.64,3.62,2.42
 D1,2026-09-19 14:30:00,Ein Frankfurt,Freiburg,2.0,2.0,2.36,3.79,2.62
 D1,2026-09-19 14:30:00,Werder Bremen,Augsburg,3.0,2.0,2.27,3.82,2.74
 D1,2026-09-19 14:30:00,M'gladbach,Mainz,3.0,4.0,2.9,3.65,2.22
+T1,2026-09-19 15:00:00,Corum,Alanyaspor,1.0,2.0,2.07,3.3,3.31
 T1,2026-09-19 15:00:00,Kocaelispor,Gaziantep,2.0,0.0,2.19,3.12,3.23
-SC0,2026-09-19 15:00:00,St Johnstone,Falkirk,1.0,1.0,2.03,3.49,3.35
-SC0,2026-09-19 15:00:00,Hibernian,Aberdeen,1.0,1.0,1.71,3.8,4.35
-SC0,2026-09-19 15:00:00,Dundee,Motherwell,2.0,1.0,2.99,3.4,2.23
+E0,2026-09-19 15:00:00,Brighton,Arsenal,3.0,0.0,4.77,3.89,1.68
 E0,2026-09-19 15:00:00,Everton,Ipswich,1.0,0.0,1.76,3.79,4.36
 E0,2026-09-19 15:00:00,Newcastle,Hull,2.0,1.0,1.58,4.26,5.1
-E0,2026-09-19 15:00:00,Brighton,Arsenal,3.0,0.0,4.77,3.89,1.68
-B1,2026-09-19 15:00:00,Oud-Heverlee Leuven,RAAL La Louviere,2.0,0.0,2.01,3.33,3.47
 SC0,2026-09-19 15:00:00,St Mirren,Dundee United,0.0,3.0,2.33,3.49,2.77
-T1,2026-09-19 15:00:00,Corum,Alanyaspor,1.0,2.0,2.07,3.3,3.31
+SC0,2026-09-19 15:00:00,St Johnstone,Falkirk,1.0,1.0,2.03,3.49,3.35
+SC0,2026-09-19 15:00:00,Dundee,Motherwell,2.0,1.0,2.99,3.4,2.23
+B1,2026-09-19 15:00:00,Oud-Heverlee Leuven,RAAL La Louviere,2.0,0.0,2.01,3.33,3.47
+SC0,2026-09-19 15:00:00,Hibernian,Aberdeen,1.0,1.0,1.71,3.8,4.35
 SP1,2026-09-19 15:15:00,Ath Bilbao,Alaves,0.0,0.0,1.63,3.87,5.26
-P1,2026-09-19 15:30:00,Nacional,Famalicao,0.0,4.0,3.5,3.28,2.05
 P1,2026-09-19 15:30:00,Gil Vicente,Maritimo,1.0,1.0,1.95,3.27,3.84
+P1,2026-09-19 15:30:00,Nacional,Famalicao,0.0,4.0,3.5,3.28,2.05
 N1,2026-09-19 15:30:00,Den Haag,Cambuur,1.0,1.0,1.76,3.95,3.87
 AT1,2026-09-19 16:00:00,Austria Lustenau,SC Rheindorf Altach,2.0,0.0,,,
 F1,2026-09-19 16:15:00,Paris FC,Strasbourg,2.0,1.0,2.0,3.67,3.4
+CZ1,2026-09-19 17:00:00,Slovácko,Baník Ostrava,2.0,2.0,,,
 I1,2026-09-19 17:00:00,Roma,Inter,2.0,2.0,2.62,3.49,2.55
 DK1,2026-09-19 17:00:00,Odense Boldklub,FC Midtjylland,1.0,1.0,,,
-CZ1,2026-09-19 17:00:00,Slovácko,Baník Ostrava,2.0,2.0,,,
 B1,2026-09-19 17:15:00,Charleroi,Cercle Brugge,3.0,2.0,1.73,3.88,3.99
-E0,2026-09-19 17:30:00,Nott'm Forest,Coventry,0.0,1.0,1.58,4.02,5.54
-D1,2026-09-19 17:30:00,Stuttgart,Dortmund,0.0,1.0,2.36,3.76,2.66
 SP1,2026-09-19 17:30:00,Celta,Santander,5.0,0.0,1.81,3.85,4.02
+D1,2026-09-19 17:30:00,Stuttgart,Dortmund,0.0,1.0,2.36,3.76,2.66
+E0,2026-09-19 17:30:00,Nott'm Forest,Coventry,0.0,1.0,1.58,4.02,5.54
 N1,2026-09-19 17:45:00,Sparta Rotterdam,Heerenveen,0.0,4.0,2.44,3.65,2.55
 SC0,2026-09-19 17:45:00,Kilmarnock,Hearts,1.0,1.0,4.59,4.04,1.64
+T1,2026-09-19 18:00:00,Trabzonspor,Galatasaray,4.0,0.0,2.92,3.77,2.07
 T1,2026-09-19 18:00:00,Buyuksehyr,Genclerbirligi,4.0,0.0,1.49,4.24,5.52
 P1,2026-09-19 18:00:00,Alverca,Rio Ave,1.0,0.0,1.86,3.45,3.95
-T1,2026-09-19 18:00:00,Trabzonspor,Galatasaray,4.0,0.0,2.92,3.77,2.07
 AT1,2026-09-19 18:30:00,Grazer AK,Austria Vienna,2.0,2.0,,,
 N1,2026-09-19 19:00:00,Ajax,Excelsior,2.0,2.0,1.2,6.82,10.04
-I1,2026-09-19 19:45:00,Venezia,Lazio,0.0,2.0,3.67,3.57,1.97
-F1,2026-09-19 19:45:00,Le Mans,Lorient,2.0,1.0,2.64,3.39,2.56
-F1,2026-09-19 19:45:00,Angers,Troyes,2.0,0.0,2.19,3.31,3.25
 B1,2026-09-19 19:45:00,Anderlecht,Waregem,3.0,0.0,1.74,3.7,4.14
 B1,2026-09-19 19:45:00,Lommel SK,Mechelen,0.0,0.0,2.57,3.45,2.48
+F1,2026-09-19 19:45:00,Angers,Troyes,2.0,0.0,2.19,3.31,3.25
+F1,2026-09-19 19:45:00,Le Mans,Lorient,2.0,1.0,2.64,3.39,2.56
 F1,2026-09-19 19:45:00,Lyon,Rennes,4.0,0.0,2.09,3.72,3.09
 F1,2026-09-19 19:45:00,Toulouse,Le Havre,3.0,2.0,1.71,3.77,4.62
-SP1,2026-09-19 20:00:00,Sevilla,Barcelona,1.0,3.0,11.92,7.42,1.19
+I1,2026-09-19 19:45:00,Venezia,Lazio,0.0,2.0,3.67,3.57,1.97
 N1,2026-09-19 20:00:00,Willem II,For Sittard,0.0,1.0,2.47,3.69,2.49
+SP1,2026-09-19 20:00:00,Sevilla,Barcelona,1.0,3.0,11.92,7.42,1.19
 P1,2026-09-19 20:30:00,Sp Lisbon,Arouca,2.0,2.0,1.2,6.44,11.85
 N1,2026-09-20 11:15:00,Feyenoord,Utrecht,5.0,0.0,1.25,5.9,8.88
 I1,2026-09-20 11:30:00,Fiorentina,Napoli,1.0,1.0,3.15,3.39,2.21
-CZ1,2026-09-20 12:00:00,Hradec Králové,Teplice,0.0,2.0,,,
 SC0,2026-09-20 12:00:00,Celtic,Rangers,0.0,1.0,2.16,3.63,2.98
+CZ1,2026-09-20 12:00:00,Hradec Králové,Teplice,0.0,2.0,,,
 B1,2026-09-20 12:30:00,Antwerp,St. Gilloise,0.0,2.0,4.99,3.93,1.6
-SP1,2026-09-20 13:00:00,Getafe,Malaga,1.0,0.0,2.02,3.03,4.06
-DK1,2026-09-20 13:00:00,Brøndby IF,F.C. København,0.0,1.0,,,
 DK1,2026-09-20 13:00:00,Sønderjyske Fodbold,Randers FC,4.0,2.0,,,
+DK1,2026-09-20 13:00:00,Brøndby IF,F.C. København,0.0,1.0,,,
+SP1,2026-09-20 13:00:00,Getafe,Malaga,1.0,0.0,2.02,3.03,4.06
 AT1,2026-09-20 13:30:00,SV Josko Ried,Wolfsberger,4.0,1.0,,,
+N1,2026-09-20 13:30:00,Twente,PSV Eindhoven,3.0,2.0,2.77,4.0,2.14
 AT1,2026-09-20 13:30:00,TSV Hartberg,LASK Linz,3.0,3.0,,,
 N1,2026-09-20 13:30:00,AZ Alkmaar,Telstar,1.0,0.0,1.24,6.29,9.06
-N1,2026-09-20 13:30:00,Twente,PSV Eindhoven,3.0,2.0,2.77,4.0,2.14
+CZ1,2026-09-20 14:00:00,Sigma Olomouc,Sparta Prague,0.0,3.0,,,
+CZ1,2026-09-20 14:00:00,Jablonec,Zlín,1.0,1.0,,,
 I1,2026-09-20 14:00:00,Frosinone,Como,2.0,0.0,5.71,4.45,1.51
 E0,2026-09-20 14:00:00,Bournemouth,Liverpool,0.0,1.0,3.05,3.78,2.13
 E0,2026-09-20 14:00:00,Leeds,Crystal Palace,0.0,0.0,1.74,3.79,4.49
-I1,2026-09-20 14:00:00,Parma,Genoa,2.0,1.0,3.05,3.01,2.46
 E0,2026-09-20 14:00:00,Man City,Sunderland,5.0,3.0,1.29,5.56,9.39
-CZ1,2026-09-20 14:00:00,Jablonec,Zlín,1.0,1.0,,,
-CZ1,2026-09-20 14:00:00,Sigma Olomouc,Sparta Prague,0.0,3.0,,,
 F1,2026-09-20 14:00:00,Auxerre,Brest,2.0,1.0,2.79,3.5,2.36
+I1,2026-09-20 14:00:00,Parma,Genoa,2.0,1.0,3.05,3.01,2.46
 D1,2026-09-20 14:30:00,Leverkusen,RB Leipzig,2.0,0.0,1.96,4.03,3.2
-B1,2026-09-20 15:00:00,St Truiden,Westerlo,0.0,2.0,1.65,4.1,4.29
-T1,2026-09-20 15:00:00,Erzurumspor,Samsunspor,1.0,0.0,2.58,3.21,2.57
 T1,2026-09-20 15:00:00,Fenerbahce,Eyupspor,8.0,0.0,1.18,6.44,12.0
+B1,2026-09-20 15:00:00,St Truiden,Westerlo,0.0,2.0,1.65,4.1,4.29
 DK1,2026-09-20 15:00:00,AC Horsens,AGF,2.0,2.0,,,
+T1,2026-09-20 15:00:00,Erzurumspor,Samsunspor,1.0,0.0,2.58,3.21,2.57
 SP1,2026-09-20 15:15:00,Ath Madrid,Real Madrid,2.0,1.0,3.43,3.8,1.95
 P1,2026-09-20 15:30:00,Guimaraes,Moreirense,1.0,1.0,1.51,4.02,6.09
 P1,2026-09-20 15:30:00,Estrela,Academico Viseu,0.0,2.0,2.11,3.27,3.33
 N1,2026-09-20 15:45:00,Nijmegen,Go Ahead Eagles,1.0,1.0,1.92,4.0,3.29
 AT1,2026-09-20 16:00:00,RB Salzburg,SK Sturm Graz,3.0,0.0,,,
 F1,2026-09-20 16:15:00,Nice,Lille,2.0,1.0,3.48,3.45,2.04
-D1,2026-09-20 16:30:00,Schalke 04,Elversberg,0.0,0.0,2.02,3.66,3.32
 E0,2026-09-20 16:30:00,Fulham,Man United,1.0,1.0,3.36,3.71,2.0
-I1,2026-09-20 17:00:00,Juventus,Atalanta,2.0,0.0,1.69,3.77,4.84
+D1,2026-09-20 16:30:00,Schalke 04,Elversberg,0.0,0.0,2.02,3.66,3.32
 CZ1,2026-09-20 17:00:00,Slavia Prague,Viktoria Plzeň,2.0,1.0,,,
 DK1,2026-09-20 17:00:00,Viborg FF,FC Nordsjælland,4.0,1.0,,,
+I1,2026-09-20 17:00:00,Juventus,Atalanta,2.0,0.0,1.69,3.77,4.84
+B1,2026-09-20 17:30:00,Club Brugge,Genk,3.0,0.0,1.47,4.6,5.33
 SP1,2026-09-20 17:30:00,La Coruna,Betis,1.0,1.0,3.32,3.51,2.07
 SP1,2026-09-20 17:30:00,Villarreal,Levante,3.0,1.0,1.49,4.6,5.53
-B1,2026-09-20 17:30:00,Club Brugge,Genk,3.0,0.0,1.47,4.6,5.33
-P1,2026-09-20 18:00:00,Santa Clara,Sp Braga,0.0,0.0,3.66,3.11,2.05
 T1,2026-09-20 18:00:00,Goztep,Rizespor,2.0,2.0,2.28,3.36,2.83
-T1,2026-09-20 18:00:00,Amedspor,Besiktas,3.0,2.0,3.82,3.71,1.79
+P1,2026-09-20 18:00:00,Santa Clara,Sp Braga,0.0,0.0,3.66,3.11,2.05
 P1,2026-09-20 18:00:00,Estoril,Casa Pia,1.0,2.0,1.75,3.59,4.36
+T1,2026-09-20 18:00:00,Amedspor,Besiktas,3.0,2.0,3.82,3.71,1.79
 B1,2026-09-20 18:15:00,Kortrijk,Beveren,1.0,0.0,2.54,3.43,2.5
 D1,2026-09-20 18:30:00,Paderborn,Hoffenheim,3.0,1.0,4.31,4.34,1.65
-I1,2026-09-20 19:45:00,Milan,Lecce,3.0,0.0,1.25,5.58,11.46
 F1,2026-09-20 19:45:00,Marseille,Paris SG,1.0,2.0,6.72,5.18,1.38
+I1,2026-09-20 19:45:00,Milan,Lecce,3.0,0.0,1.25,5.58,11.46
 SP1,2026-09-20 20:00:00,Valencia,Sociedad,2.0,3.0,2.68,3.35,2.52
 P1,2026-09-20 20:30:00,Porto,Benfica,3.0,1.0,2.6,3.35,2.5
 CZ1,2026-10-09 17:00:00,Zlín,Slavia Prague,0.0,1.0,,,
-T1,2026-10-09 18:00:00,Galatasaray,Kasimpasa,3.0,1.0,1.24,5.69,9.59
 DK1,2026-10-09 18:00:00,FC Nordsjælland,Odense Boldklub,0.0,0.0,,,
+T1,2026-10-09 18:00:00,Galatasaray,Kasimpasa,3.0,1.0,1.24,5.69,9.59
 P1,2026-10-09 18:45:00,Moreirense,Gil Vicente,0.0,1.0,3.2,3.08,2.29
 N1,2026-10-09 19:00:00,PSV Eindhoven,Heerenveen,2.0,0.0,1.26,6.41,7.7
 D1,2026-10-09 19:30:00,Dortmund,Werder Bremen,2.0,2.0,1.32,5.57,8.15
-B1,2026-10-09 19:45:00,Beveren,Lommel SK,1.0,3.0,1.8,3.79,3.86
 F1,2026-10-09 19:45:00,Lens,Lyon,2.0,1.0,2.38,3.68,2.7
+B1,2026-10-09 19:45:00,Beveren,Lommel SK,1.0,3.0,1.8,3.79,3.86
 SP1,2026-10-09 20:00:00,Malaga,Espanol,1.0,1.0,2.8,3.18,2.57
 P1,2026-10-09 20:15:00,Sp Braga,Sp Lisbon,1.0,3.0,3.04,3.25,2.28
 T1,2026-10-10 11:30:00,Genclerbirligi,Amedspor,2.0,2.0,2.99,3.46,2.17
 E0,2026-10-10 12:30:00,Arsenal,Leeds,2.0,1.0,1.38,4.78,7.89
 T1,2026-10-10 14:00:00,Alanyaspor,Erzurumspor,0.0,0.0,1.96,3.24,3.76
+T1,2026-10-10 14:00:00,Samsunspor,Trabzonspor,0.0,3.0,3.41,3.62,1.94
+CZ1,2026-10-10 14:00:00,Zbrojovka Brno,Jablonec,0.0,1.0,,,
+CZ1,2026-10-10 14:00:00,Viktoria Plzeň,Mladá Boleslav,3.0,0.0,,,
 I1,2026-10-10 14:00:00,Genoa,Fiorentina,2.0,1.0,3.18,3.26,2.27
 CZ1,2026-10-10 14:00:00,Hradec Králové,Artis Brno,2.0,4.0,,,
-CZ1,2026-10-10 14:00:00,Zbrojovka Brno,Jablonec,0.0,1.0,,,
-T1,2026-10-10 14:00:00,Samsunspor,Trabzonspor,0.0,3.0,3.41,3.62,1.94
-CZ1,2026-10-10 14:00:00,Viktoria Plzeň,Mladá Boleslav,3.0,0.0,,,
-D1,2026-10-10 14:30:00,Mainz,Leverkusen,3.0,4.0,2.88,3.83,2.17
 D1,2026-10-10 14:30:00,Augsburg,Bayern Munich,2.0,2.0,11.02,8.1,1.17
 D1,2026-10-10 14:30:00,Hoffenheim,Hamburg,2.0,3.0,1.41,5.0,6.39
 D1,2026-10-10 14:30:00,Paderborn,Stuttgart,0.0,2.0,4.65,4.55,1.58
 D1,2026-10-10 14:30:00,Union Berlin,Elversberg,1.0,0.0,2.29,3.69,2.77
-E0,2026-10-10 15:00:00,Sunderland,Brighton,0.0,2.0,2.94,3.47,2.3
-SC0,2026-10-10 15:00:00,Falkirk,Dundee,1.0,2.0,2.03,3.49,3.42
-SC0,2026-10-10 15:00:00,Dundee United,Hibernian,1.0,0.0,2.66,3.54,2.4
-SC0,2026-10-10 15:00:00,Rangers,Kilmarnock,3.0,1.0,1.14,7.75,15.13
-E0,2026-10-10 15:00:00,Aston Villa,Brentford,2.0,2.0,2.62,3.5,2.54
-SC0,2026-10-10 15:00:00,Hearts,St Mirren,5.0,0.0,1.45,4.74,5.89
-E0,2026-10-10 15:00:00,Ipswich,Fulham,2.0,1.0,2.75,3.48,2.42
-E0,2026-10-10 15:00:00,Chelsea,Bournemouth,5.0,1.0,1.66,4.21,4.53
+D1,2026-10-10 14:30:00,Mainz,Leverkusen,3.0,4.0,2.88,3.83,2.17
 B1,2026-10-10 15:00:00,Cercle Brugge,Anderlecht,1.0,2.0,3.41,3.65,1.95
+SC0,2026-10-10 15:00:00,Dundee United,Hibernian,1.0,0.0,2.66,3.54,2.4
+E0,2026-10-10 15:00:00,Aston Villa,Brentford,2.0,2.0,2.62,3.5,2.54
+E0,2026-10-10 15:00:00,Chelsea,Bournemouth,5.0,1.0,1.66,4.21,4.53
+E0,2026-10-10 15:00:00,Ipswich,Fulham,2.0,1.0,2.75,3.48,2.42
+E0,2026-10-10 15:00:00,Sunderland,Brighton,0.0,2.0,2.94,3.47,2.3
+SC0,2026-10-10 15:00:00,Rangers,Kilmarnock,3.0,1.0,1.14,7.75,15.13
+SC0,2026-10-10 15:00:00,Hearts,St Mirren,5.0,0.0,1.45,4.74,5.89
+SC0,2026-10-10 15:00:00,Falkirk,Dundee,1.0,2.0,2.03,3.49,3.42
 SP1,2026-10-10 15:15:00,Alaves,Ath Madrid,1.0,2.0,4.23,3.69,1.8
 N1,2026-10-10 15:30:00,Go Ahead Eagles,Sparta Rotterdam,3.0,3.0,1.74,4.06,3.92
-AT1,2026-10-10 16:00:00,WSG Swarovski Tirol,SV Josko Ried,1.0,2.0,,,
 AT1,2026-10-10 16:00:00,Grazer AK,RB Salzburg,0.0,0.0,,,
+AT1,2026-10-10 16:00:00,WSG Swarovski Tirol,SV Josko Ried,1.0,2.0,,,
 F1,2026-10-10 16:15:00,Lille,Le Havre,1.0,0.0,1.42,4.66,6.76
 T1,2026-10-10 17:00:00,Rizespor,Fenerbahce,0.0,3.0,4.36,3.88,1.67
-I1,2026-10-10 17:00:00,Inter,Parma,3.0,0.0,1.13,8.38,17.13
 CZ1,2026-10-10 17:00:00,Bohemians 1905,Baník Ostrava,1.0,0.0,,,
+I1,2026-10-10 17:00:00,Inter,Parma,3.0,0.0,1.13,8.38,17.13
 B1,2026-10-10 17:15:00,RAAL La Louviere,Club Brugge,1.0,4.0,6.54,4.82,1.38
+D1,2026-10-10 17:30:00,RB Leipzig,Ein Frankfurt,6.0,0.0,1.55,4.73,4.74
 E0,2026-10-10 17:30:00,Man United,Tottenham,1.0,1.0,1.69,4.16,4.37
 SP1,2026-10-10 17:30:00,Barcelona,Getafe,3.0,0.0,1.08,11.73,23.81
-D1,2026-10-10 17:30:00,RB Leipzig,Ein Frankfurt,6.0,0.0,1.55,4.73,4.74
 N1,2026-10-10 17:45:00,Feyenoord,AZ Alkmaar,2.0,0.0,1.8,3.96,3.76
 P1,2026-10-10 18:00:00,Maritimo,Porto,1.0,2.0,9.3,4.87,1.31
 AT1,2026-10-10 18:30:00,Austria Vienna,SK Sturm Graz,0.0,2.0,,,
 N1,2026-10-10 19:00:00,For Sittard,Twente,1.0,1.0,6.16,4.99,1.41
 F1,2026-10-10 19:45:00,Paris SG,Le Mans,3.0,1.0,1.08,11.3,22.06
-F1,2026-10-10 19:45:00,Brest,Angers,5.0,1.0,1.98,3.61,3.53
+F1,2026-10-10 19:45:00,Monaco,Toulouse,2.0,2.0,1.59,4.22,5.03
 F1,2026-10-10 19:45:00,Lorient,Paris FC,1.0,0.0,3.15,3.33,2.23
-B1,2026-10-10 19:45:00,Waregem,Gent,0.0,2.0,2.77,3.31,2.38
+F1,2026-10-10 19:45:00,Brest,Angers,5.0,1.0,1.98,3.61,3.53
 B1,2026-10-10 19:45:00,Genk,Kortrijk,3.0,0.0,1.42,4.54,6.31
 I1,2026-10-10 19:45:00,Napoli,Frosinone,3.0,0.0,1.44,4.74,6.44
-F1,2026-10-10 19:45:00,Monaco,Toulouse,2.0,2.0,1.59,4.22,5.03
+B1,2026-10-10 19:45:00,Waregem,Gent,0.0,2.0,2.77,3.31,2.38
 SP1,2026-10-10 20:00:00,Real Madrid,Villarreal,1.0,0.0,1.36,5.61,6.69
 N1,2026-10-10 20:00:00,Ajax,Nijmegen,1.0,1.0,1.3,5.74,7.74
 P1,2026-10-10 20:30:00,Academico Viseu,Estoril,2.0,1.0,2.24,3.38,2.99
@@ -11010,37 +11010,37 @@ T1,2026-10-11 11:30:00,Konyaspor,Buyuksehyr,0.0,0.0,2.6,3.4,2.45
 CZ1,2026-10-11 12:00:00,Slovan Liberec,Slovácko,0.0,2.0,,,
 SC0,2026-10-11 12:00:00,Motherwell,Celtic,0.0,2.0,4.77,4.37,1.57
 B1,2026-10-11 12:30:00,Standard,Charleroi,0.0,1.0,2.85,3.41,2.28
-SP1,2026-10-11 13:00:00,Elche,Celta,0.0,0.0,2.72,3.25,2.55
 DK1,2026-10-11 13:00:00,Silkeborg IF,AC Horsens,3.0,3.0,,,
 DK1,2026-10-11 13:00:00,Randers FC,Viborg FF,0.0,2.0,,,
-AT1,2026-10-11 13:30:00,SC Rheindorf Altach,Wolfsberger,3.0,0.0,,,
-AT1,2026-10-11 13:30:00,TSV Hartberg,Austria Lustenau,4.0,3.0,,,
+SP1,2026-10-11 13:00:00,Elche,Celta,0.0,0.0,2.72,3.25,2.55
 N1,2026-10-11 13:30:00,Telstar,Den Haag,2.0,2.0,2.0,3.74,3.23
+AT1,2026-10-11 13:30:00,SC Rheindorf Altach,Wolfsberger,3.0,0.0,,,
 N1,2026-10-11 13:30:00,Zwolle,Cambuur,0.0,1.0,1.92,3.84,3.38
-T1,2026-10-11 14:00:00,Gaziantep,Corum,0.0,3.0,2.55,3.31,2.54
+AT1,2026-10-11 13:30:00,TSV Hartberg,Austria Lustenau,4.0,3.0,,,
 F1,2026-10-11 14:00:00,Nice,Strasbourg,2.0,1.0,2.29,3.56,2.87
 E0,2026-10-11 14:00:00,Hull,Everton,2.0,2.0,3.58,3.4,2.04
-E0,2026-10-11 14:00:00,Crystal Palace,Nott'm Forest,3.0,1.0,2.59,3.33,2.64
+T1,2026-10-11 14:00:00,Gaziantep,Corum,0.0,3.0,2.55,3.31,2.54
 CZ1,2026-10-11 14:00:00,Teplice,Sigma Olomouc,1.0,1.0,,,
+SC0,2026-10-11 14:00:00,Aberdeen,St Johnstone,0.0,1.0,2.17,3.34,3.19
 I1,2026-10-11 14:00:00,Lazio,Monza,3.0,1.0,1.57,3.98,5.66
 I1,2026-10-11 14:00:00,Lecce,Bologna,1.0,2.0,4.1,3.34,1.91
-SC0,2026-10-11 14:00:00,Aberdeen,St Johnstone,0.0,1.0,2.17,3.34,3.19
+E0,2026-10-11 14:00:00,Crystal Palace,Nott'm Forest,3.0,1.0,2.59,3.33,2.64
 D1,2026-10-11 14:30:00,FC Koln,M'gladbach,2.0,1.0,2.0,3.89,3.22
-DK1,2026-10-11 15:00:00,Brøndby IF,Lyngby Boldklub,5.0,2.0,,,
 B1,2026-10-11 15:00:00,St. Gilloise,Oud-Heverlee Leuven,1.0,1.0,1.23,5.92,9.76
+DK1,2026-10-11 15:00:00,Brøndby IF,Lyngby Boldklub,5.0,2.0,,,
 SP1,2026-10-11 15:15:00,Sociedad,La Coruna,3.0,2.0,1.61,3.93,5.19
 P1,2026-10-11 15:30:00,Rio Ave,Nacional,3.0,2.0,2.25,3.24,3.09
 N1,2026-10-11 15:45:00,Excelsior,Groningen,1.0,5.0,2.51,3.62,2.48
 AT1,2026-10-11 16:00:00,LASK Linz,Rapid Vienna,0.0,2.0,,,
 F1,2026-10-11 16:15:00,Rennes,Auxerre,4.0,1.0,1.42,4.83,6.43
-E0,2026-10-11 16:30:00,Liverpool,Man City,0.0,3.0,2.62,3.64,2.44
 D1,2026-10-11 16:30:00,Freiburg,Schalke 04,2.0,1.0,1.64,3.98,4.83
+E0,2026-10-11 16:30:00,Liverpool,Man City,0.0,3.0,2.62,3.64,2.44
 T1,2026-10-11 17:00:00,Besiktas,Kocaelispor,2.0,1.0,1.26,5.21,9.8
-CZ1,2026-10-11 17:00:00,Sparta Prague,Pardubice,2.0,0.0,,,
 I1,2026-10-11 17:00:00,Sassuolo,Milan,1.0,1.0,4.04,3.71,1.81
 DK1,2026-10-11 17:00:00,FC Midtjylland,F.C. København,2.0,1.0,,,
-SP1,2026-10-11 17:30:00,Betis,Osasuna,5.0,2.0,1.53,4.17,5.63
+CZ1,2026-10-11 17:00:00,Sparta Prague,Pardubice,2.0,0.0,,,
 B1,2026-10-11 17:30:00,Westerlo,Antwerp,5.0,1.0,2.08,3.73,2.98
+SP1,2026-10-11 17:30:00,Betis,Osasuna,5.0,2.0,1.53,4.17,5.63
 P1,2026-10-11 18:00:00,Benfica,Guimaraes,2.0,0.0,1.21,6.15,11.59
 B1,2026-10-11 18:15:00,Mechelen,St Truiden,4.0,3.0,3.14,3.51,2.08
 I1,2026-10-11 19:45:00,Cagliari,Juventus,1.0,1.0,6.13,3.89,1.55
@@ -11048,8 +11048,8 @@ F1,2026-10-11 19:45:00,Troyes,Marseille,0.0,2.0,3.66,3.81,1.88
 SP1,2026-10-11 20:00:00,Santander,Valencia,2.0,2.0,2.28,3.51,2.89
 P1,2026-10-11 20:30:00,Arouca,Estrela,1.0,0.0,2.09,3.37,3.28
 I1,2026-10-12 17:30:00,Atalanta,Venezia,3.0,1.0,1.55,4.18,5.52
-T1,2026-10-12 18:00:00,Eyupspor,Goztep,0.0,4.0,3.56,3.59,1.89
 DK1,2026-10-12 18:00:00,AGF,Sønderjyske Fodbold,3.0,0.0,,,
+T1,2026-10-12 18:00:00,Eyupspor,Goztep,0.0,4.0,3.56,3.59,1.89
 I1,2026-10-12 19:45:00,Torino,Udinese,2.0,1.0,2.31,3.19,3.12
 SP1,2026-10-12 20:00:00,Levante,Sevilla,3.0,3.0,2.68,3.27,2.56
 E0,2026-10-12 20:00:00,Coventry,Newcastle,4.0,1.0,3.25,3.58,2.08
@@ -11067,85 +11067,85 @@ T1,2026-10-17 11:30:00,Erzurumspor,Eyupspor,2.0,0.0,1.58,3.7,5.4
 E0,2026-10-17 12:30:00,Everton,Chelsea,0.0,2.0,3.13,3.62,2.12
 SP1,2026-10-17 13:00:00,Espanol,Ath Madrid,0.0,1.0,4.68,3.84,1.7
 CZ1,2026-10-17 14:00:00,Mladá Boleslav,Teplice,1.0,0.0,,,
-CZ1,2026-10-17 14:00:00,Slavia Prague,Hradec Králové,0.0,0.0,,,
-CZ1,2026-10-17 14:00:00,Pardubice,Zlín,3.0,0.0,,,
-T1,2026-10-17 14:00:00,Genclerbirligi,Galatasaray,0.0,1.0,6.69,4.93,1.36
 I1,2026-10-17 14:00:00,Venezia,Napoli,1.0,0.0,4.67,4.0,1.68
+CZ1,2026-10-17 14:00:00,Slavia Prague,Hradec Králové,0.0,0.0,,,
 T1,2026-10-17 14:00:00,Amedspor,Konyaspor,1.0,0.0,1.89,3.44,3.77
+T1,2026-10-17 14:00:00,Genclerbirligi,Galatasaray,0.0,1.0,6.69,4.93,1.36
+CZ1,2026-10-17 14:00:00,Pardubice,Zlín,3.0,0.0,,,
 D1,2026-10-17 14:30:00,Werder Bremen,Paderborn,2.0,2.0,1.77,4.0,3.97
-D1,2026-10-17 14:30:00,Hamburg,Stuttgart,1.0,0.0,3.81,4.02,1.79
 D1,2026-10-17 14:30:00,Schalke 04,Mainz,0.0,1.0,2.94,3.62,2.21
-D1,2026-10-17 14:30:00,Union Berlin,Dortmund,0.0,0.0,5.0,4.39,1.56
+D1,2026-10-17 14:30:00,Hamburg,Stuttgart,1.0,0.0,3.81,4.02,1.79
 D1,2026-10-17 14:30:00,Elversberg,Augsburg,4.0,3.0,2.43,3.77,2.54
-SC0,2026-10-17 15:00:00,Aberdeen,St Mirren,3.0,1.0,1.83,3.66,3.94
-SC0,2026-10-17 15:00:00,Hibernian,Falkirk,1.0,2.0,1.64,3.91,4.81
+D1,2026-10-17 14:30:00,Union Berlin,Dortmund,0.0,0.0,5.0,4.39,1.56
 SC0,2026-10-17 15:00:00,Kilmarnock,Motherwell,3.0,2.0,3.18,3.59,2.07
-SC0,2026-10-17 15:00:00,St Johnstone,Dundee United,1.0,1.0,2.59,3.46,2.5
-E0,2026-10-17 15:00:00,Fulham,Hull,1.0,0.0,1.7,3.89,4.51
 E0,2026-10-17 15:00:00,Man City,Ipswich,3.0,2.0,1.24,6.47,10.08
+E0,2026-10-17 15:00:00,Fulham,Hull,1.0,0.0,1.7,3.89,4.51
+SC0,2026-10-17 15:00:00,Hibernian,Falkirk,1.0,2.0,1.64,3.91,4.81
+SC0,2026-10-17 15:00:00,St Johnstone,Dundee United,1.0,1.0,2.59,3.46,2.5
 E0,2026-10-17 15:00:00,Brentford,Liverpool,1.0,2.0,2.34,3.62,2.76
+SC0,2026-10-17 15:00:00,Aberdeen,St Mirren,3.0,1.0,1.83,3.66,3.94
 SP1,2026-10-17 15:15:00,Villarreal,Elche,0.0,0.0,1.44,4.84,6.17
 N1,2026-10-17 15:30:00,Den Haag,PSV Eindhoven,2.0,1.0,8.37,6.53,1.25
 AT1,2026-10-17 16:00:00,Austria Lustenau,LASK Linz,0.0,4.0,,,
 F1,2026-10-17 16:15:00,Strasbourg,Paris SG,1.0,3.0,6.35,5.3,1.38
 I1,2026-10-17 17:00:00,Bologna,Inter,1.0,3.0,5.31,4.04,1.59
-T1,2026-10-17 17:00:00,Fenerbahce,Alanyaspor,3.0,0.0,1.27,5.27,9.0
 CZ1,2026-10-17 17:00:00,Sigma Olomouc,Slovan Liberec,1.0,0.0,,,
-SP1,2026-10-17 17:30:00,Betis,Barcelona,2.0,5.0,6.0,5.42,1.4
+T1,2026-10-17 17:00:00,Fenerbahce,Alanyaspor,3.0,0.0,1.27,5.27,9.0
 D1,2026-10-17 17:30:00,Bayern Munich,RB Leipzig,6.0,1.0,1.21,7.43,9.32
 E0,2026-10-17 17:30:00,Newcastle,Aston Villa,0.0,1.0,2.22,3.63,2.93
+SP1,2026-10-17 17:30:00,Betis,Barcelona,2.0,5.0,6.0,5.42,1.4
 AT1,2026-10-17 18:30:00,SV Josko Ried,Austria Vienna,3.0,2.0,,,
 N1,2026-10-17 19:00:00,Telstar,Feyenoord,3.0,4.0,7.53,5.62,1.31
 F1,2026-10-17 19:45:00,Troyes,Lens,1.0,3.0,3.84,3.89,1.82
 F1,2026-10-17 19:45:00,Lille,Brest,1.0,1.0,1.84,3.76,3.88
 I1,2026-10-17 19:45:00,Roma,Genoa,2.0,0.0,1.45,4.48,6.67
+SC0,2026-10-17 20:00:00,Dundee,Rangers,2.0,2.0,7.12,4.91,1.38
 SP1,2026-10-17 20:00:00,Valencia,Ath Bilbao,0.0,0.0,3.26,3.34,2.19
 N1,2026-10-17 20:00:00,Sparta Rotterdam,Willem II,3.0,2.0,1.6,4.31,4.55
-SC0,2026-10-17 20:00:00,Dundee,Rangers,2.0,2.0,7.12,4.91,1.38
 N1,2026-10-18 11:15:00,Zwolle,Go Ahead Eagles,4.0,1.0,3.31,3.83,1.95
-T1,2026-10-18 11:30:00,Kasimpasa,Samsunspor,4.0,1.0,2.45,3.33,2.64
 I1,2026-10-18 11:30:00,Udinese,Lecce,0.0,3.0,1.87,3.45,4.14
+T1,2026-10-18 11:30:00,Kasimpasa,Samsunspor,4.0,1.0,2.45,3.33,2.64
 CZ1,2026-10-18 12:00:00,Slovácko,Zbrojovka Brno,1.0,2.0,,,
 SP1,2026-10-18 13:00:00,Osasuna,Santander,2.0,0.0,1.98,3.61,3.46
-DK1,2026-10-18 13:00:00,Sønderjyske Fodbold,Silkeborg IF,4.0,0.0,,,
 DK1,2026-10-18 13:00:00,Lyngby Boldklub,FC Nordsjælland,3.0,3.0,,,
-AT1,2026-10-18 13:30:00,Wolfsberger,WSG Swarovski Tirol,0.0,2.0,,,
+DK1,2026-10-18 13:00:00,Sønderjyske Fodbold,Silkeborg IF,4.0,0.0,,,
 AT1,2026-10-18 13:30:00,RB Salzburg,SC Rheindorf Altach,3.0,0.0,,,
+AT1,2026-10-18 13:30:00,Wolfsberger,WSG Swarovski Tirol,0.0,2.0,,,
 N1,2026-10-18 13:30:00,Cambuur,AZ Alkmaar,2.0,2.0,5.8,4.83,1.44
-T1,2026-10-18 14:00:00,Kocaelispor,Goztep,1.0,2.0,2.81,3.36,2.3
 I1,2026-10-18 14:00:00,Fiorentina,Como,1.0,3.0,3.28,3.61,2.06
-CZ1,2026-10-18 14:00:00,Baník Ostrava,Sparta Prague,0.0,0.0,,,
 F1,2026-10-18 14:00:00,Angers,Marseille,2.0,5.0,3.16,3.71,2.07
-E0,2026-10-18 14:00:00,Leeds,Man United,1.0,1.0,2.32,3.55,2.82
-E0,2026-10-18 14:00:00,Brighton,Crystal Palace,5.0,0.0,1.53,4.42,5.35
 E0,2026-10-18 14:00:00,Bournemouth,Sunderland,2.0,0.0,2.04,3.51,3.44
+T1,2026-10-18 14:00:00,Kocaelispor,Goztep,1.0,2.0,2.81,3.36,2.3
+E0,2026-10-18 14:00:00,Brighton,Crystal Palace,5.0,0.0,1.53,4.42,5.35
+CZ1,2026-10-18 14:00:00,Baník Ostrava,Sparta Prague,0.0,0.0,,,
+E0,2026-10-18 14:00:00,Leeds,Man United,1.0,1.0,2.32,3.55,2.82
 D1,2026-10-18 14:30:00,Leverkusen,Freiburg,2.0,1.0,1.7,4.14,4.15
-DK1,2026-10-18 15:00:00,Odense Boldklub,Brøndby IF,2.0,1.0,,,
 SC0,2026-10-18 15:00:00,Celtic,Hearts,7.0,1.0,1.57,4.32,4.81
+DK1,2026-10-18 15:00:00,Odense Boldklub,Brøndby IF,2.0,1.0,,,
 SP1,2026-10-18 15:15:00,Celta,Alaves,2.0,1.0,2.1,3.22,3.5
 N1,2026-10-18 15:45:00,Groningen,Ajax,2.0,5.0,3.4,4.06,1.86
 AT1,2026-10-18 16:00:00,SK Sturm Graz,Grazer AK,6.0,1.0,,,
-F1,2026-10-18 16:15:00,Le Havre,Auxerre,1.0,3.0,2.28,3.36,3.01
 F1,2026-10-18 16:15:00,Lorient,Monaco,1.0,0.0,3.48,3.46,2.03
+F1,2026-10-18 16:15:00,Le Havre,Auxerre,1.0,3.0,2.28,3.36,3.01
 F1,2026-10-18 16:15:00,Paris FC,Rennes,4.0,3.0,2.26,3.5,2.93
 E0,2026-10-18 16:30:00,Nott'm Forest,Arsenal,0.0,1.0,5.59,3.82,1.6
 D1,2026-10-18 16:30:00,M'gladbach,Hoffenheim,1.0,2.0,3.05,3.94,2.04
-T1,2026-10-18 17:00:00,Buyuksehyr,Gaziantep,2.0,1.0,1.64,3.96,4.45
 I1,2026-10-18 17:00:00,Milan,Atalanta,3.0,2.0,1.81,3.7,4.12
+T1,2026-10-18 17:00:00,Buyuksehyr,Gaziantep,2.0,1.0,1.64,3.96,4.45
 DK1,2026-10-18 17:00:00,F.C. København,AGF,1.0,1.0,,,
 CZ1,2026-10-18 17:00:00,Jablonec,Viktoria Plzeň,2.0,3.0,,,
 SP1,2026-10-18 17:30:00,Malaga,Sociedad,2.0,5.0,3.14,3.48,2.15
 N1,2026-10-18 19:00:00,Nijmegen,For Sittard,2.0,2.0,1.58,4.38,4.65
 N1,2026-10-18 19:00:00,Twente,Utrecht,1.0,2.0,1.31,5.61,7.34
-F1,2026-10-18 19:45:00,Lyon,Nice,2.0,1.0,1.66,3.98,4.63
 I1,2026-10-18 19:45:00,Juventus,Lazio,0.0,3.0,1.66,3.76,5.03
+F1,2026-10-18 19:45:00,Lyon,Nice,2.0,1.0,1.66,3.98,4.63
 SP1,2026-10-18 20:00:00,Real Madrid,Sevilla,4.0,1.0,1.23,6.27,10.23
 I1,2026-10-19 17:30:00,Monza,Cagliari,4.0,0.0,2.36,3.16,3.04
 T1,2026-10-19 18:00:00,Trabzonspor,Besiktas,2.0,0.0,2.8,3.65,2.17
 DK1,2026-10-19 18:00:00,Viborg FF,FC Midtjylland,1.0,2.0,,,
 I1,2026-10-19 19:45:00,Parma,Torino,0.0,3.0,2.99,3.05,2.46
-E0,2026-10-19 20:00:00,Tottenham,Coventry,3.0,1.0,1.46,4.55,6.23
 SP1,2026-10-19 20:00:00,Getafe,Vallecano,1.0,1.0,2.85,2.98,2.62
+E0,2026-10-19 20:00:00,Tottenham,Coventry,3.0,1.0,1.46,4.55,6.23
 P1,2026-10-19 20:15:00,Sp Braga,Gil Vicente,1.0,2.0,1.57,3.78,5.59
 SP1,2026-10-21 19:00:00,Levante,Ath Bilbao,3.0,1.0,3.42,3.29,2.15
 DK1,2026-10-23 18:00:00,Randers FC,Brøndby IF,1.0,3.0,,,
@@ -11153,40 +11153,40 @@ T1,2026-10-23 18:00:00,Alanyaspor,Kocaelispor,1.0,2.0,1.94,3.2,3.92
 AT1,2026-10-23 18:30:00,SC Rheindorf Altach,Austria Vienna,2.0,1.0,,,
 N1,2026-10-23 19:00:00,Go Ahead Eagles,Telstar,3.0,2.0,1.55,4.46,4.94
 D1,2026-10-23 19:30:00,Stuttgart,M'gladbach,2.0,3.0,1.34,5.71,7.02
-I1,2026-10-23 19:45:00,Torino,Monza,3.0,2.0,2.09,3.45,3.43
 F1,2026-10-23 19:45:00,Brest,Nice,1.0,2.0,2.21,3.49,3.11
-SP1,2026-10-23 20:00:00,Alaves,Malaga,1.0,1.0,1.62,3.77,5.65
+I1,2026-10-23 19:45:00,Torino,Monza,3.0,2.0,2.09,3.45,3.43
 E0,2026-10-23 20:00:00,Ipswich,Nott'm Forest,1.0,1.0,3.01,3.44,2.28
+SP1,2026-10-23 20:00:00,Alaves,Malaga,1.0,1.0,1.62,3.77,5.65
 P1,2026-10-23 20:45:00,Guimaraes,Maritimo,5.0,0.0,1.53,4.03,5.78
 T1,2026-10-24 11:30:00,Eyupspor,Kasimpasa,0.0,1.0,5.4,3.78,1.57
 E0,2026-10-24 12:30:00,Aston Villa,Man City,2.0,1.0,4.73,4.26,1.62
 SP1,2026-10-24 13:00:00,Vallecano,Elche,0.0,3.0,1.77,3.72,4.36
+T1,2026-10-24 14:00:00,Gaziantep,Erzurumspor,1.0,3.0,2.19,3.14,3.22
+CZ1,2026-10-24 14:00:00,Zbrojovka Brno,Bohemians 1905,2.0,2.0,,,
 I1,2026-10-24 14:00:00,Cagliari,Bologna,0.0,2.0,3.07,3.07,2.44
 CZ1,2026-10-24 14:00:00,Zlín,Sigma Olomouc,1.0,1.0,,,
-CZ1,2026-10-24 14:00:00,Zbrojovka Brno,Bohemians 1905,2.0,2.0,,,
-CZ1,2026-10-24 14:00:00,Teplice,Artis Brno,0.0,0.0,,,
-T1,2026-10-24 14:00:00,Gaziantep,Erzurumspor,1.0,3.0,2.19,3.14,3.22
 I1,2026-10-24 14:00:00,Como,Sassuolo,2.0,0.0,1.49,4.6,5.78
+CZ1,2026-10-24 14:00:00,Teplice,Artis Brno,0.0,0.0,,,
 D1,2026-10-24 14:30:00,Paderborn,Hamburg,1.0,0.0,2.22,3.65,2.92
-D1,2026-10-24 14:30:00,FC Koln,Schalke 04,0.0,0.0,2.04,3.73,3.23
-D1,2026-10-24 14:30:00,Augsburg,Union Berlin,1.0,1.0,1.84,3.89,3.73
 D1,2026-10-24 14:30:00,RB Leipzig,Elversberg,4.0,0.0,1.41,5.15,6.04
+D1,2026-10-24 14:30:00,Augsburg,Union Berlin,1.0,1.0,1.84,3.89,3.73
+D1,2026-10-24 14:30:00,FC Koln,Schalke 04,0.0,0.0,2.04,3.73,3.23
 D1,2026-10-24 14:30:00,Mainz,Werder Bremen,2.0,3.0,1.72,4.01,4.21
-SC0,2026-10-24 15:00:00,St Mirren,Dundee,2.0,1.0,2.17,3.58,2.96
 B1,2026-10-24 15:00:00,Antwerp,Charleroi,3.0,0.0,3.9,3.83,1.77
-E0,2026-10-24 15:00:00,Coventry,Fulham,0.0,1.0,3.04,3.46,2.23
-SC0,2026-10-24 15:00:00,Rangers,St Johnstone,4.0,0.0,1.21,6.23,11.03
 SC0,2026-10-24 15:00:00,Falkirk,Kilmarnock,3.0,0.0,1.86,3.73,3.69
-SC0,2026-10-24 15:00:00,Dundee United,Aberdeen,3.0,2.0,2.14,3.47,3.11
+SC0,2026-10-24 15:00:00,Rangers,St Johnstone,4.0,0.0,1.21,6.23,11.03
+SC0,2026-10-24 15:00:00,St Mirren,Dundee,2.0,1.0,2.17,3.58,2.96
+E0,2026-10-24 15:00:00,Coventry,Fulham,0.0,1.0,3.04,3.46,2.23
 E0,2026-10-24 15:00:00,Arsenal,Everton,2.0,0.0,1.43,4.41,7.27
+SC0,2026-10-24 15:00:00,Dundee United,Aberdeen,3.0,2.0,2.14,3.47,3.11
 SP1,2026-10-24 15:15:00,Santander,Espanol,2.0,1.0,2.37,3.6,2.76
 N1,2026-10-24 15:30:00,Utrecht,Zwolle,1.0,1.0,1.63,4.2,4.5
 P1,2026-10-24 15:30:00,Estrela,Casa Pia,0.0,2.0,1.75,3.58,4.42
-AT1,2026-10-24 16:00:00,TSV Hartberg,Wolfsberger,1.0,0.0,,,
 AT1,2026-10-24 16:00:00,WSG Swarovski Tirol,Grazer AK,1.0,1.0,,,
+AT1,2026-10-24 16:00:00,TSV Hartberg,Wolfsberger,1.0,0.0,,,
 T1,2026-10-24 17:00:00,Samsunspor,Amedspor,1.0,2.0,3.34,3.46,2.01
-CZ1,2026-10-24 17:00:00,Slavia Prague,Mladá Boleslav,1.0,1.0,,,
 I1,2026-10-24 17:00:00,Napoli,Roma,3.0,3.0,2.76,3.32,2.51
+CZ1,2026-10-24 17:00:00,Slavia Prague,Mladá Boleslav,1.0,1.0,,,
 B1,2026-10-24 17:15:00,Oud-Heverlee Leuven,Lommel SK,2.0,2.0,1.89,3.69,3.56
 E0,2026-10-24 17:30:00,Chelsea,Tottenham,0.0,2.0,1.69,4.12,4.35
 SP1,2026-10-24 17:30:00,Valencia,Villarreal,1.0,2.0,3.16,3.57,2.15
@@ -11194,9 +11194,9 @@ D1,2026-10-24 17:30:00,Dortmund,Ein Frankfurt,1.0,0.0,1.45,4.94,5.66
 N1,2026-10-24 17:45:00,Willem II,Cambuur,1.0,6.0,2.47,3.7,2.49
 P1,2026-10-24 18:00:00,Alverca,Arouca,0.0,1.0,2.12,3.3,3.29
 AT1,2026-10-24 18:30:00,Rapid Vienna,Austria Lustenau,5.0,1.0,,,
-I1,2026-10-24 19:45:00,Lazio,Parma,2.0,1.0,1.39,4.56,8.18
 F1,2026-10-24 19:45:00,Lens,Paris FC,2.0,1.0,2.39,3.56,2.74
 B1,2026-10-24 19:45:00,Westerlo,Beveren,4.0,4.0,2.05,3.74,3.06
+I1,2026-10-24 19:45:00,Lazio,Parma,2.0,1.0,1.39,4.56,8.18
 B1,2026-10-24 19:45:00,RAAL La Louviere,Waregem,3.0,0.0,2.91,3.36,2.27
 N1,2026-10-24 20:00:00,Den Haag,Heerenveen,2.0,3.0,3.16,3.78,2.02
 SP1,2026-10-24 20:00:00,Ath Madrid,La Coruna,1.0,0.0,1.26,5.81,10.67
@@ -11206,42 +11206,42 @@ I1,2026-10-25 11:30:00,Inter,Fiorentina,2.0,1.0,1.34,5.31,7.7
 CZ1,2026-10-25 12:00:00,Hradec Králové,Jablonec,1.0,2.0,,,
 SC0,2026-10-25 12:00:00,Hibernian,Celtic,1.0,2.0,4.37,4.11,1.65
 B1,2026-10-25 12:30:00,Genk,Standard,2.0,1.0,1.73,3.81,4.15
+SP1,2026-10-25 13:00:00,Ath Bilbao,Getafe,4.0,0.0,1.56,3.81,6.11
+T1,2026-10-25 13:00:00,Konyaspor,Genclerbirligi,2.0,0.0,1.83,3.41,4.0
 DK1,2026-10-25 13:00:00,Silkeborg IF,FC Nordsjælland,1.0,1.0,,,
 DK1,2026-10-25 13:00:00,FC Midtjylland,Lyngby Boldklub,3.0,2.0,,,
-T1,2026-10-25 13:00:00,Konyaspor,Genclerbirligi,2.0,0.0,1.83,3.41,4.0
-SP1,2026-10-25 13:00:00,Ath Bilbao,Getafe,4.0,0.0,1.56,3.81,6.11
-AT1,2026-10-25 13:30:00,SK Sturm Graz,SV Josko Ried,2.0,2.0,,,
 N1,2026-10-25 13:30:00,PSV Eindhoven,Feyenoord,1.0,1.0,2.01,4.07,3.01
 N1,2026-10-25 13:30:00,Nijmegen,Groningen,2.0,2.0,2.25,3.82,2.68
-CZ1,2026-10-25 14:00:00,Sparta Prague,Slovácko,5.0,1.0,,,
-E0,2026-10-25 14:00:00,Crystal Palace,Newcastle,0.0,2.0,2.86,3.58,2.28
-E0,2026-10-25 14:00:00,Hull,Brentford,1.0,1.0,4.6,3.92,1.69
+AT1,2026-10-25 13:30:00,SK Sturm Graz,SV Josko Ried,2.0,2.0,,,
 E0,2026-10-25 14:00:00,Liverpool,Brighton,2.0,0.0,2.09,3.76,3.13
-I1,2026-10-25 14:00:00,Atalanta,Frosinone,4.0,4.0,1.79,4.11,3.75
-E0,2026-10-25 14:00:00,Man United,Bournemouth,0.0,3.0,2.1,3.63,3.19
-I1,2026-10-25 14:00:00,Genoa,Venezia,1.0,0.0,2.08,3.34,3.49
-F1,2026-10-25 14:00:00,Monaco,Lille,1.0,1.0,2.04,3.43,3.46
 SC0,2026-10-25 14:00:00,Motherwell,Hearts,0.0,2.0,3.02,3.59,2.13
+CZ1,2026-10-25 14:00:00,Sparta Prague,Slovácko,5.0,1.0,,,
+E0,2026-10-25 14:00:00,Hull,Brentford,1.0,1.0,4.6,3.92,1.69
+E0,2026-10-25 14:00:00,Crystal Palace,Newcastle,0.0,2.0,2.86,3.58,2.28
+I1,2026-10-25 14:00:00,Atalanta,Frosinone,4.0,4.0,1.79,4.11,3.75
+I1,2026-10-25 14:00:00,Genoa,Venezia,1.0,0.0,2.08,3.34,3.49
+E0,2026-10-25 14:00:00,Man United,Bournemouth,0.0,3.0,2.1,3.63,3.19
+F1,2026-10-25 14:00:00,Monaco,Lille,1.0,1.0,2.04,3.43,3.46
 D1,2026-10-25 14:30:00,Hoffenheim,Leverkusen,3.0,0.0,2.71,3.84,2.28
-DK1,2026-10-25 15:00:00,AC Horsens,Sønderjyske Fodbold,5.0,1.0,,,
 B1,2026-10-25 15:00:00,Club Brugge,St Truiden,3.0,2.0,1.33,5.41,6.87
+DK1,2026-10-25 15:00:00,AC Horsens,Sønderjyske Fodbold,5.0,1.0,,,
 SP1,2026-10-25 15:15:00,Celta,Betis,0.0,0.0,2.89,3.37,2.35
 P1,2026-10-25 15:30:00,Estoril,Moreirense,1.0,3.0,1.93,3.46,3.7
 N1,2026-10-25 15:45:00,Sparta Rotterdam,Ajax,1.0,2.0,5.26,4.68,1.48
-AT1,2026-10-25 16:00:00,LASK Linz,RB Salzburg,1.0,3.0,,,
 T1,2026-10-25 16:00:00,Goztep,Corum,2.0,0.0,2.12,3.54,2.99
-F1,2026-10-25 16:15:00,Angers,Lorient,0.0,0.0,2.86,3.28,2.42
+AT1,2026-10-25 16:00:00,LASK Linz,RB Salzburg,1.0,3.0,,,
 F1,2026-10-25 16:15:00,Auxerre,Le Mans,1.0,1.0,2.08,3.59,3.22
+F1,2026-10-25 16:15:00,Angers,Lorient,0.0,0.0,2.86,3.28,2.42
+F1,2026-10-25 16:15:00,Toulouse,Troyes,0.0,0.0,1.59,4.13,4.97
 F1,2026-10-25 16:15:00,Marseille,Le Havre,4.0,3.0,1.55,4.38,5.09
 F1,2026-10-25 16:15:00,Rennes,Strasbourg,3.0,0.0,1.75,4.2,3.92
-F1,2026-10-25 16:15:00,Toulouse,Troyes,0.0,0.0,1.59,4.13,4.97
-D1,2026-10-25 16:30:00,Freiburg,Bayern Munich,1.0,3.0,6.43,5.69,1.36
 E0,2026-10-25 16:30:00,Sunderland,Leeds,0.0,0.0,3.04,3.21,2.35
-I1,2026-10-25 17:00:00,Lecce,Juventus,0.0,2.0,7.31,4.32,1.43
+D1,2026-10-25 16:30:00,Freiburg,Bayern Munich,1.0,3.0,6.43,5.69,1.36
 CZ1,2026-10-25 17:00:00,Viktoria Plzeň,Pardubice,1.0,2.0,,,
+I1,2026-10-25 17:00:00,Lecce,Juventus,0.0,2.0,7.31,4.32,1.43
 DK1,2026-10-25 17:00:00,AGF,Viborg FF,2.0,1.0,,,
-B1,2026-10-25 17:30:00,Gent,Anderlecht,4.0,0.0,2.3,3.2,2.96
 SP1,2026-10-25 17:30:00,Sociedad,Levante,2.0,1.0,1.64,4.08,4.74
+B1,2026-10-25 17:30:00,Gent,Anderlecht,4.0,0.0,2.3,3.2,2.96
 P1,2026-10-25 18:00:00,Nacional,Sp Braga,1.0,0.0,5.53,3.93,1.56
 P1,2026-10-25 18:00:00,Rio Ave,Famalicao,0.0,4.0,3.59,3.29,2.02
 B1,2026-10-25 18:15:00,St. Gilloise,Cercle Brugge,5.0,2.0,1.3,5.31,8.0
