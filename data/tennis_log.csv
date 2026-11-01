@@ -579,12 +579,12 @@ wta|2026-11-01|Bianca Andreescu|Carole Monnet,2026-11-01 01:30:00,wta,Carole Mon
 wta|2026-11-01|Mika Stojsavljevic|Tatiana Prozorova,2026-11-01 04:00:00,wta,Mika Stojsavljevic,Tatiana Prozorova,0.1931680659947192,Hard,2026-10-31 05:55:46.247034
 wta|2026-11-01|Aliaksandra Sasnovich|Carol Young Suh Lee,2026-11-01 02:00:00,wta,Carol Young Suh Lee,Aliaksandra Sasnovich,0.32718889595129275,Hard,2026-10-31 12:46:40.751811
 wta|2026-11-01|Diana Shnaider|Leylah Fernandez,2026-11-01 03:00:00,wta,Diana Shnaider,Leylah Fernandez,0.5943477373699865,Hard,2026-10-31 12:46:40.751811
-wta|2026-11-01|Alexandra Shubladze|Emerson Jones,2026-11-01 03:30:00,wta,Alexandra Shubladze,Emerson Jones,0.5802555142710539,Hard,2026-10-31 12:46:40.751811
+wta|2026-11-01|Alexandra Shubladze|Emerson Jones,2026-11-01 03:30:00,wta,Alexandra Shubladze,Emerson Jones,0.5802555142710538,Hard,2026-10-31 12:46:40.751811
 wta|2026-11-01|Elena Pridankina|Himeno Sakatsume,2026-11-01 03:30:00,wta,Elena Pridankina,Himeno Sakatsume,0.47456130170051164,Hard,2026-10-31 12:46:40.751811
-atp|2026-11-01|Mattia Bellucci|Thiago Agustin Tirante,2026-11-01 04:00:00,atp,Mattia Bellucci,Thiago Agustin Tirante,0.42126088375669307,Hard,2026-10-31 12:46:40.751811
+atp|2026-11-01|Mattia Bellucci|Thiago Agustin Tirante,2026-11-01 04:00:00,atp,Mattia Bellucci,Thiago Agustin Tirante,0.4212608837566932,Hard,2026-10-31 12:46:40.751811
 wta|2026-11-01|Aliona Falei|Rada Zolotareva,2026-11-01 04:00:00,wta,Rada Zolotareva,Aliona Falei,0.48451884386006994,Hard,2026-10-31 12:46:40.751811
 wta|2026-11-01|Harriet Dart|Lilli Tagger,2026-11-01 08:30:00,wta,Harriet Dart,Lilli Tagger,0.5307654633496386,Hard,2026-10-31 12:46:40.751811
-atp|2026-11-02|Arthur Gea|Jan-Lennard Struff,2026-11-02 05:00:00,atp,Arthur Gea,Jan-Lennard Struff,0.6737104669488679,Hard,2026-10-31 12:46:40.751811
+atp|2026-11-02|Arthur Gea|Jan-Lennard Struff,2026-11-02 05:00:00,atp,Arthur Gea,Jan-Lennard Struff,0.673710466948868,Hard,2026-10-31 12:46:40.751811
 wta|2026-11-02|Kaitlin Quevedo|Paula Badosa,2026-11-02 05:00:00,wta,Paula Badosa,Kaitlin Quevedo,0.5408664392459218,Hard,2026-10-31 12:46:40.751811
 wta|2026-11-02|Tereza Valentova|Xinran Sun,2026-11-02 05:00:00,wta,Tereza Valentova,Xinran Sun,0.5587465059286777,Hard,2026-10-31 12:46:40.751811
 wta|2026-11-02|Alexandra Eala|Alycia Parks,2026-11-02 05:00:00,wta,Alexandra Eala,Alycia Parks,0.7798271200914434,Hard,2026-10-31 12:46:40.751811
@@ -617,9 +617,13 @@ atp|2026-11-01|Benjamin Bonzi|Yannick Hanfmann,2026-11-01 11:30:00,atp,Yannick H
 atp|2026-11-01|Sebastian Baez|Tomas Machac,2026-11-01 11:30:00,atp,Tomas Machac,Sebastian Baez,0.6230214043371363,Hard,2026-10-31 19:22:36.961822
 atp|2026-11-01|Alex de Minaur|Carlos Alcaraz,2026-11-01 13:00:00,atp,Carlos Alcaraz,Alex de Minaur,0.7734943354738978,Hard,2026-10-31 19:22:36.961822
 atp|2026-11-01|Alex Molcan|Nuno Borges,2026-11-01 13:30:00,atp,Alex Molcan,Nuno Borges,0.5053653738065621,Hard,2026-10-31 19:22:36.961822
-wta|2026-11-01|Alice Tubello|Julia Grabher,2026-11-01 14:00:00,wta,Julia Grabher,Alice Tubello,0.6675966875300323,Hard,2026-10-31 19:22:36.961822
+wta|2026-11-01|Alice Tubello|Julia Grabher,2026-11-01 14:00:00,wta,Julia Grabher,Alice Tubello,0.6675966875300324,Hard,2026-10-31 19:22:36.961822
 wta|2026-11-01|Alina Charaeva|Noma Noha Akugue,2026-11-01 14:00:00,wta,Alina Charaeva,Noma Noha Akugue,0.6219813742578378,Hard,2026-10-31 19:22:36.961822
 atp|2026-11-01|Jiri Lehecka|Valentin Vacherot,2026-11-01 14:30:00,atp,Valentin Vacherot,Jiri Lehecka,0.4537303828126678,Hard,2026-10-31 19:22:36.961822
 wta|2026-11-02|Diana Martynov|Sandra Samir,2026-11-02 05:00:00,wta,Sandra Samir,Diana Martynov,0.5307489884443437,,2026-10-31 19:22:36.961822
 wta|2026-11-02|Dune Vaissaud|Isabella Shinikova,2026-11-02 05:00:00,wta,Dune Vaissaud,Isabella Shinikova,0.6374070578371466,,2026-10-31 19:22:36.961822
 wta|2026-11-02|Gina Feistel|Linda Klimovicova,2026-11-02 05:00:00,wta,Linda Klimovicova,Gina Feistel,0.45646627826724123,,2026-10-31 19:22:36.961822
+atp|2026-11-01|Adolfo Daniel Vallejo|Lorenzo Sonego,2026-11-01 13:00:00,atp,Lorenzo Sonego,Adolfo Daniel Vallejo,0.3571116483558277,Hard,2026-11-01 00:11:51.846441
+wta|2026-11-01|Carolina Alves|Maria Paulina Perez Garcia,2026-11-01 17:00:00,wta,Maria Paulina Perez Garcia,Carolina Alves,0.5140460636746236,Hard,2026-11-01 00:11:51.846441
+wta|2026-11-01|Elizabeth Mandlik|Selena Janicijevic,2026-11-01 19:00:00,wta,Selena Janicijevic,Elizabeth Mandlik,0.4487426718255432,Hard,2026-11-01 00:11:51.846441
+wta|2026-11-01|Katrina Scott|Laura Pigossi,2026-11-01 19:00:00,wta,Katrina Scott,Laura Pigossi,0.6249930319986414,Hard,2026-11-01 00:11:51.846441
