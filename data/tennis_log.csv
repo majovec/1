@@ -921,9 +921,9 @@ wta|2026-11-14|Elina Svitolina|Linda Noskova,2026-11-14 21:30:00,wta,Elina Svito
 atp|2026-11-17|Alexander Zverev|Arthur Fils,2026-11-17 05:00:00,atp,Arthur Fils,Alexander Zverev,0.41599891642129033,Hard,2026-11-14 10:39:41.042447
 atp|2026-11-17|Daniil Medvedev|Frances Tiafoe,2026-11-17 05:00:00,atp,Frances Tiafoe,Daniil Medvedev,0.43212915415248665,Hard,2026-11-14 10:39:41.042447
 atp|2026-11-17|Carlos Alcaraz|Daniil Medvedev,2026-11-17 05:00:00,atp,Daniil Medvedev,Carlos Alcaraz,0.18385186900864683,Hard,2026-11-14 10:39:41.042447
-atp|2026-11-17|Arthur Fils|Rafael Jodar,2026-11-17 05:00:00,atp,Rafael Jodar,Arthur Fils,0.4061335408626372,Hard,2026-11-14 10:39:41.042447
+atp|2026-11-17|Arthur Fils|Rafael Jodar,2026-11-17 05:00:00,atp,Rafael Jodar,Arthur Fils,0.4368583779735055,Hard,2026-11-14 10:39:41.042447
 atp|2026-11-17|Ben Shelton|Rafael Jodar,2026-11-17 05:00:00,atp,Rafael Jodar,Ben Shelton,0.3574400643586686,Hard,2026-11-14 10:39:41.042447
-atp|2026-11-17|Alexander Zverev|Ben Shelton,2026-11-17 05:00:00,atp,Ben Shelton,Alexander Zverev,0.4668735382440837,Hard,2026-11-14 10:39:41.042447
+atp|2026-11-17|Alexander Zverev|Ben Shelton,2026-11-17 05:00:00,atp,Ben Shelton,Alexander Zverev,0.4926662179657197,Hard,2026-11-14 10:39:41.042447
 wta|2026-11-15|Alexandra Osborne|Diletta Cherubini,2026-11-15 14:30:00,wta,Alexandra Osborne,Diletta Cherubini,0.4092162589755086,Hard,2026-11-14 22:35:45.896642
 wta|2026-11-15|Valeriya Strakhova|Zhibek Kulambayeva,2026-11-15 16:00:00,wta,Valeriya Strakhova,Zhibek Kulambayeva,0.40132727839994453,Hard,2026-11-14 22:35:45.896642
 wta|2026-11-15|Elina Svitolina|Mirra Andreeva,2026-11-15 20:00:00,wta,Mirra Andreeva,Elina Svitolina,0.5546226110911043,Hard,2026-11-15 06:47:32.481620
@@ -940,3 +940,18 @@ wta|2026-11-16|Anastasia Zolotareva|Katrina Scott,2026-11-16 05:00:00,wta,Anasta
 wta|2026-11-16|Darja Semenistaja|Irene Burillo,2026-11-16 05:00:00,wta,Darja Semenistaja,Irene Burillo,0.3766805947148754,Hard,2026-11-15 06:47:32.481620
 atp|2026-11-17|Flavio Cobolli|Frances Tiafoe,2026-11-17 05:00:00,atp,Frances Tiafoe,Flavio Cobolli,0.628712511056935,Hard,2026-11-15 16:27:36.423009
 atp|2026-11-17|Carlos Alcaraz|Flavio Cobolli,2026-11-17 05:00:00,atp,Flavio Cobolli,Carlos Alcaraz,0.0919267965744403,Hard,2026-11-15 16:27:36.423009
+wta|2026-11-16|Diletta Cherubini|Rebeka Masarova,2026-11-16 14:00:00,wta,Diletta Cherubini,Rebeka Masarova,0.3591211431793897,Hard,2026-11-15 22:57:45.175199
+wta|2026-11-16|Guiomar Maristany Zuleta De Reales|Martina Trevisan,2026-11-16 15:30:00,wta,Martina Trevisan,Guiomar Maristany Zuleta De Reales,0.3619548498135239,Hard,2026-11-15 22:57:45.175199
+wta|2026-11-16|Anastasia Tikhonova|Valeriya Strakhova,2026-11-16 21:00:00,wta,Anastasia Tikhonova,Valeriya Strakhova,0.44846976905877434,Hard,2026-11-15 22:57:45.175199
+wta|2026-11-16|Ariana Geerlings|Luisina Giovannini,2026-11-16 22:00:00,wta,Ariana Geerlings,Luisina Giovannini,0.6077416533565797,Hard,2026-11-15 22:57:45.175199
+wta|2026-11-17|Maria Lourdes Carle|Veronika Erjavec,2026-11-17 05:00:00,wta,Veronika Erjavec,Maria Lourdes Carle,0.6253925558166543,Hard,2026-11-15 22:57:45.175199
+wta|2026-11-17|Alicia Herrero Linana|Lucia Bronzetti,2026-11-17 05:00:00,wta,Alicia Herrero Linana,Lucia Bronzetti,0.6646375662392893,Hard,2026-11-15 22:57:45.175199
+wta|2026-11-17|Despina Papamichail|Laura Samson,2026-11-17 05:00:00,wta,Laura Samson,Despina Papamichail,0.7259516284074028,Hard,2026-11-15 22:57:45.175199
+wta|2026-11-17|Darja Semenistaja|Irene Burillo,2026-11-17 05:00:00,wta,Darja Semenistaja,Irene Burillo,0.3766805947148754,Hard,2026-11-15 22:57:45.175199
+wta|2026-11-17|Nadia Podoroska|Varvara Lepchenko,2026-11-17 05:00:00,wta,Varvara Lepchenko,Nadia Podoroska,0.2396271104014122,Hard,2026-11-15 22:57:45.175199
+wta|2026-11-17|Antonia Vergara Rivera|Fernanda Labrana,2026-11-17 05:00:00,wta,Antonia Vergara Rivera,Fernanda Labrana,0.5752809525760587,Hard,2026-11-15 22:57:45.175199
+wta|2026-11-17|Miriam Bulgaru|Polona Hercog,2026-11-17 05:00:00,wta,Miriam Bulgaru,Polona Hercog,0.28288027981787783,Hard,2026-11-15 22:57:45.175199
+atp|2026-11-18|Alexander Zverev|Arthur Fils,2026-11-18 05:00:00,atp,Arthur Fils,Alexander Zverev,0.38573624867710493,Hard,2026-11-15 22:57:45.175199
+atp|2026-11-18|Carlos Alcaraz|Flavio Cobolli,2026-11-18 05:00:00,atp,Flavio Cobolli,Carlos Alcaraz,0.0919267965744403,Hard,2026-11-15 22:57:45.175199
+atp|2026-11-18|Carlos Alcaraz|Daniil Medvedev,2026-11-18 05:00:00,atp,Daniil Medvedev,Carlos Alcaraz,0.18385186900864683,Hard,2026-11-15 22:57:45.175199
+atp|2026-11-18|Ben Shelton|Rafael Jodar,2026-11-18 05:00:00,atp,Rafael Jodar,Ben Shelton,0.33406523999021914,Hard,2026-11-15 22:57:45.175199
