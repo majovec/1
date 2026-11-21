@@ -1,13 +1,13 @@
 {
  "summary": {
-  "generated_at": "2026-11-21T11:23:53.341631",
+  "generated_at": "2026-11-21T19:28:12.345375",
   "version": "tennis-elo-v1",
-  "history_matches": 23578,
+  "history_matches": 23579,
   "backtest": {
-   "matches": 14538,
+   "matches": 14539,
    "weight": 0.0,
-   "accuracy": 0.6194111982390975,
-   "log_loss": 0.6485912653971845,
+   "accuracy": 0.6194373753353051,
+   "log_loss": 0.6485633897821591,
    "naive_log_loss": 0.6931471805599452,
    "calibration": [
     {
@@ -16,14 +16,14 @@
      "n": 5638
     },
     {
-     "predicted": 0.646567462369579,
+     "predicted": 0.6465674623695791,
      "observed": 0.6168388656847659,
      "n": 4549
     },
     {
-     "predicted": 0.745086316635811,
-     "observed": 0.6851851851851852,
-     "n": 2754
+     "predicted": 0.7451004523581543,
+     "observed": 0.6852994555353902,
+     "n": 2755
     },
     {
      "predicted": 0.8409507286488062,
@@ -38,52 +38,22 @@
    ]
   },
   "live": {
-   "settled": 899,
+   "settled": 900,
    "pending": 4,
-   "accuracy": 0.646273637374861,
-   "log_loss": 0.6232371372058145
+   "accuracy": 0.6466666666666666,
+   "log_loss": 0.6228149933850801
   },
-  "history_to": "2026-11-20T23:35:00",
+  "history_to": "2026-11-21T13:40:00",
   "odds": {
    "source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
    "available": true,
    "reason": "",
-   "updated_at": "2026-11-21T05:56:09.683957+00:00",
-   "age_hours": 5.462127131666666,
+   "updated_at": "2026-11-21T14:25:05.347497+00:00",
+   "age_hours": 5.051943854999999,
    "snapshots": 0
   }
  },
  "upcoming": [
-  {
-   "tour": "atp",
-   "date": "2026-11-21T14:30:00",
-   "tournament": "Nitto ATP Finals",
-   "surface": "Hard",
-   "a": "Ben Shelton",
-   "b": "Carlos Alcaraz",
-   "a_full": "Ben Shelton",
-   "b_full": "Carlos Alcaraz",
-   "p_a": 0.21596976830889988,
-   "games": [
-    105,
-    95
-   ],
-   "rating": [
-    1939,
-    2179
-   ],
-   "odds_a": null,
-   "odds_b": null,
-   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-11-21T05:56:09.683957+00:00",
-   "odds_age_hours": 5.462127131666666,
-   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
-   "market_p_a": null,
-   "market_p_b": null,
-   "market_overround": null,
-   "edge_a": null,
-   "edge_b": null
-  },
   {
    "tour": "atp",
    "date": "2026-11-21T20:30:00",
@@ -105,8 +75,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-11-21T05:56:09.683957+00:00",
-   "odds_age_hours": 5.462127131666666,
+   "odds_updated_at": "2026-11-21T14:25:05.347497+00:00",
+   "odds_age_hours": 5.051943854999999,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -135,8 +105,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-11-21T05:56:09.683957+00:00",
-   "odds_age_hours": 5.462127131666666,
+   "odds_updated_at": "2026-11-21T14:25:05.347497+00:00",
+   "odds_age_hours": 5.051943854999999,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -165,8 +135,38 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-11-21T05:56:09.683957+00:00",
-   "odds_age_hours": 5.462127131666666,
+   "odds_updated_at": "2026-11-21T14:25:05.347497+00:00",
+   "odds_age_hours": 5.051943854999999,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
+  },
+  {
+   "tour": "wta",
+   "date": "2026-11-22T06:00:00",
+   "tournament": "IEB+ Argentina Open",
+   "surface": "Hard",
+   "a": "Marina Bulbarella",
+   "b": "Lourdes Ayala",
+   "a_full": "Marina Bulbarella",
+   "b_full": "Lourdes Ayala",
+   "p_a": 0.41430735890469955,
+   "games": [
+    1,
+    3
+   ],
+   "rating": [
+    1460,
+    1518
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-11-21T14:25:05.347497+00:00",
+   "odds_age_hours": 5.051943854999999,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -176,6 +176,16 @@
   }
  ],
  "settled": [
+  {
+   "date": "2026-11-21T14:30:00",
+   "tour": "atp",
+   "a": "Ben Shelton",
+   "b": "Carlos Alcaraz",
+   "p_a": 0.21596976830889988,
+   "winner": "Carlos Alcaraz",
+   "correct": true,
+   "p_winner": 0.7840302316911001
+  },
   {
    "date": "2026-11-20T21:30:00",
    "tour": "wta",
@@ -269,22 +279,22 @@
   {
    "date": "2026-11-19T06:00:00",
    "tour": "atp",
-   "a": "Rafael Jodar",
-   "b": "Ben Shelton",
-   "p_a": 0.3334953321270987,
-   "winner": "Ben Shelton",
-   "correct": true,
-   "p_winner": 0.6665046678729013
-  },
-  {
-   "date": "2026-11-19T06:00:00",
-   "tour": "atp",
    "a": "Flavio Cobolli",
    "b": "Carlos Alcaraz",
    "p_a": 0.08294014931815591,
    "winner": "Carlos Alcaraz",
    "correct": true,
    "p_winner": 0.9170598506818441
+  },
+  {
+   "date": "2026-11-19T06:00:00",
+   "tour": "atp",
+   "a": "Rafael Jodar",
+   "b": "Ben Shelton",
+   "p_a": 0.3334953321270987,
+   "winner": "Ben Shelton",
+   "correct": true,
+   "p_winner": 0.6665046678729013
   },
   {
    "date": "2026-11-19T06:00:00",
@@ -459,12 +469,12 @@
   {
    "date": "2026-11-17T06:00:00",
    "tour": "atp",
-   "a": "Rafael Jodar",
-   "b": "Arthur Fils",
-   "p_a": 0.4368583779735055,
-   "winner": "Arthur Fils",
+   "a": "Daniil Medvedev",
+   "b": "Carlos Alcaraz",
+   "p_a": 0.18385186900864683,
+   "winner": "Carlos Alcaraz",
    "correct": true,
-   "p_winner": 0.5631416220264944
+   "p_winner": 0.8161481309913532
   },
   {
    "date": "2026-11-17T06:00:00",
@@ -499,12 +509,12 @@
   {
    "date": "2026-11-17T06:00:00",
    "tour": "atp",
-   "a": "Daniil Medvedev",
-   "b": "Carlos Alcaraz",
-   "p_a": 0.18385186900864683,
-   "winner": "Carlos Alcaraz",
+   "a": "Rafael Jodar",
+   "b": "Arthur Fils",
+   "p_a": 0.4368583779735055,
+   "winner": "Arthur Fils",
    "correct": true,
-   "p_winner": 0.8161481309913532
+   "p_winner": 0.5631416220264944
   },
   {
    "date": "2026-11-17T06:00:00",
@@ -1165,16 +1175,6 @@
    "winner": "Alejandro Tabilo",
    "correct": true,
    "p_winner": 0.5172418235033232
-  },
-  {
-   "date": "2026-11-11T06:00:00",
-   "tour": "atp",
-   "a": "Casper Ruud",
-   "b": "Aleksandr Shevchenko",
-   "p_a": 0.8472501687369562,
-   "winner": "Aleksandr Shevchenko",
-   "correct": false,
-   "p_winner": 0.15274983126304376
   }
  ]
 }
