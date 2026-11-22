@@ -1,6 +1,6 @@
 {
  "summary": {
-  "generated_at": "2026-11-22T01:25:08.333573",
+  "generated_at": "2026-11-22T11:40:06.650171",
   "version": "tennis-elo-v1",
   "history_matches": 23582,
   "backtest": {
@@ -39,7 +39,7 @@
   },
   "live": {
    "settled": 903,
-   "pending": 3,
+   "pending": 2,
    "accuracy": 0.646733111849391,
    "log_loss": 0.6228380183679725
   },
@@ -48,8 +48,8 @@
    "source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
    "available": true,
    "reason": "",
-   "updated_at": "2026-11-21T22:50:59.671691+00:00",
-   "age_hours": 2.569072745,
+   "updated_at": "2026-11-22T05:30:07.626689+00:00",
+   "age_hours": 6.166395411666667,
    "snapshots": 0
   }
  },
@@ -63,7 +63,7 @@
    "b": "Lourdes Ayala",
    "a_full": "Marina Bulbarella",
    "b_full": "Lourdes Ayala",
-   "p_a": 0.4143073589046994,
+   "p_a": 0.41430735890469955,
    "games": [
     1,
     3
@@ -75,8 +75,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-11-21T22:50:59.671691+00:00",
-   "odds_age_hours": 2.569072745,
+   "odds_updated_at": "2026-11-22T05:30:07.626689+00:00",
+   "odds_age_hours": 6.166395411666667,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -105,8 +105,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-11-21T22:50:59.671691+00:00",
-   "odds_age_hours": 2.569072745,
+   "odds_updated_at": "2026-11-22T05:30:07.626689+00:00",
+   "odds_age_hours": 6.166395411666667,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -135,8 +135,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-11-21T22:50:59.671691+00:00",
-   "odds_age_hours": 2.569072745,
+   "odds_updated_at": "2026-11-22T05:30:07.626689+00:00",
+   "odds_age_hours": 6.166395411666667,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
