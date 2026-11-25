@@ -1,13 +1,13 @@
 {
  "summary": {
-  "generated_at": "2026-11-25T08:49:54.335550",
+  "generated_at": "2026-11-25T19:25:57.461395",
   "version": "tennis-elo-v1",
-  "history_matches": 23601,
+  "history_matches": 23602,
   "backtest": {
    "matches": 14551,
    "weight": 0.0,
    "accuracy": 0.6194763246512267,
-   "log_loss": 0.6485189769223934,
+   "log_loss": 0.6485189769223932,
    "naive_log_loss": 0.6931471805599451,
    "calibration": [
     {
@@ -31,7 +31,7 @@
      "n": 1264
     },
     {
-     "predicted": 0.9300898483018907,
+     "predicted": 0.9300898483018909,
      "observed": 0.9099099099099099,
      "n": 333
     }
@@ -43,47 +43,17 @@
    "accuracy": 0.6481481481481481,
    "log_loss": 0.6218421276848336
   },
-  "history_to": "2026-11-24T20:30:00",
+  "history_to": "2026-11-25T18:05:00",
   "odds": {
    "source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "available": true,
-   "reason": "",
+   "available": false,
+   "reason": "Zdroj kurzů je zastaralý (12.1 h; limit 12 h).",
    "updated_at": "2026-11-25T07:21:52.495237+00:00",
-   "age_hours": 1.4671778647222222,
+   "age_hours": 12.068046155000001,
    "snapshots": 0
   }
  },
  "upcoming": [
-  {
-   "tour": "wta",
-   "date": "2026-11-25T19:00:00",
-   "tournament": "IEB+ Argentina Open",
-   "surface": "Hard",
-   "a": "Veronika Erjavec",
-   "b": "Martina Trevisan",
-   "a_full": "Veronika Erjavec",
-   "b_full": "Martina Trevisan",
-   "p_a": 0.4747482700617532,
-   "games": [
-    87,
-    38
-   ],
-   "rating": [
-    1535,
-    1570
-   ],
-   "odds_a": null,
-   "odds_b": null,
-   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-11-25T07:21:52.495237+00:00",
-   "odds_age_hours": 1.4671778647222222,
-   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
-   "market_p_a": null,
-   "market_p_b": null,
-   "market_overround": null,
-   "edge_a": null,
-   "edge_b": null
-  },
   {
    "tour": "wta",
    "date": "2026-11-25T20:30:00",
@@ -106,38 +76,8 @@
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
    "odds_updated_at": "2026-11-25T07:21:52.495237+00:00",
-   "odds_age_hours": 1.4671778647222222,
-   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
-   "market_p_a": null,
-   "market_p_b": null,
-   "market_overround": null,
-   "edge_a": null,
-   "edge_b": null
-  },
-  {
-   "tour": "wta",
-   "date": "2026-11-25T20:30:00",
-   "tournament": "IEB+ Argentina Open",
-   "surface": "Hard",
-   "a": "Ariana Geerlings",
-   "b": "Alicia Herrero Linana",
-   "a_full": "Ariana Geerlings",
-   "b_full": "Alicia Herrero Linana",
-   "p_a": 0.5382408108937711,
-   "games": [
-    18,
-    41
-   ],
-   "rating": [
-    1720,
-    1641
-   ],
-   "odds_a": null,
-   "odds_b": null,
-   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-11-25T07:21:52.495237+00:00",
-   "odds_age_hours": 1.4671778647222222,
-   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "odds_age_hours": 12.068046155000001,
+   "odds_status": "Zdroj kurzů je zastaralý (12.1 h; limit 12 h).",
    "market_p_a": null,
    "market_p_b": null,
    "market_overround": null,
@@ -166,8 +106,38 @@
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
    "odds_updated_at": "2026-11-25T07:21:52.495237+00:00",
-   "odds_age_hours": 1.4671778647222222,
-   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "odds_age_hours": 12.068046155000001,
+   "odds_status": "Zdroj kurzů je zastaralý (12.1 h; limit 12 h).",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
+  },
+  {
+   "tour": "wta",
+   "date": "2026-11-26T06:00:00",
+   "tournament": "IEB+ Argentina Open",
+   "surface": "Hard",
+   "a": "Nadia Podoroska",
+   "b": "Maria Lourdes Carle",
+   "a_full": "Nadia Podoroska",
+   "b_full": "Maria Lourdes Carle",
+   "p_a": 0.7903611775636381,
+   "games": [
+    20,
+    69
+   ],
+   "rating": [
+    1681,
+    1485
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-11-25T07:21:52.495237+00:00",
+   "odds_age_hours": 12.068046155000001,
+   "odds_status": "Zdroj kurzů je zastaralý (12.1 h; limit 12 h).",
    "market_p_a": null,
    "market_p_b": null,
    "market_overround": null,
@@ -196,8 +166,8 @@
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
    "odds_updated_at": "2026-11-25T07:21:52.495237+00:00",
-   "odds_age_hours": 1.4671778647222222,
-   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "odds_age_hours": 12.068046155000001,
+   "odds_status": "Zdroj kurzů je zastaralý (12.1 h; limit 12 h).",
    "market_p_a": null,
    "market_p_b": null,
    "market_overround": null,
@@ -226,8 +196,8 @@
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
    "odds_updated_at": "2026-11-25T07:21:52.495237+00:00",
-   "odds_age_hours": 1.4671778647222222,
-   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "odds_age_hours": 12.068046155000001,
+   "odds_status": "Zdroj kurzů je zastaralý (12.1 h; limit 12 h).",
    "market_p_a": null,
    "market_p_b": null,
    "market_overround": null,
@@ -256,8 +226,8 @@
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
    "odds_updated_at": "2026-11-25T07:21:52.495237+00:00",
-   "odds_age_hours": 1.4671778647222222,
-   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "odds_age_hours": 12.068046155000001,
+   "odds_status": "Zdroj kurzů je zastaralý (12.1 h; limit 12 h).",
    "market_p_a": null,
    "market_p_b": null,
    "market_overround": null,
