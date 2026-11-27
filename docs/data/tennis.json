@@ -1,6 +1,6 @@
 {
  "summary": {
-  "generated_at": "2026-11-27T01:47:28.268753",
+  "generated_at": "2026-11-27T12:44:59.985564",
   "version": "tennis-elo-v1",
   "history_matches": 23609,
   "backtest": {
@@ -39,7 +39,7 @@
   },
   "live": {
    "settled": 925,
-   "pending": 4,
+   "pending": 2,
    "accuracy": 0.6475675675675676,
    "log_loss": 0.6224896773348074
   },
@@ -48,8 +48,8 @@
    "source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
    "available": true,
    "reason": "",
-   "updated_at": "2026-11-26T21:00:42.848628+00:00",
-   "age_hours": 4.779283368055555,
+   "updated_at": "2026-11-27T07:06:53.475391+00:00",
+   "age_hours": 5.635141714722222,
    "snapshots": 0
   }
  },
@@ -75,8 +75,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-11-26T21:00:42.848628+00:00",
-   "odds_age_hours": 4.779283368055555,
+   "odds_updated_at": "2026-11-27T07:06:53.475391+00:00",
+   "odds_age_hours": 5.635141714722222,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -105,8 +105,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-11-26T21:00:42.848628+00:00",
-   "odds_age_hours": 4.779283368055555,
+   "odds_updated_at": "2026-11-27T07:06:53.475391+00:00",
+   "odds_age_hours": 5.635141714722222,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -135,8 +135,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-11-26T21:00:42.848628+00:00",
-   "odds_age_hours": 4.779283368055555,
+   "odds_updated_at": "2026-11-27T07:06:53.475391+00:00",
+   "odds_age_hours": 5.635141714722222,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -165,8 +165,8 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-11-26T21:00:42.848628+00:00",
-   "odds_age_hours": 4.779283368055555,
+   "odds_updated_at": "2026-11-27T07:06:53.475391+00:00",
+   "odds_age_hours": 5.635141714722222,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
