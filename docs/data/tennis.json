@@ -1,19 +1,19 @@
 {
  "summary": {
-  "generated_at": "2026-11-27T23:32:52.469388",
+  "generated_at": "2026-11-28T08:03:21.252040",
   "version": "tennis-elo-v1",
-  "history_matches": 23611,
+  "history_matches": 23612,
   "backtest": {
-   "matches": 14560,
+   "matches": 14561,
    "weight": 0.0,
-   "accuracy": 0.6194368131868132,
-   "log_loss": 0.6485648448910079,
+   "accuracy": 0.6193942723714031,
+   "log_loss": 0.6485756924939745,
    "naive_log_loss": 0.6931471805599452,
    "calibration": [
     {
-     "predicted": 0.5489717209144228,
-     "observed": 0.5358724534986714,
-     "n": 5645
+     "predicted": 0.5489725388346743,
+     "observed": 0.5357775416223876,
+     "n": 5646
     },
     {
      "predicted": 0.6465685702426782,
@@ -38,18 +38,18 @@
    ]
   },
   "live": {
-   "settled": 927,
-   "pending": 1,
-   "accuracy": 0.6472491909385113,
-   "log_loss": 0.6228215551564253
+   "settled": 928,
+   "pending": 2,
+   "accuracy": 0.646551724137931,
+   "log_loss": 0.6230195026095862
   },
-  "history_to": "2026-11-27T19:35:00",
+  "history_to": "2026-11-27T22:05:00",
   "odds": {
    "source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
    "available": true,
    "reason": "",
-   "updated_at": "2026-11-27T20:46:01.472874+00:00",
-   "age_hours": 2.780832365,
+   "updated_at": "2026-11-28T06:40:36.788997+00:00",
+   "age_hours": 1.3790175119444443,
    "snapshots": 0
   }
  },
@@ -75,8 +75,38 @@
    "odds_a": null,
    "odds_b": null,
    "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
-   "odds_updated_at": "2026-11-27T20:46:01.472874+00:00",
-   "odds_age_hours": 2.780832365,
+   "odds_updated_at": "2026-11-28T06:40:36.788997+00:00",
+   "odds_age_hours": 1.3790175119444443,
+   "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
+   "market_p_a": null,
+   "market_p_b": null,
+   "market_overround": null,
+   "edge_a": null,
+   "edge_b": null
+  },
+  {
+   "tour": "wta",
+   "date": "2026-11-28T18:00:00",
+   "tournament": "IEB+ Argentina Open",
+   "surface": "Hard",
+   "a": "Julia Riera",
+   "b": "Veronika Erjavec",
+   "a_full": "Julia Riera",
+   "b_full": "Veronika Erjavec",
+   "p_a": 0.6513199543860066,
+   "games": [
+    62,
+    87
+   ],
+   "rating": [
+    1660,
+    1535
+   ],
+   "odds_a": null,
+   "odds_b": null,
+   "odds_source": "Tennis Explorer (přes veřejný datový feed; bookmaker neuveden)",
+   "odds_updated_at": "2026-11-28T06:40:36.788997+00:00",
+   "odds_age_hours": 1.3790175119444443,
    "odds_status": "Kurz pro tento zápas není ve zdroji nebo se nepodařilo ověřit shodu.",
    "market_p_a": null,
    "market_p_b": null,
@@ -105,6 +135,16 @@
    "winner": "Varvara Lepchenko",
    "correct": false,
    "p_winner": 0.27360298811730177
+  },
+  {
+   "date": "2026-11-27T06:00:00",
+   "tour": "wta",
+   "a": "Julia Riera",
+   "b": "Alicia Herrero Linana",
+   "p_a": 0.4464103013458711,
+   "winner": "Julia Riera",
+   "correct": false,
+   "p_winner": 0.4464103013458711
   },
   {
    "date": "2026-11-26T06:00:00",
@@ -179,42 +219,22 @@
   {
    "date": "2026-11-24T06:00:00",
    "tour": "wta",
-   "a": "Luna Maria Cinalli",
-   "b": "Guiomar Maristany Zuleta De Reales",
-   "p_a": 0.23178299826861268,
-   "winner": "Guiomar Maristany Zuleta De Reales",
-   "correct": true,
-   "p_winner": 0.7682170017313873
-  },
-  {
-   "date": "2026-11-24T06:00:00",
-   "tour": "wta",
-   "a": "Irene Burillo",
-   "b": "Lourdes Ayala",
-   "p_a": 0.5657810792174547,
-   "winner": "Irene Burillo",
-   "correct": true,
-   "p_winner": 0.5657810792174547
-  },
-  {
-   "date": "2026-11-24T06:00:00",
-   "tour": "wta",
-   "a": "Veronika Erjavec",
-   "b": "Zhibek Kulambayeva",
-   "p_a": 0.5463844084695736,
-   "winner": "Veronika Erjavec",
-   "correct": true,
-   "p_winner": 0.5463844084695736
-  },
-  {
-   "date": "2026-11-24T06:00:00",
-   "tour": "wta",
    "a": "Laura Samson",
    "b": "Victoria Bosio",
    "p_a": 0.7855069036903942,
    "winner": "Laura Samson",
    "correct": true,
    "p_winner": 0.7855069036903942
+  },
+  {
+   "date": "2026-11-24T06:00:00",
+   "tour": "wta",
+   "a": "Leyre Romero Gormaz",
+   "b": "Nadia Podoroska",
+   "p_a": 0.6139213130948086,
+   "winner": "Nadia Podoroska",
+   "correct": false,
+   "p_winner": 0.3860786869051914
   },
   {
    "date": "2026-11-24T06:00:00",
@@ -229,12 +249,32 @@
   {
    "date": "2026-11-24T06:00:00",
    "tour": "wta",
-   "a": "Leyre Romero Gormaz",
-   "b": "Nadia Podoroska",
-   "p_a": 0.6139213130948086,
-   "winner": "Nadia Podoroska",
-   "correct": false,
-   "p_winner": 0.3860786869051914
+   "a": "Luna Maria Cinalli",
+   "b": "Guiomar Maristany Zuleta De Reales",
+   "p_a": 0.23178299826861268,
+   "winner": "Guiomar Maristany Zuleta De Reales",
+   "correct": true,
+   "p_winner": 0.7682170017313873
+  },
+  {
+   "date": "2026-11-24T06:00:00",
+   "tour": "wta",
+   "a": "Veronika Erjavec",
+   "b": "Zhibek Kulambayeva",
+   "p_a": 0.5463844084695736,
+   "winner": "Veronika Erjavec",
+   "correct": true,
+   "p_winner": 0.5463844084695736
+  },
+  {
+   "date": "2026-11-24T06:00:00",
+   "tour": "wta",
+   "a": "Irene Burillo",
+   "b": "Lourdes Ayala",
+   "p_a": 0.5657810792174547,
+   "winner": "Irene Burillo",
+   "correct": true,
+   "p_winner": 0.5657810792174547
   },
   {
    "date": "2026-11-23T20:00:00",
@@ -279,22 +319,22 @@
   {
    "date": "2026-11-23T15:00:00",
    "tour": "wta",
-   "a": "Carole Monnet",
-   "b": "Berta Bonardi",
-   "p_a": 0.7049200851673579,
-   "winner": "Carole Monnet",
-   "correct": true,
-   "p_winner": 0.7049200851673579
-  },
-  {
-   "date": "2026-11-23T15:00:00",
-   "tour": "wta",
    "a": "Ayana Akli",
    "b": "Martina Trevisan",
    "p_a": 0.34686174567359285,
    "winner": "Martina Trevisan",
    "correct": true,
    "p_winner": 0.6531382543264072
+  },
+  {
+   "date": "2026-11-23T15:00:00",
+   "tour": "wta",
+   "a": "Carole Monnet",
+   "b": "Berta Bonardi",
+   "p_a": 0.7049200851673579,
+   "winner": "Carole Monnet",
+   "correct": true,
+   "p_winner": 0.7049200851673579
   },
   {
    "date": "2026-11-22T22:00:00",
@@ -1075,16 +1115,6 @@
    "winner": "Elizabeth Mandlik",
    "correct": false,
    "p_winner": 0.3178798626037584
-  },
-  {
-   "date": "2026-11-13T06:00:00",
-   "tour": "wta",
-   "a": "Bianca Andreescu",
-   "b": "Polona Hercog",
-   "p_a": 0.747723103482476,
-   "winner": "Bianca Andreescu",
-   "correct": true,
-   "p_winner": 0.747723103482476
   }
  ]
 }
